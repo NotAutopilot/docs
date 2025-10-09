@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>MediaWiki API help - Tinkla: Tinkering with Tesla</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"Special","wgCanonicalSpecialPageName":"ApiHelp","wgNamespaceNumber":-1,"wgPageName":"Special:ApiHelp","wgTitle":"ApiHelp","wgCurRevisionId":0,"wgRevisionId":0,"wgArticleId":0,"wgIsArticle":false,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":true,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Special:ApiHelp","wgRelevantArticleId":0,"wgRequestId":"1b6860ade922680ebc1e2932","wgCSPNonce":false,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgWikiEditorEnabledModules":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"ready","user.tokens":"loading","mediawiki.hlist":"ready","mediawiki.apihelp":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.skinning.interface":"ready"});mw.loader.implement("user.tokens@0tffind",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});RLPAGEMODULES=["site","mediawiki.page.startup","mediawiki.user","mediawiki.page.ready","mediawiki.searchSuggest"];mw.loader.load(RLPAGEMODULES);});</script>
+<link href="/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.apihelp%2Chlist%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.skinning.interface&amp;only=styles&amp;skin=apioutput" rel="stylesheet"/>
+<script async="" src="/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=apioutput"></script>
+<meta content="" name="ResourceLoaderDynamicStyles"/>
+<link href="/load.php?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=apioutput" rel="stylesheet"/>
+<meta content="MediaWiki 1.32.1" name="generator"/>
+<meta content="noindex,nofollow" name="robots"/>
+<link href="/favicon.ico" rel="shortcut icon"/>
+<link href="/opensearch_desc.php" rel="search" title="Tinkla: Tinkering with Tesla (en)" type="application/opensearchdescription+xml"/>
+<link href="https://tinkla.us/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
+<link href="https://www.mediawiki.org/wiki/Special:MyLanguage/Copyright" rel="license"/>
+<link href="/index.php?title=Special:RecentChanges&amp;feed=atom" rel="alternate" title="Tinkla: Tinkering with Tesla Atom feed" type="application/atom+xml"/>
+<!--[if lt IE 9]><script src="/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=Timeless&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns--1 ns-special mw-special-ApiHelp page-Special_ApiHelp rootpage-Special_ApiHelp skin-apioutput action-view">
+<div class="mw-body" role="main">
+<h1 class="firstHeading">MediaWiki API help</h1>
+<div class="mw-body-content">
+<div id="mw-content-text"><p>This is an auto-generated MediaWiki API documentation page.
+</p><p>Documentation and examples: <a class="external free" href="https://www.mediawiki.org/wiki/API" rel="noreferrer noopener" target="_blank">https://www.mediawiki.org/wiki/API</a>
+</p><h2 class="apihelp-header apihelp-module-name" dir="ltr" id="imagerotate" lang="en">action=imagerotate</h2><div class="apihelp-linktrail">(<a class="apihelp-linktrail" dir="ltr" href="index_php/Special_ApiHelp/main.html" lang="en">main</a> | <b dir="ltr" lang="en">imagerotate</b>)</div>
+<div class="apihelp-block apihelp-flags"><ul><li><span class="apihelp-flag-readrights">This module requires read rights.</span></li><li><span class="apihelp-flag-writerights">This module requires write rights.</span></li><li><span class="apihelp-flag-mustbeposted">This module only accepts POST requests.</span></li><li><span class="apihelp-source">Source: <span dir="ltr" lang="en">MediaWiki</span></span></li><li><span class="apihelp-license">License: <a href="/index.php/Special:Version/License/MediaWiki" title="Special:Version/License/MediaWiki"><span dir="ltr" lang="en">GPL-2.0-or-later</span></a></span></li></ul></div>
+<p>Rotate one or more images.
+</p>
+<div class="apihelp-block apihelp-parameters"><div class="apihelp-block-head">Parameters:</div><dl><dt><span dir="ltr" lang="en">rotation</span></dt><dd class="description"><p>Degrees to rotate image clockwise.
+</p></dd><dd class="info">This parameter is required.</dd><dd class="info">One of the following values: <span dir="auto">90</span>, <span dir="auto">180</span>, <span dir="auto">270</span></dd><dt><span dir="ltr" lang="en">continue</span></dt><dd class="description"><p>When more results are available, use this to continue.
+</p></dd><dt><span dir="ltr" lang="en">tags</span></dt><dd class="description"><p>Tags to apply to the entry in the upload log.
+</p></dd><dd class="info">Values (separate with <kbd>|</kbd> or <a href="/api.php?action=help&amp;modules=main#main.2Fdatatypes">alternative</a>): </dd><dt><span dir="ltr" lang="en">titles</span></dt><dd class="description"><p>A list of titles to work on.
+</p></dd><dd class="info">Separate values with <kbd>|</kbd> or <a href="/api.php?action=help&amp;modules=main#main.2Fdatatypes">alternative</a>. Maximum number of values is 50 (500 for bots).</dd><dt><span dir="ltr" lang="en">pageids</span></dt><dd class="description"><p>A list of page IDs to work on.
+</p></dd><dd class="info">Type: list of integers</dd><dd class="info">Separate values with <kbd>|</kbd> or <a href="/api.php?action=help&amp;modules=main#main.2Fdatatypes">alternative</a>. Maximum number of values is 50 (500 for bots).</dd><dt><span dir="ltr" lang="en">revids</span></dt><dd class="description"><p>A list of revision IDs to work on.
+</p></dd><dd class="info">Type: list of integers</dd><dd class="info">Separate values with <kbd>|</kbd> or <a href="/api.php?action=help&amp;modules=main#main.2Fdatatypes">alternative</a>. Maximum number of values is 50 (500 for bots).</dd><dt><span dir="ltr" lang="en">generator</span></dt><dd class="description"><p>Get the list of pages to work on by executing the specified query module.
+</p><p><strong>Note:</strong> Generator parameter names must be prefixed with a "g", see examples.
+</p><dl><dt><span dir="ltr" lang="en"><a href="api.php">allcategories</a></span></dt>
+<dd>Enumerate all categories.</dd>
+<dt><span dir="ltr" lang="en"><a href="api.php">alldeletedrevisions</a></span></dt>
+<dd>List all deleted revisions by a user or in a namespace.</dd>
+<dt><span dir="ltr" lang="en"><a href="api.php">allfileusages</a></span></dt>
+<dd>List all file usages, including non-existing.</dd>
+<dt><span dir="ltr" lang="en"><a href="api.php">allimages</a></span></dt>
+<dd>Enumerate all images sequentially.</dd>
+<dt><span dir="ltr" lang="en"><a href="api.php">alllinks</a></span></dt>
+<dd>Enumerate all links that point to a given namespace.</dd>
+<dt><span dir="ltr" lang="en"><a href="api.php">allpages</a></span></dt>
+<dd>Enumerate all pages sequentially in a given namespace.</dd>
+<dt><span dir="ltr" lang="en"><a href="api.php">allredirects</a></span></dt>
+<dd>List all redirects to a namespace.</dd>
+<dt><span dir="ltr" lang="en"><a href="api.php">allrevisions</a></span></dt>
+<dd>List all revisions.</dd>
+<dt><span dir="ltr" lang="en"><a href="api.php">alltransclusions</a></span></dt>
+<dd>List all transclusions (pages embedded using {{x}}), including non-existing.</dd>
+<dt><span dir="ltr" lang="en"><a href="api.php">backlinks</a></span></dt>
+<dd>Find all pages that link to the given page.</dd>
+<dt><span dir="ltr" lang="en"><a href="api.php">categories</a></span></dt>
+<dd>List all categories the pages belong to.</dd>
+<dt><span dir="ltr" lang="en"><a href="api.php">categorymembers</a></span></dt>
+<dd>List all pages in a given category.</dd>
+<dt><span dir="ltr" lang="en"><a href="api.php">deletedrevisions</a></span></dt>
+<dd>Get deleted revision information.</dd>
+<dt><span dir="ltr" lang="en"><a href="api.php">duplicatefiles</a></span></dt>
+<dd>List all files that are duplicates of the given files based on hash values.</dd>
+<dt><span dir="ltr" lang="en"><a href="api.php">embeddedin</a></span></dt>
+<dd>Find all pages that embed (transclude) the given title.</dd>
+<dt><span dir="ltr" lang="en"><a href="api.php">exturlusage</a></span></dt>
+<dd>Enumerate pages that contain a given URL.</dd>
+<dt><span dir="ltr" lang="en"><a href="api.php">fileusage</a></span></dt>
+<dd>Find all pages that use the given files.</dd>
+<dt><span dir="ltr" lang="en"><a href="api.php">images</a></span></dt>
+<dd>Returns all files contained on the given pages.</dd>
+<dt><span dir="ltr" lang="en"><a href="api.php">imageusage</a></span></dt>
+<dd>Find all pages that use the given image title.</dd>
+<dt><span dir="ltr" lang="en"><a href="api.php">iwbacklinks</a></span></dt>
+<dd>Find all pages that link to the given interwiki link.</dd>
+<dt><span dir="ltr" lang="en"><a href="api.php">langbacklinks</a></span></dt>
+<dd>Find all pages that link to the given language link.</dd>
+<dt><span dir="ltr" lang="en"><a href="api.php">links</a></span></dt>
+<dd>Returns all links from the given pages.</dd>
+<dt><span dir="ltr" lang="en"><a href="api.php">linkshere</a></span></dt>
+<dd>Find all pages that link to the given pages.</dd>
+<dt><span dir="ltr" lang="en"><a href="api.php">pageswithprop</a></span></dt>
+<dd>List all pages using a given page property.</dd>
+<dt><span dir="ltr" lang="en"><a href="api.php">prefixsearch</a></span></dt>
+<dd>Perform a prefix search for page titles.</dd>
+<dt><span dir="ltr" lang="en"><a href="api.php">protectedtitles</a></span></dt>
+<dd>List all titles protected from creation.</dd>
+<dt><span dir="ltr" lang="en"><a href="api.php">querypage</a></span></dt>
+<dd>Get a list provided by a QueryPage-based special page.</dd>
+<dt><span dir="ltr" lang="en"><a href="api.php">random</a></span></dt>
+<dd>Get a set of random pages.</dd>
+<dt><span dir="ltr" lang="en"><a href="api.php">recentchanges</a></span></dt>
+<dd>Enumerate recent changes.</dd>
+<dt><span dir="ltr" lang="en"><a href="api.php">redirects</a></span></dt>
+<dd>Returns all redirects to the given pages.</dd>
+<dt><span dir="ltr" lang="en"><a href="api.php">revisions</a></span></dt>
+<dd>Get revision information.</dd>
+<dt><span dir="ltr" lang="en"><a href="api.php">search</a></span></dt>
+<dd>Perform a full text search.</dd>
+<dt><span dir="ltr" lang="en"><a href="api.php">templates</a></span></dt>
+<dd>Returns all pages transcluded on the given pages.</dd>
+<dt><span dir="ltr" lang="en"><a href="api.php">transcludedin</a></span></dt>
+<dd>Find all pages that transclude the given pages.</dd>
+<dt><span dir="ltr" lang="en"><a href="api.php">watchlist</a></span></dt>
+<dd>Get recent changes to pages in the current user's watchlist.</dd>
+<dt><span dir="ltr" lang="en"><a href="api.php">watchlistraw</a></span></dt>
+<dd>Get all pages on the current user's watchlist.</dd></dl>
+</dd><dd class="info">One of the following values: <a href="api.php">allcategories</a>, <a href="api.php">alldeletedrevisions</a>, <a href="api.php">allfileusages</a>, <a href="api.php">allimages</a>, <a href="api.php">alllinks</a>, <a href="api.php">allpages</a>, <a href="api.php">allredirects</a>, <a href="api.php">allrevisions</a>, <a href="api.php">alltransclusions</a>, <a href="api.php">backlinks</a>, <a href="api.php">categories</a>, <a href="api.php">categorymembers</a>, <a href="api.php">deletedrevisions</a>, <a href="api.php">duplicatefiles</a>, <a href="api.php">embeddedin</a>, <a href="api.php">exturlusage</a>, <a href="api.php">fileusage</a>, <a href="api.php">images</a>, <a href="api.php">imageusage</a>, <a href="api.php">iwbacklinks</a>, <a href="api.php">langbacklinks</a>, <a href="api.php">links</a>, <a href="api.php">linkshere</a>, <a href="api.php">pageswithprop</a>, <a href="api.php">prefixsearch</a>, <a href="api.php">protectedtitles</a>, <a href="api.php">querypage</a>, <a href="api.php">random</a>, <a href="api.php">recentchanges</a>, <a href="api.php">redirects</a>, <a href="api.php">revisions</a>, <a href="api.php">search</a>, <a href="api.php">templates</a>, <a href="api.php">transcludedin</a>, <a href="api.php">watchlist</a>, <a href="api.php">watchlistraw</a></dd><dt><span dir="ltr" lang="en">redirects</span></dt><dd class="description"><p>Automatically resolve redirects in <var>titles</var>, <var>pageids</var>, and <var>revids</var>, and in pages returned by <var>generator</var>.
+</p></dd><dd class="info">Type: boolean (<a href="/api.php?action=help&amp;modules=main#main.2Fdatatypes">details</a>)</dd><dt><span dir="ltr" lang="en">converttitles</span></dt><dd class="description"><p>Convert titles to other variants if necessary. Only works if the wiki's content language supports variant conversion. Languages that support variant conversion include en, crh, gan, iu, kk, ku, shi, sr, tg, uz and zh.
+</p></dd><dd class="info">Type: boolean (<a href="/api.php?action=help&amp;modules=main#main.2Fdatatypes">details</a>)</dd><dt><span dir="ltr" lang="en">token</span></dt><dd class="description"><p>A "csrf" token retrieved from <a href="api.php">action=query&amp;meta=tokens</a>
+</p></dd><dd class="info">This parameter is required.</dd></dl></div>
+<div class="apihelp-block apihelp-examples"><div class="apihelp-block-head">Examples:</div><dl><dt>Rotate <kbd>File:Example.png</kbd> by <kbd>90</kbd> degrees.</dt><dd><a dir="ltr" href="api.php">api.php?action=imagerotate&amp;titles=File:Example.jpg&amp;rotation=90&amp;token=123ABC</a> <a href="index_php/Special_ApiSandbox.html"><small>[open in sandbox]</small></a></dd><dt>Rotate all images in <kbd>Category:Flip</kbd> by <kbd>180</kbd> degrees.</dt><dd><a dir="ltr" href="api.php">api.php?action=imagerotate&amp;generator=categorymembers&amp;gcmtitle=Category:Flip&amp;gcmtype=file&amp;rotation=180&amp;token=123ABC</a> <a href="index_php/Special_ApiSandbox.html"><small>[open in sandbox]</small></a></dd></dl></div>
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="index_php/Special_ApiHelp.html">https://tinkla.us/index.php/Special:ApiHelp</a>"</div>
+</div>
+</div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-141390218-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":1188});});</script> </body></html>

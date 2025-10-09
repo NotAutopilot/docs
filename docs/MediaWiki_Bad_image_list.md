@@ -1,0 +1,7 @@
+# MediaWiki:Bad image list
+
+The format is as follows:
+
+Only list items (lines starting with *) are considered.
+The first link on a line must be a link to a bad file.
+Any subsequent links on the same line are considered to be exceptions, i.e. pages where the file may occur inline.

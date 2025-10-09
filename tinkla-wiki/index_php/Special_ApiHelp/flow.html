@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>MediaWiki API help - Tinkla: Tinkering with Tesla</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"Special","wgCanonicalSpecialPageName":"ApiHelp","wgNamespaceNumber":-1,"wgPageName":"Special:ApiHelp","wgTitle":"ApiHelp","wgCurRevisionId":0,"wgRevisionId":0,"wgArticleId":0,"wgIsArticle":false,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":true,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Special:ApiHelp","wgRelevantArticleId":0,"wgRequestId":"effe0c57682aee24b679c644","wgCSPNonce":false,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgWikiEditorEnabledModules":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"ready","user.tokens":"loading","mediawiki.hlist":"ready","mediawiki.apihelp":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.skinning.interface":"ready"});mw.loader.implement("user.tokens@0tffind",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});RLPAGEMODULES=["site","mediawiki.page.startup","mediawiki.user","mediawiki.page.ready","mediawiki.searchSuggest"];mw.loader.load(RLPAGEMODULES);});</script>
+<link href="/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.apihelp%2Chlist%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.skinning.interface&amp;only=styles&amp;skin=apioutput" rel="stylesheet"/>
+<script async="" src="/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=apioutput"></script>
+<meta content="" name="ResourceLoaderDynamicStyles"/>
+<link href="/load.php?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=apioutput" rel="stylesheet"/>
+<meta content="MediaWiki 1.32.1" name="generator"/>
+<meta content="noindex,nofollow" name="robots"/>
+<link href="/favicon.ico" rel="shortcut icon"/>
+<link href="/opensearch_desc.php" rel="search" title="Tinkla: Tinkering with Tesla (en)" type="application/opensearchdescription+xml"/>
+<link href="https://tinkla.us/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
+<link href="https://www.mediawiki.org/wiki/Special:MyLanguage/Copyright" rel="license"/>
+<link href="/index.php?title=Special:RecentChanges&amp;feed=atom" rel="alternate" title="Tinkla: Tinkering with Tesla Atom feed" type="application/atom+xml"/>
+<!--[if lt IE 9]><script src="/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=Timeless&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns--1 ns-special mw-special-ApiHelp page-Special_ApiHelp rootpage-Special_ApiHelp skin-apioutput action-view">
+<div class="mw-body" role="main">
+<h1 class="firstHeading">MediaWiki API help</h1>
+<div class="mw-body-content">
+<div id="mw-content-text"><p>This is an auto-generated MediaWiki API documentation page.
+</p><p>Documentation and examples: <a class="external free" href="https://www.mediawiki.org/wiki/API" rel="noreferrer noopener" target="_blank">https://www.mediawiki.org/wiki/API</a>
+</p><h2 class="apihelp-header apihelp-module-name" dir="ltr" id="flow" lang="en">action=flow</h2><div class="apihelp-linktrail">(<a class="apihelp-linktrail" dir="ltr" href="index_php/Special_ApiHelp/main.html" lang="en">main</a> | <b dir="ltr" lang="en">flow</b>)</div>
+<div class="apihelp-block apihelp-flags"><ul><li><span class="apihelp-flag-readrights">This module requires read rights.</span></li><li><span class="apihelp-source">Source: <span dir="ltr" lang="en">Flow</span></span></li><li><span class="apihelp-license">License: <a href="index_php/Special_Version/License/Flow.html" title="Special:Version/License/Flow"><span dir="ltr" lang="en">GPL-2.0-or-later</span></a></span></li></ul></div>
+<p>Allows actions to be taken on Flow pages.
+</p>
+<div class="apihelp-block apihelp-help-urls"><ul><li><a dir="ltr" href="https://www.mediawiki.org/wiki/Extension:Flow/API">https://www.mediawiki.org/wiki/Extension:Flow/API</a></li></ul></div>
+<div class="apihelp-block apihelp-parameters"><div class="apihelp-block-head">Parameters:</div><dl><dt><span dir="ltr" lang="en">submodule</span></dt><dd class="description"><p>The Flow submodule to invoke.
+</p><dl><dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=flow%2Bedit-header">edit-header</a></span></dt>
+<dd>Edits a board description.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=flow%2Bedit-post">edit-post</a></span></dt>
+<dd>Edits a post's content.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=flow%2Bedit-title">edit-title</a></span></dt>
+<dd>Edits a topic's title.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=flow%2Bedit-topic-summary">edit-topic-summary</a></span></dt>
+<dd>Edits a topic summary's content.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=flow%2Block-topic">lock-topic</a></span></dt>
+<dd>Lock or unlock a Flow topic.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=flow%2Bmoderate-post">moderate-post</a></span></dt>
+<dd>Moderates a Flow post.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=flow%2Bmoderate-topic">moderate-topic</a></span></dt>
+<dd>Moderates a Flow topic.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=flow%2Bnew-topic">new-topic</a></span></dt>
+<dd>Creates a new Flow topic on the given workflow.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=flow%2Breply">reply</a></span></dt>
+<dd>Replies to a post.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=flow%2Bundo-edit-header">undo-edit-header</a></span></dt>
+<dd>Retrieve information necessary to undo description edits.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=flow%2Bundo-edit-post">undo-edit-post</a></span></dt>
+<dd>Retrieve information necessary to undo post edit.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=flow%2Bundo-edit-topic-summary">undo-edit-topic-summary</a></span></dt>
+<dd>Retrieve information necessary to undo topic summary edits.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=flow%2Bview-header">view-header</a></span></dt>
+<dd>View a board description.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=flow%2Bview-post">view-post</a></span></dt>
+<dd>View a post.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=flow%2Bview-post-history">view-post-history</a></span></dt>
+<dd>View the revision history of a post.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=flow%2Bview-topic">view-topic</a></span></dt>
+<dd>View a topic.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=flow%2Bview-topic-history">view-topic-history</a></span></dt>
+<dd>View the revision history of a topic.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=flow%2Bview-topic-summary">view-topic-summary</a></span></dt>
+<dd>View a topic summary.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=flow%2Bview-topiclist">view-topiclist</a></span></dt>
+<dd>View a list of topics.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=flow%2Bclose-open-topic">close-open-topic</a></span></dt>
+<dd><span class="apihelp-deprecated">Deprecated.</span> Deprecated in favor of <a href="/api.php?action=help&amp;modules=flow%2Block-topic">action=flow&amp;submodule=lock-topic</a>.</dd></dl>
+</dd><dd class="info">This parameter is required.</dd><dd class="info">One of the following values: <a href="/api.php?action=help&amp;modules=flow%2Bedit-header"><span dir="ltr" lang="en">edit-header</span></a>, <a href="/api.php?action=help&amp;modules=flow%2Bedit-post"><span dir="ltr" lang="en">edit-post</span></a>, <a href="/api.php?action=help&amp;modules=flow%2Bedit-title"><span dir="ltr" lang="en">edit-title</span></a>, <a href="/api.php?action=help&amp;modules=flow%2Bedit-topic-summary"><span dir="ltr" lang="en">edit-topic-summary</span></a>, <a href="/api.php?action=help&amp;modules=flow%2Block-topic"><span dir="ltr" lang="en">lock-topic</span></a>, <a href="/api.php?action=help&amp;modules=flow%2Bmoderate-post"><span dir="ltr" lang="en">moderate-post</span></a>, <a href="/api.php?action=help&amp;modules=flow%2Bmoderate-topic"><span dir="ltr" lang="en">moderate-topic</span></a>, <a href="/api.php?action=help&amp;modules=flow%2Bnew-topic"><span dir="ltr" lang="en">new-topic</span></a>, <a href="/api.php?action=help&amp;modules=flow%2Breply"><span dir="ltr" lang="en">reply</span></a>, <a href="/api.php?action=help&amp;modules=flow%2Bundo-edit-header"><span dir="ltr" lang="en">undo-edit-header</span></a>, <a href="/api.php?action=help&amp;modules=flow%2Bundo-edit-post"><span dir="ltr" lang="en">undo-edit-post</span></a>, <a href="/api.php?action=help&amp;modules=flow%2Bundo-edit-topic-summary"><span dir="ltr" lang="en">undo-edit-topic-summary</span></a>, <a href="/api.php?action=help&amp;modules=flow%2Bview-header"><span dir="ltr" lang="en">view-header</span></a>, <a href="/api.php?action=help&amp;modules=flow%2Bview-post"><span dir="ltr" lang="en">view-post</span></a>, <a href="/api.php?action=help&amp;modules=flow%2Bview-post-history"><span dir="ltr" lang="en">view-post-history</span></a>, <a href="/api.php?action=help&amp;modules=flow%2Bview-topic"><span dir="ltr" lang="en">view-topic</span></a>, <a href="/api.php?action=help&amp;modules=flow%2Bview-topic-history"><span dir="ltr" lang="en">view-topic-history</span></a>, <a href="/api.php?action=help&amp;modules=flow%2Bview-topic-summary"><span dir="ltr" lang="en">view-topic-summary</span></a>, <a href="/api.php?action=help&amp;modules=flow%2Bview-topiclist"><span dir="ltr" lang="en">view-topiclist</span></a>, <a href="/api.php?action=help&amp;modules=flow%2Bclose-open-topic"><span class="apihelp-deprecated-value" dir="ltr" lang="en">close-open-topic</span></a></dd><dt><span dir="ltr" lang="en">page</span></dt><dd class="description"><p>The page to take the action on.
+</p></dd><dd class="info">Default: <span dir="auto">Topic:Flow-enabled_page</span></dd><dt><span dir="ltr" lang="en">token</span></dt><dd class="description"><p>A token retrieved from <a href="api.php">action=query&amp;meta=tokens</a>
+</p></dd><dd class="info">Default: <span class="apihelp-empty">(empty)</span></dd></dl></div>
+<div class="apihelp-block apihelp-examples"><div class="apihelp-block-head">Example:</div><dl><dt>Edit the description of "<a class="new" href="/index.php?title=Talk:Sandbox&amp;action=edit&amp;redlink=1" title="Talk:Sandbox (page does not exist)">Talk:Sandbox</a>"</dt><dd><a dir="ltr" href="/api.php?action=flow&amp;submodule=edit-header&amp;page=Talk:Sandbox&amp;ehprev_revision=???&amp;ehcontent=Nice%20to&amp;20meet%20you">api.php?action=flow&amp;submodule=edit-header&amp;page=Talk:Sandbox&amp;ehprev_revision=???&amp;ehcontent=Nice%20to&amp;20meet%20you</a> <a href="/index.php/Special:ApiSandbox#action=flow&amp;submodule=edit-header&amp;page=Talk:Sandbox&amp;ehprev_revision=???&amp;ehcontent=Nice%20to&amp;20meet%20you"><small>[open in sandbox]</small></a></dd></dl></div>
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="index_php/Special_ApiHelp.html">https://tinkla.us/index.php/Special:ApiHelp</a>"</div>
+</div>
+</div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-141390218-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":609});});</script> </body></html>

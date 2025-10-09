@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>MediaWiki API help - Tinkla: Tinkering with Tesla</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"Special","wgCanonicalSpecialPageName":"ApiHelp","wgNamespaceNumber":-1,"wgPageName":"Special:ApiHelp","wgTitle":"ApiHelp","wgCurRevisionId":0,"wgRevisionId":0,"wgArticleId":0,"wgIsArticle":false,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":true,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Special:ApiHelp","wgRelevantArticleId":0,"wgRequestId":"3a0479726a2d25863c6e179b","wgCSPNonce":false,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgWikiEditorEnabledModules":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"ready","user.tokens":"loading","mediawiki.hlist":"ready","mediawiki.apihelp":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.skinning.interface":"ready"});mw.loader.implement("user.tokens@0tffind",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});RLPAGEMODULES=["site","mediawiki.page.startup","mediawiki.user","mediawiki.page.ready","mediawiki.searchSuggest"];mw.loader.load(RLPAGEMODULES);});</script>
+<link href="/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.apihelp%2Chlist%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.skinning.interface&amp;only=styles&amp;skin=apioutput" rel="stylesheet"/>
+<script async="" src="/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=apioutput"></script>
+<meta content="" name="ResourceLoaderDynamicStyles"/>
+<link href="/load.php?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=apioutput" rel="stylesheet"/>
+<meta content="MediaWiki 1.32.1" name="generator"/>
+<meta content="noindex,nofollow" name="robots"/>
+<link href="/favicon.ico" rel="shortcut icon"/>
+<link href="/opensearch_desc.php" rel="search" title="Tinkla: Tinkering with Tesla (en)" type="application/opensearchdescription+xml"/>
+<link href="https://tinkla.us/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
+<link href="https://www.mediawiki.org/wiki/Special:MyLanguage/Copyright" rel="license"/>
+<link href="/index.php?title=Special:RecentChanges&amp;feed=atom" rel="alternate" title="Tinkla: Tinkering with Tesla Atom feed" type="application/atom+xml"/>
+<!--[if lt IE 9]><script src="/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=Timeless&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns--1 ns-special mw-special-ApiHelp page-Special_ApiHelp rootpage-Special_ApiHelp skin-apioutput action-view">
+<div class="mw-body" role="main">
+<h1 class="firstHeading">MediaWiki API help</h1>
+<div class="mw-body-content">
+<div id="mw-content-text"><p>This is an auto-generated MediaWiki API documentation page.
+</p><p>Documentation and examples: <a class="external free" href="https://www.mediawiki.org/wiki/API" rel="noreferrer noopener" target="_blank">https://www.mediawiki.org/wiki/API</a>
+</p><h2 class="apihelp-header apihelp-module-name" dir="ltr" id="parse" lang="en">action=parse</h2><div class="apihelp-linktrail">(<a class="apihelp-linktrail" dir="ltr" href="index_php/Special_ApiHelp/main.html" lang="en">main</a> | <b dir="ltr" lang="en">parse</b>)</div>
+<div class="apihelp-block apihelp-flags"><ul><li><span class="apihelp-flag-readrights">This module requires read rights.</span></li><li><span class="apihelp-source">Source: <span dir="ltr" lang="en">MediaWiki</span></span></li><li><span class="apihelp-license">License: <a href="/index.php/Special:Version/License/MediaWiki" title="Special:Version/License/MediaWiki"><span dir="ltr" lang="en">GPL-2.0-or-later</span></a></span></li></ul></div>
+<p>Parses content and returns parser output.
+</p><p>See the various prop-modules of <kbd><a href="api.php">action=query</a></kbd> to get information from the current version of a page.
+</p><p>There are several ways to specify the text to parse:
+</p>
+<ol><li>Specify a page or revision, using <var>page</var>, <var>pageid</var>, or <var>oldid</var>.</li>
+<li>Specify content explicitly, using <var>text</var>, <var>title</var>, <var>revid</var>, and <var>contentmodel</var>.</li>
+<li>Specify only a summary to parse. <var>prop</var> should be given an empty value.</li></ol>
+<div class="apihelp-block apihelp-help-urls"><ul><li><a dir="ltr" href="https://www.mediawiki.org/wiki/Special:MyLanguage/API:Parsing_wikitext#parse">https://www.mediawiki.org/wiki/Special:MyLanguage/API:Parsing_wikitext#parse</a></li></ul></div>
+<div class="apihelp-block apihelp-parameters"><div class="apihelp-block-head">Parameters:</div><dl><dt><span dir="ltr" lang="en">title</span></dt><dd class="description"><p>Title of page the text belongs to. If omitted, <var>contentmodel</var> must be specified, and <a class="new" href="/index.php?title=API&amp;action=edit&amp;redlink=1" title="API (page does not exist)">API</a> will be used as the title.
+</p></dd><dt><span dir="ltr" lang="en">text</span></dt><dd class="description"><p>Text to parse. Use <var>title</var> or <var>contentmodel</var> to control the content model.
+</p></dd><dt><span dir="ltr" lang="en">revid</span></dt><dd class="description"><p>Revision ID, for <code>{{REVISIONID}}</code> and similar variables.
+</p></dd><dd class="info">Type: integer</dd><dt><span dir="ltr" lang="en">summary</span></dt><dd class="description"><p>Summary to parse.
+</p></dd><dt><span dir="ltr" lang="en">page</span></dt><dd class="description"><p>Parse the content of this page. Cannot be used together with <var>text</var> and <var>title</var>.
+</p></dd><dt><span dir="ltr" lang="en">pageid</span></dt><dd class="description"><p>Parse the content of this page. Overrides <var>page</var>.
+</p></dd><dd class="info">Type: integer</dd><dt><span dir="ltr" lang="en">redirects</span></dt><dd class="description"><p>If <var>page</var> or <var>pageid</var> is set to a redirect, resolve it.
+</p></dd><dd class="info">Type: boolean (<a href="/api.php?action=help&amp;modules=main#main.2Fdatatypes">details</a>)</dd><dt><span dir="ltr" lang="en">oldid</span></dt><dd class="description"><p>Parse the content of this revision. Overrides <var>page</var> and <var>pageid</var>.
+</p></dd><dd class="info">Type: integer</dd><dt><span dir="ltr" lang="en">prop</span></dt><dd class="description"><p>Which pieces of information to get:
+</p><dl><dt><span dir="ltr" lang="en">text</span></dt>
+<dd>Gives the parsed text of the wikitext.</dd>
+<dt><span dir="ltr" lang="en">langlinks</span></dt>
+<dd>Gives the language links in the parsed wikitext.</dd>
+<dt><span dir="ltr" lang="en">categories</span></dt>
+<dd>Gives the categories in the parsed wikitext.</dd>
+<dt><span dir="ltr" lang="en">categorieshtml</span></dt>
+<dd>Gives the HTML version of the categories.</dd>
+<dt><span dir="ltr" lang="en">links</span></dt>
+<dd>Gives the internal links in the parsed wikitext.</dd>
+<dt><span dir="ltr" lang="en">templates</span></dt>
+<dd>Gives the templates in the parsed wikitext.</dd>
+<dt><span dir="ltr" lang="en">images</span></dt>
+<dd>Gives the images in the parsed wikitext.</dd>
+<dt><span dir="ltr" lang="en">externallinks</span></dt>
+<dd>Gives the external links in the parsed wikitext.</dd>
+<dt><span dir="ltr" lang="en">sections</span></dt>
+<dd>Gives the sections in the parsed wikitext.</dd>
+<dt><span dir="ltr" lang="en">revid</span></dt>
+<dd>Adds the revision ID of the parsed page.</dd>
+<dt><span dir="ltr" lang="en">displaytitle</span></dt>
+<dd>Adds the title of the parsed wikitext.</dd>
+<dt><span dir="ltr" lang="en">headhtml</span></dt>
+<dd>Gives parsed <code>&lt;head&gt;</code> of the page.</dd>
+<dt><span dir="ltr" lang="en">modules</span></dt>
+<dd>Gives the ResourceLoader modules used on the page. To load, use <code>mw.loader.using()</code>. Either <kbd>jsconfigvars</kbd> or <kbd>encodedjsconfigvars</kbd> must be requested jointly with <kbd>modules</kbd>.</dd>
+<dt><span dir="ltr" lang="en">jsconfigvars</span></dt>
+<dd>Gives the JavaScript configuration variables specific to the page. To apply, use <code>mw.config.set()</code>.</dd>
+<dt><span dir="ltr" lang="en">encodedjsconfigvars</span></dt>
+<dd>Gives the JavaScript configuration variables specific to the page as a JSON string.</dd>
+<dt><span dir="ltr" lang="en">indicators</span></dt>
+<dd>Gives the HTML of page status indicators used on the page.</dd>
+<dt><span dir="ltr" lang="en">iwlinks</span></dt>
+<dd>Gives interwiki links in the parsed wikitext.</dd>
+<dt><span dir="ltr" lang="en">wikitext</span></dt>
+<dd>Gives the original wikitext that was parsed.</dd>
+<dt><span dir="ltr" lang="en">properties</span></dt>
+<dd>Gives various properties defined in the parsed wikitext.</dd>
+<dt><span dir="ltr" lang="en">limitreportdata</span></dt>
+<dd>Gives the limit report in a structured way. Gives no data, when <var>disablelimitreport</var> is set.</dd>
+<dt><span dir="ltr" lang="en">limitreporthtml</span></dt>
+<dd>Gives the HTML version of the limit report. Gives no data, when <var>disablelimitreport</var> is set.</dd>
+<dt><span dir="ltr" lang="en">parsetree</span></dt>
+<dd>The XML parse tree of revision content (requires content model <code>wikitext</code>)</dd>
+<dt><span dir="ltr" lang="en">parsewarnings</span></dt>
+<dd>Gives the warnings that occurred while parsing content.</dd>
+<dt><span dir="ltr" lang="en">headitems</span></dt>
+<dd><span class="apihelp-deprecated">Deprecated.</span> Gives items to put in the <code>&lt;head&gt;</code> of the page.</dd></dl>
+</dd><dd class="info">Values (separate with <kbd>|</kbd> or <a href="/api.php?action=help&amp;modules=main#main.2Fdatatypes">alternative</a>): <span dir="auto">text</span>, <span dir="auto">langlinks</span>, <span dir="auto">categories</span>, <span dir="auto">categorieshtml</span>, <span dir="auto">links</span>, <span dir="auto">templates</span>, <span dir="auto">images</span>, <span dir="auto">externallinks</span>, <span dir="auto">sections</span>, <span dir="auto">revid</span>, <span dir="auto">displaytitle</span>, <span dir="auto">headhtml</span>, <span dir="auto">modules</span>, <span dir="auto">jsconfigvars</span>, <span dir="auto">encodedjsconfigvars</span>, <span dir="auto">indicators</span>, <span dir="auto">iwlinks</span>, <span dir="auto">wikitext</span>, <span dir="auto">properties</span>, <span dir="auto">limitreportdata</span>, <span dir="auto">limitreporthtml</span>, <span dir="auto">parsetree</span>, <span dir="auto">parsewarnings</span>, <span class="apihelp-deprecated-value" dir="auto">headitems</span></dd><dd class="info">Default: <span dir="auto">text|langlinks|categories|links|templates|images|externallinks|sections|revid|displaytitle|iwlinks|properties|parsewarnings</span></dd><dt><span dir="ltr" lang="en">wrapoutputclass</span></dt><dd class="description"><p>CSS class to use to wrap the parser output.
+</p></dd><dd class="info">Default: <span dir="auto">mw-parser-output</span></dd><dt><span dir="ltr" lang="en">pst</span></dt><dd class="description"><p>Do a pre-save transform on the input before parsing it. Only valid when used with text.
+</p></dd><dd class="info">Type: boolean (<a href="/api.php?action=help&amp;modules=main#main.2Fdatatypes">details</a>)</dd><dt><span dir="ltr" lang="en">onlypst</span></dt><dd class="description"><p>Do a pre-save transform (PST) on the input, but don't parse it. Returns the same wikitext, after a PST has been applied. Only valid when used with <var>text</var>.
+</p></dd><dd class="info">Type: boolean (<a href="/api.php?action=help&amp;modules=main#main.2Fdatatypes">details</a>)</dd><dt><span dir="ltr" lang="en">effectivelanglinks</span></dt><dd class="info"><strong class="apihelp-deprecated">Deprecated.</strong></dd><dd class="description"><p>Includes language links supplied by extensions (for use with <kbd>prop=langlinks</kbd>).
+</p></dd><dd class="info">Type: boolean (<a href="/api.php?action=help&amp;modules=main#main.2Fdatatypes">details</a>)</dd><dt><span dir="ltr" lang="en">section</span></dt><dd class="description"><p>Only parse the content of this section number.
+</p><p>When <kbd>new</kbd>, parse <var>text</var> and <var>sectiontitle</var> as if adding a new section to the page.
+</p><p><kbd>new</kbd> is allowed only when specifying <var>text</var>.
+</p></dd><dt><span dir="ltr" lang="en">sectiontitle</span></dt><dd class="description"><p>New section title when <var>section</var> is <kbd>new</kbd>.
+</p><p>Unlike page editing, this does not fall back to <var>summary</var> when omitted or empty.
+</p></dd><dt><span dir="ltr" lang="en">disablepp</span></dt><dd class="info"><strong class="apihelp-deprecated">Deprecated.</strong></dd><dd class="description"><p>Use <var>disablelimitreport</var> instead.
+</p></dd><dd class="info">Type: boolean (<a href="/api.php?action=help&amp;modules=main#main.2Fdatatypes">details</a>)</dd><dt><span dir="ltr" lang="en">disablelimitreport</span></dt><dd class="description"><p>Omit the limit report ("NewPP limit report") from the parser output.
+</p></dd><dd class="info">Type: boolean (<a href="/api.php?action=help&amp;modules=main#main.2Fdatatypes">details</a>)</dd><dt><span dir="ltr" lang="en">disableeditsection</span></dt><dd class="description"><p>Omit edit section links from the parser output.
+</p></dd><dd class="info">Type: boolean (<a href="/api.php?action=help&amp;modules=main#main.2Fdatatypes">details</a>)</dd><dt><span dir="ltr" lang="en">disabletidy</span></dt><dd class="info"><strong class="apihelp-deprecated">Deprecated.</strong></dd><dd class="description"><p>Do not run HTML cleanup (e.g. tidy) on the parser output.
+</p></dd><dd class="info">Type: boolean (<a href="/api.php?action=help&amp;modules=main#main.2Fdatatypes">details</a>)</dd><dt><span dir="ltr" lang="en">disablestylededuplication</span></dt><dd class="description"><p>Do not deduplicate inline stylesheets in the parser output.
+</p></dd><dd class="info">Type: boolean (<a href="/api.php?action=help&amp;modules=main#main.2Fdatatypes">details</a>)</dd><dt><span dir="ltr" lang="en">generatexml</span></dt><dd class="info"><strong class="apihelp-deprecated">Deprecated.</strong></dd><dd class="description"><p>Generate XML parse tree (requires content model <code>wikitext</code>; replaced by <kbd>prop=parsetree</kbd>).
+</p></dd><dd class="info">Type: boolean (<a href="/api.php?action=help&amp;modules=main#main.2Fdatatypes">details</a>)</dd><dt><span dir="ltr" lang="en">preview</span></dt><dd class="description"><p>Parse in preview mode.
+</p></dd><dd class="info">Type: boolean (<a href="/api.php?action=help&amp;modules=main#main.2Fdatatypes">details</a>)</dd><dt><span dir="ltr" lang="en">sectionpreview</span></dt><dd class="description"><p>Parse in section preview mode (enables preview mode too).
+</p></dd><dd class="info">Type: boolean (<a href="/api.php?action=help&amp;modules=main#main.2Fdatatypes">details</a>)</dd><dt><span dir="ltr" lang="en">disabletoc</span></dt><dd class="description"><p>Omit table of contents in output.
+</p></dd><dd class="info">Type: boolean (<a href="/api.php?action=help&amp;modules=main#main.2Fdatatypes">details</a>)</dd><dt><span dir="ltr" lang="en">useskin</span></dt><dd class="description"><p>Apply the selected skin to the parser output. May affect the following properties: <kbd>langlinks</kbd>, <kbd>headitems</kbd>, <kbd>modules</kbd>, <kbd>jsconfigvars</kbd>, <kbd>indicators</kbd>.
+</p></dd><dd class="info">One of the following values: <span dir="auto">monobook</span>, <span dir="auto">timeless</span>, <span dir="auto">vector</span></dd><dt><span dir="ltr" lang="en">contentformat</span></dt><dd class="description"><p>Content serialization format used for the input text. Only valid when used with text.
+</p></dd><dd class="info">One of the following values: <span dir="auto">application/json</span>, <span dir="auto">application/xml</span>, <span dir="auto">text/x-wiki</span>, <span dir="auto">text/javascript</span>, <span dir="auto">text/css</span>, <span dir="auto">text/plain</span></dd><dt><span dir="ltr" lang="en">contentmodel</span></dt><dd class="description"><p>Content model of the input text. If omitted, title must be specified, and default will be the model of the specified title. Only valid when used with text.
+</p></dd><dd class="info">One of the following values: <span dir="auto">GadgetDefinition</span>, <span dir="auto">flow-board</span>, <span dir="auto">XML Data</span>, <span dir="auto">wikitext</span>, <span dir="auto">javascript</span>, <span dir="auto">json</span>, <span dir="auto">css</span>, <span dir="auto">text</span></dd></dl></div>
+<div class="apihelp-block apihelp-examples"><div class="apihelp-block-head">Examples:</div><dl><dt>Parse a page.</dt><dd><a dir="ltr" href="api.php">api.php?action=parse&amp;page=Project:Sandbox</a> <a href="index_php/Special_ApiSandbox.html"><small>[open in sandbox]</small></a></dd><dt>Parse wikitext.</dt><dd><a dir="ltr" href="api.php">api.php?action=parse&amp;text={{Project:Sandbox}}&amp;contentmodel=wikitext</a> <a href="index_php/Special_ApiSandbox.html"><small>[open in sandbox]</small></a></dd><dt>Parse wikitext, specifying the page title.</dt><dd><a dir="ltr" href="api.php">api.php?action=parse&amp;text={{PAGENAME}}&amp;title=Test</a> <a href="index_php/Special_ApiSandbox.html"><small>[open in sandbox]</small></a></dd><dt>Parse a summary.</dt><dd><a dir="ltr" href="api.php">api.php?action=parse&amp;summary=Some+[[link]]&amp;prop=</a> <a href="index_php/Special_ApiSandbox.html"><small>[open in sandbox]</small></a></dd></dl></div>
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="index_php/Special_ApiHelp.html">https://tinkla.us/index.php/Special:ApiHelp</a>"</div>
+</div>
+</div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-141390218-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":425});});</script> </body></html>

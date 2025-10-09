@@ -1,0 +1,139 @@
+site_name: Tinkla Wiki
+site_description: Community documentation for running OpenPilot on Tesla vehicles
+site_author: Tinkla Community
+site_url: https://tinkla.us
+
+theme:
+  name: shadcn
+  palette: slate
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+plugins:
+  - search:
+      lang: en
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/BogGyver/openpilot
+      name: GitHub Repository
+    - icon: fontawesome/solid/globe
+      link: https://comma.ai
+      name: Comma.ai
+
+nav:
+  - Home: index.md
+
+  - Getting Started:
+    - Welcome: Welcome_to_Tinkla_.md
+    - Overview: Main_Page.md
+    - Old Versions: Old_versions_of_OP.md
+
+  - Vehicle Support:
+    - preAP Model S: OpenPilot_for_preAP_Tesla_ModelS.md
+    - OBD2 Port Info: Tesla_Model_S_preAP_OBD2_port.md
+    - CAN Bus Details: Tesla_CAN_Bus.md
+
+  - Hardware:
+    - Core Devices:
+      - Comma Device: Comma_devkit.md
+      - EON: EON.md
+      - EON Details: The_EON.md
+      - Panda: Panda.md
+      - Panda Details: The_Panda.md
+      - SoftPanda: SoftPanda.md
+
+    - preAP Components:
+      - OBD-C Adapter: Tinkla_OBD-C_Adapter.md
+      - Tesla Radar: Tesla_Bosch_Radar.md
+      - Radar (EON): Tesla_Bosch_Radar_EON.md
+      - Pedal Interceptor: Pedal_Interceptor.md
+      - Pedal (EON): Pedal_Interceptor_EON.md
+      - Tinkla Buddy:
+        - Overview: Tinkla_Buddy.md
+        - Installation: Tinkla_Buddy_Installation.md
+        - Configuration: Tinkla_Buddy_Configuration.md
+        - Install Kit: Tinkla_Buddy_Install_Kit.md
+        - Admin: Tinkla_Buddy_Admin.md
+
+    - Autopilot Components:
+      - AP1 Harness: AP1_Harness.md
+      - AP2 Harness: AP2_Harness.md
+      - Tinkla Relay: Tinkla_Relay.md
+
+    - Legacy Hardware:
+      - Tesla Giraffe: Tesla_Giraffe.md
+      - EPAS Harness: EPAS_harness.md
+
+  - Configuration:
+    - Tesla Unity Config: Tesla_Unity_Configuration.md
+    - OP Config File: OpenPilot_Configuration_File.md
+    - EON Bash Profile: EON_bash_profile.md
+    - SSH Access: SSH_Into_Your_Device.md
+
+  - Features & Integration:
+    - Longitudinal Control: Longitudinal_Control__ACC.md
+    - IC Integration: PreAP__IC_Integration_with_OP.md
+    - Map Integration: Map_Integration.md
+    - Removing IC: Removing_the_Instrument_Cluster.md
+    - Root Access: Root_Access_To_IC_and_CID.md
+
+  - Tools & Reference:
+    - Cabana CAN Tool: Cabana.md
+    - AWG Wire Chart: AWG_chart.md
+    - Power Options: Power_Options_For_Accessories.md
+    - Cooling (Noctua): Noctua_fan.md
+
+  - Community:
+    - Feedback & Ideas: Talk_Feedback__Ideas__Comments_.md
+    - User Installations: Installed_OP_Instances.md
+    - Service Centers: Tesla_Service_Center_Frustration.md
+
+  - Legal:
+    - Disclaimer & License: Tinkla_General_disclaimer.md

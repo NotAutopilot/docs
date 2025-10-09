@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>MediaWiki API help - Tinkla: Tinkering with Tesla</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"Special","wgCanonicalSpecialPageName":"ApiHelp","wgNamespaceNumber":-1,"wgPageName":"Special:ApiHelp","wgTitle":"ApiHelp","wgCurRevisionId":0,"wgRevisionId":0,"wgArticleId":0,"wgIsArticle":false,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":true,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Special:ApiHelp","wgRelevantArticleId":0,"wgRequestId":"c238ffc9420b64e6e72202cc","wgCSPNonce":false,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgWikiEditorEnabledModules":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"ready","user.tokens":"loading","mediawiki.hlist":"ready","mediawiki.apihelp":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.skinning.interface":"ready"});mw.loader.implement("user.tokens@0tffind",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});RLPAGEMODULES=["site","mediawiki.page.startup","mediawiki.user","mediawiki.page.ready","mediawiki.searchSuggest"];mw.loader.load(RLPAGEMODULES);});</script>
+<link href="/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.apihelp%2Chlist%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.skinning.interface&amp;only=styles&amp;skin=apioutput" rel="stylesheet"/>
+<script async="" src="/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=apioutput"></script>
+<meta content="" name="ResourceLoaderDynamicStyles"/>
+<link href="/load.php?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=apioutput" rel="stylesheet"/>
+<meta content="MediaWiki 1.32.1" name="generator"/>
+<meta content="noindex,nofollow" name="robots"/>
+<link href="/favicon.ico" rel="shortcut icon"/>
+<link href="/opensearch_desc.php" rel="search" title="Tinkla: Tinkering with Tesla (en)" type="application/opensearchdescription+xml"/>
+<link href="https://tinkla.us/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
+<link href="https://www.mediawiki.org/wiki/Special:MyLanguage/Copyright" rel="license"/>
+<link href="/index.php?title=Special:RecentChanges&amp;feed=atom" rel="alternate" title="Tinkla: Tinkering with Tesla Atom feed" type="application/atom+xml"/>
+<!--[if lt IE 9]><script src="/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=Timeless&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns--1 ns-special mw-special-ApiHelp page-Special_ApiHelp rootpage-Special_ApiHelp skin-apioutput action-view">
+<div class="mw-body" role="main">
+<h1 class="firstHeading">MediaWiki API help</h1>
+<div class="mw-body-content">
+<div id="mw-content-text"><p>This is an auto-generated MediaWiki API documentation page.
+</p><p>Documentation and examples: <a class="external free" href="https://www.mediawiki.org/wiki/API" rel="noreferrer noopener" target="_blank">https://www.mediawiki.org/wiki/API</a>
+</p><h2 class="apihelp-header apihelp-module-name" dir="ltr" id="query" lang="en">action=query</h2><div class="apihelp-linktrail">(<a class="apihelp-linktrail" dir="ltr" href="index_php/Special_ApiHelp/main.html" lang="en">main</a> | <b dir="ltr" lang="en">query</b>)</div>
+<div class="apihelp-block apihelp-flags"><ul><li><span class="apihelp-flag-readrights">This module requires read rights.</span></li><li><span class="apihelp-source">Source: <span dir="ltr" lang="en">MediaWiki</span></span></li><li><span class="apihelp-license">License: <a href="/index.php/Special:Version/License/MediaWiki" title="Special:Version/License/MediaWiki"><span dir="ltr" lang="en">GPL-2.0-or-later</span></a></span></li></ul></div>
+<p>Fetch data from and about MediaWiki.
+</p><p>All data modifications will first have to use query to acquire a token to prevent abuse from malicious sites.
+</p>
+<div class="apihelp-block apihelp-help-urls"><ul><li><a dir="ltr" href="https://www.mediawiki.org/wiki/Special:MyLanguage/API:Query">https://www.mediawiki.org/wiki/Special:MyLanguage/API:Query</a></li><li><a dir="ltr" href="https://www.mediawiki.org/wiki/Special:MyLanguage/API:Meta">https://www.mediawiki.org/wiki/Special:MyLanguage/API:Meta</a></li><li><a dir="ltr" href="https://www.mediawiki.org/wiki/Special:MyLanguage/API:Properties">https://www.mediawiki.org/wiki/Special:MyLanguage/API:Properties</a></li><li><a dir="ltr" href="https://www.mediawiki.org/wiki/Special:MyLanguage/API:Lists">https://www.mediawiki.org/wiki/Special:MyLanguage/API:Lists</a></li></ul></div>
+<div class="apihelp-block apihelp-parameters"><div class="apihelp-block-head">Parameters:</div><dl><dt><span dir="ltr" lang="en">prop</span></dt><dd class="description"><p>Which properties to get for the queried pages.
+</p><dl><dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Bcategories">categories</a></span></dt>
+<dd>List all categories the pages belong to.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Bcategoryinfo">categoryinfo</a></span></dt>
+<dd>Returns information about the given categories.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Bcontributors">contributors</a></span></dt>
+<dd>Get the list of logged-in contributors and the count of anonymous contributors to a page.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Bdeletedrevisions">deletedrevisions</a></span></dt>
+<dd>Get deleted revision information.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Bduplicatefiles">duplicatefiles</a></span></dt>
+<dd>List all files that are duplicates of the given files based on hash values.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Bextlinks">extlinks</a></span></dt>
+<dd>Returns all external URLs (not interwikis) from the given pages.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Bfileusage">fileusage</a></span></dt>
+<dd>Find all pages that use the given files.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Bimageinfo">imageinfo</a></span></dt>
+<dd>Returns file information and upload history.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Bimages">images</a></span></dt>
+<dd>Returns all files contained on the given pages.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Binfo">info</a></span></dt>
+<dd>Get basic page information.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Biwlinks">iwlinks</a></span></dt>
+<dd>Returns all interwiki links from the given pages.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Blanglinks">langlinks</a></span></dt>
+<dd>Returns all interlanguage links from the given pages.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Blinks">links</a></span></dt>
+<dd>Returns all links from the given pages.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Blinkshere">linkshere</a></span></dt>
+<dd>Find all pages that link to the given pages.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Bpageprops">pageprops</a></span></dt>
+<dd>Get various page properties defined in the page content.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Bredirects">redirects</a></span></dt>
+<dd>Returns all redirects to the given pages.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Breferences">references</a></span></dt>
+<dd>Return a data representation of references associated with the given pages.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Brevisions">revisions</a></span></dt>
+<dd>Get revision information.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Bstashimageinfo">stashimageinfo</a></span></dt>
+<dd>Returns file information for stashed files.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Btemplates">templates</a></span></dt>
+<dd>Returns all pages transcluded on the given pages.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Btranscludedin">transcludedin</a></span></dt>
+<dd>Find all pages that transclude the given pages.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Bflowinfo">flowinfo</a></span></dt>
+<dd><span class="apihelp-deprecated">Deprecated.</span> Get basic Flow information about a page.</dd></dl>
+</dd><dd class="info">Values (separate with <kbd>|</kbd> or <a href="/api.php?action=help&amp;modules=main#main.2Fdatatypes">alternative</a>): <a href="/api.php?action=help&amp;modules=query%2Bcategories"><span dir="ltr" lang="en">categories</span></a>, <a href="/api.php?action=help&amp;modules=query%2Bcategoryinfo"><span dir="ltr" lang="en">categoryinfo</span></a>, <a href="/api.php?action=help&amp;modules=query%2Bcontributors"><span dir="ltr" lang="en">contributors</span></a>, <a href="/api.php?action=help&amp;modules=query%2Bdeletedrevisions"><span dir="ltr" lang="en">deletedrevisions</span></a>, <a href="/api.php?action=help&amp;modules=query%2Bduplicatefiles"><span dir="ltr" lang="en">duplicatefiles</span></a>, <a href="/api.php?action=help&amp;modules=query%2Bextlinks"><span dir="ltr" lang="en">extlinks</span></a>, <a href="/api.php?action=help&amp;modules=query%2Bfileusage"><span dir="ltr" lang="en">fileusage</span></a>, <a href="/api.php?action=help&amp;modules=query%2Bimageinfo"><span dir="ltr" lang="en">imageinfo</span></a>, <a href="/api.php?action=help&amp;modules=query%2Bimages"><span dir="ltr" lang="en">images</span></a>, <a href="/api.php?action=help&amp;modules=query%2Binfo"><span dir="ltr" lang="en">info</span></a>, <a href="/api.php?action=help&amp;modules=query%2Biwlinks"><span dir="ltr" lang="en">iwlinks</span></a>, <a href="/api.php?action=help&amp;modules=query%2Blanglinks"><span dir="ltr" lang="en">langlinks</span></a>, <a href="/api.php?action=help&amp;modules=query%2Blinks"><span dir="ltr" lang="en">links</span></a>, <a href="/api.php?action=help&amp;modules=query%2Blinkshere"><span dir="ltr" lang="en">linkshere</span></a>, <a href="/api.php?action=help&amp;modules=query%2Bpageprops"><span dir="ltr" lang="en">pageprops</span></a>, <a href="/api.php?action=help&amp;modules=query%2Bredirects"><span dir="ltr" lang="en">redirects</span></a>, <a href="/api.php?action=help&amp;modules=query%2Breferences"><span dir="ltr" lang="en">references</span></a>, <a href="/api.php?action=help&amp;modules=query%2Brevisions"><span dir="ltr" lang="en">revisions</span></a>, <a href="/api.php?action=help&amp;modules=query%2Bstashimageinfo"><span dir="ltr" lang="en">stashimageinfo</span></a>, <a href="/api.php?action=help&amp;modules=query%2Btemplates"><span dir="ltr" lang="en">templates</span></a>, <a href="/api.php?action=help&amp;modules=query%2Btranscludedin"><span dir="ltr" lang="en">transcludedin</span></a>, <a href="/api.php?action=help&amp;modules=query%2Bflowinfo"><span class="apihelp-deprecated-value" dir="ltr" lang="en">flowinfo</span></a></dd><dt><span dir="ltr" lang="en">list</span></dt><dd class="description"><p>Which lists to get.
+</p><dl><dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Ballcategories">allcategories</a></span></dt>
+<dd>Enumerate all categories.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Balldeletedrevisions">alldeletedrevisions</a></span></dt>
+<dd>List all deleted revisions by a user or in a namespace.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Ballfileusages">allfileusages</a></span></dt>
+<dd>List all file usages, including non-existing.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Ballimages">allimages</a></span></dt>
+<dd>Enumerate all images sequentially.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Balllinks">alllinks</a></span></dt>
+<dd>Enumerate all links that point to a given namespace.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Ballpages">allpages</a></span></dt>
+<dd>Enumerate all pages sequentially in a given namespace.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Ballredirects">allredirects</a></span></dt>
+<dd>List all redirects to a namespace.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Ballrevisions">allrevisions</a></span></dt>
+<dd>List all revisions.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Balltransclusions">alltransclusions</a></span></dt>
+<dd>List all transclusions (pages embedded using {{x}}), including non-existing.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Ballusers">allusers</a></span></dt>
+<dd>Enumerate all registered users.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Bbacklinks">backlinks</a></span></dt>
+<dd>Find all pages that link to the given page.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Bblocks">blocks</a></span></dt>
+<dd>List all blocked users and IP addresses.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Bcategorymembers">categorymembers</a></span></dt>
+<dd>List all pages in a given category.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Bembeddedin">embeddedin</a></span></dt>
+<dd>Find all pages that embed (transclude) the given title.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Bexturlusage">exturlusage</a></span></dt>
+<dd>Enumerate pages that contain a given URL.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Bfilearchive">filearchive</a></span></dt>
+<dd>Enumerate all deleted files sequentially.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Bgadgetcategories">gadgetcategories</a></span></dt>
+<dd>Returns a list of gadget categories.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Bgadgets">gadgets</a></span></dt>
+<dd>Returns a list of gadgets used on this wiki.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Bimageusage">imageusage</a></span></dt>
+<dd>Find all pages that use the given image title.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Biwbacklinks">iwbacklinks</a></span></dt>
+<dd>Find all pages that link to the given interwiki link.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Blangbacklinks">langbacklinks</a></span></dt>
+<dd>Find all pages that link to the given language link.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Blogevents">logevents</a></span></dt>
+<dd>Get events from logs.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Bmystashedfiles">mystashedfiles</a></span></dt>
+<dd>Get a list of files in the current user's upload stash.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Bpagepropnames">pagepropnames</a></span></dt>
+<dd>List all page property names in use on the wiki.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Bpageswithprop">pageswithprop</a></span></dt>
+<dd>List all pages using a given page property.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Bprefixsearch">prefixsearch</a></span></dt>
+<dd>Perform a prefix search for page titles.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Bprotectedtitles">protectedtitles</a></span></dt>
+<dd>List all titles protected from creation.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Bquerypage">querypage</a></span></dt>
+<dd>Get a list provided by a QueryPage-based special page.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Brandom">random</a></span></dt>
+<dd>Get a set of random pages.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Brecentchanges">recentchanges</a></span></dt>
+<dd>Enumerate recent changes.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Bsearch">search</a></span></dt>
+<dd>Perform a full text search.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Btags">tags</a></span></dt>
+<dd>List change tags.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Busercontribs">usercontribs</a></span></dt>
+<dd>Get all edits by a user.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Busers">users</a></span></dt>
+<dd>Get information about a list of users.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Bwatchlist">watchlist</a></span></dt>
+<dd>Get recent changes to pages in the current user's watchlist.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Bwatchlistraw">watchlistraw</a></span></dt>
+<dd>Get all pages on the current user's watchlist.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Bdeletedrevs">deletedrevs</a></span></dt>
+<dd><span class="apihelp-deprecated">Deprecated.</span> List deleted revisions.</dd></dl>
+</dd><dd class="info">Values (separate with <kbd>|</kbd> or <a href="/api.php?action=help&amp;modules=main#main.2Fdatatypes">alternative</a>): <a href="/api.php?action=help&amp;modules=query%2Ballcategories"><span dir="ltr" lang="en">allcategories</span></a>, <a href="/api.php?action=help&amp;modules=query%2Balldeletedrevisions"><span dir="ltr" lang="en">alldeletedrevisions</span></a>, <a href="/api.php?action=help&amp;modules=query%2Ballfileusages"><span dir="ltr" lang="en">allfileusages</span></a>, <a href="/api.php?action=help&amp;modules=query%2Ballimages"><span dir="ltr" lang="en">allimages</span></a>, <a href="/api.php?action=help&amp;modules=query%2Balllinks"><span dir="ltr" lang="en">alllinks</span></a>, <a href="/api.php?action=help&amp;modules=query%2Ballpages"><span dir="ltr" lang="en">allpages</span></a>, <a href="/api.php?action=help&amp;modules=query%2Ballredirects"><span dir="ltr" lang="en">allredirects</span></a>, <a href="/api.php?action=help&amp;modules=query%2Ballrevisions"><span dir="ltr" lang="en">allrevisions</span></a>, <a href="/api.php?action=help&amp;modules=query%2Balltransclusions"><span dir="ltr" lang="en">alltransclusions</span></a>, <a href="/api.php?action=help&amp;modules=query%2Ballusers"><span dir="ltr" lang="en">allusers</span></a>, <a href="/api.php?action=help&amp;modules=query%2Bbacklinks"><span dir="ltr" lang="en">backlinks</span></a>, <a href="/api.php?action=help&amp;modules=query%2Bblocks"><span dir="ltr" lang="en">blocks</span></a>, <a href="/api.php?action=help&amp;modules=query%2Bcategorymembers"><span dir="ltr" lang="en">categorymembers</span></a>, <a href="/api.php?action=help&amp;modules=query%2Bembeddedin"><span dir="ltr" lang="en">embeddedin</span></a>, <a href="/api.php?action=help&amp;modules=query%2Bexturlusage"><span dir="ltr" lang="en">exturlusage</span></a>, <a href="/api.php?action=help&amp;modules=query%2Bfilearchive"><span dir="ltr" lang="en">filearchive</span></a>, <a href="/api.php?action=help&amp;modules=query%2Bgadgetcategories"><span dir="ltr" lang="en">gadgetcategories</span></a>, <a href="/api.php?action=help&amp;modules=query%2Bgadgets"><span dir="ltr" lang="en">gadgets</span></a>, <a href="/api.php?action=help&amp;modules=query%2Bimageusage"><span dir="ltr" lang="en">imageusage</span></a>, <a href="/api.php?action=help&amp;modules=query%2Biwbacklinks"><span dir="ltr" lang="en">iwbacklinks</span></a>, <a href="/api.php?action=help&amp;modules=query%2Blangbacklinks"><span dir="ltr" lang="en">langbacklinks</span></a>, <a href="/api.php?action=help&amp;modules=query%2Blogevents"><span dir="ltr" lang="en">logevents</span></a>, <a href="/api.php?action=help&amp;modules=query%2Bmystashedfiles"><span dir="ltr" lang="en">mystashedfiles</span></a>, <a href="/api.php?action=help&amp;modules=query%2Bpagepropnames"><span dir="ltr" lang="en">pagepropnames</span></a>, <a href="/api.php?action=help&amp;modules=query%2Bpageswithprop"><span dir="ltr" lang="en">pageswithprop</span></a>, <a href="/api.php?action=help&amp;modules=query%2Bprefixsearch"><span dir="ltr" lang="en">prefixsearch</span></a>, <a href="/api.php?action=help&amp;modules=query%2Bprotectedtitles"><span dir="ltr" lang="en">protectedtitles</span></a>, <a href="/api.php?action=help&amp;modules=query%2Bquerypage"><span dir="ltr" lang="en">querypage</span></a>, <a href="/api.php?action=help&amp;modules=query%2Brandom"><span dir="ltr" lang="en">random</span></a>, <a href="/api.php?action=help&amp;modules=query%2Brecentchanges"><span dir="ltr" lang="en">recentchanges</span></a>, <a href="/api.php?action=help&amp;modules=query%2Bsearch"><span dir="ltr" lang="en">search</span></a>, <a href="/api.php?action=help&amp;modules=query%2Btags"><span dir="ltr" lang="en">tags</span></a>, <a href="/api.php?action=help&amp;modules=query%2Busercontribs"><span dir="ltr" lang="en">usercontribs</span></a>, <a href="/api.php?action=help&amp;modules=query%2Busers"><span dir="ltr" lang="en">users</span></a>, <a href="/api.php?action=help&amp;modules=query%2Bwatchlist"><span dir="ltr" lang="en">watchlist</span></a>, <a href="/api.php?action=help&amp;modules=query%2Bwatchlistraw"><span dir="ltr" lang="en">watchlistraw</span></a>, <a href="/api.php?action=help&amp;modules=query%2Bdeletedrevs"><span class="apihelp-deprecated-value" dir="ltr" lang="en">deletedrevs</span></a></dd><dt><span dir="ltr" lang="en">meta</span></dt><dd class="description"><p>Which metadata to get.
+</p><dl><dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Ballmessages">allmessages</a></span></dt>
+<dd>Return messages from this site.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Bauthmanagerinfo">authmanagerinfo</a></span></dt>
+<dd>Retrieve information about the current authentication status.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Bfilerepoinfo">filerepoinfo</a></span></dt>
+<dd>Return meta information about image repositories configured on the wiki.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Bnotifications">notifications</a></span></dt>
+<dd>Get notifications waiting for the current user.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Boath">oath</a></span></dt>
+<dd>Check to see if two-factor authentication (OATH) is enabled for a user.</dd>
+<dt><span dir="ltr" lang="en"><a href="api.php">siteinfo</a></span></dt>
+<dd>Return general information about the site.</dd>
+<dt><span dir="ltr" lang="en"><a href="api.php">tokens</a></span></dt>
+<dd>Gets tokens for data-modifying actions.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Bunreadnotificationpages">unreadnotificationpages</a></span></dt>
+<dd>Get pages for which there are unread notifications for the current user.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Buserinfo">userinfo</a></span></dt>
+<dd>Get information about the current user.</dd></dl>
+</dd><dd class="info">Values (separate with <kbd>|</kbd> or <a href="/api.php?action=help&amp;modules=main#main.2Fdatatypes">alternative</a>): <a href="/api.php?action=help&amp;modules=query%2Ballmessages"><span dir="ltr" lang="en">allmessages</span></a>, <a href="/api.php?action=help&amp;modules=query%2Bauthmanagerinfo"><span dir="ltr" lang="en">authmanagerinfo</span></a>, <a href="/api.php?action=help&amp;modules=query%2Bfilerepoinfo"><span dir="ltr" lang="en">filerepoinfo</span></a>, <a href="/api.php?action=help&amp;modules=query%2Bnotifications"><span dir="ltr" lang="en">notifications</span></a>, <a href="/api.php?action=help&amp;modules=query%2Boath"><span dir="ltr" lang="en">oath</span></a>, <a href="api.php"><span dir="ltr" lang="en">siteinfo</span></a>, <a href="api.php"><span dir="ltr" lang="en">tokens</span></a>, <a href="/api.php?action=help&amp;modules=query%2Bunreadnotificationpages"><span dir="ltr" lang="en">unreadnotificationpages</span></a>, <a href="/api.php?action=help&amp;modules=query%2Buserinfo"><span dir="ltr" lang="en">userinfo</span></a></dd><dt><span dir="ltr" lang="en">indexpageids</span></dt><dd class="description"><p>Include an additional pageids section listing all returned page IDs.
+</p></dd><dd class="info">Type: boolean (<a href="/api.php?action=help&amp;modules=main#main.2Fdatatypes">details</a>)</dd><dt><span dir="ltr" lang="en">export</span></dt><dd class="description"><p>Export the current revisions of all given or generated pages.
+</p></dd><dd class="info">Type: boolean (<a href="/api.php?action=help&amp;modules=main#main.2Fdatatypes">details</a>)</dd><dt><span dir="ltr" lang="en">exportnowrap</span></dt><dd class="description"><p>Return the export XML without wrapping it in an XML result (same format as <a href="/index.php/Special:Export" title="Special:Export">Special:Export</a>). Can only be used with query+export.
+</p></dd><dd class="info">Type: boolean (<a href="/api.php?action=help&amp;modules=main#main.2Fdatatypes">details</a>)</dd><dt><span dir="ltr" lang="en">iwurl</span></dt><dd class="description"><p>Whether to get the full URL if the title is an interwiki link.
+</p></dd><dd class="info">Type: boolean (<a href="/api.php?action=help&amp;modules=main#main.2Fdatatypes">details</a>)</dd><dt><span dir="ltr" lang="en">continue</span></dt><dd class="description"><p>When more results are available, use this to continue.
+</p></dd><dt><span dir="ltr" lang="en">rawcontinue</span></dt><dd class="description"><p>Return raw <samp>query-continue</samp> data for continuation.
+</p></dd><dd class="info">Type: boolean (<a href="/api.php?action=help&amp;modules=main#main.2Fdatatypes">details</a>)</dd><dt><span dir="ltr" lang="en">titles</span></dt><dd class="description"><p>A list of titles to work on.
+</p></dd><dd class="info">Separate values with <kbd>|</kbd> or <a href="/api.php?action=help&amp;modules=main#main.2Fdatatypes">alternative</a>. Maximum number of values is 50 (500 for bots).</dd><dt><span dir="ltr" lang="en">pageids</span></dt><dd class="description"><p>A list of page IDs to work on.
+</p></dd><dd class="info">Type: list of integers</dd><dd class="info">Separate values with <kbd>|</kbd> or <a href="/api.php?action=help&amp;modules=main#main.2Fdatatypes">alternative</a>. Maximum number of values is 50 (500 for bots).</dd><dt><span dir="ltr" lang="en">revids</span></dt><dd class="description"><p>A list of revision IDs to work on.
+</p></dd><dd class="info">Type: list of integers</dd><dd class="info">Separate values with <kbd>|</kbd> or <a href="/api.php?action=help&amp;modules=main#main.2Fdatatypes">alternative</a>. Maximum number of values is 50 (500 for bots).</dd><dt><span dir="ltr" lang="en">generator</span></dt><dd class="description"><p>Get the list of pages to work on by executing the specified query module.
+</p><p><strong>Note:</strong> Generator parameter names must be prefixed with a "g", see examples.
+</p><dl><dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Ballcategories">allcategories</a></span></dt>
+<dd>Enumerate all categories.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Balldeletedrevisions">alldeletedrevisions</a></span></dt>
+<dd>List all deleted revisions by a user or in a namespace.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Ballfileusages">allfileusages</a></span></dt>
+<dd>List all file usages, including non-existing.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Ballimages">allimages</a></span></dt>
+<dd>Enumerate all images sequentially.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Balllinks">alllinks</a></span></dt>
+<dd>Enumerate all links that point to a given namespace.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Ballpages">allpages</a></span></dt>
+<dd>Enumerate all pages sequentially in a given namespace.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Ballredirects">allredirects</a></span></dt>
+<dd>List all redirects to a namespace.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Ballrevisions">allrevisions</a></span></dt>
+<dd>List all revisions.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Balltransclusions">alltransclusions</a></span></dt>
+<dd>List all transclusions (pages embedded using {{x}}), including non-existing.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Bbacklinks">backlinks</a></span></dt>
+<dd>Find all pages that link to the given page.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Bcategories">categories</a></span></dt>
+<dd>List all categories the pages belong to.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Bcategorymembers">categorymembers</a></span></dt>
+<dd>List all pages in a given category.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Bdeletedrevisions">deletedrevisions</a></span></dt>
+<dd>Get deleted revision information.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Bduplicatefiles">duplicatefiles</a></span></dt>
+<dd>List all files that are duplicates of the given files based on hash values.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Bembeddedin">embeddedin</a></span></dt>
+<dd>Find all pages that embed (transclude) the given title.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Bexturlusage">exturlusage</a></span></dt>
+<dd>Enumerate pages that contain a given URL.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Bfileusage">fileusage</a></span></dt>
+<dd>Find all pages that use the given files.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Bimages">images</a></span></dt>
+<dd>Returns all files contained on the given pages.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Bimageusage">imageusage</a></span></dt>
+<dd>Find all pages that use the given image title.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Biwbacklinks">iwbacklinks</a></span></dt>
+<dd>Find all pages that link to the given interwiki link.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Blangbacklinks">langbacklinks</a></span></dt>
+<dd>Find all pages that link to the given language link.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Blinks">links</a></span></dt>
+<dd>Returns all links from the given pages.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Blinkshere">linkshere</a></span></dt>
+<dd>Find all pages that link to the given pages.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Bpageswithprop">pageswithprop</a></span></dt>
+<dd>List all pages using a given page property.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Bprefixsearch">prefixsearch</a></span></dt>
+<dd>Perform a prefix search for page titles.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Bprotectedtitles">protectedtitles</a></span></dt>
+<dd>List all titles protected from creation.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Bquerypage">querypage</a></span></dt>
+<dd>Get a list provided by a QueryPage-based special page.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Brandom">random</a></span></dt>
+<dd>Get a set of random pages.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Brecentchanges">recentchanges</a></span></dt>
+<dd>Enumerate recent changes.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Bredirects">redirects</a></span></dt>
+<dd>Returns all redirects to the given pages.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Brevisions">revisions</a></span></dt>
+<dd>Get revision information.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Bsearch">search</a></span></dt>
+<dd>Perform a full text search.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Btemplates">templates</a></span></dt>
+<dd>Returns all pages transcluded on the given pages.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Btranscludedin">transcludedin</a></span></dt>
+<dd>Find all pages that transclude the given pages.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Bwatchlist">watchlist</a></span></dt>
+<dd>Get recent changes to pages in the current user's watchlist.</dd>
+<dt><span dir="ltr" lang="en"><a href="/api.php?action=help&amp;modules=query%2Bwatchlistraw">watchlistraw</a></span></dt>
+<dd>Get all pages on the current user's watchlist.</dd></dl>
+</dd><dd class="info">One of the following values: <a href="/api.php?action=help&amp;modules=query%2Ballcategories">allcategories</a>, <a href="/api.php?action=help&amp;modules=query%2Balldeletedrevisions">alldeletedrevisions</a>, <a href="/api.php?action=help&amp;modules=query%2Ballfileusages">allfileusages</a>, <a href="/api.php?action=help&amp;modules=query%2Ballimages">allimages</a>, <a href="/api.php?action=help&amp;modules=query%2Balllinks">alllinks</a>, <a href="/api.php?action=help&amp;modules=query%2Ballpages">allpages</a>, <a href="/api.php?action=help&amp;modules=query%2Ballredirects">allredirects</a>, <a href="/api.php?action=help&amp;modules=query%2Ballrevisions">allrevisions</a>, <a href="/api.php?action=help&amp;modules=query%2Balltransclusions">alltransclusions</a>, <a href="/api.php?action=help&amp;modules=query%2Bbacklinks">backlinks</a>, <a href="/api.php?action=help&amp;modules=query%2Bcategories">categories</a>, <a href="/api.php?action=help&amp;modules=query%2Bcategorymembers">categorymembers</a>, <a href="/api.php?action=help&amp;modules=query%2Bdeletedrevisions">deletedrevisions</a>, <a href="/api.php?action=help&amp;modules=query%2Bduplicatefiles">duplicatefiles</a>, <a href="/api.php?action=help&amp;modules=query%2Bembeddedin">embeddedin</a>, <a href="/api.php?action=help&amp;modules=query%2Bexturlusage">exturlusage</a>, <a href="/api.php?action=help&amp;modules=query%2Bfileusage">fileusage</a>, <a href="/api.php?action=help&amp;modules=query%2Bimages">images</a>, <a href="/api.php?action=help&amp;modules=query%2Bimageusage">imageusage</a>, <a href="/api.php?action=help&amp;modules=query%2Biwbacklinks">iwbacklinks</a>, <a href="/api.php?action=help&amp;modules=query%2Blangbacklinks">langbacklinks</a>, <a href="/api.php?action=help&amp;modules=query%2Blinks">links</a>, <a href="/api.php?action=help&amp;modules=query%2Blinkshere">linkshere</a>, <a href="/api.php?action=help&amp;modules=query%2Bpageswithprop">pageswithprop</a>, <a href="/api.php?action=help&amp;modules=query%2Bprefixsearch">prefixsearch</a>, <a href="/api.php?action=help&amp;modules=query%2Bprotectedtitles">protectedtitles</a>, <a href="/api.php?action=help&amp;modules=query%2Bquerypage">querypage</a>, <a href="/api.php?action=help&amp;modules=query%2Brandom">random</a>, <a href="/api.php?action=help&amp;modules=query%2Brecentchanges">recentchanges</a>, <a href="/api.php?action=help&amp;modules=query%2Bredirects">redirects</a>, <a href="/api.php?action=help&amp;modules=query%2Brevisions">revisions</a>, <a href="/api.php?action=help&amp;modules=query%2Bsearch">search</a>, <a href="/api.php?action=help&amp;modules=query%2Btemplates">templates</a>, <a href="/api.php?action=help&amp;modules=query%2Btranscludedin">transcludedin</a>, <a href="/api.php?action=help&amp;modules=query%2Bwatchlist">watchlist</a>, <a href="/api.php?action=help&amp;modules=query%2Bwatchlistraw">watchlistraw</a></dd><dt><span dir="ltr" lang="en">redirects</span></dt><dd class="description"><p>Automatically resolve redirects in <var>query+titles</var>, <var>query+pageids</var>, and <var>query+revids</var>, and in pages returned by <var>query+generator</var>.
+</p></dd><dd class="info">Type: boolean (<a href="/api.php?action=help&amp;modules=main#main.2Fdatatypes">details</a>)</dd><dt><span dir="ltr" lang="en">converttitles</span></dt><dd class="description"><p>Convert titles to other variants if necessary. Only works if the wiki's content language supports variant conversion. Languages that support variant conversion include en, crh, gan, iu, kk, ku, shi, sr, tg, uz and zh.
+</p></dd><dd class="info">Type: boolean (<a href="/api.php?action=help&amp;modules=main#main.2Fdatatypes">details</a>)</dd></dl></div>
+<div class="apihelp-block apihelp-examples"><div class="apihelp-block-head">Examples:</div><dl><dt>Fetch <a href="api.php">site info</a> and <a href="/api.php?action=help&amp;modules=query%2Brevisions">revisions</a> of <kbd>Main Page</kbd>.</dt><dd><a dir="ltr" href="/api.php?action=query&amp;prop=revisions&amp;meta=siteinfo&amp;titles=Main%20Page&amp;rvprop=user%7Ccomment&amp;continue=">api.php?action=query&amp;prop=revisions&amp;meta=siteinfo&amp;titles=Main%20Page&amp;rvprop=user|comment&amp;continue=</a> <a href="/index.php/Special:ApiSandbox#action=query&amp;prop=revisions&amp;meta=siteinfo&amp;titles=Main%20Page&amp;rvprop=user%7Ccomment&amp;continue="><small>[open in sandbox]</small></a></dd><dt>Fetch revisions of pages beginning with <kbd>API/</kbd>.</dt><dd><a dir="ltr" href="/api.php?action=query&amp;generator=allpages&amp;gapprefix=API/&amp;prop=revisions&amp;continue=">api.php?action=query&amp;generator=allpages&amp;gapprefix=API/&amp;prop=revisions&amp;continue=</a> <a href="/index.php/Special:ApiSandbox#action=query&amp;generator=allpages&amp;gapprefix=API/&amp;prop=revisions&amp;continue="><small>[open in sandbox]</small></a></dd></dl></div>
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="index_php/Special_ApiHelp.html">https://tinkla.us/index.php/Special:ApiHelp</a>"</div>
+</div>
+</div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-141390218-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":6410});});</script> </body></html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>MediaWiki API help - Tinkla: Tinkering with Tesla</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"Special","wgCanonicalSpecialPageName":"ApiHelp","wgNamespaceNumber":-1,"wgPageName":"Special:ApiHelp","wgTitle":"ApiHelp","wgCurRevisionId":0,"wgRevisionId":0,"wgArticleId":0,"wgIsArticle":false,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":true,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Special:ApiHelp","wgRelevantArticleId":0,"wgRequestId":"f436543f71a5528151b206ae","wgCSPNonce":false,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgWikiEditorEnabledModules":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"ready","user.tokens":"loading","mediawiki.hlist":"ready","mediawiki.apihelp":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.skinning.interface":"ready"});mw.loader.implement("user.tokens@0tffind",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});RLPAGEMODULES=["site","mediawiki.page.startup","mediawiki.user","mediawiki.page.ready","mediawiki.searchSuggest"];mw.loader.load(RLPAGEMODULES);});</script>
+<link href="/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.apihelp%2Chlist%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.skinning.interface&amp;only=styles&amp;skin=apioutput" rel="stylesheet"/>
+<script async="" src="/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=apioutput"></script>
+<meta content="" name="ResourceLoaderDynamicStyles"/>
+<link href="/load.php?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=apioutput" rel="stylesheet"/>
+<meta content="MediaWiki 1.32.1" name="generator"/>
+<meta content="noindex,nofollow" name="robots"/>
+<link href="/favicon.ico" rel="shortcut icon"/>
+<link href="/opensearch_desc.php" rel="search" title="Tinkla: Tinkering with Tesla (en)" type="application/opensearchdescription+xml"/>
+<link href="https://tinkla.us/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
+<link href="https://www.mediawiki.org/wiki/Special:MyLanguage/Copyright" rel="license"/>
+<link href="/index.php?title=Special:RecentChanges&amp;feed=atom" rel="alternate" title="Tinkla: Tinkering with Tesla Atom feed" type="application/atom+xml"/>
+<!--[if lt IE 9]><script src="/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=Timeless&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns--1 ns-special mw-special-ApiHelp page-Special_ApiHelp rootpage-Special_ApiHelp skin-apioutput action-view">
+<div class="mw-body" role="main">
+<h1 class="firstHeading">MediaWiki API help</h1>
+<div class="mw-body-content">
+<div id="mw-content-text"><p>This is an auto-generated MediaWiki API documentation page.
+</p><p>Documentation and examples: <a class="external free" href="https://www.mediawiki.org/wiki/API" rel="noreferrer noopener" target="_blank">https://www.mediawiki.org/wiki/API</a>
+</p><h2 class="apihelp-header apihelp-module-name" dir="ltr" id="edit" lang="en">action=edit</h2><div class="apihelp-linktrail">(<a class="apihelp-linktrail" dir="ltr" href="index_php/Special_ApiHelp/main.html" lang="en">main</a> | <b dir="ltr" lang="en">edit</b>)</div>
+<div class="apihelp-block apihelp-flags"><ul><li><span class="apihelp-flag-readrights">This module requires read rights.</span></li><li><span class="apihelp-flag-writerights">This module requires write rights.</span></li><li><span class="apihelp-flag-mustbeposted">This module only accepts POST requests.</span></li><li><span class="apihelp-source">Source: <span dir="ltr" lang="en">MediaWiki</span></span></li><li><span class="apihelp-license">License: <a href="/index.php/Special:Version/License/MediaWiki" title="Special:Version/License/MediaWiki"><span dir="ltr" lang="en">GPL-2.0-or-later</span></a></span></li></ul></div>
+<p>Create and edit pages.
+</p>
+<div class="apihelp-block apihelp-help-urls"><ul><li><a dir="ltr" href="https://www.mediawiki.org/wiki/Special:MyLanguage/API:Edit">https://www.mediawiki.org/wiki/Special:MyLanguage/API:Edit</a></li></ul></div>
+<div class="apihelp-block apihelp-parameters"><div class="apihelp-block-head">Parameters:</div><dl><dt><span dir="ltr" lang="en">title</span></dt><dd class="description"><p>Title of the page to edit. Cannot be used together with <var>pageid</var>.
+</p></dd><dt><span dir="ltr" lang="en">pageid</span></dt><dd class="description"><p>Page ID of the page to edit. Cannot be used together with <var>title</var>.
+</p></dd><dd class="info">Type: integer</dd><dt><span dir="ltr" lang="en">section</span></dt><dd class="description"><p>Section number. <kbd>0</kbd> for the top section, <kbd>new</kbd> for a new section.
+</p></dd><dt><span dir="ltr" lang="en">sectiontitle</span></dt><dd class="description"><p>The title for a new section.
+</p></dd><dt><span dir="ltr" lang="en">text</span></dt><dd class="description"><p>Page content.
+</p></dd><dt><span dir="ltr" lang="en">summary</span></dt><dd class="description"><p>Edit summary. Also section title when section=new and sectiontitle is not set.
+</p></dd><dt><span dir="ltr" lang="en">tags</span></dt><dd class="description"><p>Change tags to apply to the revision.
+</p></dd><dd class="info">Values (separate with <kbd>|</kbd> or <a href="/api.php?action=help&amp;modules=main#main.2Fdatatypes">alternative</a>): </dd><dt><span dir="ltr" lang="en">minor</span></dt><dd class="description"><p>Minor edit.
+</p></dd><dd class="info">Type: boolean (<a href="/api.php?action=help&amp;modules=main#main.2Fdatatypes">details</a>)</dd><dt><span dir="ltr" lang="en">notminor</span></dt><dd class="description"><p>Non-minor edit.
+</p></dd><dd class="info">Type: boolean (<a href="/api.php?action=help&amp;modules=main#main.2Fdatatypes">details</a>)</dd><dt><span dir="ltr" lang="en">bot</span></dt><dd class="description"><p>Mark this edit as a bot edit.
+</p></dd><dd class="info">Type: boolean (<a href="/api.php?action=help&amp;modules=main#main.2Fdatatypes">details</a>)</dd><dt><span dir="ltr" lang="en">basetimestamp</span></dt><dd class="description"><p>Timestamp of the base revision, used to detect edit conflicts. May be obtained through <a href="api.php">action=query&amp;prop=revisions&amp;rvprop=timestamp</a>.
+</p></dd><dd class="info">Type: timestamp (<a href="/api.php?action=help&amp;modules=main#main.2Fdatatypes">allowed formats</a>)</dd><dt><span dir="ltr" lang="en">starttimestamp</span></dt><dd class="description"><p>Timestamp when the editing process began, used to detect edit conflicts. An appropriate value may be obtained using <var><a href="api.php">curtimestamp</a></var> when beginning the edit process (e.g. when loading the page content to edit).
+</p></dd><dd class="info">Type: timestamp (<a href="/api.php?action=help&amp;modules=main#main.2Fdatatypes">allowed formats</a>)</dd><dt><span dir="ltr" lang="en">recreate</span></dt><dd class="description"><p>Override any errors about the page having been deleted in the meantime.
+</p></dd><dd class="info">Type: boolean (<a href="/api.php?action=help&amp;modules=main#main.2Fdatatypes">details</a>)</dd><dt><span dir="ltr" lang="en">createonly</span></dt><dd class="description"><p>Don't edit the page if it exists already.
+</p></dd><dd class="info">Type: boolean (<a href="/api.php?action=help&amp;modules=main#main.2Fdatatypes">details</a>)</dd><dt><span dir="ltr" lang="en">nocreate</span></dt><dd class="description"><p>Throw an error if the page doesn't exist.
+</p></dd><dd class="info">Type: boolean (<a href="/api.php?action=help&amp;modules=main#main.2Fdatatypes">details</a>)</dd><dt><span dir="ltr" lang="en">watch</span></dt><dd class="info"><strong class="apihelp-deprecated">Deprecated.</strong></dd><dd class="description"><p>Add the page to the current user's watchlist.
+</p></dd><dd class="info">Type: boolean (<a href="/api.php?action=help&amp;modules=main#main.2Fdatatypes">details</a>)</dd><dt><span dir="ltr" lang="en">unwatch</span></dt><dd class="info"><strong class="apihelp-deprecated">Deprecated.</strong></dd><dd class="description"><p>Remove the page from the current user's watchlist.
+</p></dd><dd class="info">Type: boolean (<a href="/api.php?action=help&amp;modules=main#main.2Fdatatypes">details</a>)</dd><dt><span dir="ltr" lang="en">watchlist</span></dt><dd class="description"><p>Unconditionally add or remove the page from the current user's watchlist, use preferences or do not change watch.
+</p></dd><dd class="info">One of the following values: <span dir="auto">watch</span>, <span dir="auto">unwatch</span>, <span dir="auto">preferences</span>, <span dir="auto">nochange</span></dd><dd class="info">Default: <span dir="auto">preferences</span></dd><dt><span dir="ltr" lang="en">md5</span></dt><dd class="description"><p>The MD5 hash of the text parameter, or the prependtext and appendtext parameters concatenated. If set, the edit won't be done unless the hash is correct.
+</p></dd><dt><span dir="ltr" lang="en">prependtext</span></dt><dd class="description"><p>Add this text to the beginning of the page. Overrides text.
+</p></dd><dt><span dir="ltr" lang="en">appendtext</span></dt><dd class="description"><p>Add this text to the end of the page. Overrides text.
+</p><p>Use section=new to append a new section, rather than this parameter.
+</p></dd><dt><span dir="ltr" lang="en">undo</span></dt><dd class="description"><p>Undo this revision. Overrides text, prependtext and appendtext.
+</p></dd><dd class="info">The value must be no less than 0.</dd><dd class="info">Type: integer</dd><dt><span dir="ltr" lang="en">undoafter</span></dt><dd class="description"><p>Undo all revisions from undo to this one. If not set, just undo one revision.
+</p></dd><dd class="info">The value must be no less than 0.</dd><dd class="info">Type: integer</dd><dt><span dir="ltr" lang="en">redirect</span></dt><dd class="description"><p>Automatically resolve redirects.
+</p></dd><dd class="info">Type: boolean (<a href="/api.php?action=help&amp;modules=main#main.2Fdatatypes">details</a>)</dd><dt><span dir="ltr" lang="en">contentformat</span></dt><dd class="description"><p>Content serialization format used for the input text.
+</p></dd><dd class="info">One of the following values: <span dir="auto">application/json</span>, <span dir="auto">application/xml</span>, <span dir="auto">text/x-wiki</span>, <span dir="auto">text/javascript</span>, <span dir="auto">text/css</span>, <span dir="auto">text/plain</span></dd><dt><span dir="ltr" lang="en">contentmodel</span></dt><dd class="description"><p>Content model of the new content.
+</p></dd><dd class="info">One of the following values: <span dir="auto">GadgetDefinition</span>, <span dir="auto">flow-board</span>, <span dir="auto">XML Data</span>, <span dir="auto">wikitext</span>, <span dir="auto">javascript</span>, <span dir="auto">json</span>, <span dir="auto">css</span>, <span dir="auto">text</span></dd><dt><span dir="ltr" lang="en">token</span></dt><dd class="description"><p>A "csrf" token retrieved from <a href="api.php">action=query&amp;meta=tokens</a>
+</p><p>The token should always be sent as the last parameter, or at least after the text parameter.
+</p></dd><dd class="info">This parameter is required.</dd><dt><span dir="ltr" lang="en">captchaword</span></dt><dd class="description"><p>Answer to the CAPTCHA
+</p></dd><dt><span dir="ltr" lang="en">captchaid</span></dt><dd class="description"><p>CAPTCHA ID from previous request
+</p></dd></dl></div>
+<div class="apihelp-block apihelp-examples"><div class="apihelp-block-head">Examples:</div><dl><dt>Edit a page.</dt><dd><a dir="ltr" href="api.php">api.php?action=edit&amp;title=Test&amp;summary=test%20summary&amp;text=article%20content&amp;basetimestamp=2007-08-24T12:34:54Z&amp;token=123ABC</a> <a href="/index.php/Special:ApiSandbox#action=edit&amp;title=Test&amp;summary=test%20summary&amp;text=article%20content&amp;basetimestamp=2007-08-24T12:34:54Z&amp;token=123ABC"><small>[open in sandbox]</small></a></dd><dt>Prepend <kbd>__NOTOC__</kbd> to a page.</dt><dd><a dir="ltr" href="api.php">api.php?action=edit&amp;title=Test&amp;summary=NOTOC&amp;minor=&amp;prependtext=__NOTOC__%0A&amp;basetimestamp=2007-08-24T12:34:54Z&amp;token=123ABC</a> <a href="index_php/Special_ApiSandbox.html"><small>[open in sandbox]</small></a></dd><dt>Undo revisions 13579 through 13585 with autosummary.</dt><dd><a dir="ltr" href="/api.php?action=edit&amp;title=Test&amp;undo=13585&amp;undoafter=13579&amp;basetimestamp=2007-08-24T12:34:54Z&amp;token=123ABC">api.php?action=edit&amp;title=Test&amp;undo=13585&amp;undoafter=13579&amp;basetimestamp=2007-08-24T12:34:54Z&amp;token=123ABC</a> <a href="index_php/Special_ApiSandbox.html"><small>[open in sandbox]</small></a></dd></dl></div>
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="index_php/Special_ApiHelp.html">https://tinkla.us/index.php/Special:ApiHelp</a>"</div>
+</div>
+</div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-141390218-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":523});});</script> </body></html>

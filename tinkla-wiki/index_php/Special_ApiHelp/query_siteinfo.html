@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>MediaWiki API help - Tinkla: Tinkering with Tesla</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"Special","wgCanonicalSpecialPageName":"ApiHelp","wgNamespaceNumber":-1,"wgPageName":"Special:ApiHelp","wgTitle":"ApiHelp","wgCurRevisionId":0,"wgRevisionId":0,"wgArticleId":0,"wgIsArticle":false,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":true,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Special:ApiHelp","wgRelevantArticleId":0,"wgRequestId":"d1e658ad6c82af62cebf02f3","wgCSPNonce":false,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgWikiEditorEnabledModules":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"ready","user.tokens":"loading","mediawiki.hlist":"ready","mediawiki.apihelp":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.skinning.interface":"ready"});mw.loader.implement("user.tokens@0tffind",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});RLPAGEMODULES=["site","mediawiki.page.startup","mediawiki.user","mediawiki.page.ready","mediawiki.searchSuggest"];mw.loader.load(RLPAGEMODULES);});</script>
+<link href="/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.apihelp%2Chlist%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.skinning.interface&amp;only=styles&amp;skin=apioutput" rel="stylesheet"/>
+<script async="" src="/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=apioutput"></script>
+<meta content="" name="ResourceLoaderDynamicStyles"/>
+<link href="/load.php?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=apioutput" rel="stylesheet"/>
+<meta content="MediaWiki 1.32.1" name="generator"/>
+<meta content="noindex,nofollow" name="robots"/>
+<link href="/favicon.ico" rel="shortcut icon"/>
+<link href="/opensearch_desc.php" rel="search" title="Tinkla: Tinkering with Tesla (en)" type="application/opensearchdescription+xml"/>
+<link href="https://tinkla.us/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
+<link href="https://www.mediawiki.org/wiki/Special:MyLanguage/Copyright" rel="license"/>
+<link href="/index.php?title=Special:RecentChanges&amp;feed=atom" rel="alternate" title="Tinkla: Tinkering with Tesla Atom feed" type="application/atom+xml"/>
+<!--[if lt IE 9]><script src="/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=Timeless&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns--1 ns-special mw-special-ApiHelp page-Special_ApiHelp rootpage-Special_ApiHelp skin-apioutput action-view">
+<div class="mw-body" role="main">
+<h1 class="firstHeading">MediaWiki API help</h1>
+<div class="mw-body-content">
+<div id="mw-content-text"><p>This is an auto-generated MediaWiki API documentation page.
+</p><p>Documentation and examples: <a class="external free" href="https://www.mediawiki.org/wiki/API" rel="noreferrer noopener" target="_blank">https://www.mediawiki.org/wiki/API</a>
+</p><h2 class="apihelp-header apihelp-module-name" dir="ltr" id="query+siteinfo" lang="en">meta=siteinfo (si)</h2><div class="apihelp-linktrail">(<a class="apihelp-linktrail" dir="ltr" href="index_php/Special_ApiHelp/main.html" lang="en">main</a> | <a class="apihelp-linktrail" dir="ltr" href="index_php/Special_ApiHelp/query.html" lang="en">query</a> | <b dir="ltr" lang="en">siteinfo</b>)</div>
+<div class="apihelp-block apihelp-flags"><ul><li><span class="apihelp-flag-readrights">This module requires read rights.</span></li><li><span class="apihelp-source">Source: <span dir="ltr" lang="en">MediaWiki</span></span></li><li><span class="apihelp-license">License: <a href="/index.php/Special:Version/License/MediaWiki" title="Special:Version/License/MediaWiki"><span dir="ltr" lang="en">GPL-2.0-or-later</span></a></span></li></ul></div>
+<p>Return general information about the site.
+</p>
+<div class="apihelp-block apihelp-help-urls"><ul><li><a dir="ltr" href="https://www.mediawiki.org/wiki/Special:MyLanguage/API:Siteinfo">https://www.mediawiki.org/wiki/Special:MyLanguage/API:Siteinfo</a></li></ul></div>
+<div class="apihelp-block apihelp-parameters"><div class="apihelp-block-head">Parameters:</div><dl><dt><span dir="ltr" lang="en">siprop</span></dt><dd class="description"><p>Which information to get:
+</p><dl><dt><span dir="ltr" lang="en">general</span></dt>
+<dd>Overall system information.</dd>
+<dt><span dir="ltr" lang="en">namespaces</span></dt>
+<dd>List of registered namespaces and their canonical names.</dd>
+<dt><span dir="ltr" lang="en">namespacealiases</span></dt>
+<dd>List of registered namespace aliases.</dd>
+<dt><span dir="ltr" lang="en">specialpagealiases</span></dt>
+<dd>List of special page aliases.</dd>
+<dt><span dir="ltr" lang="en">magicwords</span></dt>
+<dd>List of magic words and their aliases.</dd>
+<dt><span dir="ltr" lang="en">interwikimap</span></dt>
+<dd>Returns interwiki map (optionally filtered, optionally localised by using <var>siinlanguagecode</var>).</dd>
+<dt><span dir="ltr" lang="en">dbrepllag</span></dt>
+<dd>Returns database server with the highest replication lag.</dd>
+<dt><span dir="ltr" lang="en">statistics</span></dt>
+<dd>Returns site statistics.</dd>
+<dt><span dir="ltr" lang="en">usergroups</span></dt>
+<dd>Returns user groups and the associated permissions.</dd>
+<dt><span dir="ltr" lang="en">libraries</span></dt>
+<dd>Returns libraries installed on the wiki.</dd>
+<dt><span dir="ltr" lang="en">extensions</span></dt>
+<dd>Returns extensions installed on the wiki.</dd>
+<dt><span dir="ltr" lang="en">fileextensions</span></dt>
+<dd>Returns list of file extensions (file types) allowed to be uploaded.</dd>
+<dt><span dir="ltr" lang="en">rightsinfo</span></dt>
+<dd>Returns wiki rights (license) information if available.</dd>
+<dt><span dir="ltr" lang="en">restrictions</span></dt>
+<dd>Returns information on available restriction (protection) types.</dd>
+<dt><span dir="ltr" lang="en">languages</span></dt>
+<dd>Returns a list of languages MediaWiki supports (optionally localised by using <var>siinlanguagecode</var>).</dd>
+<dt><span dir="ltr" lang="en">languagevariants</span></dt>
+<dd>Returns a list of language codes for which <a class="extiw" href="https://www.mediawiki.org/wiki/Special:MyLanguage/LanguageConverter" title="mw:Special:MyLanguage/LanguageConverter">LanguageConverter</a> is enabled, and the variants supported for each.</dd>
+<dt><span dir="ltr" lang="en">skins</span></dt>
+<dd>Returns a list of all enabled skins (optionally localised by using <var>siinlanguagecode</var>, otherwise in the content language).</dd>
+<dt><span dir="ltr" lang="en">extensiontags</span></dt>
+<dd>Returns a list of parser extension tags.</dd>
+<dt><span dir="ltr" lang="en">functionhooks</span></dt>
+<dd>Returns a list of parser function hooks.</dd>
+<dt><span dir="ltr" lang="en">showhooks</span></dt>
+<dd>Returns a list of all subscribed hooks (contents of <var><a class="extiw" href="https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:%24wgHooks" title="mw:Special:MyLanguage/Manual:$wgHooks">$wgHooks</a></var>).</dd>
+<dt><span dir="ltr" lang="en">variables</span></dt>
+<dd>Returns a list of variable IDs.</dd>
+<dt><span dir="ltr" lang="en">protocols</span></dt>
+<dd>Returns a list of protocols that are allowed in external links.</dd>
+<dt><span dir="ltr" lang="en">defaultoptions</span></dt>
+<dd>Returns the default values for user preferences.</dd>
+<dt><span dir="ltr" lang="en">uploaddialog</span></dt>
+<dd>Returns the upload dialog configuration.</dd></dl>
+</dd><dd class="info">Values (separate with <kbd>|</kbd> or <a href="/api.php?action=help&amp;modules=main#main.2Fdatatypes">alternative</a>): <span dir="auto">general</span>, <span dir="auto">namespaces</span>, <span dir="auto">namespacealiases</span>, <span dir="auto">specialpagealiases</span>, <span dir="auto">magicwords</span>, <span dir="auto">interwikimap</span>, <span dir="auto">dbrepllag</span>, <span dir="auto">statistics</span>, <span dir="auto">usergroups</span>, <span dir="auto">libraries</span>, <span dir="auto">extensions</span>, <span dir="auto">fileextensions</span>, <span dir="auto">rightsinfo</span>, <span dir="auto">restrictions</span>, <span dir="auto">languages</span>, <span dir="auto">languagevariants</span>, <span dir="auto">skins</span>, <span dir="auto">extensiontags</span>, <span dir="auto">functionhooks</span>, <span dir="auto">showhooks</span>, <span dir="auto">variables</span>, <span dir="auto">protocols</span>, <span dir="auto">defaultoptions</span>, <span dir="auto">uploaddialog</span></dd><dd class="info">Default: <span dir="auto">general</span></dd><dt><span dir="ltr" lang="en">sifilteriw</span></dt><dd class="description"><p>Return only local or only nonlocal entries of the interwiki map.
+</p></dd><dd class="info">One of the following values: <span dir="auto">local</span>, <span dir="auto">!local</span></dd><dt><span dir="ltr" lang="en">sishowalldb</span></dt><dd class="description"><p>List all database servers, not just the one lagging the most.
+</p></dd><dd class="info">Type: boolean (<a href="/api.php?action=help&amp;modules=main#main.2Fdatatypes">details</a>)</dd><dt><span dir="ltr" lang="en">sinumberingroup</span></dt><dd class="description"><p>Lists the number of users in user groups.
+</p></dd><dd class="info">Type: boolean (<a href="/api.php?action=help&amp;modules=main#main.2Fdatatypes">details</a>)</dd><dt><span dir="ltr" lang="en">siinlanguagecode</span></dt><dd class="description"><p>Language code for localised language names (best effort) and skin names.
+</p></dd></dl></div>
+<div class="apihelp-block apihelp-examples"><div class="apihelp-block-head">Examples:</div><dl><dt>Fetch site information.</dt><dd><a dir="ltr" href="api.php">api.php?action=query&amp;meta=siteinfo&amp;siprop=general|namespaces|namespacealiases|statistics</a> <a href="index_php/Special_ApiSandbox.html"><small>[open in sandbox]</small></a></dd><dt>Fetch a list of local interwiki prefixes.</dt><dd><a dir="ltr" href="api.php">api.php?action=query&amp;meta=siteinfo&amp;siprop=interwikimap&amp;sifilteriw=local</a> <a href="index_php/Special_ApiSandbox.html"><small>[open in sandbox]</small></a></dd><dt>Check the current replication lag.</dt><dd><a dir="ltr" href="api.php">api.php?action=query&amp;meta=siteinfo&amp;siprop=dbrepllag&amp;sishowalldb=</a> <a href="index_php/Special_ApiSandbox.html"><small>[open in sandbox]</small></a></dd></dl></div>
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="index_php/Special_ApiHelp.html">https://tinkla.us/index.php/Special:ApiHelp</a>"</div>
+</div>
+</div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-141390218-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":2444});});</script> </body></html>

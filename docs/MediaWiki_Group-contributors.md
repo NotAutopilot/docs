@@ -1,0 +1,3 @@
+# MediaWiki:Group-contributors
+
+Contributors
