@@ -8,12 +8,12 @@ Some notable ones:
 
 #### Commands
 
-- fp - flashes your[Panda](Panda.md) and reboots[EON](EON.md) on success (stops on error to show what went wrong)
+- fp - flashes your [Panda](Panda.md) and reboots [EON](EON.md) on success (stops on error to show what went wrong)
 - so "text to search" - Searches all source code for the text to search
 - gcp - a sequence of commands that allows you to commit and push the code to the repo
 - gcpa "my commit comment" - a sequence of commands that allows you to commit all changes and files and push to the repo
-- killop - kills OpenPilot tmux session
-- runop - runs OpenPilot in shell session; amazing for debug purposes
+- killop - kills Open Pilot tmux session
+- runop - runs Open Pilot in shell session; amazing for debug purposes
 - mrw - mounts file system in read/write mode
 - mro - mounts file system in read only mode
 
@@ -48,7 +48,7 @@ In the editor, replace all the contents with the following code and then exit an
 ```
 export EDITOR='vim'
 export TERM='xterm-256color'
-export PS1="\u@\h:\[\e[36m\]\w\[\e[0m\]\$ "
+export PS1="\u@\h:\[\e [36m\]\w\[\e [0m\]\$ "
 export PREFIX='/usr'
 export VALGRIND_LIB='/usr/lib/valgrind'
 

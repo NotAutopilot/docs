@@ -1,24 +1,24 @@
-# Tinkla Wiki - OpenPilot for Tesla
+# Tinkla Wiki - Open Pilot for Tesla
 
-This is a converted version of the Tinkla Wiki, documenting how to install and use OpenPilot on Tesla vehicles.
+This is a converted version of the Tinkla Wiki, documenting how to install and use Open Pilot on Tesla vehicles.
 
 ## Main Pages
 
 ### Getting Started
 
 - [Welcome to Tinkla!](Welcome_to_Tinkla_.md) - Main landing page
-- [What is OpenPilot](Main_Page.md) - Overview of the project
+- [What is Open Pilot](Main_Page.md) - Overview of the project
 
 ### Tesla Vehicle Support
 
-#### Pre-Autopilot (preAP) Tesla Model S
-- [OpenPilot for preAP Tesla ModelS](OpenPilot_for_preAP_Tesla_ModelS.md) - Complete guide for pre-AP vehicles
+#### Pre-Autopilot (pre AP) Tesla Model S
+- [Open Pilot for pre AP Tesla Model S](Open Pilot_for_pre AP_Tesla_Model S.md) - Complete guide for pre-AP vehicles
 
 #### Autopilot 1 (AP1)
-- Coming soon (files referenced but not converted)
+- [Open Pilot for Tesla Model S/X with AP1](Open Pilot_for_Tesla_Model_S-X_with_AP1.md) - Complete guide for AP1 vehicles
 
 #### Autopilot 2 (AP2)
-- Coming soon (files referenced but not converted)
+- [Open Pilot for Tesla Model S/X with AP2](Open Pilot_for_Tesla_Model_S-X_with_AP2.md) - Complete guide for AP2 vehicles
 
 ### Hardware Components
 
@@ -29,7 +29,7 @@ This is a converted version of the Tinkla Wiki, documenting how to install and u
 - [The Panda](The_Panda.md) - Additional Panda documentation
 - [The EON](The_EON.md) - Additional EON documentation
 
-#### preAP Components
+#### pre AP Components
 - [Tinkla OBD-C Adapter](Tinkla_OBD-C_Adapter.md) - OBD-C connection adapter
 - [Tesla Bosch Radar](Tesla_Bosch_Radar.md) - Radar retrofit guide
 - [Tesla Bosch Radar EON](Tesla_Bosch_Radar_EON.md) - EON-specific radar guide
@@ -49,21 +49,21 @@ This is a converted version of the Tinkla Wiki, documenting how to install and u
 #### Legacy Components
 - [Tesla Giraffe](Tesla_Giraffe.md) - Legacy connector
 - [EPAS Harness](EPAS_harness.md) - Electric power steering harness
-- [SoftPanda](SoftPanda.md) - Software Panda implementation
+- [Soft Panda](Soft Panda.md) - Software Panda implementation
 
 ### Configuration & Software
 
 - [Tesla Unity Configuration](Tesla_Unity_Configuration.md) - Main configuration guide
-- [OpenPilot Configuration File](OpenPilot_Configuration_File.md) - Legacy configuration
+- [Open Pilot Configuration File](Open Pilot_Configuration_File.md) - Legacy configuration
 - [EON bash profile](EON_bash_profile.md) - Shell configuration
 - [SSH Into Your Device](SSH_Into_Your_Device.md) - Remote access guide
-- [Old versions of OP](Old_versions_of_OP.md) - Legacy OpenPilot versions
+- [Old versions of OP](Old_versions_of_OP.md) - Legacy Open Pilot versions
 
 ### Technical Information
 
 #### Tesla-Specific
 - [Tesla CAN Bus](Tesla_CAN_Bus.md) - CAN bus documentation
-- [Tesla Model S preAP OBD2 port](Tesla_Model_S_preAP_OBD2_port.md) - OBD2 connector info
+- [Tesla Model S pre AP OBD2 port](Tesla_Model_S_pre AP_OBD2_port.md) - OBD2 connector info
 - [Longitudinal Control (ACC)](Longitudinal_Control__ACC.md) - Cruise control implementation
 
 #### General
@@ -74,7 +74,7 @@ This is a converted version of the Tinkla Wiki, documenting how to install and u
 
 ### Installation & Maintenance
 
-- [PreAP: IC Integration with OP](PreAP__IC_Integration_with_OP.md) - Instrument cluster integration
+- [Pre AP: IC Integration with OP](Pre AP__IC_Integration_with_OP.md) - Instrument cluster integration
 - [Removing the Instrument Cluster](Removing_the_Instrument_Cluster.md)
 - [Root Access To IC and CID](Root_Access_To_IC_and_CID.md)
 - [Map Integration](Map_Integration.md)
@@ -87,21 +87,21 @@ This is a converted version of the Tinkla Wiki, documenting how to install and u
 
 ### Templates
 
-- [Template EPAS Harness](Template_EPAS_Harness.md)
+- [Template EPAS Harness](Template_EPAS_harness.md)
 - [Template Flashing the Panda](Template_Flashing_the_Panda.md)
 - [Template Getting Started](Template_Getting_Started.md)
-- [Template LongControl v066](Template_LongControl_v066.md)
+- [Template Long Control v066](Template_Long Control_v066.md)
 
 ### Community
 
 - [Talk: Feedback? Ideas? Comments?](Talk_Feedback__Ideas__Comments_.md)
-- [User BogGyver](User_BogGyver.md)
+- [User Bog Gyver](User_Bog Gyver.md)
 
 ---
 
 ## About This Conversion
 
-This wiki was converted from MediaWiki HTML to Markdown for use with modern documentation systems.
+This wiki was converted from Media Wiki HTML to Markdown for use with modern documentation systems.
 
 - **Total Pages Converted:** 60
 - **Images:** 135 images copied to `images/` directory
@@ -116,4 +116,4 @@ This wiki was converted from MediaWiki HTML to Markdown for use with modern docu
 
 ### Original Wiki
 
-This content originally came from the Tinkla wiki at tinkla.us, which documented community efforts to run OpenPilot on Tesla vehicles.
+This content originally came from the Tinkla wiki at tinkla.us, which documented community efforts to run Open Pilot on Tesla vehicles.

@@ -76,11 +76,11 @@ class WikiConverter:
                 wiki_page = urllib.parse.unquote(wiki_page)
                 # Convert to markdown-friendly filename
                 md_file = wiki_page.replace(' ', '-').replace('/', '-').replace(':', '') + '.md'
-                return f"[{link_text}]({md_file}) "
+                return f"[{link_text}]({md_file})"
 
             # External links
             elif href.startswith('http'):
-                return f"[{link_text}]({href}) "
+                return f"[{link_text}]({href})"
 
             # Skip other links (anchors, etc.)
             else:

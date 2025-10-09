@@ -2,9 +2,9 @@
 
 Do you like Tinkering with your Tesla? Do you like adding additional features to it without having to install old style switches to control them? Do you want to control additional lights or devices based on specific conditions of the car (charging, driving, turning left/right, gear forward/reverse, high beams on, blind spot monitoring signals, or specific button presses on the steering wheel)? Then Tinkla Relay is a must have Swiss Army Knife for Tesla Model S/X/3/Y integrations.
 
-1. Are you annoyed when AutoPilot disengages because you just slightly corrected the direction due to a moron cutting into your line, or avoiding a pothole? You can enabled the AutoResume AutoPilot functionality and Tinkla Relay will do it for you.
-2. Do you wish your AutoPilot (non FSD) would adjust the max speed up and down with the recognized speed limit? With Tinkla Relay it does. For Model 3/Y users it even recognizes the % offset configured in the AutoPilot tab and takes that into consideration.
-3. Do you find yourself sometimes stuck in CHILL mode and need that extra power, but takes too long to go though the settings? If your Model 3/Y is equipped with Tinkla Relay, you will be able to floor the pedal and gain advantage of all the kWs availble in your car. While the accelerator pedal is pressed more than 92% down, Tinkla Relay will automatically suspend the CHILL mode and give you full power.
+1. Are you annoyed when Auto Pilot disengages because you just slightly corrected the direction due to a moron cutting into your line, or avoiding a pothole? You can enabled the Auto Resume Auto Pilot functionality and Tinkla Relay will do it for you.
+2. Do you wish your Auto Pilot (non FSD) would adjust the max speed up and down with the recognized speed limit? With Tinkla Relay it does. For Model 3/Y users it even recognizes the % offset configured in the Auto Pilot tab and takes that into consideration.
+3. Do you find yourself sometimes stuck in CHILL mode and need that extra power, but takes too long to go though the settings? If your Model 3/Y is equipped with Tinkla Relay, you will be able to floor the pedal and gain advantage of all the k Ws availble in your car. While the accelerator pedal is pressed more than 92% down, Tinkla Relay will automatically suspend the CHILL mode and give you full power.
 
 Read below for more info.
 
@@ -45,41 +45,41 @@ Tinkla Relay can be either installed using the provided harness directly into th
 
 Tinkla Relay can be installed in less than 15 minutes by simply removing the 4 pins that hold the cover of the passenger footwell in your Model 3/Y and adding the provided harness between the car and the MCU computer.
 
-## AutoPilot Extended Functionality
+## Auto Pilot Extended Functionality
 
-By enabling the AutoPilot Extended Functionality of Tinkla Relay, you will gain access to some enhancements to your standard or EAP Autopilot.
+By enabling the Auto Pilot Extended Functionality of Tinkla Relay, you will gain access to some enhancements to your standard or EAP Autopilot.
 
-### AutoPilot AutoResume
+### Auto Pilot Auto Resume
 
-You do not have to tap the stalk to re-engage AutoPilot after a slight steering correction, provided that the adaptive cruise-control is still engaged.
+You do not have to tap the stalk to re-engage Auto Pilot after a slight steering correction, provided that the adaptive cruise-control is still engaged.
 
 Here is how it works:
 
 - When autopilot is disengaged due to a steering correction, the system will start the auto-engage process in the background- It will wait for turn signals to be off
-- It will wait for AutoPilot to become available (gray steering icon)
+- It will wait for Auto Pilot to become available (gray steering icon)
 - It will monitor that adaptive cruise control is still engaged
 - It will monitor that you are not actively steering (via the hands on wheel detection)
-- Once all the conditions have been met, it will start a 1 second timer to ensure that nothing else happens, and it no other events, it will re-engage AutoPilot
+- Once all the conditions have been met, it will start a 1 second timer to ensure that nothing else happens, and it no other events, it will re-engage Auto Pilot
 
 ```
 You can cancel the re-engage process at any time by a simple stalk pull or by hitting the brake pedal or canceling the adaptive cruise control via the stalk.
 ```
 
-### AutoPilot AutoAdjust Max Speed Limit
+### Auto Pilot Auto Adjust Max Speed Limit
 
-Driving on the highway (or on small roads, doesn't matter), and the speed limit changed, but you missed it, and then lucky you, there is a cop waiting 100 yards beyond the speed sign, ready to hand you that bill... That does not have to happen if you have Tinkla Relay installed. Tinkla Relay monitors the speed limit changes that AutoPilot recognizes and immediately adjusts your Max Speed to match. It even takes in consideration your percentage override entered in the settings of a Model 3/Y (not available for S/X at this moment). The Relay just saved your wallet :)
+Driving on the highway (or on small roads, doesn't matter), and the speed limit changed, but you missed it, and then lucky you, there is a cop waiting 100 yards beyond the speed sign, ready to hand you that bill... That does not have to happen if you have Tinkla Relay installed. Tinkla Relay monitors the speed limit changes that Auto Pilot recognizes and immediately adjusts your Max Speed to match. It even takes in consideration your percentage override entered in the settings of a Model 3/Y (not available for S/X at this moment). The Relay just saved your wallet :)
 
 ```
-If you attempt to manually change the speed limit during an AutoAdjust process, the AutoAdjust will be canceled.
+If you attempt to manually change the speed limit during an Auto Adjust process, the Auto Adjust will be canceled.
 ```
 
 ## CHILL++ Extra power when you need it
 
-If you drive in Chill mode most of the time (like I do), you will find yourself at times in situations when you wish you were not: merging in traffic, passing somebody, etc. You know you have twice the power in your car, yet you opted for the chill factor that works 98% of the time. With Tinkla Relay you can have your cake and eat it too: between 0% and 90% of your accelerator pedal press, it will continue to operate in the same manner you have it now in Chill mode. Once you go beyond the 92% mark, you will know it. Tinkla Relay recognizes you want more juice and provides it to your wheels instantly. (You will not see the CHILL text vanish from your dash, but you will feel the extra kWs)
+If you drive in Chill mode most of the time (like I do), you will find yourself at times in situations when you wish you were not: merging in traffic, passing somebody, etc. You know you have twice the power in your car, yet you opted for the chill factor that works 98% of the time. With Tinkla Relay you can have your cake and eat it too: between 0% and 90% of your accelerator pedal press, it will continue to operate in the same manner you have it now in Chill mode. Once you go beyond the 92% mark, you will know it. Tinkla Relay recognizes you want more juice and provides it to your wheels instantly. (You will not see the CHILL text vanish from your dash, but you will feel the extra k Ws)
 
 ## Reading CAN messages
 
-By using the old web based version of[Cabana by Comma.ai](https://cabana.tinkla.us) you can view live streaming of CAN messages from your Tesla (Chassis CAN for Model S/X, Vehicle and Chassis CAN for Model 3/Y). To parse the messages you can select the appropriate dbc file (tesla_modelsx.dbc from Model S/X or[Josh Wardell's](https://github.com/joshwardell/model3dbc) tesla_model3y.dbc for Model 3/Y). Please note that Cabana only works inside Google Chrome.
+By using the old web based version of [Cabana by Comma.ai](https://cabana.tinkla.us) you can view live streaming of CAN messages from your Tesla (Chassis CAN for Model S/X, Vehicle and Chassis CAN for Model 3/Y). To parse the messages you can select the appropriate dbc file (tesla_modelsx.dbc from Model S/X or [Josh Wardell's](https://github.com/joshwardell/model3dbc) tesla_model3y.dbc for Model 3/Y). Please note that Cabana only works inside Google Chrome.
 
 ```
 Once you are done reading messages, you will have to make sure you power cycle the Relay to return to normal functionality. The cabana switches the standard functionality of Relay and puts it into a read only mode. The power cycle restored the basic functionality. To power cycle your Relay you have to disconnect both from the harness and from the computer (USB).
@@ -89,11 +89,11 @@ Once you are done reading messages, you will have to make sure you power cycle t
 
 Sometimes there is a need to update your Tinkla Relay firmware to take advantage of new code releases. In order to do this, you will need access to a computer with internet access and a Chromium based web browser (Google Chrome, Microsoft Edge, Chromium), and a USB cable to connect from your computer to the micro-USB port on the Tinkla Relay.
 
-In order to flash the latest code for Tinkla Relay, go to[https://relay.tinkla.us](https://relay.tinkla.us) and follow the instructions.
+In order to flash the latest code for Tinkla Relay, go to [https://relay.tinkla.us](https://relay.tinkla.us) and follow the instructions.
 
 ## Virtual Buttons
 
-Tinkla Relay creates up to 4 virtual buttons in order to control the relay outputs. These virtual buttons are combinations of quick double presses on existing steering wheel controls. Depending on the configuration selected via the[DIP Switches](Tinkla_Relay.md) , these virtual buttons can act alone or in combination with other logic based on car state.
+Tinkla Relay creates up to 4 virtual buttons in order to control the relay outputs. These virtual buttons are combinations of quick double presses on existing steering wheel controls. Depending on the configuration selected via the [DIP Switches](Tinkla_Relay.md) , these virtual buttons can act alone or in combination with other logic based on car state.
 
 In the table below we show the connection between a virtual button and the corresponding steering wheel button. In order to switch the state of the relay for that corresponding button, the user will have to double-press that particular steering wheel button quickly with no more than 0.75 s between presses.
 
@@ -112,7 +112,7 @@ Switches 1-4 allows you to select one of the pre-configured logic that triggers 
 Switch 5 is an overall setting for all 4 relays and, if on, will keep the relays in their state even when car is off. If Switch 6 is off then all relays will be turned off when the car is off.
 
 ```
-Switch 6 enables Tesla AutoPilot Extended Functionality. Please see more info above.
+Switch 6 enables Tesla Auto Pilot Extended Functionality. Please see more info above.
 ```
 
 ```
@@ -150,4 +150,4 @@ If you see use for a different configuration and logic, please do not hesitate t
 
 ## How to order Tinkla Relay
 
-Tinkla Relay is available to purchase in our[online store](https://shop.tinkla.us) .
+Tinkla Relay is available to purchase in our [online store](https://shop.tinkla.us) .

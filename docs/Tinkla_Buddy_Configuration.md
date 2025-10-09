@@ -7,13 +7,13 @@
 
 In order for your Tinkla Buddy to operate, it needs certificates which are given by the Tinkla server to those that registered their product. When you register your device you receive a free 14 day trial period. During this time your Tinkla Buddy has full functionality. Expand section for details.
 
-30 days prior to your the expiration of your license or trial period, you have the option to purchase or renew the yearly subscription using the built in PayPal connection.
+30 days prior to your the expiration of your license or trial period, you have the option to purchase or renew the yearly subscription using the built in Pay Pal connection.
 
 Once your trial or license period expires, all functionality on the Tinkla Buddy is removed until you purchase / renew your license.
 
-To register your Tinkla Buddy first you need to create an account ontinkla.usAND confirm your email.
+To register your Tinkla Buddy first you need to create an account ontinkla.us AND confirm your email.
 
-Once you have yourtinkla.usaccount setup, you can register your Tinkla Buddy using theTinkla Buddy Adminportal.
+Once you have yourtinkla.usaccount setup, you can register your Tinkla Buddy using the Tinkla Buddy Adminportal.
 
 Once you have verified your credentials, you will be required to enter your personal information as well as select your email notification preferences. These settings can be later changed from the**Account**menu, by selecting**User Preferences**
 
@@ -21,7 +21,7 @@ Now it is time to finally register your Tinkla Buddy. You will need to know the 
 
 You will notice that for now your Tinkla Buddy record has no data. The**Buddy Software**,**Tesla Software**fields will be empty and the**Last Signal**and**Cert Update**fields will show dates in the past. Do not worry, they will get updated the moment your Tinkla Buddy gets its certs for the first time.
 
-It is now time to[power up your Tinkla Buddy for the first time](Tinkla_Buddy_Installation.md) .
+It is now time to [power up your Tinkla Buddy for the first time](Tinkla_Buddy_Installation.md) .
 
 ## Using the Tinkla Buddy Admin portal
 
@@ -40,7 +40,7 @@ If you plan to use email to send screenshots, please make sure you setup your em
 - **Update**- Checks for a Tinkla Buddy update.
 - **Quiet**- Puts the device in a quiet mode for Service Center visits.
 - **Wifi**- **Info**- This shows the current Wireless Access Point name and password to join the network and use your car's 3g or LTE internet.
-- **IC Int.**- Here you can Turn Integration**On**or**Off**- IC integration allows OpenPilot to appear on the Instrument Cluster similar to Tesla AutoPilot. It also shows data from your Baolong TPMS as if you have a Conti TPMS retrofit.
+- **IC Int.**- Here you can Turn Integration**On**or**Off**- IC integration allows Open Pilot to appear on the Instrument Cluster similar to Tesla Auto Pilot. It also shows data from your Baolong TPMS as if you have a Conti TPMS retrofit.
 - **Please note:**it can take up to a minute for your IC to restart the processes in integration mode and it will flicker twice during the process. The IC isn't rebooted, just restarting processes.
 - **Tunnels**- Here you can turn Tunnels**On**or**Off**- Turning tunnels on allows you to use the Tinkla Bastillion server to SSH into your Tinkla Buddy and it enables the remote control app (in development)
 2. **Tesla**- **Tokens**- If you are a security researcher and have access to your car's systems, you'll be able to see it here.
@@ -59,19 +59,19 @@ If you plan to use email to send screenshots, please make sure you setup your em
 
 ## Using the Tinkla Buddy Webapp
 
-Tinkla Buddy Webapp is a web based application hosted on your Tinkla Buddy. It allows you to do more configurations on your Tinkla Buddy that can not be achieved through the Tinkla Menu, such as setting up token persistence, changing your WiFi access point password, etc. Expand section for details.
+Tinkla Buddy Webapp is a web based application hosted on your Tinkla Buddy. It allows you to do more configurations on your Tinkla Buddy that can not be achieved through the Tinkla Menu, such as setting up token persistence, changing your Wi Fi access point password, etc. Expand section for details.
 
-Setup WiFi for access to Tinkla Buddy App.
+Setup Wi Fi for access to Tinkla Buddy App.
 
 First activate the TB on your CID using either the wheel menu button or (if parked) parking button four times. Select**Tinkla**.
 
-Then select**WiFi**.
+Then select**Wi Fi**.
 
-Then select**On**, to turn on the WiFi SSID.
+Then select**On**, to turn on the Wi Fi SSID.
 
-On your Cell phone look for the SSID`tinklaAP`, the WiFi password is`teslaFr33`
+On your Cell phone look for the SSID`tinkla AP`, the Wi Fi password is`tesla Fr33`
 
-Select the SSID and it will assign an IP (it may tell you there is no internet). The next thing to do is go to your favorite browser on the phone, and enter the following URL[http://10.5.5.1](http://10.5.5.1) 
+Select the SSID and it will assign an IP (it may tell you there is no internet). The next thing to do is go to your favorite browser on the phone, and enter the following URL [http://10.5.5.1](http://10.5.5.1) 
 
 You will be presented with the log in screen. The first time password is`1234`
 
@@ -109,19 +109,19 @@ ssh cid rm /tmp/CID_script.sh
 
 ## Cron Jobs
 
-If you already have root and token persistence setup, then you can have scripts set to run periodically on the CID based on where you place your`script.sh`. Based on the directory you use, you can have a script run afterReboot (MCU reboot, not Tinkla Buddy), every 1, 5, 15, or 60 minutes. Expand section for details.
+If you already have root and token persistence setup, then you can have scripts set to run periodically on the CID based on where you place your`script.sh`. Based on the directory you use, you can have a script run after Reboot (MCU reboot, not Tinkla Buddy), every 1, 5, 15, or 60 minutes. Expand section for details.
 
 Scripts within these folders**MUST**have filenames ending in`.sh`.
 
 ```
-/opt/tinkla/cron/afterReboot
-/opt/tinkla/cron/everyOneMinute
-/opt/tinkla/cron/everyFiveMinutes
-/opt/tinkla/cron/everyFifteenminutes
-/opt/tinkla/cron/everyHour
+/opt/tinkla/cron/after Reboot
+/opt/tinkla/cron/every One Minute
+/opt/tinkla/cron/every Five Minutes
+/opt/tinkla/cron/every Fifteenminutes
+/opt/tinkla/cron/every Hour
 ```
 
-For those users that have root persistence, I recommend adding a**clean_traces.sh**file to the**/opt/tinkla/cron/everyOneMinute**folder containing the following code
+For those users that have root persistence, I recommend adding a**clean_traces.sh**file to the**/opt/tinkla/cron/every One Minute**folder containing the following code
 
 ```
 sed -i '/192\.168\.90\.101/d' /var/log/sshd/current
@@ -133,37 +133,37 @@ echo 'set +o history' > /home/tesla/.bashrc
 cat /dev/null > /home/tesla/.bash_history
 ```
 
-If you have root persistence and want the AutoPilot screen on CID, create a script called**ap_screen.sh**in the**/opt/tinkla/cron/afterReboot**folder containing this code:
+If you have root persistence and want the Auto Pilot screen on CID, create a script called**ap_screen.sh**in the**/opt/tinkla/cron/after Reboot**folder containing this code:
 
 ```
-edit-settings-conf.pl -a vapi/forceHasAutopilot=true
-edit-settings-conf.pl -a vapi/forceHasDriveOnNav=true
-edit-settings-conf.pl -a vapi/forceHasDriveOnNavMaps=true
-/usr/local/bin/sdv GUI_autopilotAlwaysOn true
-/usr/local/bin/sdv GUI_autosteerOnRequest true
-/usr/local/bin/sdv GUI_autosteerDisabled false
-/usr/local/bin/sdv GUI_accFromZero true
-/usr/local/bin/sdv DAS_mapAvailability true
-/usr/local/bin/sdv GUI_redLightStopSignOnRequest true
-/usr/local/bin/sdv GUI_enableMapStops true
-/usr/local/bin/sdv GUI_enableVisionStops true
-/usr/local/bin/sdv GUI_enableFSDFunctions true
-/usr/local/bin/sdv GUI_stopAndGo true
-/usr/local/bin/sdv GUI_noaEverywhere true
-/usr/local/bin/sdv DAS_navAvailable true
-/usr/local/bin/sdv GUI_accFollowDistance 2
-/usr/local/bin/sdv GUI_accOvertakeOnRequest true
-/usr/local/bin/sdv GUI_autopilotControlRequest 0
-/usr/local/bin/sdv FEATURE_dasDriveOnNavEnabled true
-/usr/local/bin/sdv FEATURE_dasDriveOnNavMapsOkay true
-/usr/local/bin/sdv VAPI_backupCameraCalibrated true
-/usr/local/bin/sdv VAPI_fisheyeCameraCalibrated true
-/usr/local/bin/sdv VAPI_lPillarCameraCalibrated true
-/usr/local/bin/sdv VAPI_lRepeaterCameraCalibrated true
-/usr/local/bin/sdv VAPI_mainCameraCalibrated true
-/usr/local/bin/sdv VAPI_narrowCameraCalibrated true
-/usr/local/bin/sdv VAPI_rPillarCameraCalibrated true
-/usr/local/bin/sdv VAPI_rRepeaterCameraCalibrated true
+edit-settings-conf.pl -a vapi/force Has Autopilot=true
+edit-settings-conf.pl -a vapi/force Has Drive On Nav=true
+edit-settings-conf.pl -a vapi/force Has Drive On Nav Maps=true
+/usr/local/bin/sdv GUI_autopilot Always On true
+/usr/local/bin/sdv GUI_autosteer On Request true
+/usr/local/bin/sdv GUI_autosteer Disabled false
+/usr/local/bin/sdv GUI_acc From Zero true
+/usr/local/bin/sdv DAS_map Availability true
+/usr/local/bin/sdv GUI_red Light Stop Sign On Request true
+/usr/local/bin/sdv GUI_enable Map Stops true
+/usr/local/bin/sdv GUI_enable Vision Stops true
+/usr/local/bin/sdv GUI_enable FSDFunctions true
+/usr/local/bin/sdv GUI_stop And Go true
+/usr/local/bin/sdv GUI_noa Everywhere true
+/usr/local/bin/sdv DAS_nav Available true
+/usr/local/bin/sdv GUI_acc Follow Distance 2
+/usr/local/bin/sdv GUI_acc Overtake On Request true
+/usr/local/bin/sdv GUI_autopilot Control Request 0
+/usr/local/bin/sdv FEATURE_das Drive On Nav Enabled true
+/usr/local/bin/sdv FEATURE_das Drive On Nav Maps Okay true
+/usr/local/bin/sdv VAPI_backup Camera Calibrated true
+/usr/local/bin/sdv VAPI_fisheye Camera Calibrated true
+/usr/local/bin/sdv VAPI_l Pillar Camera Calibrated true
+/usr/local/bin/sdv VAPI_l Repeater Camera Calibrated true
+/usr/local/bin/sdv VAPI_main Camera Calibrated true
+/usr/local/bin/sdv VAPI_narrow Camera Calibrated true
+/usr/local/bin/sdv VAPI_r Pillar Camera Calibrated true
+/usr/local/bin/sdv VAPI_r Repeater Camera Calibrated true
 echo "1" > /var/etc/dashw
 echo "dashw 1" >> /var/etc/gateway.cfg
 echo "autopilot 1" >> /var/etc/gateway.cfg
@@ -177,7 +177,7 @@ start qtcar-audiod
 
 ## Controlling Relays
 
-You can control[relay banks of 4 or 8 channels](https://www.amazon.com/NOYITO-4-Channel-Computer-Drive-free-Controller/dp/B07C3HXZQ9) easily with your Tinkla Buddy by configuring a custom menu.
+You can control [relay banks of 4 or 8 channels](https://www.amazon.com/NOYITO-4-Channel-Computer-Drive-free-Controller/dp/B07C3HXZQ9) easily with your Tinkla Buddy by configuring a custom menu.
 
 The channels can be controlled independently or in groups. To control a channel, we use the**usbrelay**application that is already installed on your Tinkla Buddy. When you get a new relays bank, you need to power it up via 12v from the car and also connect it to the Buddy via USB. Once all connections are done, the fun can begin.
 
@@ -204,7 +204,7 @@ QAAMZ_4=0
 
 This for example is a 4 channel board, and the names associated with each channel are**QAAMZ_1-QAAMZ_4**. To change the status of a channel, all you have to do is issue a command like`usbrelay QAAMZ_2=1`. That command will turn second channel ON. To turn it off, you type`usbrelay QAAMZ_2=0`. To turn multiple channels on/off, you just list them, space separated, after**usbrelay**like this`usbrelay QAAMZ_1=1 QAAMZ_2=0 QAAMZ_4=1`In this example channels 1 and 4 are turned on and channel 2 is turned off.
 
-Now that you know how to control the relays from the command prompt, you can incorporate them in your[Custom Menu](Tinkla_Buddy_Configuration.md) .
+Now that you know how to control the relays from the command prompt, you can incorporate them in your [Custom Menu](Tinkla_Buddy_Configuration.md) .
 
 The following example creates a custom menu for 2 options on the relays, one that switches 1 channel on/off and one that switches 3 channels at the same time on/off.
 

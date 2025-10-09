@@ -1,19 +1,19 @@
-# Template:LongControl v066
+# Template:Long Control v066
 
 ### Using Adaptive Cruise Control
 
 ```
-To repeat, without electric brakes (iBooster) the car only uses regenerative braking. This is not enough for sudden slowdowns. YOU MUST BE READY TO MANUALLY BRAKE AT ANY MOMENT.
+To repeat, without electric brakes (i Booster) the car only uses regenerative braking. This is not enough for sudden slowdowns. YOU MUST BE READY TO MANUALLY BRAKE AT ANY MOMENT.
 ```
 
-Adaptive Cruise Control allows the car to match speed with cars in front of you, slows down for turns based on Comma OP logic and also accelerates up to the MAX set speed. We have two types of adaptive cruise control based on your car configuration and options installed: ACC which is based on Tesla CC and PCC which uses the[pedal interceptor](Pedal_Interceptor.md) .
+Adaptive Cruise Control allows the car to match speed with cars in front of you, slows down for turns based on Comma OP logic and also accelerates up to the MAX set speed. We have two types of adaptive cruise control based on your car configuration and options installed: ACC which is based on Tesla CC and PCC which uses the [pedal interceptor](Pedal_Interceptor.md) .
 
 Follow these steps to use ACC:
 
 1. Press the cruise stalk IN so that the orange "cruise control ready" LED on the stalk is lit.
-2. Enable the ACC option on the[EON](EON.md) screen if necessary.
+2. Enable the ACC option on the [EON](EON.md) screen if necessary.
 3. Accelerate above 18 MPH.
-4. Enable OpenPilot using a DOUBLE stalk pull (pull the cruise control stalk BACKWARDS TWICE in quick succession.) You will see the blue 'Cruise' icon appear on your dash. If you have[IC/CID integration](Root_Access_To_IC_and_CID.md) , the speed will be set to the speed limit for that road + the set offset in the OpenPilot screen in CID. ACC is now active.
+4. Enable Open Pilot using a DOUBLE stalk pull (pull the cruise control stalk BACKWARDS TWICE in quick succession.) You will see the blue 'Cruise' icon appear on your dash. If you have [IC/CID integration](Root_Access_To_IC_and_CID.md) , the speed will be set to the speed limit for that road + the set offset in the Open Pilot screen in CID. ACC is now active.
 5. The initial max speed may be conservative. Press UP on the stalk to increase it.
 You can also accelerate manually to temporarily drive faster than current cruise speed. This will not disable ACC.
 6. Cruise is disabled if you brake or the car slows below 18 MPH.
@@ -21,10 +21,10 @@ You can also accelerate manually to temporarily drive faster than current cruise
 
 Follow these steps to use PCC:
 
-1. Press the cruise stalk IN so that the orange "cruise control ready" LED on the stalk is not lit (or set the[OpenPilot Configuration File](OpenPilot_Configuration_File.md) to use pedal always over CC)
-2. Enable the PCC option on the[EON](EON.md) screen if necessary.
+1. Press the cruise stalk IN so that the orange "cruise control ready" LED on the stalk is not lit (or set the [Open Pilot Configuration File](Open Pilot_Configuration_File.md) to use pedal always over CC)
+2. Enable the PCC option on the [EON](EON.md) screen if necessary.
 3. Accelerate above 1 MPH.
-4. Enable OpenPilot using a DOUBLE stalk pull (pull the cruise control stalk BACKWARDS TWICE in quick succession.) You will see the blue 'Cruise' icon appear on your dash. If you have[IC/CID integration](Root_Access_To_IC_and_CID.md) , the speed will be set to the speed limit for that road + the set offset in the OpenPilot screen in CID. PCC is now active.
+4. Enable Open Pilot using a DOUBLE stalk pull (pull the cruise control stalk BACKWARDS TWICE in quick succession.) You will see the blue 'Cruise' icon appear on your dash. If you have [IC/CID integration](Root_Access_To_IC_and_CID.md) , the speed will be set to the speed limit for that road + the set offset in the Open Pilot screen in CID. PCC is now active.
 5. The initial max speed may be conservative. Press UP on the stalk to increase it.
 Please note: As long as your foot touches the accelerator pedal, it will completely override PCC control.
 6. Cruise is disabled if you brake.
@@ -38,7 +38,7 @@ Controls while ACC or PCC are enabled:
 | Cruise stalk DOUBLE PULL | Enable OP steering and ACC or PCC and updates the max allowed cruise speed based on your current speed. |
 | Cruise stalk UP | Increase cruise speed, increasing max allowed ACC/PCC speed if necessary. |
 | Cruise stalk DOWN | Decrease cruise speed and max allowed ACC/PCC speed. |
-| Cruise stalk PUSH | Disable OpenPilot (both steering and ACC/PCC). |
+| Cruise stalk PUSH | Disable Open Pilot (both steering and ACC/PCC). |
 | Cruise stalk DOUBLE 1/2 DOWN | If the on screen ACC button has "CC" displaying, this will engage regular stock Tesla CC without auto-steer or regenerative braking. |
 | Brake pedal | Pause both ACC/PCC and traditional cruise. |
 | Accelerator | (When in AUTO mode) Accel over 18 MPH to unpause ACC. No effect on PCC. Overrides the long control for both ACC and PCC. |
@@ -47,14 +47,14 @@ Controls while ACC or PCC are enabled:
 
 ### Using Regular Cruise Control
 
-Beginning in OpenPilot v0.6.6, we have brought back Tesla's stock Cruise Control as an option to maintain your car's speed when OP can not see well enough to stay engaged or where you deem conditions are not safe enough to allow OP to steer the car for you, i.e. when there is snow or rain and OP can't clearly detect the road lines. OP auto-detects if you have a Pedal interceptor and if you do, when you press the cruise stalk IN so that the orange "cruise control ready" LED on the stalk is lit, PCC is off and regular CC is available.**YOU ARE IN CONTROL, not OP.**
+Beginning in Open Pilot v0.6.6, we have brought back Tesla's stock Cruise Control as an option to maintain your car's speed when OP can not see well enough to stay engaged or where you deem conditions are not safe enough to allow OP to steer the car for you, i.e. when there is snow or rain and OP can't clearly detect the road lines. OP auto-detects if you have a Pedal interceptor and if you do, when you press the cruise stalk IN so that the orange "cruise control ready" LED on the stalk is lit, PCC is off and regular CC is available.**YOU ARE IN CONTROL, not OP.**
 
 Follow these steps to use stock CC:
 
-1. Press the cruise stalk IN so that the orange "cruise control ready" LED on the stalk is lit. (If you have a Pedal and[OpenPilot Configuration File](OpenPilot_Configuration_File.md) is set to use pedal always over CC, this won't work.)
-2. Set the ACC option on the[EON](EON.md) screen to CC if necessary. (If you have a Pedal, CC should be selected by default)
+1. Press the cruise stalk IN so that the orange "cruise control ready" LED on the stalk is lit. (If you have a Pedal and [Open Pilot Configuration File](Open Pilot_Configuration_File.md) is set to use pedal always over CC, this won't work.)
+2. Set the ACC option on the [EON](EON.md) screen to CC if necessary. (If you have a Pedal, CC should be selected by default)
 3. Accelerate above 18 MPH.
-4. Enable Cruise Control pressing DOUBLE 1/2 DOWN on the stalk (press the cruise control stalk halfway DOWN TWICE in quick succession.) You will see the blue 'Cruise' icon appear on your dash. If you have[IC/CID integration](Root_Access_To_IC_and_CID.md) , the speed will be set to the speed you were going. Tesla's stock CC is now active.
+4. Enable Cruise Control pressing DOUBLE 1/2 DOWN on the stalk (press the cruise control stalk halfway DOWN TWICE in quick succession.) You will see the blue 'Cruise' icon appear on your dash. If you have [IC/CID integration](Root_Access_To_IC_and_CID.md) , the speed will be set to the speed you were going. Tesla's stock CC is now active.
 5. Press UP or DOWN on the stalk to increase or decrease speed.
-Please note: CC is not controlled by OpenPilot, you are in control.
+Please note: CC is not controlled by Open Pilot, you are in control.
 6. Cruise is disabled if you brake.

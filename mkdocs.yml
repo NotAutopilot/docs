@@ -77,6 +77,8 @@ nav:
 
   - Vehicle Support:
     - preAP Model S: OpenPilot_for_preAP_Tesla_ModelS.md
+    - AP1 Model S/X: OpenPilot_for_Tesla_Model_S-X_with_AP1.md
+    - AP2 Model S/X: OpenPilot_for_Tesla_Model_S-X_with_AP2.md
     - OBD2 Port Info: Tesla_Model_S_preAP_OBD2_port.md
     - CAN Bus Details: Tesla_CAN_Bus.md
 

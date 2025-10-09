@@ -9,8 +9,8 @@ There are multiple videos on how to remove the Instrument Cluster [IC], here is 
 
 Tools worth investing in:
 
-- [AirShim (aka Inflatable Pry Bar)](https://www.homedepot.com/p/Calculated-Industries-Contractor-Grade-AirShim-Inflatable-Pry-Bar-and-Leveling-Tool-that-Holds-Up-To-300-lbs-1190/206697086)
-- [Trim pry tools](https://www.amazon.com/dp/B07JVP1MRS/ref=cm_sw_r_tw_dp_U_x_CN1KEbF8VGTSB)
+- [Air Shim (aka Inflatable Pry Bar)](https://www.homedepot.com/p/Calculated-Industries-Contractor-Grade-Air Shim-Inflatable-Pry-Bar-and-Leveling-Tool-that-Holds-Up-To-300-lbs-1190/206697086)
+- [Trim pry tools](https://www.amazon.com/dp/B07JVP1MRS/ref=cm_sw_r_tw_dp_U_x_CN1KEb F8VGTSB)
 - [TORX T20 Screwdriver](https://www.amazon.com/dp/B00093DYRO/ref=cm_sw_r_tw_dp_U_x_IO1KEb4MM5KNS)
 
 ****Step 1****
