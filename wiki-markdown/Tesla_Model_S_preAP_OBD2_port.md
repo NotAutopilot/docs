@@ -1,6 +1,9 @@
 # Tesla Model S preAP OBD2 port
 
-preAP Tesla Model S OBD2 port with pins 1 and 9 populatedpreAP Tesla Model S OBD2 port without pins 1 and 9 populated
+![preAP Tesla Model S OBD2 port with pins 1 and 9 populated](images/OBD2_with_pins_1_and_9_populated.png)
+
+![preAP Tesla Model S OBD2 port without pins 1 and 9 populated](images/OBD2_port_without_pins_1_and_9_populated.png)
+
 ## Tinkla OBD-C Adapter and your car's OBD2 port
 
 Tinkla OBD-C Adapter connects to your preAP Tesla Model S' OBD2 port in order to power the Comma devkit and also talk to your car's Chassis CAN bus. Depending on the year/month when your car was manufactured, your OBD2 port might or might not have the pins 1 and 9 (which have the Chassis CAN bus) populated. Do not despair, we have a solution for that.

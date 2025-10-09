@@ -1,3 +1,3 @@
-# Media Wiki:Grouppage-contributors
+# MediaWiki:Grouppage-contributors
 
 Project:Tinkla

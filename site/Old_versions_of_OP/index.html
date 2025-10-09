@@ -275,34 +275,9 @@
     
 
     
-    <div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2">
-        <div data-slot="sidebar-group-content" data-sidebar="group-content" class="w-full text-sm">
-            <ul data-slot="sidebar-menu" data-sidebar="menu" class="flex w-full min-w-0 flex-col gap-0.5">
-                
-                
-                <li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative">
-    <a data-slot="sidebar-menu-button" data-active="false" data-sidebar="menu-button"
-        data-size="default" href="/"
-        class="hover:bg-sidebar-accent hover:text-sidebar-accent-foreground peer/menu-button flex items-center gap-2 rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 data-[active=true]:bg-accent data-[active=true]:border-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md">
 
-        
-        Home
-        
-
-        
-
-        
-
-        
-    </a>
-</li>
-                
-                
-            </ul>
-        </div>
-    </div>
     
-
+    
     
     
     <div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2">
@@ -892,48 +867,48 @@
 
     </div>
     <div class="typography w-full flex-1 *:data-[slot=alert]:first:mt-0">
-        <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>These instructions are for the old versions of Open Pilot that run on EON with white or gray panda. For the latest code and instructions please visit the main page.
+        <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>These instructions are for the old versions of OpenPilot that run on EON with white or gray panda. For the latest code and instructions please visit the main page.
 </span></code></pre></div>
-<p><a href="../Talk_Feedback__Ideas__Comments_/">Talk: Feedback? Ideas? Comments?</a> </p>
-<p>Services:Tokens|Vitals| Open VPN | Tesla Remote |Installs|</p>
+<p><a href="../Talk_Feedback__Ideas__Comments_/">Talk: Feedback? Ideas? Comments?</a></p>
+<p>Services:Tokens|Vitals| OpenVPN | Tesla Remote |Installs|</p>
 <p>****Quick Start****</p>
 <ol>
-<li>The Tesla Giraffe install guidewill start your journey to driving with Open Pilot.</li>
+<li>TheTesla Giraffe install guidewill start your journey to driving with OpenPilot.</li>
 <li>Plug your <a href="https://comma.ai/shop/products/panda-obd-ii-dongle">Comma.ai Panda</a> into your Giraffe</li>
 <li>Thenmake and install the EPAS Harness.</li>
 <li>Install the EONin your windshield.</li>
 <li>Then <a href="../EON/">install the Tesla version of OP</a></li>
 <li>Finally take your Tesla w/OP for a spin!</li>
-<li>And if you want to have IC integration (root access not required), now you can with Tinkla Buddy</li>
+<li>And if you want to have IC integration (root access not required), now you can withTinkla Buddy</li>
 </ol>
 <h2 id="getting-pre-ap-up-to-ap1">Getting Pre-AP up to AP1</h2>
 <ul>
-<li>Please read and understand the Disclaimers and Licensing.</li>
+<li>Please read and understand theDisclaimers and Licensing.</li>
 </ul>
 <h4 id="out-of-the-box">Out of the Box</h4>
-<p>Well, just few easy mods to your Tesla and Open Pilot does a fairly good job at lane keep assist (LKA) and introduces a limited adaptive cruise control (ACC) based on the Open Pilot vision radar and just regenerative (regen) braking. Also, the system has a built in lane departure warning (LDW). All you need is:</p>
+<p>Well, just few easy mods to your Tesla and OpenPilot does a fairly good job at lane keep assist (LKA) and introduces a limited adaptive cruise control (ACC) based on the OpenPilot vision radar and just regenerative (regen) braking. Also, the system has a built in lane departure warning (LDW). All you need is:</p>
 <ol>
-<li>an EON, (not a comma two devkit)</li>
-<li>a Panda,</li>
-<li>a Tesla Giraffe,</li>
-<li>and a fairly easy to make EPAS harness.</li>
+<li>anEON, (not a comma two devkit)</li>
+<li>aPanda,</li>
+<li>aTesla Giraffe,</li>
+<li>and a fairly easy to makeEPAS harness.</li>
 </ol>
 <p>The cost for this complete setup is about $1,000 USD when getting all the components from Comma.ai and ebay (for the harness).</p>
 <h4 id="map-integration">Map Integration</h4>
 <p>Comma.ai has brought map integrationfor longitudinal control (slowing down in turns for example) and there are plans to start bringing map info into lateral control as well to improve turning. Map integration is a key component for us too in order to improve the turning capabilities of the system.</p>
 <h4 id="0-18-mph-upgrade">0 - 18 MPH Upgrade</h4>
-<p>The "Out of the Box" setup is the basic install for your tesla and can control your acceleration above 18 MPH. The Pedal Interceptoris a small unit that gets connected between your accelerator pedal on your Model S and the Giraffe. While the stock cruise control on Tesla only works above 18 MPH, with the pedal we can control speed down to 1 MPH (though the regen brakes only work above 5 MPH). The benefit of the pedal is better (and smoother) adaptive cruise control over just the stock Tesla cruise control.</p>
+<p>The "Out of the Box" setup is the basic install for your tesla and can control your acceleration above 18 MPH. ThePedal Interceptoris a small unit that gets connected between your accelerator pedal on your Model S and the Giraffe. While the stock cruise control on Tesla only works above 18 MPH, with the pedal we can control speed down to 1 MPH (though the regen brakes only work above 5 MPH). The benefit of the pedal is better (and smoother) adaptive cruise control over just the stock Tesla cruise control.</p>
 <h4 id="tesla-radar-retrofit">Tesla Radar Retrofit</h4>
-<p>With a few more wires and a harness (plus some e Bay parts) you can add a Tesla Bosch radarto your pre-AP1 car. With full radar integration now available in Open Pilot, you get more accurate lead car detection which leads to a better ACC (still limited to regen braking). Also, if you have Instrument Cluster integration, now you can see 3 lanes full of cars on your IC.</p>
+<p>With a few more wires and a harness (plus some eBay parts) you can add a Tesla Bosch radarto your pre-AP1 car. With full radar integration now available in OpenPilot, you get more accurate lead car detection which leads to a better ACC (still limited to regen braking). Also, if you have Instrument Cluster integration, now you can see 3 lanes full of cars on your IC.</p>
 <h4 id="instrument-cluster">Instrument Cluster</h4>
 <p>Tinkla Buddywill allow you to visualize the path and cars on your Tesla's Instrument Cluster.</p>
 <h4 id="stop-and-go">Stop-and-Go</h4>
-<p>The next hurdle for us is integration with i Booster brakes for full stop and go traffic. This will require replacement of the standard vacuum brakes on your pre-AP1 Model S to the i Booster system that Tesla used in the AP1 cars and beyond. This will be about <span class="arithmatex">\(500-\)</span>800 in parts and some more involved mechanical work as you would need to flush your brakes and such. 
+<p>The next hurdle for us is integration with iBooster brakes for full stop and go traffic. This will require replacement of the standard vacuum brakes on your pre-AP1 Model S to the iBooster system that Tesla used in the AP1 cars and beyond. This will be about <span class="arithmatex">\(500-\)</span>800 in parts and some more involved mechanical work as you would need to flush your brakes and such. 
 Also, root access is needed for this upgrade.</p>
 <h4 id="parking-sensors">Parking Sensors</h4>
-<p>Finally, we will be integrating the AP1 style parking sensors into the Open Pilot code, allowing us to use the data from the 12 sensors to detect cars around us. This is one step we're hoping to start soon. Depending on where you source the sensors and harness, this alone can be somewhere between $500 and $1,500.</p>
+<p>Finally, we will be integrating the AP1 style parking sensors into the OpenPilot code, allowing us to use the data from the 12 sensors to detect cars around us. This is one step we're hoping to start soon. Depending on where you source the sensors and harness, this alone can be somewhere between $500 and $1,500.</p>
 <h4 id="ap1-integration">AP1 Integration</h4>
-<p>Once all this is done, we will be able to fully integrate with AP1 cars as well. With Tesla no longer paying any attention to the older Model S (the <a href="https://en.wikipedia.org/wiki/Tesla_Autopilot#Hardware_1">AP1</a> was based on the Mobile Eye platform that Tesla dumped in October 2016 and has received limited code updates ever since), the only option to get new features and functionality is by joining the <a href="https://community.comma.ai/wiki/index.php/Tesla">Open Pilot group</a> .</p>
+<p>Once all this is done, we will be able to fully integrate with AP1 cars as well. With Tesla no longer paying any attention to the older Model S (the <a href="https://en.wikipedia.org/wiki/Tesla_Autopilot#Hardware_1">AP1</a> was based on the MobileEye platform that Tesla dumped in October 2016 and has received limited code updates ever since), the only option to get new features and functionality is by joining the <a href="https://community.comma.ai/wiki/index.php/Tesla">OpenPilot group</a>.</p>
 
     </div>
 </article>
@@ -979,22 +954,14 @@ Also, root access is needed for this upgrade.</p>
             
 
             
-            <div class="flex flex-col gap-4">
-                <div class="text-muted-foreground text-sm font-medium">Menu</div>
-                <div class="flex flex-col gap-3">
-                    
-                    <a class="text-2xl font-medium" href="..">
-                        
-                        Home
-                        
-                    </a>
-                    
-                </div>
-            </div>
-            
 
             
             <div class="flex flex-col gap-8">
+                
+                <div class="flex flex-col gap-4">
+                    <div class="text-muted-foreground text-sm font-medium">Home</div>
+                    
+                </div>
                 
                 <div class="flex flex-col gap-4">
                     <div class="text-muted-foreground text-sm font-medium">Getting Started</div>

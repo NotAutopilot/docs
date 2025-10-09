@@ -275,34 +275,9 @@
     
 
     
-    <div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2">
-        <div data-slot="sidebar-group-content" data-sidebar="group-content" class="w-full text-sm">
-            <ul data-slot="sidebar-menu" data-sidebar="menu" class="flex w-full min-w-0 flex-col gap-0.5">
-                
-                
-                <li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative">
-    <a data-slot="sidebar-menu-button" data-active="false" data-sidebar="menu-button"
-        data-size="default" href="/"
-        class="hover:bg-sidebar-accent hover:text-sidebar-accent-foreground peer/menu-button flex items-center gap-2 rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 data-[active=true]:bg-accent data-[active=true]:border-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md">
 
-        
-        Home
-        
-
-        
-
-        
-
-        
-    </a>
-</li>
-                
-                
-            </ul>
-        </div>
-    </div>
     
-
+    
     
     
     <div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2">
@@ -894,8 +869,8 @@
     <div class="typography w-full flex-1 *:data-[slot=alert]:first:mt-0">
         <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>This page is describing the usage of the Tesla Pedal Interceptor with Tesla Unity. If you are looking to use the Pedal Interceptor with the older version of Tesla OP that works on EON, please look at the Pedal Interceptor for EON page.
 </span></code></pre></div>
-<p>The Comma Pedal is used to provide advanced acceleration and regen braking capability on Tesla cars running Openpilot that do not have i Booster installed.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Without electric brakes (i Booster) the car only uses regenerative braking. This is not enough for sudden slowdowns. YOU MUST BE READY TO MANUALLY BRAKE AT ANY MOMENT.
+<p>The Comma Pedal is used to provide advanced acceleration and regen braking capability on Tesla cars running Openpilot that do not have iBooster installed.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Without electric brakes (iBooster) the car only uses regenerative braking. This is not enough for sudden slowdowns. YOU MUST BE READY TO MANUALLY BRAKE AT ANY MOMENT.
 </span></code></pre></div>
 <h3 id="what-it-does">What it Does</h3>
 <p>The Comma Pedal is an accelerator pedal interceptor. It is a device that is inserted between a car's electronic accelerator pedal and the DU (Drive Unit). It detects the voltage from the accelerator pedal which represents the pedal's position. It then writes that same voltage back out to the DU as if the accelerator pedal had produced it.</p>
@@ -907,7 +882,7 @@
 <li>1 USB- This is used to program and monitor the Comma Pedal, itself.</li>
 </ol>
 <p>When Openpilot is NOT engaged, the Comma Pedal reads the voltage from the accelerator pedal and just passes it along to the DU.</p>
-<p>When Openpilot IS engaged with <a href="../Longitudinal_Control__ACC/">longitudinal control</a> , it gets the virtual accelerator pedal position from Openpilot and passes it on to the DU.</p>
+<p>When Openpilot IS engaged with <a href="../Longitudinal_Control__ACC/">longitudinal control</a>, it gets the virtual accelerator pedal position from Openpilot and passes it on to the DU.</p>
 <p>The Comma Pedal is also constantly sending the physical accelerator pedal's position to the CAN bus for Openpilot to read. This way you can increase speed temporarily without having to adjust max speed or disengage longitudinal control.</p>
 <h3 id="obtaining-a-comma-pedal">Obtaining a Comma Pedal</h3>
 <p>You cannot buy a pre-built Comma Pedal from Comma. Fortunately we have a solution for you that only requires you to strip some wires and secure them with a screwdriver:</p>
@@ -915,7 +890,7 @@
 <li>you can find the Tinkla Pedal Interceptor <a href="https://shop.tinkla.us/Tinkla-Pedal-p487274387">here in the Tinkla Store</a></li>
 <li>you can find the connectors (limited quantity)<a href="https://shop.tinkla.us/Tesla-Pedal-Connectors-pair-p459771917">here in the Tinkla Store</a></li>
 </ul>
-<p>You could also <a href="https://github.com/commaai/neo/tree/master/pedal">build it yourself</a> (not recommended) or have one <a href="https://medium.com/@joshuairl/comma-pedal-building-with-macrofab-6328bea791e8">fabricated through a service like Macrofab</a> .</p>
+<p>You could also <a href="https://github.com/commaai/neo/tree/master/pedal">build it yourself</a>(not recommended) or have one <a href="https://medium.com/@joshuairl/comma-pedal-building-with-macrofab-6328bea791e8">fabricated through a service like Macrofab</a>.</p>
 <h3 id="wiring-a-tesla-pedal">Wiring a Tesla Pedal</h3>
 <p>If you purchased a Tinkla Pedal Interceptor together with the Tesla Pedal Connectors from our online store, you are in for a treat. Attaching the connectors to the pedal board is as easy as strip-twist-screw. 
 The color codes for the Tesla Pedal Connectors wires are as follow:</p>
@@ -929,31 +904,32 @@ The color codes for the Tesla Pedal Connectors wires are as follow:</p>
 <p>In order to create your Tesla Pedal you need:</p>
 <ul>
 <li>1x Comma Pedal board (for sources see above section)</li>
-<li>1x <a href="https://www.amazon.com/Le Motech-Plastic-Electrical-Junction-72x42x23mm/dp/B07F3Y8L95/">box to hold the board</a> if your Pedal doesn't already have a case (current ones ship with 3D printed cases). You will need to cut some <a href="../images/Pedal_in_box.png">small openings</a> on the sides (and in front of the RJ45) if you use this one.</li>
-<li>1x set of "WPT-929" connectors (actually <a href="https://www.molex.com/molex/products/datasheet.jsp?part=active/0314026110_CRIMP_HOUSINGS.xml">Molex</a> ) -<a href="https://www.amazon.com/dp/B07GZY4ST4">fast shipping</a> ,<a href="https://de.aliexpress.com/item/32778798102.html">slow shipping</a></li>
+<li>1x <a href="https://www.amazon.com/LeMotech-Plastic-Electrical-Junction-72x42x23mm/dp/B07F3Y8L95/">box to hold the board</a> if your Pedal doesn't already have a case (current ones ship with 3D printed cases). You will need to cut some <a href="File_Pedal_in_box.png.md">small openings</a> on the sides (and in front of the RJ45) if you use this one.</li>
+<li>1x set of "WPT-929" connectors (actually <a href="https://www.molex.com/molex/products/datasheet.jsp?part=active/0314026110_CRIMP_HOUSINGS.xml">Molex</a>) -<a href="https://www.amazon.com/dp/B07GZY4ST4">fast shipping</a>,<a href="https://de.aliexpress.com/item/32778798102.html">slow shipping</a></li>
 <li>~3ft of wire for the connectors in case your Pedal and connectors don't come with them (~AWG24)</li>
-<li>1x SN-28B crimping tool (same one as used for EPAS cable -<a href="https://www.amazon.com/Wovier-Compression-Ratcheting-0-1-1-0mm2-Wire-electrode/dp/B01CE4FAMW">fast shipping</a> ,<a href="https://www.aliexpress.com/item/32843027501.html">slow shipping</a> )</li>
+<li>1x SN-28B crimping tool (same one as used for EPAS cable -<a href="https://www.amazon.com/Wovier-Compression-Ratcheting-0-1-1-0mm2-Wire-electrode/dp/B01CE4FAMW">fast shipping</a>,<a href="https://www.aliexpress.com/item/32843027501.html">slow shipping</a>)</li>
 <li>1x ethernet cable ~2ft (not crossover)</li>
 </ul>
 <p>Use the diagram to connect the female WPT-929 pedal connector to the IN side of the pedal board and the male WSP-929 connector to the OUT side of the pedal connector.</p>
 <h3 id="connecting-the-pedal-for-tinkla-unity">Connecting the Pedal for Tinkla Unity</h3>
-<p>Connecting the CAN BUS from the Pedal to the Tinkla OBD-C Adapteris done via the RJ45 port using a standard ethernet cable.</p>
+<p><img alt="" src="../images/Tinkla_OBD-C_Adapter_RJ45.jpg" /></p>
+<p>Connecting the CAN BUS from the Pedal to theTinkla OBD-C Adapteris done via the RJ45 port using a standard ethernet cable.</p>
 <p>Plug in the ethernet cable into the RJ45 port of the Pedal and the other end into the RJ45 port of the Tinkla OBD-C Adapter.</p>
 <h3 id="installing-the-tesla-pedal">Installing the Tesla Pedal</h3>
 <p>To install the Pedal, there are two steps:</p>
 <ol>
 <li>connecting the board to the accelerator pedal</li>
-<li>connecting the board to the Tinkla OBD-C Adapter</li>
+<li>connecting the board to theTinkla OBD-C Adapter</li>
 </ol>
-<p>This <a href="https://www.youtube.com/watch?v=Ui Qved6gt2U">video</a> for a similar product shows you what you have to do in order to install the Pedal interceptor between the accelerator pedal and the car's existing connector. Take your time and watch the video first. The process is not complicated if you just follow it step by step.</p>
-<p>Once that is complete, connect your ethernet cable to the Pedal and the other end to the RJ45 port on the Tinkla OBD-C Adapter.</p>
+<p>This <a href="https://www.youtube.com/watch?v=UiQved6gt2U">video</a> for a similar product shows you what you have to do in order to install the Pedal interceptor between the accelerator pedal and the car's existing connector. Take your time and watch the video first. The process is not complicated if you just follow it step by step.</p>
+<p>Once that is complete, connect your ethernet cable to the Pedal and the other end to the RJ45 port on theTinkla OBD-C Adapter.</p>
 <h3 id="flashing-the-firmware-for-tesla-pedal-with-tesla-unity-code">Flashing the firmware for Tesla Pedal with Tesla Unity code</h3>
 <h5 id="flashing-via-can">Flashing via CAN</h5>
-<p>With the introduction of Tesla Unity code, flashing the Tesla Pedal with the latest firmware is as easy as pressing a button in the Tesla pre AP settings page. To flash the latest firmware to your Tesla Pedal:</p>
+<p>With the introduction of Tesla Unity code, flashing the Tesla Pedal with the latest firmware is as easy as pressing a button in the Tesla preAP settings page. To flash the latest firmware to your Tesla Pedal:</p>
 <ol>
-<li>Ensure your Pedal is installed in your vehicle and connected to the Tinkla OBD-C Adapteror to your specific harness.</li>
+<li>Ensure your Pedal is installed in your vehicle and connected to theTinkla OBD-C Adapteror to your specific harness.</li>
 <li>Ensure that all the <a href="../Tesla_Unity_Configuration/">settings are configured</a> correctly for your pedal, especially enabling the pedal and setting up which CAN port it is connected to.</li>
-<li>Using the**Flash Pedal**button under the**Tesla pre AP**tab of <a href="../Tesla_Unity_Configuration/">settings</a> start the firmware flashing process</li>
+<li>Using the**Flash Pedal**button under the**Tesla preAP**tab of <a href="../Tesla_Unity_Configuration/">settings</a> start the firmware flashing process</li>
 <li>Before hitting the**Flash**button, ensure your car is on (in P - Park) and continue to keep your foot on the brake throughout the process.</li>
 <li>Hit the**Flash**button and the screen will show the progress. Your car might emit warnings and sounds during this process, which is normal.</li>
 <li>Once process is complete, allow the car to go in "CAR OFF" mode and reboot your Comma devkit.</li>
@@ -962,19 +938,20 @@ The color codes for the Tesla Pedal Connectors wires are as follow:</p>
 <h5 id="flashing-via-usb">Flashing via USB</h5>
 <p><strong>Flashing via USB involves more steps and is only necessary if flashing via CAN is not possible.</strong></p>
 <p>If you built your Pedal yourself or it was shipped without any firmware, it will boot in DFU mode. To know which mode you're in look at the LED on the Pedal board: no light = DFU mode, slow blink = normal flash mode, fast blink = normal operations.</p>
-<p>Entering Pedal Interceptor DFU Mode (image by @jfrux) To enter DFU mode, you will need a <a href="https://www.amazon.com/dp/B09FDJFJ6Z/ref=cm_sw_em_r_mt_dp_QFSM3ZZ87K5WTECKYD12?_encoding=UTF8&amp;psc=1">USB-A to USB-A cable</a> and to remove the Pedal Interceptor from your car. Connect one end of the USB cable to the pedal interceptor, then jump the small pin indicated in the attached image to one of the pins labeled 5V with a small wire. While holding that jump wire, connect the Pedal Interceptor to your computer via USB. This usually takes two people, one to do the jump and one to plug the USB into the laptop. Always have the USB plugged into the Pedal first, then laptop (it makes your life a lot easier). For how to put the pedal interceptor in the DFU mode, follow the instructions for <a href="https://medium.com/@jfrux/flashing-the-comma-pedal-with-ubuntu-a83fb668f6e2#fcdf">applying 5 Volt to a special point on the board</a> .</p>
-<p>While in DFU mode, and connected to your computer running Mac OS or Linux, you can flash your pedal using the same Unity code from your computer.</p>
+<p><img alt="Entering Pedal Interceptor DFU Mode (image by @jfrux)" src="../images/Entering_Pedal_Interceptor_DFU_Mode__image_by__jfrux_.png" /></p>
+<p>To enter DFU mode, you will need a <a href="https://www.amazon.com/dp/B09FDJFJ6Z/ref=cm_sw_em_r_mt_dp_QFSM3ZZ87K5WTECKYD12?_encoding=UTF8&amp;psc=1">USB-A to USB-A cable</a> and to remove the Pedal Interceptor from your car. Connect one end of the USB cable to the pedal interceptor, then jump the small pin indicated in the attached image to one of the pins labeled 5V with a small wire. While holding that jump wire, connect the Pedal Interceptor to your computer via USB. This usually takes two people, one to do the jump and one to plug the USB into the laptop. Always have the USB plugged into the Pedal first, then laptop (it makes your life a lot easier). For how to put the pedal interceptor in the DFU mode, follow the instructions for <a href="https://medium.com/@jfrux/flashing-the-comma-pedal-with-ubuntu-a83fb668f6e2#fcdf">applying 5 Volt to a special point on the board</a>.</p>
+<p>While in DFU mode, and connected to your computer running MacOS or Linux, you can flash your pedal using the same Unity code from your computer.</p>
 <p>To do so you will need a local copy of the Unity code and to run few commands. Please see the sequence below that you have to run in a terminal window on your laptop.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>cd ~
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>rm -rf openpilot
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>git clone https://github.com/boggyver/openpilot.git --depth 1 -b tesla_unity_release C2
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>git clone https://github.com/boggyver/openpilot.git --depth 1 -b tesla_unity_releaseC2
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>cd openpilot/panda/board/pedal
 </span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>./recover.sh
 </span></code></pre></div>
 <p>Sometimes you have to issue the command multiple times until it completes successfully. With the updated bootloader you'll be able to flash future updates via CAN.</p>
 <p>Once done, unplug USB from the Pedal and install in car.</p>
 <h3 id="using-the-tesla-pedal">Using the Tesla Pedal</h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Without electric brakes (i Booster) the car only uses regenerative braking. This is not enough for suddent slowdowns. YOU MUST BE READY TO MANUALLY BRAKE AT ANY MOMENT.
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Without electric brakes (iBooster) the car only uses regenerative braking. This is not enough for suddent slowdowns. YOU MUST BE READY TO MANUALLY BRAKE AT ANY MOMENT.
 </span></code></pre></div>
 <p>Out of the box, OP will use the Tesla CC (with stalk spamming) to control CC. This in our OP implementation is called Adaptive Cruise Control or ACC. CC on Tesla only works above 18 MPH (29 km/h).</p>
 <p>If you turn off the Tesla CC by pressing on the CC stalk, OP will switch to Tesla Pedal mode (PCC). This will provide you with smooth adaptive cruise control by sending the right commands to your Tesla Pedal. Tesla Pedal works down to 1 MPH, but be careful, regen brakes stop working at 5 MPH (8 km/h).</p>
@@ -1023,22 +1000,14 @@ The color codes for the Tesla Pedal Connectors wires are as follow:</p>
             
 
             
-            <div class="flex flex-col gap-4">
-                <div class="text-muted-foreground text-sm font-medium">Menu</div>
-                <div class="flex flex-col gap-3">
-                    
-                    <a class="text-2xl font-medium" href="..">
-                        
-                        Home
-                        
-                    </a>
-                    
-                </div>
-            </div>
-            
 
             
             <div class="flex flex-col gap-8">
+                
+                <div class="flex flex-col gap-4">
+                    <div class="text-muted-foreground text-sm font-medium">Home</div>
+                    
+                </div>
                 
                 <div class="flex flex-col gap-4">
                     <div class="text-muted-foreground text-sm font-medium">Getting Started</div>

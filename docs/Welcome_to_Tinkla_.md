@@ -1,20 +1,20 @@
 # Welcome to Tinkla!
 
-If you're looking for instructions for the old versions of Open Pilot that run on EON with white or gray panda, that page is available [here](Old_versions_of_OP.md) .
+If you're looking for instructions for the old versions of OpenPilot that run on EON with white or gray panda, that page is available [here](Old_versions_of_OP.md).
 
-[Talk: Feedback? Ideas? Comments?](Talk_Feedback__Ideas__Comments_.md) 
+[Talk: Feedback? Ideas? Comments?](Talk_Feedback__Ideas__Comments_.md)
 
-## What is Open Pilot
+## What is OpenPilot
 
-Open Pilot is open source software built to improve upon the existing driver assistance in most new cars on the road today. Now Open Pilot is available for pre-autopilot Tesla Model S as well as Tesla Model S/X with autopilot hardware 1 or 2.
+OpenPilot is open source software built to improve upon the existing driver assistance in most new cars on the road today. Now OpenPilot is available for pre-autopilot Tesla Model S as well as Tesla Model S/X with autopilot hardware 1 or 2.
 
 Currently, openpilot performs the functions of Adaptive Cruise Control (ACC), Automated Lane Centering (ALC), Forward Collision Warning (FCW) and Lane Departure Warning (LDW) for a growing variety of supported car makes, models and model years. In addition, while openpilot is engaged, a camera based Driver Monitoring (DM) feature alerts distracted and asleep drivers. See more about the vehicle integration and limitations.
 
 ## Getting Started
 
-1. [Open Pilot for pre AP Tesla Model S](Open Pilot_for_pre AP_Tesla_Model S.md)
-2. [Open Pilot for Tesla Model S/X with AP1](Open Pilot_for_Tesla_Model_S-X_with_AP1.md)
-3. [Open Pilot for Tesla Model S/X with AP2](Open Pilot_for_Tesla_Model_S-X_with_AP2.md)
+1. [OpenPilot for preAP Tesla ModelS](OpenPilot_for_preAP_Tesla_ModelS.md)
+2. [OpenPilot for Tesla Model S/X with AP1](OpenPilot_for_Tesla_Model_S-X_with_AP1.md)
+3. [OpenPilot for Tesla Model S/X with AP2](OpenPilot_for_Tesla_Model_S-X_with_AP2.md)
 
 ## Software Design History
 
@@ -52,15 +52,15 @@ Currently, openpilot performs the functions of Adaptive Cruise Control (ACC), Au
 * Display shutdown
 * Engage at 0 MPH (AP cars)
 * Fleet based speed (AP cars)
-* Slow down in turns based on Sunny Pilot 
-* prevent i Booster from pressing both pedals
+* Slow down in turns based on SunnyPilot 
+* prevent iBooster from pressing both pedals
 * Improved acceleration handling for AP1
 * Add message ID for the CAN Error 
 * Reduce min accel to -4.5 
 * Improve follow distance
 * Better and smoother pedal with 4 profiles
 * Universal calibration tool for pedal interceptor
-* i Booster control improvement
+* iBooster control improvement
 * Add 5 pedal profiles and 3 acceleration profiles for better long control wiht pedal
 * Add alert when maximum regen is used with pedal to show braking limit 
 * Prevent PCC engagement with uncalibrated pedals
@@ -87,7 +87,7 @@ Currently, openpilot performs the functions of Adaptive Cruise Control (ACC), Au
 ### v0.8.13-53 (2022-08-05)
 
 ```
-* i Booster ECU fixes
+* iBooster ECU fixes
 * Try to fix Controls Mismatch issues
 * Add toggle for radar error with AP
 ```
@@ -114,42 +114,42 @@ Currently, openpilot performs the functions of Adaptive Cruise Control (ACC), Au
 ### v0.8.13-48 (2022-05-18)
 
 ```
-* limit i Booster travel to a max of 15mm (90psi on my car)
-* set Hold values for i Booster to 6.5mm (14psi)
+* limit iBooster travel to a max of 15mm (90psi on my car)
+* set Hold values for iBooster to 6.5mm (14psi)
 * change lane poly calculation logic for IC integrtion
 ```
 
 ### v0.8.13-47 (2022-05-11)
 
-- do not send i Booster brake command when real accelerator pedal is pressed
+- do not send iBooster brake command when real accelerator pedal is pressed
 
 ### v0.8.13-46 (2022-05-10)
 
-- do not send i Booster brake command when accelerator pedal is pressed
+- do not send iBooster brake command when accelerator pedal is pressed
 - increase brake hold value
 
 ### v0.8.13-45 (2022-05-09)
 
 - update firmware for Vacuum Sensor board with brake release condition
-- allow 0x553 for i Booster in panda
+- allow 0x553 for iBooster in panda
 - allow 0x555 for IVS in panda
 
 ### v0.8.13-44 (2022-05-04)
 
 - update firmware for Vacuum Sensor board
-- fix CRC for i Booster
+- fix CRC for iBooster
 
 ### v0.8.13-43 (2022-04-21)
 
 - fix Pedal over CC issues when MCU2 or no Tinkla Buddy
 - add firmware for Vacuum Sensor board
-- fix CRC for i Booster
+- fix CRC for iBooster
 
 ### v0.8.13-41 (2022-04-19)
 
 - fix startup screen for C3
 - fix modem initialization for C3 (comma three: correctly set initial EPS bearer settings for AT&T sim cards)
-- fix logic for enabling OP on pre AP MS
+- fix logic for enabling OP on preAP MS
 - add C3 Tinkla Splash
 
 ### v0.8.13-38 (2022-04-05)
@@ -161,9 +161,9 @@ Currently, openpilot performs the functions of Adaptive Cruise Control (ACC), Au
 
 ### v0.8.13-37 (2022-04-01)
 
-- added configuration value for Hands On Level before human takeover
+- added configuration value for HandsOnLevel before human takeover
 - fixed acceleration for AP1 stop-and-go which was limited at 1.2m/s^2
-- added testing toggle for full Long Control from planner vs actuator (AP1 or pre AP with i Booster)
+- added testing toggle for full LongControl from planner vs actuator (AP1 or preAP with iBooster)
 - fixed release scripts
 - fixed automatic flashing of panda code
 
@@ -208,4 +208,4 @@ Currently, openpilot performs the functions of Adaptive Cruise Control (ACC), Au
 - adjustable follow distance though UI
 - allows for CC without LKAS when using Pedal
 - pedal can be on either CAN0 or CAN2 (set via UI)
-- support for i Booster ECU (in dev)
+- support for iBooster ECU (in dev)

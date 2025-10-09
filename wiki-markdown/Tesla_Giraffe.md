@@ -6,7 +6,11 @@ Tesla Giraffe is not needed with the latest versions of Tesla Unity OpenPilot. T
 
 ## Installing the Giraffe
 
-Has 1&9Missing 1&9There are currently three options concerning Giraffes for your Model S. You can even make your ownTesla Giraffe.
+![Has 1&9](images/CH_bus-2.jpg)
+
+![Missing 1&9](images/No_CH_bus-2.jpg)
+
+There are currently three options concerning Giraffes for your Model S. You can even make your ownTesla Giraffe.
 
 1. An EPAS harness from[Flyboy222pa on eBay](https://www.ebay.com/str/level2tesla)or[evcablescom.tech](https://evcablescom-tech.3dcartstores.com/Tesla-Open-Pilot-EPAS-Harness_p_1.html)- The harness installs below the MCU.
 - This path doesn't require a Giraffe and has our[EPAS Harness](EPAS_Harness.md)already built-in, so you don't need to make it yourself.

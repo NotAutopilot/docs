@@ -1,5 +1,13 @@
 # Tesla Bosch Radar EON
 
+![](images/Tesla_Bosch_Radar_Wiring_Harness.png)
+
+![](images/Giraffe_rev_B_Radar_Diagram.png)
+
+![](images/Giraffe_rev_A.png)
+
+![](images/The_Giraffe_rev_A_board__Use_CAN1_for_radar_.png)
+
 The Bosch radar made for Tesla (Bosch MRRevo14, and with few different part numbers like 1038224-00-A/B or 1057551-00-B) have been used on Tesla Model S cars from October 2014 (AP1) until they have been replaced by the Continental radar with AP2.5). The main difference between 1038224-00-B and 1038224-00-A is that the A version does not have the heater element for winter weather (to melt snow and ice).
 
 The radar has a range of about 160m and for the short beam a cone of 45°.
@@ -248,7 +256,9 @@ Once done, reboot your EON.
 
 ### Calibrating your radar
 
-Determine the center of carMost likely the radar will have to be calibrated in order to ensure the correct data being fed into OpenPilot. In order to calibrate your radar you will need:
+![Determine the center of car](images/Determine_the_center_of_car.png)
+
+Most likely the radar will have to be calibrated in order to ensure the correct data being fed into OpenPilot. In order to calibrate your radar you will need:
 
 - the[calibrateRadar.py](https://github.com/BogGyver/openpilot/blob/test_teslaradar/selfdrive/car/tesla/radar_tools/calibrateRadar.py)script which for those running on one of my Tesla branches is located in**/data/openpilot/selfdrive/car/tesla/radar_tools/**
 - a 4ft (120 cm) metal pole that can stay vertically by itself (I personally use a microphone stand)

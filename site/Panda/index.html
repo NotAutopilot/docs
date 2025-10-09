@@ -275,34 +275,9 @@
     
 
     
-    <div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2">
-        <div data-slot="sidebar-group-content" data-sidebar="group-content" class="w-full text-sm">
-            <ul data-slot="sidebar-menu" data-sidebar="menu" class="flex w-full min-w-0 flex-col gap-0.5">
-                
-                
-                <li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative">
-    <a data-slot="sidebar-menu-button" data-active="false" data-sidebar="menu-button"
-        data-size="default" href="/"
-        class="hover:bg-sidebar-accent hover:text-sidebar-accent-foreground peer/menu-button flex items-center gap-2 rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 data-[active=true]:bg-accent data-[active=true]:border-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md">
 
-        
-        Home
-        
-
-        
-
-        
-
-        
-    </a>
-</li>
-                
-                
-            </ul>
-        </div>
-    </div>
     
-
+    
     
     
     <div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2">
@@ -895,17 +870,17 @@
         <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>The newer Comma devkits (Comma two and Comma three) have a built-in Panda which is similar in hardware to the Black Panda. This article is for the older versions of Panda used with EON, like the White Panda and the Grey Panda.
 </span></code></pre></div>
 <p>The Panda is an OBD II dongle created by Comma.ai. It allows the EON to talk to the car via <a href="../Tesla_CAN_Bus/">CAN bus</a> messaging. It supports 3 CAN buses, 2 LIN buses, and 1 GMLAN.</p>
-<p>The software for the Panda is opensource (and heavily modified for Tesla). When installed on a Tesla, the Panda (by itself) creates all the messages to emulate a DAS (the Auto Pilot computer) as well as to keep the Bosch radar talking. It has CAN0 connected to the Tesla Chassis CAN, CAN1 connected to the Bosch radar, and CAN2 connected to the Tesla <a href="https://en.wikipedia.org/wiki/Power_steering#Electric_systems">EPAS</a> (the electric power steering).</p>
+<p>The software for the Panda is opensource (and heavily modified for Tesla). When installed on a Tesla, the Panda (by itself) creates all the messages to emulate a DAS (the AutoPilot computer) as well as to keep the Bosch radar talking. It has CAN0 connected to the Tesla Chassis CAN, CAN1 connected to the Bosch radar, and CAN2 connected to the Tesla <a href="https://en.wikipedia.org/wiki/Power_steering#Electric_systems">EPAS</a>(the electric power steering).</p>
 <p>There are two "flavors" of Panda:</p>
 <ul>
-<li>White Panda: $99 USD - The white panda has Wi Fi and USB capabilities and can work directly with your computer running <a href="../Cabana/">Cabana</a> .</li>
-<li>Grey Panda: $199 USD - The grey panda has high precision GPS (to be used with maps integration) but no wifi and can't be used with <a href="../Cabana/">Cabana</a> .</li>
+<li>White Panda: $99 USD - The white panda has WiFi and USB capabilities and can work directly with your computer running <a href="../Cabana/">Cabana</a>.</li>
+<li>Grey Panda: $199 USD - The grey panda has high precision GPS (to be used with maps integration) but no wifi and can't be used with <a href="../Cabana/">Cabana</a>.</li>
 </ul>
 <p>Both versions are currently fully supported because we actually use the Tesla GPS for maps integration.
 I have both pandas due to the amount of development I do. I use the Grey Panda for driving the car and I use the White Panda for debugging/monitoring/reverse engineering CAN messages (in conjunction with an OBD II splitter).</p>
-<p>The Comma.ai Panda can be purchased from the <a href="https://comma.ai/shop/products/panda-obd-ii-dongle">Comma.ai store</a> .</p>
+<p>The Comma.ai Panda can be purchased from the <a href="https://comma.ai/shop/products/panda-obd-ii-dongle">Comma.ai store</a>.</p>
 <h3 id="flashing-the-panda">Flashing the Panda</h3>
-<p>After installing or updating Open Pilot on your EON, you need to also update the software on your Panda. Here's how:</p>
+<p>After installing or updating OpenPilot on your EON, you need to also update the software on your Panda. Here's how:</p>
 <p>In your Tesla while it says “Car Off” connect your Panda to your Giraffe rev B OBD (or EPAS OBD). Connect your EON to the Panda via USB. Then SSH in and run:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>cd /data/openpilot/panda/board
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>killall boardd
@@ -913,7 +888,7 @@ I have both pandas due to the amount of development I do. I use the Grey Panda f
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>make &amp;&amp; sleep 1 &amp;&amp; (make recover || make recover) &amp;&amp; echo Success! Rebooting in 2s... &amp;&amp; sleep 2 &amp;&amp; reboot
 </span></code></pre></div>
 <p>The kill command ensures that the EON stops regular communication to the Panda. That's also why a reboot is needed at the end. If any error occurs (which of course should not happen) the reboot will be skipped so you can troubleshoot.
-Assertion Errors should be fixed by rebooting EON and trying a second time. Optionally you may also power cycle your Panda by reseating it.</p>
+AssertionErrors should be fixed by rebooting EON and trying a second time. Optionally you may also power cycle your Panda by reseating it.</p>
 <h4 id="future-updates">Future updates</h4>
 <p>Tesla OP is constantly being developed, tweaked, and improved. Therefore, there will be future updates which will require pulling an update and flashing your Panda. To save ourselves some time, the developers have introduced an easy way to run the commands in the "Flashing the Panda" section. Simply follow the instructions in <a href="../EON_bash_profile/">EON_bash_profile</a> to setup a .bash_profile for your EON. Then you simply run the following command while your Tesla says “Car Off” and your Panda is connected to your Giraffe's OBD and your EON:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>fp
@@ -963,22 +938,14 @@ Assertion Errors should be fixed by rebooting EON and trying a second time. Opti
             
 
             
-            <div class="flex flex-col gap-4">
-                <div class="text-muted-foreground text-sm font-medium">Menu</div>
-                <div class="flex flex-col gap-3">
-                    
-                    <a class="text-2xl font-medium" href="..">
-                        
-                        Home
-                        
-                    </a>
-                    
-                </div>
-            </div>
-            
 
             
             <div class="flex flex-col gap-8">
+                
+                <div class="flex flex-col gap-4">
+                    <div class="text-muted-foreground text-sm font-medium">Home</div>
+                    
+                </div>
                 
                 <div class="flex flex-col gap-4">
                     <div class="text-muted-foreground text-sm font-medium">Getting Started</div>

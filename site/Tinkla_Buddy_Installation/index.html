@@ -275,34 +275,9 @@
     
 
     
-    <div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2">
-        <div data-slot="sidebar-group-content" data-sidebar="group-content" class="w-full text-sm">
-            <ul data-slot="sidebar-menu" data-sidebar="menu" class="flex w-full min-w-0 flex-col gap-0.5">
-                
-                
-                <li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative">
-    <a data-slot="sidebar-menu-button" data-active="false" data-sidebar="menu-button"
-        data-size="default" href="/"
-        class="hover:bg-sidebar-accent hover:text-sidebar-accent-foreground peer/menu-button flex items-center gap-2 rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 data-[active=true]:bg-accent data-[active=true]:border-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md">
 
-        
-        Home
-        
-
-        
-
-        
-
-        
-    </a>
-</li>
-                
-                
-            </ul>
-        </div>
-    </div>
     
-
+    
     
     
     <div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2">
@@ -912,7 +887,7 @@
 </table>
 <h2 id="creating-the-sd-card">Creating the SD card</h2>
 <ul>
-<li>On Windows PCs you can use Win32Disk Imagerto create to burn the image to the SD card for your Tinkla Buddy.</li>
+<li>On Windows PCs you can useWin32DiskImagerto create to burn the image to the SD card for your Tinkla Buddy.</li>
 <li>On Linux flavors (including Mac OS) you can just use the dd command.</li>
 </ul>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>dd if=tinkla_buddy.img of=/dev/dse status=progress
@@ -933,17 +908,17 @@
 <tbody>
 <tr>
 <td>R2S</td>
-<td><a href="https://tinkla.us/files/tinkla Buddy-R2S-1.44-11.11.2022.img.gz">v1.44-R2S (built 11/11/2022)</a></td>
+<td><a href="https://tinkla.us/files/tinklaBuddy-R2S-1.44-11.11.2022.img.gz">v1.44-R2S (built 11/11/2022)</a></td>
 <td>422678aa480ed25058a7dbcbd623748c</td>
 </tr>
 <tr>
 <td>R1S H5</td>
-<td><a href="https://tinkla.us/files/tinkla Buddy-H5-1.44-09.22.2020.img.gz">v1.44-H5 (built 09/22/2020)</a></td>
+<td><a href="https://tinkla.us/files/tinklaBuddy-H5-1.44-09.22.2020.img.gz">v1.44-H5 (built 09/22/2020)</a></td>
 <td>6a4de9389a17438cbf7c198606eaf8d8</td>
 </tr>
 <tr>
 <td>R1S H3/R1 H3</td>
-<td><a href="https://tinkla.us/files/tinkla Buddy-H3-1.44-09.22.2020.img.gz">v1.44-H3 (built 09/22/2020)</a></td>
+<td><a href="https://tinkla.us/files/tinklaBuddy-H3-1.44-09.22.2020.img.gz">v1.44-H3 (built 09/22/2020)</a></td>
 <td>f08619695fef1c88584bd23e3dcd8bc8</td>
 </tr>
 </tbody>
@@ -952,25 +927,25 @@
 <h2 id="physical-buddy-installation">Physical Buddy Installation</h2>
 <p>The hardest part of installing a Tinkla Buddy is finding an always-on power source. The three most viable options are (a) if you have a Tesla with the Cold Weather package there is a fuse box near the accelerator which makes this a 30 minute install, (b) if you have a fuse box behind the passenger kick panel (2016 and later) and you'll need to re-crimp your 12v red wire for an hour install, or &copy; if you don't have a fuse box in the cabin pull a wire through a gasket on the firewall behind the washer fluid reservoir in the Frunk which can take 1-2 hours.</p>
 <h3 id="instrument-cluster-connections">Instrument Cluster Connections</h3>
-<p>After you have <a href="../Removing_the_Instrument_Cluster/">removed the Instrument Cluster (IC)</a> , and you can access the Fakra cable on the back, you connect your LAN Fakra-RJ45 cable directly on to the back of the IC and then use the WAN Fakra-RJ45 cable and connect it to the cable that was previously connected to the IC. Remember you will have two use two CAT5e/CAT6 cables to connect the included Fakra-RJ45 adapters to the Tinkla Buddy. I recommend getting some 2ft or 3ft ones from your local store.</p>
+<p>After you have <a href="../Removing_the_Instrument_Cluster/">removed the Instrument Cluster (IC)</a>, and you can access the Fakra cable on the back, you connect your LAN Fakra-RJ45 cable directly on to the back of the IC and then use the WAN Fakra-RJ45 cable and connect it to the cable that was previously connected to the IC. Remember you will have two use two CAT5e/CAT6 cables to connect the included Fakra-RJ45 adapters to the Tinkla Buddy. I recommend getting some 2ft or 3ft ones from your local store.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Note: The fakra connector is coming straight out. Get a flat head and push on the tab. In my case it was taped tightly to the loom bringing power in, so there was no fear of it falling into the dash. If that does happen to you, you can get to it by going under the steering wheel (see pics below for reference). Plug your new cable into the IC and then plug the other into the car’s cable (only one right way to plug them). Route the cables back in the hole behind the IC where the original network cable came from. Push the IC back into place on its alignment pegs. You’ll want to get both cables over to the left “hatch” on the left of the dash; that’s a good place to put the Buddy. In my case I just stuck it next to the pedal so running power was easy.
 </span></code></pre></div>
 <p>Here is a diagram of the end result:</p>
-<p>While the Dash is already open, this is a good time to run <a href="./">power for your Tinkla Buddy</a> .</p>
+<p>While the Dash is already open, this is a good time to run <a href="./">power for your Tinkla Buddy</a>.</p>
 <h3 id="power">Power</h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Tinkla Buddy requires constant 5V/2A to operate. If you have a Tinkla OBD-C Adapter for pre AP Tesla Model S, you can use the specially designed USB-A port to power the Tinkla Buddy. If you do not have an Tinkla OBD-C adapter, you will have to install a power adapter for your Buddy to convert 12V power to 5V power like this one.
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Tinkla Buddy requires constant 5V/2A to operate. If you have a Tinkla OBD-C Adapter for preAP Tesla Model S, you can use the specially designed USB-A port to power the Tinkla Buddy. If you do not have an Tinkla OBD-C adapter, you will have to install a power adapter for your Buddy to convert 12V power to 5V power like this one.
 </span></code></pre></div>
-<p>If you do NOT have a <a href="../Tinkla_OBD-C_Adapter/">Tinkla OBD-C Adapter</a> , you will have to find a way to power your Tinkla Buddy from another source using a 12V to 5V power adapter <a href="https://a.co/d/fyu V6Zh">like this one</a> . Based on your Tesla Model and included packages, you'll want to follow the corresponding installation guide for Power. We'll need a 12v constant power supply. Places like the USB outlets or 12v accessory outlet are not good because those switch off when the car is "off". If you have an AP1 car or have completed the full AP1 retrofit**and**you aren't using it for Open Pilot power, you can just use the empty OBD port or tap the power line that goes to the OBD port behind it for a permanent install.</p>
+<p>If you do NOT have a <a href="../Tinkla_OBD-C_Adapter/">Tinkla OBD-C Adapter</a>, you will have to find a way to power your Tinkla Buddy from another source using a 12V to 5V power adapter <a href="https://a.co/d/fyuV6Zh">like this one</a>. Based on your Tesla Model and included packages, you'll want to follow the corresponding installation guide for Power. We'll need a 12v constant power supply. Places like the USB outlets or 12v accessory outlet are not good because those switch off when the car is "off". If you have an AP1 car or have completed the full AP1 retrofit**and**you aren't using it for OpenPilot power, you can just use the empty OBD port or tap the power line that goes to the OBD port behind it for a permanent install.</p>
 <p>There are different <a href="../Power_Options_For_Accessories/">power options for accessories</a> depending on the year your Tesla was built and the packages you have installed.</p>
 <p>Once you identify the fuse you will tap, remove the original fuse and, using a voltmeter, identify the side of the fuse socket that has the permanent 12V. This is important to know because otherwise you will end up running the circuit through two fuses and create issues. The side**without**the wire of your fuse tap should go where the 12V constant power was identified. Place the original fuse in the lower fuse socket and use the new fuse for the TB power circuit in the upper socket. See diagram below.</p>
-<p>Once you're done running power we can move on to <a href="./">powering up the Tinkla Buddy for the first time</a> .</p>
+<p>Once you're done running power we can move on to <a href="./">powering up the Tinkla Buddy for the first time</a>.</p>
 <h2 id="powering-up-the-tinkla-buddy-for-the-first-time">Powering up the Tinkla Buddy for the first time</h2>
 <p>Before you're ready to power the Buddy:</p>
 <ol>
 <li>Make sure you have the RJ-45 barrel on the network cables,</li>
 <li>Make sure the IC and CID are online,</li>
 <li>Make sure the Tesla is ON. (Press and hold the Brake until you hear/feel the car turn on.)</li>
-<li>If you have not done it yet, now it's the time to <a href="../Tinkla_Buddy_Configuration/">Register your Tinkla Buddy</a> . It will not receive certificates from the server otherwise and thus it will not work.</li>
+<li>If you have not done it yet, now it's the time to <a href="../Tinkla_Buddy_Configuration/">Register your Tinkla Buddy</a>. It will not receive certificates from the server otherwise and thus it will not work.</li>
 </ol>
 <p>Then while the Buddy is unplugged from power, remove the RJ-45 barrel and insert the RJ-45 cables into the correct jack on the Buddy.</p>
 <ul>
@@ -983,7 +958,7 @@
 <div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>At this point the Buddy will reboot 3-4 times, and then attempt to receive the certs from the Tinkla Buddy server. This takes about 4-5 minutes. Image inflation can take a good deal longer. Walk away from your car and give the Buddy about 20 minutes to finish initializing. When you return you should see two flashing green LEDs on the Tinkla Buddy and one red flashing LED.
 </span></code></pre></div>
 <h2 id="install-complete">Install Complete</h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>To get IC Auto Pilot integration view, update your Open Pilot Configuration File to look like: enable_das_emulation = True then when the car is &quot;On&quot; showing PRND, the IC will do a soft restart and change to the Auto Pilot view.
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>To get IC AutoPilot integration view, update your OpenPilot Configuration File to look like: enable_das_emulation = True then when the car is &quot;On&quot; showing PRND, the IC will do a soft restart and change to the AutoPilot view.
 </span></code></pre></div>
 <p>To see if it is working you have two ways to activate the Tinkla Menu:</p>
 <ol>
@@ -1054,22 +1029,14 @@
             
 
             
-            <div class="flex flex-col gap-4">
-                <div class="text-muted-foreground text-sm font-medium">Menu</div>
-                <div class="flex flex-col gap-3">
-                    
-                    <a class="text-2xl font-medium" href="..">
-                        
-                        Home
-                        
-                    </a>
-                    
-                </div>
-            </div>
-            
 
             
             <div class="flex flex-col gap-8">
+                
+                <div class="flex flex-col gap-4">
+                    <div class="text-muted-foreground text-sm font-medium">Home</div>
+                    
+                </div>
                 
                 <div class="flex flex-col gap-4">
                     <div class="text-muted-foreground text-sm font-medium">Getting Started</div>

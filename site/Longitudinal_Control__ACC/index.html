@@ -275,34 +275,9 @@
     
 
     
-    <div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2">
-        <div data-slot="sidebar-group-content" data-sidebar="group-content" class="w-full text-sm">
-            <ul data-slot="sidebar-menu" data-sidebar="menu" class="flex w-full min-w-0 flex-col gap-0.5">
-                
-                
-                <li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative">
-    <a data-slot="sidebar-menu-button" data-active="false" data-sidebar="menu-button"
-        data-size="default" href="/"
-        class="hover:bg-sidebar-accent hover:text-sidebar-accent-foreground peer/menu-button flex items-center gap-2 rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 data-[active=true]:bg-accent data-[active=true]:border-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md">
 
-        
-        Home
-        
-
-        
-
-        
-
-        
-    </a>
-</li>
-                
-                
-            </ul>
-        </div>
-    </div>
     
-
+    
     
     
     <div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2">
@@ -892,28 +867,28 @@
 
     </div>
     <div class="typography w-full flex-1 *:data-[slot=alert]:first:mt-0">
-        <p>Longitudinal control, or addaptive cruise control (ACC), is the capability to accelerate and slow down the car based on traffic, user max speed settings and map information integration (curvature, traffic, etc). This is an ongoing effort. These pre-AP cars lack electronic <a href="../Pedal_Interceptor/">pedal control</a> for (acceleration and braking) and <a href="../Tesla_Bosch_Radar/">radar</a> .</p>
+        <p>Longitudinal control, or addaptive cruise control (ACC), is the capability to accelerate and slow down the car based on traffic, user max speed settings and map information integration (curvature, traffic, etc). This is an ongoing effort. These pre-AP cars lack electronic <a href="The_Comma.ai_Pedal.md">pedal control</a> for (acceleration and braking) and <a href="../Tesla_Bosch_Radar/">radar</a>.</p>
 <p>As of 2019 we have both software-only and hardware-based Adaptive Cruise Control.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Without electric brakes (i Booster) the car only uses regenerative braking. This is not enough for suddent slowdowns. YOU MUST BE READY TO MANUALLY BRAKE AT ANY MOMENT.
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Without electric brakes (iBooster) the car only uses regenerative braking. This is not enough for suddent slowdowns. YOU MUST BE READY TO MANUALLY BRAKE AT ANY MOMENT.
 </span></code></pre></div>
 <h3 id="vision-radar-with-spam-acc">Vision Radar With Spam ACC</h3>
-<p>The easiest setup is to use the vision only "mock" radar in Open Pilot. It works OK on highway if there are not many speed changes. The radar accuracy has improved since 0.5.11 but still has a 1-2 seconds delay vs real time. Also, it only tracks one car, the lead car. In order to use this for longitudinal control, we use CAN messages to create fake cruise stalk messages, increasing/decreasin the speed by 1 (half action) or 5 (full action). This creates the desired outcome but the speed changes are not very smooth. Also, the Tesla CC (and thus OP ACC using cruise stalk spamming) only works above 18 MPH (29 km/h).</p>
+<p>The easiest setup is to use the vision only "mock" radar in OpenPilot. It works OK on highway if there are not many speed changes. The radar accuracy has improved since 0.5.11 but still has a 1-2 seconds delay vs real time. Also, it only tracks one car, the lead car. In order to use this for longitudinal control, we use CAN messages to create fake cruise stalk messages, increasing/decreasin the speed by 1 (half action) or 5 (full action). This creates the desired outcome but the speed changes are not very smooth. Also, the Tesla CC (and thus OP ACC using cruise stalk spamming) only works above 18 MPH (29 km/h).</p>
 <h3 id="vision-radar-with-pedal">Vision Radar With Pedal</h3>
-<p>The next step up is to replace the CC stalk spamming with a <a href="../Pedal_Interceptor/">pedal interceptor</a> . This allows speed control from 1 MPH (1.6 km/h) but you need to keep in mind that regenerative braking only works above 5 MPH (8 km/h). The cost of this updgrade is about $100.00 USD.</p>
+<p>The next step up is to replace the CC stalk spamming with a <a href="The_Comma.ai_Pedal.md">pedal interceptor</a>. This allows speed control from 1 MPH (1.6 km/h) but you need to keep in mind that regenerative braking only works above 5 MPH (8 km/h). The cost of this updgrade is about $100.00 USD.</p>
 <h3 id="tesla-bosch-radar-with-pedal">Tesla Bosch Radar With Pedal</h3>
-<p>Next upgrade would be to add a <a href="../Tesla_Bosch_Radar/">Tesla Bosch Radar</a> . This increases the cars/objects tracked from 1 to 32 and allows real time monitoring of distance and relative speed for lead car and cars on the side lanes, increasing the smoothness and precision of the ACC. This is still limitted in braking power. If you have <a href="../Root_Access_To_IC_and_CID/">IC/CID integration</a> , this feature shows up to 6 cars on the IC. The cost of this upgrade is about $500.00 USD and requires some extensive work (including removing and re-installing the front bumper).</p>
-<h3 id="tesla-bosch-radar-with-i-booster">Tesla Bosch Radar With i Booster</h3>
-<p>Final upgrade for ACC in order to obtaing full stop and go capabilities is to replace your old vacuum based braking system with an electronic braking system (i Booster). This code is in development as of May 2019. The cost for this upgrade is about $6-700.00 USD and requires <a href="../Root_Access_To_IC_and_CID/">root access</a> and knowledge on how to flush your brake lines. This feature will give you full stop-n-go capability.</p>
+<p>Next upgrade would be to add a <a href="../Tesla_Bosch_Radar/">Tesla Bosch Radar</a>. This increases the cars/objects tracked from 1 to 32 and allows real time monitoring of distance and relative speed for lead car and cars on the side lanes, increasing the smoothness and precision of the ACC. This is still limitted in braking power. If you have <a href="../Root_Access_To_IC_and_CID/">IC/CID integration</a>, this feature shows up to 6 cars on the IC. The cost of this upgrade is about $500.00 USD and requires some extensive work (including removing and re-installing the front bumper).</p>
+<h3 id="tesla-bosch-radar-with-ibooster">Tesla Bosch Radar With iBooster</h3>
+<p>Final upgrade for ACC in order to obtaing full stop and go capabilities is to replace your old vacuum based braking system with an electronic braking system (iBooster). This code is in development as of May 2019. The cost for this upgrade is about $6-700.00 USD and requires <a href="../Root_Access_To_IC_and_CID/">root access</a> and knowledge on how to flush your brake lines. This feature will give you full stop-n-go capability.</p>
 <h3 id="using-adaptive-cruise-control">Using Adaptive Cruise Control</h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>To repeat, without electric brakes (i Booster) the car only uses regenerative braking. This is not enough for sudden slowdowns. YOU MUST BE READY TO MANUALLY BRAKE AT ANY MOMENT.
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>To repeat, without electric brakes (iBooster) the car only uses regenerative braking. This is not enough for sudden slowdowns. YOU MUST BE READY TO MANUALLY BRAKE AT ANY MOMENT.
 </span></code></pre></div>
-<p>Adaptive Cruise Control allows the car to match speed with cars in front of you, slows down for turns based on Comma OP logic and also accelerates up to the MAX set speed. We have two types of adaptive cruise control based on your car configuration and options installed: ACC which is based on Tesla CC and PCC which uses the <a href="../Pedal_Interceptor/">pedal interceptor</a> .</p>
+<p>Adaptive Cruise Control allows the car to match speed with cars in front of you, slows down for turns based on Comma OP logic and also accelerates up to the MAX set speed. We have two types of adaptive cruise control based on your car configuration and options installed: ACC which is based on Tesla CC and PCC which uses the <a href="../Pedal_Interceptor/">pedal interceptor</a>.</p>
 <p>Follow these steps to use ACC:</p>
 <ol>
 <li>Press the cruise stalk IN so that the orange "cruise control ready" LED on the stalk is lit.</li>
 <li>Enable the ACC option on the <a href="../EON/">EON</a> screen if necessary.</li>
 <li>Accelerate above 18 MPH.</li>
-<li>Enable Open Pilot using a DOUBLE stalk pull (pull the cruise control stalk BACKWARDS TWICE in quick succession.) You will see the blue 'Cruise' icon appear on your dash. If you have <a href="../Root_Access_To_IC_and_CID/">IC/CID integration</a> , the speed will be set to the speed limit for that road + the set offset in the Open Pilot screen in CID. ACC is now active.</li>
+<li>Enable OpenPilot using a DOUBLE stalk pull (pull the cruise control stalk BACKWARDS TWICE in quick succession.) You will see the blue 'Cruise' icon appear on your dash. If you have <a href="../Root_Access_To_IC_and_CID/">IC/CID integration</a>, the speed will be set to the speed limit for that road + the set offset in the OpenPilot screen in CID. ACC is now active.</li>
 <li>The initial max speed may be conservative. Press UP on the stalk to increase it.
 You can also accelerate manually to temporarily drive faster than current cruise speed. This will not disable ACC.</li>
 <li>Cruise is disabled if you brake or the car slows below 18 MPH.</li>
@@ -921,10 +896,10 @@ You can also accelerate manually to temporarily drive faster than current cruise
 </ol>
 <p>Follow these steps to use PCC:</p>
 <ol>
-<li>Press the cruise stalk IN so that the orange "cruise control ready" LED on the stalk is not lit (or set the <a href="Open Pilot_Configuration_File.md">Open Pilot Configuration File</a> to use pedal always over CC)</li>
+<li>Press the cruise stalk IN so that the orange "cruise control ready" LED on the stalk is not lit (or set the <a href="../OpenPilot_Configuration_File/">OpenPilot Configuration File</a> to use pedal always over CC)</li>
 <li>Enable the PCC option on the <a href="../EON/">EON</a> screen if necessary.</li>
 <li>Accelerate above 1 MPH.</li>
-<li>Enable Open Pilot using a DOUBLE stalk pull (pull the cruise control stalk BACKWARDS TWICE in quick succession.) You will see the blue 'Cruise' icon appear on your dash. If you have <a href="../Root_Access_To_IC_and_CID/">IC/CID integration</a> , the speed will be set to the speed limit for that road + the set offset in the Open Pilot screen in CID. PCC is now active.</li>
+<li>Enable OpenPilot using a DOUBLE stalk pull (pull the cruise control stalk BACKWARDS TWICE in quick succession.) You will see the blue 'Cruise' icon appear on your dash. If you have <a href="../Root_Access_To_IC_and_CID/">IC/CID integration</a>, the speed will be set to the speed limit for that road + the set offset in the OpenPilot screen in CID. PCC is now active.</li>
 <li>The initial max speed may be conservative. Press UP on the stalk to increase it.
 Please note: As long as your foot touches the accelerator pedal, it will completely override PCC control.</li>
 <li>Cruise is disabled if you brake.</li>
@@ -960,7 +935,7 @@ Please note: As long as your foot touches the accelerator pedal, it will complet
 </tr>
 <tr>
 <td>Cruise stalk PUSH</td>
-<td>Disable Open Pilot (both steering and ACC/PCC).</td>
+<td>Disable OpenPilot (both steering and ACC/PCC).</td>
 </tr>
 <tr>
 <td>Cruise stalk DOUBLE &frac12; DOWN</td>
@@ -985,15 +960,15 @@ Please note: As long as your foot touches the accelerator pedal, it will complet
 </tbody>
 </table>
 <h3 id="using-regular-cruise-control">Using Regular Cruise Control</h3>
-<p>Beginning in Open Pilot v0.6.6, we have brought back Tesla's stock Cruise Control as an option to maintain your car's speed when OP can not see well enough to stay engaged or where you deem conditions are not safe enough to allow OP to steer the car for you, i.e. when there is snow or rain and OP can't clearly detect the road lines. OP auto-detects if you have a Pedal interceptor and if you do, when you press the cruise stalk IN so that the orange "cruise control ready" LED on the stalk is lit, PCC is off and regular CC is available.<strong>YOU ARE IN CONTROL, not OP.</strong></p>
+<p>Beginning in OpenPilot v0.6.6, we have brought back Tesla's stock Cruise Control as an option to maintain your car's speed when OP can not see well enough to stay engaged or where you deem conditions are not safe enough to allow OP to steer the car for you, i.e. when there is snow or rain and OP can't clearly detect the road lines. OP auto-detects if you have a Pedal interceptor and if you do, when you press the cruise stalk IN so that the orange "cruise control ready" LED on the stalk is lit, PCC is off and regular CC is available.<strong>YOU ARE IN CONTROL, not OP.</strong></p>
 <p>Follow these steps to use stock CC:</p>
 <ol>
-<li>Press the cruise stalk IN so that the orange "cruise control ready" LED on the stalk is lit. (If you have a Pedal and <a href="Open Pilot_Configuration_File.md">Open Pilot Configuration File</a> is set to use pedal always over CC, this won't work.)</li>
+<li>Press the cruise stalk IN so that the orange "cruise control ready" LED on the stalk is lit. (If you have a Pedal and <a href="../OpenPilot_Configuration_File/">OpenPilot Configuration File</a> is set to use pedal always over CC, this won't work.)</li>
 <li>Set the ACC option on the <a href="../EON/">EON</a> screen to CC if necessary. (If you have a Pedal, CC should be selected by default)</li>
 <li>Accelerate above 18 MPH.</li>
-<li>Enable Cruise Control pressing DOUBLE &frac12; DOWN on the stalk (press the cruise control stalk halfway DOWN TWICE in quick succession.) You will see the blue 'Cruise' icon appear on your dash. If you have <a href="../Root_Access_To_IC_and_CID/">IC/CID integration</a> , the speed will be set to the speed you were going. Tesla's stock CC is now active.</li>
+<li>Enable Cruise Control pressing DOUBLE &frac12; DOWN on the stalk (press the cruise control stalk halfway DOWN TWICE in quick succession.) You will see the blue 'Cruise' icon appear on your dash. If you have <a href="../Root_Access_To_IC_and_CID/">IC/CID integration</a>, the speed will be set to the speed you were going. Tesla's stock CC is now active.</li>
 <li>Press UP or DOWN on the stalk to increase or decrease speed.
-Please note: CC is not controlled by Open Pilot, you are in control.</li>
+Please note: CC is not controlled by OpenPilot, you are in control.</li>
 <li>Cruise is disabled if you brake.</li>
 </ol>
 
@@ -1041,22 +1016,14 @@ Please note: CC is not controlled by Open Pilot, you are in control.</li>
             
 
             
-            <div class="flex flex-col gap-4">
-                <div class="text-muted-foreground text-sm font-medium">Menu</div>
-                <div class="flex flex-col gap-3">
-                    
-                    <a class="text-2xl font-medium" href="..">
-                        
-                        Home
-                        
-                    </a>
-                    
-                </div>
-            </div>
-            
 
             
             <div class="flex flex-col gap-8">
+                
+                <div class="flex flex-col gap-4">
+                    <div class="text-muted-foreground text-sm font-medium">Home</div>
+                    
+                </div>
                 
                 <div class="flex flex-col gap-4">
                     <div class="text-muted-foreground text-sm font-medium">Getting Started</div>
@@ -1322,10 +1289,10 @@ Please note: CC is not controlled by Open Pilot, you are in control.</li>
         
 
         
-        <a href="#tesla-bosch-radar-with-i-booster"
+        <a href="#tesla-bosch-radar-with-ibooster"
             class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
             data-active="false" data-depth="2">
-            Tesla Bosch Radar With i Booster
+            Tesla Bosch Radar With iBooster
         </a>
         
 

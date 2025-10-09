@@ -2,9 +2,9 @@
 
 The Comma devkit (two or three) is the name associated in the Comma.ai community to the device that sits in your windshield and does all the calculations for LKA and ACC.
 
-## Comma Dev Kit
+## Comma DevKit
 
-The EON Gold (and Comma two) is based on the [Qualcom Snapdragon 821 mobile platform](https://www.qualcomm.com/products/snapdragon-821-mobile-platform?cmpid=snfyus19642&gclid=EAIa IQob Ch MI-o G8if364QIVFY_ICh0DFAr XEAAYASAAEg KFL_D_Bw E&gclsrc=aw.ds) . Phones like Le Eco Le Pro3 have been used to create the Fr EON (the free EON). You can find some instructions [here](https://medium.com/@kirk_40929/getting-comma-openpilot-running-on-a-used-phone-c72d609cb4d3) . You would also need a Black Panda in order to have a kit similar to the Comma two or Comma three.
+The EON Gold (and Comma two) is based on the [Qualcom Snapdragon 821 mobile platform](https://www.qualcomm.com/products/snapdragon-821-mobile-platform?cmpid=snfyus19642&gclid=EAIaIQobChMI-oG8if364QIVFY_ICh0DFArXEAAYASAAEgKFL_D_BwE&gclsrc=aw.ds). Phones like LeEco LePro3 have been used to create the FrEON (the free EON). You can find some instructions [here](https://medium.com/@kirk_40929/getting-comma-openpilot-running-on-a-used-phone-c72d609cb4d3). You would also need a Black Panda in order to have a kit similar to the Comma two or Comma three.
 
 If you choose to buy your [Comma two](https://comma.ai/shop/products/two) or [Comma three](https://comma.ai/shop/products/three) already made, you can do so from Comma.ai store for $999 USD and up, depending on version. Support for Comma two is supposed to end in summer of 2022.
 
@@ -39,7 +39,7 @@ Comma devkit installation is pretty simple. Your main objective is to ensure the
 8. Remove the RED protective tape from the back of the 3M adhesive and be ready to place the Comma mount on the windshield. Align the masking tape we placed on the Comma mount on the inside with the masking tape we have on the outside of the windshield. They should not overlap at all AND you should not see light either. when you are confident on the position press hard on the mount.
 9. Remove all masking tape. You are done. You now have a perfectly centered, perfectly vertical Comma devkit.
 
-### pre AP Model S only: Hide the Thuderbolt3 cable above the Headliner
+### preAP Model S only: Hide the Thuderbolt3 cable above the Headliner
 
 1. Pull your Thunderbolt3 cable from the footwell gap (where the OBDII port with a Tinkla OBD-C Adapter is) up to where the "A" pillar is...
 2. Follow the instructions to remove the air bag cover from the "A" pillar
@@ -48,7 +48,7 @@ Comma devkit installation is pretty simple. Your main objective is to ensure the
 5. Move to the corner where the headliner and the removed airbag panel intersect, this corner is the easiest place to stick a pry tool... Using your pry tool lift the corner and move the pry-tool along the top of the windshield tucking the wire into the headliner as you go. When you reach the mirror base, the Thuderbolt3 cable can be routed down the front of the windshield to emerge at the bottom of the mirror base closer to the center of the windshield.
 6. Once the cabling is tucked in the headliner, move back to the "A" pillar and tuck the cable into the pillar cover routing it down towards the door seal, then secure the pillar cover to conceal the wiring.
 
-## Installing Open Pilot for Tesla
+## Installing OpenPilot for Tesla
 
 ```
 Comma.ai doesn't fully support Tesla cars. That's why we maintain our own fork, which you will have to install into your Comma devkit.
@@ -58,9 +58,9 @@ Comma.ai doesn't fully support Tesla cars. That's why we maintain our own fork, 
 DON’T INSTALL ON ANYTHING OTHER THAN A SUPPORTED TESLA! (Someone bricked their Jeep trying.)
 ```
 
-### If you had Open Pilot for Tesla v0.6.6 (tesla_devel) or v0.7.4 (tesla_alpha) installed
+### If you had OpenPilot for Tesla v0.6.6 (tesla_devel) or v0.7.4 (tesla_alpha) installed
 
-If you had Open Pilot for Tesla v0.6.6 (tesla_devel) or v0.7.4 (tesla_alpha) installed on your Comma two/EON Gold before, you HAVE to first update your device's firmware to the latest version before being able to use Tesla Unity.
+If you had OpenPilot for Tesla v0.6.6 (tesla_devel) or v0.7.4 (tesla_alpha) installed on your Comma two/EON Gold before, you HAVE to first update your device's firmware to the latest version before being able to use Tesla Unity.
 
 In order to do so,[you have to ssh into your device](SSH_Into_Your_Device.md) and run following command
 
@@ -70,15 +70,15 @@ In order to do so,[you have to ssh into your device](SSH_Into_Your_Device.md) an
 DON’T RUN THIS COMMAND ON AN OLD EON BASED ON One+ 3T AS IT WILL BRICK IT. THE OLD EON ONLY WORKS WITH THE OLD VERSION OF OPENPILOT FOR TESLA.
 ```
 
-### Installing the Tinkla version of Open Pilot
+### Installing the Tinkla version of OpenPilot
 
-Follow these instructions for setting up a Comma devkit with Tinkla Open Pilot
+Follow these instructions for setting up a Comma devkit with Tinkla OpenPilot
 
 ```
 If the devkit came with the official software preinstalled (did not start with "Getting Started"), or to remove the "Dashcam" software, follow the instructions in section Removing Dashcam Software
 ```
 
-1. When your device boots up for the first time, you'll have the choice of either installing "Dashcam software" or "Custom Software (Advanced)." Let's go through this process to install Open Pilot instead of the Dashcam software (which does not pilot the car).
+1. When your device boots up for the first time, you'll have the choice of either installing "Dashcam software" or "Custom Software (Advanced)." Let's go through this process to install OpenPilot instead of the Dashcam software (which does not pilot the car).
 2. Ensure you're connected either to a Wifi hotspot, or that you can "Skip" the wifi hotspot selection (that means the SIM card is connected to a network).
 3. Select "Custom Software (Advanced)."
 4. Enter [https://op.tinkla.us](https://op.tinkla.us) and click "Install Software."
@@ -86,7 +86,7 @@ If the devkit came with the official software preinstalled (did not start with "
 6. Closely follow the training guide.
 7. [Edit your Config](Comma_devkit.md) for your specific Tesla
 8. Train (calibrate) the system on your car by manually driving faster than 15 mph (~ 25 km/h) for a few minutes. The screen will show what the camera sees after the training is complete.
-9. You may now enable Tinkla Unity as per usual, and Open Pilot will take control after emitting a sound.
+9. You may now enable Tinkla Unity as per usual, and OpenPilot will take control after emitting a sound.
 
 ### Removing Dashcam Software
 
@@ -95,7 +95,7 @@ If you selected the "Dashcam" software during setup you can uninstall with the f
 ```
 
 1. Click on the settings icon (the gear in the top left of the homescreen)
-2. Click "Software" on the right (Version will say "xxxx v X.X.X, something different than Tinkla OP v X.X.X))
+2. Click "Software" on the right (Version will say "xxxx vX.X.X, something different than Tinkla OP vX.X.X))
 3. Scroll down to "Uninstall xxx"
 4. If the option is grayed out or unavailable, shut off your car.
 5. When prompted with a confirmation of uninstalling click, "Uninstall"
@@ -122,7 +122,7 @@ After the Comma devkit has booted you should go and [edit the configuration sett
 Since version 0.8.13-37, flashing of the panda code is done automatically every time there is a change in the code. If for any reason your devkit shows car offline while connected to your Tesla, and a reboot will not fix that, please follow the instructions below to flash both the bootloader and the code onto your panda.
 ```
 
-In your Tesla while it says “Car Off” connect your Comma devkit to your car harness (either using the Tinkla OBD-C Adapter for pre AP cars or the specific harness for your AP Tesla.
+In your Tesla while it says “Car Off” connect your Comma devkit to your car harness (either using the Tinkla OBD-C Adapter for preAP cars or the specific harness for your AP Tesla.
 
 Once the device fully boots up, go to Settings->Tinkla and scroll down to the bottom of the screen where you will see a button called "Flash Panda"
 
@@ -136,11 +136,11 @@ Once you hit the Flash Panda button, a new (white) screen will open up and at th
 - Blue (static): CAN detected
 - Blue (fades in and out): power saving
 
-### pre AP only: Patch your EPAS
+### preAP only: Patch your EPAS
 
-In your Tesla while it says “Car Off” connect your Comma devkit to your car harness (etiher using the Tinkla OBD-C Adapter for pre AP cars or the specific harness for your AP Tesla.
+In your Tesla while it says “Car Off” connect your Comma devkit to your car harness (etiher using the Tinkla OBD-C Adapter for preAP cars or the specific harness for your AP Tesla.
 
-Once the device fully boots up, go to Settings->Tesla pre AP and scroll down to the bottom of the screen where you will see a button called "Flash EPAS"
+Once the device fully boots up, go to Settings->Tesla preAP and scroll down to the bottom of the screen where you will see a button called "Flash EPAS"
 
 Once you hit the Flash EPAS button, a new (white) screen will open up and at the bottom will will find the Patch button. Press and hold the brake pedal so the car stays on. Note that during the process you might see some warning on the instrument cluster which will go away. Select Patch and then wait for the software to configure the EPAS. Once complete you will be prompted to reboot the Comma devkit. Also, at this point exit the car so that the car goes in Car Off mode. Once this happens your EPAS will be patched and ready to go.
 
@@ -148,26 +148,26 @@ Once you hit the Flash EPAS button, a new (white) screen will open up and at the
 
 ### Final steps
 
-Finally, check here to learn more about all the controls, functions and features related to longitudinal control:[Using adaptive cruise control](Longitudinal_Control__ACC.md) 
+Finally, check here to learn more about all the controls, functions and features related to longitudinal control:[Using adaptive cruise control](Longitudinal_Control__ACC.md)
 
-### First Open Pilot Drive
+### First OpenPilot Drive
 
 1. Make sure the Comma devkit is mounted properly and connected to the Panda by following [#Installing the Comma devkit](Comma_devkit.md)
-2. Turn your car on and verify that the left side indicator shows "Car Online". If not, your panda is not flashed, see flashing instructions here [Panda Flashing](Panda.md) .
-3. Open Pilot should switch to "drive mode" and show the camera view with white lane marking
+2. Turn your car on and verify that the left side indicator shows "Car Online". If not, your panda is not flashed, see flashing instructions here [Panda Flashing](Panda.md).
+3. OpenPilot should switch to "drive mode" and show the camera view with white lane marking
 4. Read up and understand the controls from [Using adaptive cruise control](Longitudinal_Control__ACC.md)
 
 ### If your car is recognized
 
 1. Calibration will increment at above 15mph. It will take less than 30 seconds to fully calibrate. If you move the mount, it's recommended to reset camera calibration under "device settings".
-2. When driving, Pull the Cruise Control Stalk to use Open Pilot
+2. When driving, Pull the Cruise Control Stalk to use OpenPilot
 
 ### If your car is not recognized
 
-1. If your Tesla is a pre AP Model S, did you turn on the toggle for**Force Pre AP Tesla Model S**in the**Tesla pre AP**[settings](Comma_devkit.md) ?
+1. If your Tesla is a preAP Model S, did you turn on the toggle for**Force PreAP Tesla Model S**in the**Tesla preAP**[settings](Comma_devkit.md)?
 2. Ask for help on the #tesla channel of the [Comma.ai Discord](https://discordapp.com/invite/Wyna3qy)
 
 ### Experiencing issues?
 
-In case you use a [Pedal](Pedal_Interceptor.md) and it just won't work, chances are it doesn't have Tesla firmware on it yet. You can flash it with [this guide](Pedal_Interceptor.md) .
-On any other issue, please use the search function or ask us on [Discord](https://discordapp.com/invite/Wyna3qy) .
+In case you use a [Pedal](Pedal_Interceptor.md) and it just won't work, chances are it doesn't have Tesla firmware on it yet. You can flash it with [this guide](Pedal_Interceptor.md).
+On any other issue, please use the search function or ask us on [Discord](https://discordapp.com/invite/Wyna3qy).

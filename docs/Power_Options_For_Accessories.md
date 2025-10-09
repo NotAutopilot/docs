@@ -31,13 +31,13 @@ On the left is a view of the accelerator pedal with the fuse box just to the rig
 
 If your fuse adaptor has a butt connector, you’re half way there. First, cut and strip the end of the wire coming from your USB power supply (if not already stripped). Crimp it into the butt connector. Then, choose a suitable fuse in the fusebox. The 5A brown fuse on right should work. Put the 5A fuse in the free slot of your adaptor. Then, plug the adaptor in as shown (the fuses are pointing down). Finally, route the loop connector to the 10mm screw just below and to the right of the fuse box. Screw it in and you have ground.
 
-Once you're done running power we can move on to [powering up your Tinkla Buddy](Tinkla_Buddy_Installation.md) .
+Once you're done running power we can move on to [powering up your Tinkla Buddy](Tinkla_Buddy_Installation.md).
 
 #### Tesla S built 2016+ (Fuse Box in cabin)
 
 If you have a 2016 or later Tesla then there should be a fuse box behind the passenger kick panel and you'll need to re-crimp your 12v red wire which will make this about an hour install.
 
-Once you're done running power we can move on to [powering up your Tinkla Buddy](Tinkla_Buddy_Installation.md) .
+Once you're done running power we can move on to [powering up your Tinkla Buddy](Tinkla_Buddy_Installation.md).
 
 #### Tesla w/o Fuse Box in Cabin
 
@@ -62,4 +62,4 @@ Above is the cabin side of the gasket, hiding low and left when you take off the
 
 Above is a zoomed out view of the compartment behind the kneeboard. there is a plastic panel on the left which is easy to remove and has two 13mm bolts you can use for ground.
 
-1. [↑](Power_Options_For_Accessories.md) [Installing tinkla buddy with in-car fuses](https://docs.google.com/document/d/1Phf WGHXD_g WPe8UAKInbd S7Ks59dnjsfd Ij ZZXHj YQg/edit?usp=sharing) by @erflesby
+1. [↑](Power_Options_For_Accessories.md)[Installing tinkla buddy with in-car fuses](https://docs.google.com/document/d/1PhfWGHXD_gWPe8UAKInbdS7Ks59dnjsfdIjZZXHjYQg/edit?usp=sharing) by @erflesby

@@ -275,34 +275,9 @@
     
 
     
-    <div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2">
-        <div data-slot="sidebar-group-content" data-sidebar="group-content" class="w-full text-sm">
-            <ul data-slot="sidebar-menu" data-sidebar="menu" class="flex w-full min-w-0 flex-col gap-0.5">
-                
-                
-                <li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative">
-    <a data-slot="sidebar-menu-button" data-active="false" data-sidebar="menu-button"
-        data-size="default" href="/"
-        class="hover:bg-sidebar-accent hover:text-sidebar-accent-foreground peer/menu-button flex items-center gap-2 rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 data-[active=true]:bg-accent data-[active=true]:border-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md">
 
-        
-        Home
-        
-
-        
-
-        
-
-        
-    </a>
-</li>
-                
-                
-            </ul>
-        </div>
-    </div>
     
-
+    
     
     
     <div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2">
@@ -892,8 +867,8 @@
 
     </div>
     <div class="typography w-full flex-1 *:data-[slot=alert]:first:mt-0">
-        <p>The Comma Pedal is used to provide advanced acceleration and regen braking capability on Tesla cars running Openpilot that do not have i Booster installed.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Without electric brakes (i Booster) the car only uses regenerative braking. This is not enough for sudden slowdowns. YOU MUST BE READY TO MANUALLY BRAKE AT ANY MOMENT.
+        <p>The Comma Pedal is used to provide advanced acceleration and regen braking capability on Tesla cars running Openpilot that do not have iBooster installed.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Without electric brakes (iBooster) the car only uses regenerative braking. This is not enough for sudden slowdowns. YOU MUST BE READY TO MANUALLY BRAKE AT ANY MOMENT.
 </span></code></pre></div>
 <h3 id="what-it-does">What it Does</h3>
 <p>The Comma Pedal is an accelerator pedal interceptor. It is a device that is inserted between a car's electronic accelerator pedal and the DU (Drive Unit). It detects the voltage from the accelerator pedal which represents the pedal's position. It then writes that same voltage back out to the DU as if the accelerator pedal had produced it.</p>
@@ -905,7 +880,7 @@
 <li>1 USB- This is used to program and monitor the Comma Pedal, itself.</li>
 </ol>
 <p>When Openpilot is NOT engaged, the Comma Pedal reads the voltage from the accelerator pedal and just passes it along to the DU.</p>
-<p>When Openpilot IS engaged with <a href="../Longitudinal_Control__ACC/">longitudinal control</a> , it gets the virtual accelerator pedal position from Openpilot and passes it on to the DU.</p>
+<p>When Openpilot IS engaged with <a href="../Longitudinal_Control__ACC/">longitudinal control</a>, it gets the virtual accelerator pedal position from Openpilot and passes it on to the DU.</p>
 <p>The Comma Pedal is also constantly sending the physical accelerator pedal's position to the CAN bus for Openpilot to read. This way you can increase speed temporarily without having to adjust max speed or disengage longitudinal control.</p>
 <h3 id="obtaining-a-comma-pedal">Obtaining a Comma Pedal</h3>
 <p>You cannot buy a pre-built Comma Pedal from Comma. Fortunately there are other people in the community manufacturing and selling them:</p>
@@ -913,29 +888,30 @@
 <li><a href="https://www.ebay.com/itm/comma-pedal-/224754086101?mkcid=16&amp;mkevt=1&amp;_trksid=p2349624.m46890.l49286&amp;mkrid=711-127632-2357-0">https://www.ebay.com/itm/comma-pedal-/224754086101?mkcid=16&amp;mkevt=1&amp;_trksid=p2349624.m46890.l49286&amp;mkrid=711-127632-2357-0</a> for the pedal hardware</li>
 <li><a href="https://www.ebay.com/itm/Tesla-Openpilot-Pedal-Interceptor-Connectors-/124807073952?mkcid=16&amp;mkevt=1&amp;_trksid=p2349624.m46890.l49286&amp;mkrid=711-127632-2357-0">https://www.ebay.com/itm/Tesla-Openpilot-Pedal-Interceptor-Connectors-/124807073952?mkcid=16&amp;mkevt=1&amp;_trksid=p2349624.m46890.l49286&amp;mkrid=711-127632-2357-0</a> for the Tesla specific connectors</li>
 </ul>
-<p>Since they're currently always sold out as soon as new ones get in stock, you could also <a href="https://github.com/commaai/neo/tree/master/pedal">build it yourself</a> (not recommended) or have one <a href="https://medium.com/@joshuairl/comma-pedal-building-with-macrofab-6328bea791e8">fabricated through a service like Macrofab</a> .</p>
+<p>Since they're currently always sold out as soon as new ones get in stock, you could also <a href="https://github.com/commaai/neo/tree/master/pedal">build it yourself</a>(not recommended) or have one <a href="https://medium.com/@joshuairl/comma-pedal-building-with-macrofab-6328bea791e8">fabricated through a service like Macrofab</a>.</p>
 <h3 id="wiring-a-tesla-pedal">Wiring a Tesla Pedal</h3>
 <p>In order to create your Tesla Pedal you need:</p>
 <ul>
 <li>1x Comma Pedal board (for sources see above section)</li>
-<li>1x <a href="https://www.amazon.com/Le Motech-Plastic-Electrical-Junction-72x42x23mm/dp/B07F3Y8L95/">box to hold the board</a> if your Pedal doesn't already have a case (current ones ship with 3D printed cases). You will need to cut some <a href="../images/Pedal_in_box.png">small openings</a> on the sides (and in front of the RJ45) if you use this one.</li>
-<li>1x set of "WPT-929" connectors (actually <a href="https://www.molex.com/molex/products/datasheet.jsp?part=active/0314026110_CRIMP_HOUSINGS.xml">Molex</a> ) -<a href="https://www.amazon.com/dp/B07GZY4ST4">fast shipping</a> ,<a href="https://de.aliexpress.com/item/32778798102.html">slow shipping</a></li>
+<li>1x <a href="https://www.amazon.com/LeMotech-Plastic-Electrical-Junction-72x42x23mm/dp/B07F3Y8L95/">box to hold the board</a> if your Pedal doesn't already have a case (current ones ship with 3D printed cases). You will need to cut some <a href="File_Pedal_in_box.png.md">small openings</a> on the sides (and in front of the RJ45) if you use this one.</li>
+<li>1x set of "WPT-929" connectors (actually <a href="https://www.molex.com/molex/products/datasheet.jsp?part=active/0314026110_CRIMP_HOUSINGS.xml">Molex</a>) -<a href="https://www.amazon.com/dp/B07GZY4ST4">fast shipping</a>,<a href="https://de.aliexpress.com/item/32778798102.html">slow shipping</a></li>
 <li>~3ft of wire for the connectors in case your Pedal and connectors don't come with them (~AWG24)</li>
-<li>1x SN-28B crimping tool (same one as used for EPAS cable -<a href="https://www.amazon.com/Wovier-Compression-Ratcheting-0-1-1-0mm2-Wire-electrode/dp/B01CE4FAMW">fast shipping</a> ,<a href="https://www.aliexpress.com/item/32843027501.html">slow shipping</a> )</li>
-<li>**EITHER**1x ethernet cable ~2ft (not crossover) for current gen Pedal and <a href="../Tesla_Giraffe/">Tesla Giraffe</a> (rev B) which have RJ45 ports</li>
-<li>**OR**1x JST2 male and 1x female connector plus some twisted pair wire if RJ45 is not present. You can <a href="https://www.digikey.com/product-detail/en/adafruit-industries-llc/1131/1528-1494-ND/5761282?WT.srch=1&amp;gclid=EAIa IQob Ch MIj O_5y Jy K4g IV1g OGCh1l OAh1EAQYAi ABEg Lflf D_Bw E">buy this</a> and cut it and you're done (not twisted but will work just fine)</li>
+<li>1x SN-28B crimping tool (same one as used for EPAS cable -<a href="https://www.amazon.com/Wovier-Compression-Ratcheting-0-1-1-0mm2-Wire-electrode/dp/B01CE4FAMW">fast shipping</a>,<a href="https://www.aliexpress.com/item/32843027501.html">slow shipping</a>)</li>
+<li>**EITHER**1x ethernet cable ~2ft (not crossover) for current gen Pedal and <a href="../Tesla_Giraffe/">Tesla Giraffe</a>(rev B) which have RJ45 ports</li>
+<li>**OR**1x JST2 male and 1x female connector plus some twisted pair wire if RJ45 is not present. You can <a href="https://www.digikey.com/product-detail/en/adafruit-industries-llc/1131/1528-1494-ND/5761282?WT.srch=1&amp;gclid=EAIaIQobChMIjO_5yJyK4gIV1gOGCh1lOAh1EAQYAiABEgLflfD_BwE">buy this</a> and cut it and you're done (not twisted but will work just fine)</li>
 </ul>
 <p>Use the diagram to connect the female WPT-929 pedal connector to the IN side of the pedal board and the male WSP-929 connector to the OUT side of the pedal connector.</p>
 <h3 id="connecting-the-pedal-for-old-eon-with-giraffe-or-harness">Connecting the Pedal for Old EON with Giraffe or Harness</h3>
 <p>Connecting the CAN BUS from the Pedal to the <a href="../Tesla_Giraffe/">Giraffe</a> depends on your setup, as explained in the parts list above.</p>
-<p>Via RJ45: Plug in the ethernet cable into the RJ45 port of the Pedal and the other end into the RJ45 port of the Giraffe that is labelled with "comma".Via JST2: Solder positions 3 and 6 of the fake-ethernet port of the Pedal board to the two JST2 connectors (male and female) with enough length to reach EPAS cable/Giraffe. We need both because you will plug the female one in the <a href="../Tesla_Giraffe/">Giraffe's</a> EPAS connector and then the EPAS Harness into the male JST2. Red should be CAN+ and black should be CAN- (that's the convention also used in the image showing the CAN wire soldered to pins 3 and 6 of the fake ethernet port on the Pedal board).</p>
+<p><img alt="" src="../images/Pedal_CAN_connection.png" /></p>
+<p>Via RJ45: Plug in the ethernet cable into the RJ45 port of the Pedal and the other end into the RJ45 port of the Giraffe that is labelled with "comma".Via JST2: Solder positions 3 and 6 of the fake-ethernet port of the Pedal board to the two JST2 connectors (male and female) with enough length to reach EPAS cable/Giraffe. We need both because you will plug the female one in the <a href="../Tesla_Giraffe/">Giraffe's</a>EPAS connector and then the EPAS Harness into the male JST2. Red should be CAN+ and black should be CAN- (that's the convention also used in the image showing the CAN wire soldered to pins 3 and 6 of the fake ethernet port on the Pedal board).</p>
 <h3 id="installing-the-tesla-pedal-for-old-eon-setup-with-giraffe-or-harness">Installing the Tesla Pedal for old EON setup with Giraffe or Harness</h3>
 <p>To install the Pedal, there are two steps:</p>
 <ol>
 <li>connecting the board to the accelerator pedal</li>
 <li>connecting the board to the <a href="../Tesla_Giraffe/">Tesla Giraffe</a> for old EON</li>
 </ol>
-<p>This <a href="https://www.youtube.com/watch?v=Ui Qved6gt2U">video</a> for a similar product shows you what you have to do in order to install the Pedal interceptor between the accelerator pedal and the car's existing connector. Take your time and watch the video first. The process is not complicated if you just follow it step by step.</p>
+<p>This <a href="https://www.youtube.com/watch?v=UiQved6gt2U">video</a> for a similar product shows you what you have to do in order to install the Pedal interceptor between the accelerator pedal and the car's existing connector. Take your time and watch the video first. The process is not complicated if you just follow it step by step.</p>
 <p>Once that is complete, connect your ethernet cable to the Pedal and the other end to the Giraffe's RJ45 Port labelled "comma".</p>
 <p>Older Giraffes and Pedals without RJ45 ports connect over JST2: Disconnect the EPAS cable from the Tesla Giraffe and connect the female JST2 from your Pedal to the Giraffe. Then connect the EPAS cable to the male JST2 from your Pedal.</p>
 <p>If your Pedal needs to be flashed, don't put your trim back on just yet. Instead connect the Giraffe and Panda to the car and and follow instructions below. This makes it easier to get to the Pedal in case necessary.
@@ -943,10 +919,10 @@ Once you're ready to cover everything up, make sure you don't forget to reconnec
 <h3 id="flashing-the-firmware-for-tesla-pedal-for-older-eon-versions">Flashing the firmware for Tesla Pedal for older EON versions</h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>You have to use a Tesla specific firmware on the Pedal in order to work for Tesla.
 </span></code></pre></div>
-<p>You can flash the Pedal directly from the EON, this is why**we highly recommend installing the Pedal in your car before flashing (see section above)**. If, for whatever reason, you need to flash your Pedal outside the car, use below instructions in conjunction with <a href="https://medium.com/@jfrux/flashing-the-comma-pedal-with-ubuntu-a83fb668f6e2">this guide</a> by <a href="https://medium.com/@jfrux">@jfrux</a> </p>
+<p>You can flash the Pedal directly from the EON, this is why**we highly recommend installing the Pedal in your car before flashing (see section above)**. If, for whatever reason, you need to flash your Pedal outside the car, use below instructions in conjunction with <a href="https://medium.com/@jfrux/flashing-the-comma-pedal-with-ubuntu-a83fb668f6e2">this guide</a> by <a href="https://medium.com/@jfrux">@jfrux</a></p>
 <h5 id="step-1-get-the-code">Step 1: Get the code</h5>
 <p>SSH into your EON, then download our latest Pedal code (use<code>git pull</code>in /data/panda if you already cloned the repo).</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>git clone --depth 1 https://github.com/Bog Gyver/panda.git -b tesla_pedal /data/panda
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>git clone --depth 1 https://github.com/BogGyver/panda.git -b tesla_pedal /data/panda
 </span></code></pre></div>
 <h5 id="step-2-prepare-your-hardware">Step 2: Prepare your hardware</h5>
 <p>Connect your EON to your car (Panda) if not already done. Then press the brake pedal to power up the Pedal.</p>
@@ -960,14 +936,14 @@ Once you're ready to cover everything up, make sure you don't forget to reconnec
 <div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>make canflash
 </span></code></pre></div>
 <p>In case flashing is stuck at<code>checking for flasher</code>, press CTRL+C to abort and re run above command. Power cycling Panda by reseating it may also help. If CAN flashing doesn't work for whatever reason you can always try Step 3.2 as a fallback.</p>
-<p>1Original resource:<a href="https://medium.com/@jfrux/comma-pedal-updating-the-firmware-over-can-fa438a3cf910">Comma Pedal: Updating the Firmware over CAN</a> by <a href="https://medium.com/@jfrux">@jfrux</a> </p>
+<p>1Original resource:<a href="https://medium.com/@jfrux/comma-pedal-updating-the-firmware-over-can-fa438a3cf910">Comma Pedal: Updating the Firmware over CAN</a> by <a href="https://medium.com/@jfrux">@jfrux</a></p>
 <h5 id="step-32-flashing-via-usb">Step 3.2: Flashing via USB</h5>
 <p><strong>Flashing via USB involves more steps and is only necessary if flashing via CAN is not possible yet (see explanation in Step 3.1).</strong></p>
 <p>If you built your Pedal yourself or it was shipped without any firmware, it will boot in DFU mode. To know which mode you're in look at the LED on the Pedal board: no light = DFU mode, slow blink = normal flash mode, fast blink = normal operations.</p>
 <p>If your Pedal LED is blinking, you can put your Pedal into DFU mode via CAN:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>./enter_canloader.py --recover
 </span></code></pre></div>
-<p>It's possible that the LED won't turn off on the first try, but usually does so after entering the command a second time*. In case you get an Assertion Error, reboot EON and start over from step 2. Also power cycle your Panda by reseating it if the issue persists.While in DFU mode, connect your EON via USB to the Pedal (unplug from Panda or use a second USB cable) ensuring that the car does not go in Car Off mode (don't lift your butt off the driver's seat) since Pedal would lose power and therefore also DFU mode.
+<p>It's possible that the LED won't turn off on the first try, but usually does so after entering the command a second time*. In case you get an AssertionError, reboot EON and start over from step 2. Also power cycle your Panda by reseating it if the issue persists.While in DFU mode, connect your EON via USB to the Pedal (unplug from Panda or use a second USB cable) ensuring that the car does not go in Car Off mode (don't lift your butt off the driver's seat) since Pedal would lose power and therefore also DFU mode.
 Now run this command to flash the bootloader and operational code:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>make recover
 </span></code></pre></div>
@@ -979,7 +955,7 @@ Now run this command to flash the bootloader and operational code:</p>
 Once the pedal is back in operational mode (rapid LED blinking), PRND letters should be white. If it's not, first try to reboot pedal: Open the driver door while not sitting in the driver seat to make the car go in "Car Off" mode, then step on the brake to turn it back on.
 If you still experience red PRND letters after a successful flash and pedal being in operational mode, it means a bad connection between the car and the accelerator, so check your pedal Molex connectors.</p>
 <h3 id="using-the-tesla-pedal">Using the Tesla Pedal</h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Without electric brakes (i Booster) the car only uses regenerative braking. This is not enough for suddent slowdowns. YOU MUST BE READY TO MANUALLY BRAKE AT ANY MOMENT.
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Without electric brakes (iBooster) the car only uses regenerative braking. This is not enough for suddent slowdowns. YOU MUST BE READY TO MANUALLY BRAKE AT ANY MOMENT.
 </span></code></pre></div>
 <p>Out of the box, OP will use the Tesla CC (with stalk spamming) to control CC. This in our OP implementation is called Adaptive Cruise Control or ACC. CC on Tesla only works above 18 MPH (29 km/h).</p>
 <p>If you turn off the Tesla CC by pressing on the CC stalk, OP will switch to Tesla Pedal mode (PCC). This will provide you with smooth adaptive cruise control by sending the right commands to your Tesla Pedal. Tesla Pedal works down to 1 MPH, but be careful, regen brakes stop working at 5 MPH (8 km/h).</p>
@@ -1028,22 +1004,14 @@ If you still experience red PRND letters after a successful flash and pedal bein
             
 
             
-            <div class="flex flex-col gap-4">
-                <div class="text-muted-foreground text-sm font-medium">Menu</div>
-                <div class="flex flex-col gap-3">
-                    
-                    <a class="text-2xl font-medium" href="..">
-                        
-                        Home
-                        
-                    </a>
-                    
-                </div>
-            </div>
-            
 
             
             <div class="flex flex-col gap-8">
+                
+                <div class="flex flex-col gap-4">
+                    <div class="text-muted-foreground text-sm font-medium">Home</div>
+                    
+                </div>
                 
                 <div class="flex flex-col gap-4">
                     <div class="text-muted-foreground text-sm font-medium">Getting Started</div>

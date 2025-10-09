@@ -275,34 +275,9 @@
     
 
     
-    <div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2">
-        <div data-slot="sidebar-group-content" data-sidebar="group-content" class="w-full text-sm">
-            <ul data-slot="sidebar-menu" data-sidebar="menu" class="flex w-full min-w-0 flex-col gap-0.5">
-                
-                
-                <li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative">
-    <a data-slot="sidebar-menu-button" data-active="false" data-sidebar="menu-button"
-        data-size="default" href="/"
-        class="hover:bg-sidebar-accent hover:text-sidebar-accent-foreground peer/menu-button flex items-center gap-2 rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 data-[active=true]:bg-accent data-[active=true]:border-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md">
 
-        
-        Home
-        
-
-        
-
-        
-
-        
-    </a>
-</li>
-                
-                
-            </ul>
-        </div>
-    </div>
     
-
+    
     
     
     <div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2">
@@ -892,34 +867,36 @@
 
     </div>
     <div class="typography w-full flex-1 *:data-[slot=alert]:first:mt-0">
-        <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Tesla Giraffe is not needed with the latest versions of Tesla Unity Open Pilot. This equipment was used in the past to connect the EPAS Harness to the OBD2 port and the Panda. With the release of v0.8.13 this device was replaced by the Tinkla OBD-C Adapter
+        <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Tesla Giraffe is not needed with the latest versions of Tesla Unity OpenPilot. This equipment was used in the past to connect the EPAS Harness to the OBD2 port and the Panda. With the release of v0.8.13 this device was replaced by the Tinkla OBD-C Adapter
 </span></code></pre></div>
 <h2 id="installing-the-giraffe">Installing the Giraffe</h2>
-<p>Has 1&amp;9Missing 1&amp;9There are currently three options concerning Giraffes for your Model S. You can even make your own Tesla Giraffe.</p>
+<p><img alt="Has 1&amp;9" src="../images/CH_bus-2.jpg" /></p>
+<p><img alt="Missing 1&amp;9" src="../images/No_CH_bus-2.jpg" /></p>
+<p>There are currently three options concerning Giraffes for your Model S. You can even make your ownTesla Giraffe.</p>
 <ol>
-<li>An EPAS harness from <a href="https://www.ebay.com/str/level2tesla">Flyboy222pa on e Bay</a> or <a href="https://evcablescom-tech.3dcartstores.com/Tesla-Open-Pilot-EPAS-Harness_p_1.html">evcablescom.tech</a> - The harness installs below the MCU.</li>
-<li>This path doesn't require a Giraffe and has our <a href="../EPAS_harness/">EPAS Harness</a> already built-in, so you don't need to make it yourself.</li>
+<li>An EPAS harness from <a href="https://www.ebay.com/str/level2tesla">Flyboy222pa on eBay</a> or <a href="https://evcablescom-tech.3dcartstores.com/Tesla-Open-Pilot-EPAS-Harness_p_1.html">evcablescom.tech</a>- The harness installs below the MCU.</li>
+<li>This path doesn't require a Giraffe and has our <a href="EPAS_Harness.md">EPAS Harness</a> already built-in, so you don't need to make it yourself.</li>
 <li>But this will require a 120 Ohm resistor if you want to install a Radar retrofit.</li>
-<li>Giraffe rev B from @E=mc2#7596 on the <a href="https://discordapp.com/invite/Wyna3qy">Comma.ai Discord</a> - This Giraffe installs into the OBD port under the dash in the driver's footwell.</li>
+<li>Giraffe rev B from @E=mc2#7596 on the <a href="https://discordapp.com/invite/Wyna3qy">Comma.ai Discord</a>- This Giraffe installs into the OBD port under the dash in the driver's footwell.</li>
 <li>This will work as long as your OBD port pins 1 and 9 look like the first picture on the right.</li>
 <li>Giraffe for cars built before May 31, 2013, will need a "TDC Connector".- This Giraffe installs into the OBD port under the dash in the driver's footwell but needs an additional connection to the port under the MCU.</li>
 <li>You'll want this variant if your OBD port is missing pins 1 and 9 like the second picture to the right.</li>
 </ol>
-<p>Your <a href="https://comma.ai/shop/products/panda-obd-ii-dongle">Comma.ai Panda</a> plugs right into your Giraffe or Flyboy's EPAS harness. In case of the Giraffe, your need to make the <a href="../EPAS_harness/">EPAS Harness</a> yourself.</p>
-<h2 id="giraffe-rev-b">Giraffe rev B</h2>
+<p>Your <a href="https://comma.ai/shop/products/panda-obd-ii-dongle">Comma.ai Panda</a> plugs right into your Giraffe or Flyboy's EPAS harness. In case of the Giraffe, your need to make the <a href="EPAS_Harness.md">EPAS Harness</a> yourself.</p>
+<h2 id="giraffe-revb">Giraffe revB</h2>
 <p>The <a href="https://github.com/appleguru/panda">Tesla Giraffe rev. B</a> was created and sold by**@appleguru**.</p>
-<p>On top of creating the right pin connections between Panda and the appropriate <a href="../Tesla_CAN_Bus/">Tesla CAN Bus</a> , it has a number of other nice features:</p>
+<p>On top of creating the right pin connections between Panda and the appropriate <a href="../Tesla_CAN_Bus/">Tesla CAN Bus</a>, it has a number of other nice features:</p>
 <ul>
 <li>automatically connects EPAS connector back to <a href="../Tesla_CAN_Bus/">Chassis CAN</a> bus when no Panda is present</li>
 <li>offers connector for CAN2 on Panda which is used for <a href="../Tesla_Bosch_Radar/">Tesla Bosch Radar</a></li>
 <li>has 12V power out which can be used to power the <a href="../Tesla_Bosch_Radar/">Tesla Bosch Radar</a> via relay</li>
-<li>has the Comma RJ45 Fake Ethernet CAN connector to connect the <a href="../Pedal_Interceptor/">Comma Pedal</a></li>
+<li>has the Comma RJ45 FakeEthernet CAN connector to connect the <a href="The_Comma.ai_Pedal.md">Comma Pedal</a></li>
 <li>has 8 GPIO outputs that can be used to drive certain other accessories; the 8<sup>th</sup> GPIO is used in our Panda firmware for "ignition power" which can be used to drive the relay needed for <a href="../Tesla_Bosch_Radar/">Tesla Bosch Radar</a> power</li>
 </ul>
 <h3 id="default-output-mapping-with-tesla-giraffe-rev-b-firmware-from-my-branch">Default Output Mapping with Tesla Giraffe rev. B firmware from my branch</h3>
-<p>The general purpose outputs on the GPIO RJ45 and optional 10 position terminal block are driven from the panda via one of the otherwise unused LIN bus outputs. This output, through the circuitry on the rev. B giraffe, drives an automotive grade 8 ch smart FET (Infineon BTS4880R) that can handle loads up to 500m A per channel (2A max across all outputs).</p>
+<p>The general purpose outputs on the GPIO RJ45 and optional 10 position terminal block are driven from the panda via one of the otherwise unused LIN bus outputs. This output, through the circuitry on the rev. B giraffe, drives an automotive grade 8 ch smart FET (Infineon BTS4880R) that can handle loads up to 500mA per channel (2A max across all outputs).</p>
 <p>The initial application for the GPIO is to support the "Tesla Camera switcher" project, which allows intelligent switching between the car's backup camera and a new camera added to the front bumper to help with forward parking on a Model S or Model X. The current firmware automatically switches to the backup camera feed when in reverse, and the front camera feed otherwise, allowing for the use of pressing and holding on the menu button on the steering wheel to manually select.</p>
-<p>Other projects that will potentially use this GPIO are the "Tesla 360 camera install", the "Tesla lighted appliqué", and a few owners that have installed light bars/want to drive relays from <a href="../Tesla_CAN_Bus/">CAN</a> so they come on with their high beams. The firmware is open-source, so you can configure this interface to suit your project’s needs and get a very capable GPIO from <a href="../Tesla_CAN_Bus/">CAN</a> ! Please see the table below for the current CAN signals mapped:</p>
+<p>Other projects that will potentially use this GPIO are the "Tesla 360 camera install", the "Tesla lighted appliqué", and a few owners that have installed light bars/want to drive relays from <a href="../Tesla_CAN_Bus/">CAN</a> so they come on with their high beams. The firmware is open-source, so you can configure this interface to suit your project’s needs and get a very capable GPIO from <a href="../Tesla_CAN_Bus/">CAN</a>! Please see the table below for the current CAN signals mapped:</p>
 <table>
 <thead>
 <tr>
@@ -1049,7 +1026,7 @@
 </tbody>
 </table>
 <h3 id="giraffe-can-bus-inputsoutputs">Giraffe CAN Bus Inputs/Outputs</h3>
-<p>Panda CAN2 is used in my branch to connect the <a href="../Tesla_Bosch_Radar/">Tesla Bosch Radar</a> . R11 on the bottom of the board is unpopulated and available for an optional 120 Ohm 1206 termination resistor to be installed if needed. CAN2 is broken out on both the Comma RJ45 output and the J3 2pin output (see pinout). If you're not planning to install the R11, please make sure you add an 120 Ohm resistor before the JST connector per the <a href="../Tesla_Bosch_Radar/">Tesla Bosch Radar</a> instructions.</p>
+<p>Panda CAN2 is used in my branch to connect the <a href="../Tesla_Bosch_Radar/">Tesla Bosch Radar</a>. R11 on the bottom of the board is unpopulated and available for an optional 120 Ohm 1206 termination resistor to be installed if needed. CAN2 is broken out on both the Comma RJ45 output and the J3 2pin output (see pinout). If you're not planning to install the R11, please make sure you add an 120 Ohm resistor before the JST connector per the <a href="../Tesla_Bosch_Radar/">Tesla Bosch Radar</a> instructions.</p>
 <p>Panda CAN1 is connected to the Model S and Model X’s <a href="../Tesla_CAN_Bus/">Chassis CAN</a> via the giraffe’s male OBD’s Pins 1 (CH+) and 9 (CH-). The J6 EPAS output switches between <a href="../Tesla_CAN_Bus/">CH CAN</a> from the Car and CAN3 from the Panda, depending on the state of CAN Select (Which is driven by the panda’s GMLAN output). When it is high (D1 Yellow), J6 is sending Panda CAN3 out. When it is low (D1 Green), the Car’s Chassis CAN (CAN1) is going out J6.</p>
 <h3 id="tesla-giraffe-rev-b-useful-part-numbers">Tesla Giraffe rev B Useful Part Numbers</h3>
 <p>2pin connectors for J2 / J3 / J6 are JST 2pos 2mm PH headers, PN B2B-PH-K-S(LF)(SN)</p>
@@ -1101,22 +1078,14 @@
             
 
             
-            <div class="flex flex-col gap-4">
-                <div class="text-muted-foreground text-sm font-medium">Menu</div>
-                <div class="flex flex-col gap-3">
-                    
-                    <a class="text-2xl font-medium" href="..">
-                        
-                        Home
-                        
-                    </a>
-                    
-                </div>
-            </div>
-            
 
             
             <div class="flex flex-col gap-8">
+                
+                <div class="flex flex-col gap-4">
+                    <div class="text-muted-foreground text-sm font-medium">Home</div>
+                    
+                </div>
                 
                 <div class="flex flex-col gap-4">
                     <div class="text-muted-foreground text-sm font-medium">Getting Started</div>
@@ -1366,10 +1335,10 @@
         
 
         
-        <a href="#giraffe-rev-b"
+        <a href="#giraffe-revb"
             class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
             data-active="false" data-depth="2">
-            Giraffe rev B
+            Giraffe revB
         </a>
         
         

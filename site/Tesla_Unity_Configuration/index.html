@@ -275,34 +275,9 @@
     
 
     
-    <div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2">
-        <div data-slot="sidebar-group-content" data-sidebar="group-content" class="w-full text-sm">
-            <ul data-slot="sidebar-menu" data-sidebar="menu" class="flex w-full min-w-0 flex-col gap-0.5">
-                
-                
-                <li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative">
-    <a data-slot="sidebar-menu-button" data-active="false" data-sidebar="menu-button"
-        data-size="default" href="/"
-        class="hover:bg-sidebar-accent hover:text-sidebar-accent-foreground peer/menu-button flex items-center gap-2 rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 data-[active=true]:bg-accent data-[active=true]:border-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md">
 
-        
-        Home
-        
-
-        
-
-        
-
-        
-    </a>
-</li>
-                
-                
-            </ul>
-        </div>
-    </div>
     
-
+    
     
     
     <div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2">
@@ -894,7 +869,7 @@
     <div class="typography w-full flex-1 *:data-[slot=alert]:first:mt-0">
         <h2 id="intro">Intro</h2>
 <ul>
-<li>On top of the standard settings offered by Open Pilot, Tinkla Unity has three separate sections which configure how the software behaves in your car.</li>
+<li>On top of the standard settings offered by OpenPilot, Tinkla Unity has three separate sections which configure how the software behaves in your car.</li>
 <li>Understanding these settings and what they do is a crucial component on having the best experience with Tinkla Unity in your vehicle.</li>
 <li>Because our cars are so similar yet so different (just between 2012 and 2014 the number of available factory configurations for Model S is ridiculously high), combined with changes made by Tesla between software updates, it is hard to automate the configuration. So please take your time to read through these settings and understand them.</li>
 <li>If you have questions, please join us on <a href="https://discordapp.com/invite/Wyna3qy">Discord</a> where people will be happy to answer your questions.</li>
@@ -913,20 +888,22 @@
 <p>There is one field (<strong>Speed Limit Offset</strong>) which can be either in your car's units of measure (km/h or MPH) OR can represent a percentage of the speed limit. The way this field is interpreted depends on the value of the**Use relative offset**toggle.</p>
 </li>
 <li>
-<p>Editing numerical values in Tesla Unity settings page (&frac12;)</p>
+<p><img alt="" src="../images/Editing_numerical_values_1.png" /></p>
 </li>
-<li>Editing numerical values in Tesla Unity settings page (2/2)</li>
 </ul>
+<p>Editing numerical values in Tesla Unity settings page (&frac12;)
+- <img alt="" src="../images/Editing_numerical_values_2.png" /></p>
+<p>Editing numerical values in Tesla Unity settings page (2/2)</p>
 <h2 id="tinkla">Tinkla</h2>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>These settings apply to all models of Tesla. They control software that was created only for the Tesla branch.
 </span></code></pre></div>
 <ul>
-<li><strong>Enable HSO</strong>(toggle): Enables Human Steering Override (HSO) feature, which allows the driver to take over the steering wheel without disengaging the Open Pilot software. Once the hand is removed from the steering wheel, the software takes over again to keep the vehicle in the lane.</li>
-<li><strong>HSO numb period</strong>(editable field): This is the interval, in seconds, at which Open Pilot checks if the driver is still overriding the steering. Default values is 1.5 seconds. A value to small and you might have to fight Open Pilot over control. A value too large will delay Open Pilot from taking control in time after you let go of the steering wheel.</li>
-<li><strong>Enable HAO</strong>(toggle): Enables the Human Acceleration Override (HAO) feature, which allows the driver to accelerate the car while Open Pilot has longitudinal control of the vehicle without disengaging the software.</li>
-<li><strong>Enable ALC</strong>(toggle): Enables Automatic Lane Change (ALC) feature, which automatically changes lanes x seconds (see ALC delay) after the turn signal stalk was tapped (not fully pressed). During the whole process of ALC, the turn signals will be kept on and the software will check if the line between lanes allows for a lane change and (on AP1/AP2 cars) if there is any vehicle in the blind spot.<strong>For pre AP cars, which do not have blind spot monitoring, please confirm there is no vehicle. If there is, fully press the turn signal to cancel the ALC process</strong></li>
-<li><strong>ALC delay</strong>(editable field): The dalay, in seconds, from the turn signal stalk press until the Open Pilot initiates the lane change. During this time the blinker will remain on, allowing the other drivers to see your intentions. You can reduce the wait time by slightly touching the steering wheel in the direction of lane change, which will initiate it at that moment.</li>
-<li><strong>Enable OP Long Control</strong>(toggle): Allows Open Pilot to control the acceleration and braking of your vehicle. If this toggle is Off, you will have to accelerate/brake on your own for <a href="Open Pilot_for_pre AP_Tesla_Model S.md">pre AP Tesla Model S</a> (Open Pilot will just do lane keep assist) or it will use the built in adaptive cruise control (ACC) feature of your Tesla Model S/X with <a href="Open Pilot_for_Tesla_Model_S-X_with_AP1.md">AP1</a> /<a href="Open Pilot_for_Tesla_Model_S-X_with_AP2.md">AP2</a> .</li>
+<li><strong>Enable HSO</strong>(toggle): Enables Human Steering Override (HSO) feature, which allows the driver to take over the steering wheel without disengaging the OpenPilot software. Once the hand is removed from the steering wheel, the software takes over again to keep the vehicle in the lane.</li>
+<li><strong>HSO numb period</strong>(editable field): This is the interval, in seconds, at which OpenPilot checks if the driver is still overriding the steering. Default values is 1.5 seconds. A value to small and you might have to fight OpenPilot over control. A value too large will delay OpenPilot from taking control in time after you let go of the steering wheel.</li>
+<li><strong>Enable HAO</strong>(toggle): Enables the Human Acceleration Override (HAO) feature, which allows the driver to accelerate the car while OpenPilot has longitudinal control of the vehicle without disengaging the software.</li>
+<li><strong>Enable ALC</strong>(toggle): Enables Automatic Lane Change (ALC) feature, which automatically changes lanes x seconds (see ALC delay) after the turn signal stalk was tapped (not fully pressed). During the whole process of ALC, the turn signals will be kept on and the software will check if the line between lanes allows for a lane change and (on AP1/AP2 cars) if there is any vehicle in the blind spot.<strong>For preAP cars, which do not have blind spot monitoring, please confirm there is no vehicle. If there is, fully press the turn signal to cancel the ALC process</strong></li>
+<li><strong>ALC delay</strong>(editable field): The dalay, in seconds, from the turn signal stalk press until the OpenPilot initiates the lane change. During this time the blinker will remain on, allowing the other drivers to see your intentions. You can reduce the wait time by slightly touching the steering wheel in the direction of lane change, which will initiate it at that moment.</li>
+<li><strong>Enable OP Long Control</strong>(toggle): Allows OpenPilot to control the acceleration and braking of your vehicle. If this toggle is Off, you will have to accelerate/brake on your own for <a href="../OpenPilot_for_preAP_Tesla_ModelS/">preAP Tesla Model S</a>(OpenPilot will just do lane keep assist) or it will use the built in adaptive cruise control (ACC) feature of your Tesla Model S/X with <a href="../OpenPilot_for_Tesla_Model_S-X_with_AP1/">AP1</a>/<a href="../OpenPilot_for_Tesla_Model_S-X_with_AP2/">AP2</a>.</li>
 <li><strong>Turn screen off while engaged</strong>(toggle): Turns off the Comma devkit screen when there are no messages/warnings to be shown. It turns on automatically if there is something to be displayed.</li>
 <li><strong>Show Debug View</strong>(toggle): For development purpose only. Please leave this toggle OFF.</li>
 <li><strong>Hide GPS Warnings</strong>(toggle): Because of the window treatments on our Tesla vehicles, the GPS signal inside the vehicle is very low. This will create constant warning on the Comma devkit display about the quality of GPS signal. By turning this toggle on you will mute those messages.</li>
@@ -936,32 +913,34 @@
 <li><strong>Hands on level</strong>(editable field): Level at which to detect hands on wheel. Higher number means more force needed.</li>
 <li><strong>Tinkla Development Unit</strong>(toggle): For development purpose only. Please leave this toggle OFF.</li>
 <li>
-<p><strong>Flash Panda</strong>(button): Panda is a separate internal component inside your Comma devkit. It has its own software and does a lot of the safety controls and checks between your car and the Comma devkit. You can think of it as the CAN Police. Every time you update your Comma devkit software you will also have to flash the new code on the Panda. This button starts the process to <a href="../Comma_devkit/">flash your Panda</a> .</p>
+<p><strong>Flash Panda</strong>(button): Panda is a separate internal component inside your Comma devkit. It has its own software and does a lot of the safety controls and checks between your car and the Comma devkit. You can think of it as the CAN Police. Every time you update your Comma devkit software you will also have to flash the new code on the Panda. This button starts the process to <a href="../Comma_devkit/">flash your Panda</a>.</p>
 </li>
 <li>
-<p>Tinkla specific settings for the Tesla Unity branch of Open Pilot (&frac12;)</p>
+<p><img alt="" src="../images/Tinkla_Settings_1.png" /></p>
 </li>
-<li>Tinkla specific settings for the Tesla Unity branch of Open Pilot (2/2)</li>
 </ul>
-<h2 id="tesla-pre-ap">Tesla pre AP</h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>These settings apply only to pre AP Tesla Model S. They control how OP software works on a Tesla that never had Auto Pilot hardware.
+<p>Tinkla specific settings for the Tesla Unity branch of OpenPilot (&frac12;)
+- <img alt="" src="../images/Tinkla_Settings_2.png" /></p>
+<p>Tinkla specific settings for the Tesla Unity branch of OpenPilot (2/2)</p>
+<h2 id="tesla-preap">Tesla preAP</h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>These settings apply only to preAP Tesla Model S. They control how OP software works on a Tesla that never had AutoPilot hardware.
 </span></code></pre></div>
 <ul>
 <li><strong>Tesla software post 2019.16</strong>(toggle): Most users should have this toggle ON. If by any chance (I do hope not) you're running Tesla software older than version 2019.16, do turn this OFF to see if it works on your car. There were CAN messages changed between pre and post version 2019.16.</li>
 <li><strong>Use pedal</strong>(toggle): If you have a <a href="../Pedal_Interceptor/">pedal interceptor</a> installed in your car, please turn this toggle ON. Otherwise, leave it OFF. This can create issues if turned ON without a pedal interceptor installed.</li>
-<li><strong>Use pedal over CC</strong>(toggle): If you have a <a href="../Pedal_Interceptor/">pedal interceptor</a> installed in your car AND want to have pedal based adaptive cruise control (PCC) enabled all the time no matter what the status of your car's cruise control is, turn this ON. It will completely disable your car's cruise control. If you have pedal interceptor and leave this OFF, then when the car's cruise control is ON you can not engage Open Pilot but it will allow you to use the factory Cruise Control.</li>
-<li><strong>Pedal on CAN0</strong>(toggle): If you have a <a href="../Pedal_Interceptor/">pedal interceptor</a> installed in your car and it is connected on CAN0, then turn this toggle ON. An example when you would need this on would be connecting the pedal to the Comma Relay RJ45. If your pedal is connected to the <a href="../Tinkla_OBD-C_Adapter/">Tinkla OBD-C Adapter</a> , then leave this toggle OFF as your pedal will be on CAN2.</li>
+<li><strong>Use pedal over CC</strong>(toggle): If you have a <a href="../Pedal_Interceptor/">pedal interceptor</a> installed in your car AND want to have pedal based adaptive cruise control (PCC) enabled all the time no matter what the status of your car's cruise control is, turn this ON. It will completely disable your car's cruise control. If you have pedal interceptor and leave this OFF, then when the car's cruise control is ON you can not engage OpenPilot but it will allow you to use the factory Cruise Control.</li>
+<li><strong>Pedal on CAN0</strong>(toggle): If you have a <a href="../Pedal_Interceptor/">pedal interceptor</a> installed in your car and it is connected on CAN0, then turn this toggle ON. An example when you would need this on would be connecting the pedal to the Comma Relay RJ45. If your pedal is connected to the <a href="../Tinkla_OBD-C_Adapter/">Tinkla OBD-C Adapter</a>, then leave this toggle OFF as your pedal will be on CAN2.</li>
 <li><strong>Pedal Profile</strong>(editable field): The profile to be used with the Tinkla Pedal Interceptor. 1-wider range to 4-narrower range, 5-no limits (default). If 5 seems to aggressive, try 2,3 or 4.</li>
-<li><strong>Auto Resume ACC</strong>(toggle): Not used at the moment</li>
+<li><strong>AutoResume ACC</strong>(toggle): Not used at the moment</li>
 <li><strong>Follow Distance</strong>(editable field): This field adjusts the follow distance, in seconds, from the lead car. A smaller value will keep you closer to the lead car while a larger value will keep you farther out from the lead car. It is speed dependent. For example, at 60 MPH your vehicle travels at a speed of 27 m/s (meters per second). A value of 0.8s for the follow distance will keep your vehicle 27 * 0.8 = 21.6m (72ft) back, while a value of 1.2s will keep your vehicle 27 * 1.2 = 32.4m (108ft) back. At 30 MPH the distance will be 10.8m (36ft) for 0.8s and 16.2m (54ft) for 1.2s.</li>
-<li><strong>Use Tinkla Buddy</strong>(toggle): Tells the Tesla Unity code to send the messages for IC integration if you have a Tinkla Buddyinstalled in your pre AP Tesla Model S with MCU1 car. (does not work for MCU2 cars).</li>
+<li><strong>Use Tinkla Buddy</strong>(toggle): Tells the Tesla Unity code to send the messages for IC integration if you have aTinkla Buddyinstalled in your preAP Tesla Model S with MCU1 car. (does not work for MCU2 cars).</li>
 <li><strong>Use Tesla Radar</strong>(toggle): Tells the Tesla Unity code that you have installed a <a href="../Tesla_Bosch_Radar/">Tesla Bosch Radar</a> in your car. Do not turn this ON unless you have properly installed and configured a radar in your car or the software will not work.</li>
 <li><strong>Radar behind nosecone</strong>(toggle): If you installed the <a href="../Tesla_Bosch_Radar/">Tesla Bosch Radar</a> behind the nosecone, turn this feature ON before doing the Radar VIN Learn process so that the radar learns about its position.</li>
 <li><strong>Radar offset</strong>(editable field): If you installed a <a href="../Tesla_Bosch_Radar/">Tesla Bosch Radar</a> in your car and have the radar off-center (like when it is behind the nose cone), adjust this value to show the**horizontal**distance, in meters, between the center of the nosecone (the middle of the Tesla logo) and the center of the radar. Positive numbers towards left of the car (as seen from the driver seat).</li>
 <li><strong>Use Radar Upside Down</strong>(toggle): Allows one to install the Tesla Radar upside down.</li>
-<li><strong>Car has i Booster</strong>(toggle): Turn this toggle on if you have retrofitted your car with the <a href="https://sghinnovations.com/?product=ibooster-controller-ecu">SGH Innovations' i Booster ECU</a> to take advantage of full stop-and-go capabilities.</li>
+<li><strong>Car has iBooster</strong>(toggle): Turn this toggle on if you have retrofitted your car with the <a href="https://sghinnovations.com/?product=ibooster-controller-ecu">SGH Innovations' iBooster ECU</a> to take advantage of full stop-and-go capabilities.</li>
 <li><strong>Ignore wrong Date/Time</strong>(toggle): Allows a rebooted EON to run even if the date is incorrect. Prevents need to connect to network upon restarting.</li>
-<li><strong>Force Pre AP Tesla Model S</strong>(toggle): This toggle has to be always ON if you have a pre AP Tesla Model S. It has to be OFF for any other Tesla vehicle. It forces the Tesla Unity code to think it is connected to a pre AP Tesla Model S and to adjust all the settings accordingly. Turing this feature ON on an AP1/AP2 Tesla will make the software stop working.</li>
+<li><strong>Force PreAP Tesla Model S</strong>(toggle): This toggle has to be always ON if you have a preAP Tesla Model S. It has to be OFF for any other Tesla vehicle. It forces the Tesla Unity code to think it is connected to a preAP Tesla Model S and to adjust all the settings accordingly. Turing this feature ON on an AP1/AP2 Tesla will make the software stop working.</li>
 <li><strong>Flash EPAS</strong>(button): This feature <a href="../Comma_devkit/">patches the code</a> in the electronic power assisted steering (EPAS) ECU of your car, allowing us to control the steering. It is a necessary step when installing the software for the first time and might be needed again if the software stops steering your car after a Tesla software update.</li>
 <li><strong>Flash Pedal</strong>(button): Use this feature if you just installed a <a href="../Pedal_Interceptor/">pedal interceptor</a> in your car to ensure the Tesla specific software is loaded on the pedal interceptor. Please make sure you set your toggles properly for the pedal interceptor (see above) BEFORE attempting to flash the code onto the device.</li>
 <li><strong>Calibrate Pedal</strong>(button): Use this feature to calibrate your pedal interceptor device in order to enable the right experience when using PCC. Pedal will not work (will not allow you to enable PCC) until it is calibrated.</li>
@@ -969,33 +948,37 @@
 <p><strong>Radar VIN Learn</strong>(button):Use this feature to configure your radar if you have installed a <a href="../Tesla_Bosch_Radar/">Tesla Bosch Radar</a> in your car. It will program the VIN of your car as well as the location of the radar. Please make sure you configure all the toggles and settings for the radar (see radar options on this page) before attempting the Radar VIN Learn.</p>
 </li>
 <li>
-<p>Tesla pre AP specific settings for the Tesla Unity branch of Open Pilot (&#8531;)</p>
+<p><img alt="" src="../images/Tesla_preAP_Settings_1.png" /></p>
 </li>
-<li>Tesla pre AP specific settings for the Tesla Unity branch of Open Pilot (&#8532;)</li>
-<li>Tesla pre AP specific settings for the Tesla Unity branch of Open Pilot (3/3)</li>
 </ul>
+<p>Tesla preAP specific settings for the Tesla Unity branch of OpenPilot (&#8531;)
+- <img alt="" src="../images/Tesla_preAP_Settings_2.png" /></p>
+<p>Tesla preAP specific settings for the Tesla Unity branch of OpenPilot (&#8532;)
+- <img alt="" src="../images/Tesla_preAP_Settings_3.png" /></p>
+<p>Tesla preAP specific settings for the Tesla Unity branch of OpenPilot (3/3)</p>
 <h2 id="tesla-generic">Tesla Generic</h2>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>These settings apply to all models of Tesla. They control how OP software works on a Tesla.
 </span></code></pre></div>
 <ul>
-<li><strong>Adjust ACC max with speed limit</strong>(toggle): Enables Open Pilot to adjust the top speed allowed for adaptive cruise control (ACC) based on the speed limit information provided by our Tesla maps system OR detected by AP1/AP2. Once enabled, your top speed will adjust based on the speed limit for that road**plus**the offset (either relative or fixed) that you set in the next two settings.</li>
-<li><strong>Use relative offset</strong>(toggle): When enabled, Open Pilot uses the**Speed limit offset**values as a percentage of the speed limit. For example if you set the**Speed limit offset**and the detected speed limit in your area is 60, the max will be set to 60 + 60x15% = 69. If the speed limit was 35, the max will be 35 + 35x15% = 40. If this toggle is OFF, then the calculations will use the**speed limit offset**as a fixed delta. If the speed limit is 60, and your offset is set to 15, the max will be set to 60 + 15 = 75. If the speed limit is 35, and your offset is set to 15, the max will be 35 + 15 = 50.</li>
+<li><strong>Adjust ACC max with speed limit</strong>(toggle): Enables OpenPilot to adjust the top speed allowed for adaptive cruise control (ACC) based on the speed limit information provided by our Tesla maps system OR detected by AP1/AP2. Once enabled, your top speed will adjust based on the speed limit for that road**plus**the offset (either relative or fixed) that you set in the next two settings.</li>
+<li><strong>Use relative offset</strong>(toggle): When enabled, OpenPilot uses the**Speed limit offset**values as a percentage of the speed limit. For example if you set the**Speed limit offset**and the detected speed limit in your area is 60, the max will be set to 60 + 60x15% = 69. If the speed limit was 35, the max will be 35 + 35x15% = 40. If this toggle is OFF, then the calculations will use the**speed limit offset**as a fixed delta. If the speed limit is 60, and your offset is set to 15, the max will be set to 60 + 15 = 75. If the speed limit is 35, and your offset is set to 15, the max will be 35 + 15 = 50.</li>
 <li><strong>Speed limit offset</strong>(editable field): This is the offset (in either units of measure for your speed limit - km/h or MPH - or in % for relative offset) for the max speed limit when adjusted based on detected speed limits for the roads you are driving on.</li>
 <li><strong>Slowdown in Turns</strong>(toggle): Reduces the car' speed in turns based on road curvature and current speed.</li>
 <li><strong>Slowdown Factor in Turns</strong>(editable field): The multiplier used to compute the safe speed to take a turn. 0.5 is slower, 1.5 is faster. If you think the car takes turns too fast, use a lower factor. If you want the car to take faster turns, increase the factor.</li>
 <li><strong>Braking Factor</strong>(editable field): The multiplier used to compute the Tesla braking power. 0.5 means less braking and 1.5 means more braking.</li>
-<li><strong>Acceleration Profile</strong>(editable field): The profile to be used for acceleration: 1-Chill, 2-Standard, 3-Mad Max</li>
-<li><strong>Use Long Control data</strong>(toggle): Uses data from Tesla fleet to control speed based on maps. Only works on cars factory equipped with Auto Pilot.</li>
+<li><strong>Acceleration Profile</strong>(editable field): The profile to be used for acceleration: 1-Chill, 2-Standard, 3-MadMax</li>
+<li><strong>Use LongControl data</strong>(toggle): Uses data from Tesla fleet to control speed based on maps. Only works on cars factory equipped with AutoPilot.</li>
 <li><strong>Ignore Radar Errors</strong>(toggle): Ignore Tesla Radar errors about calibration not being done.</li>
-<li><strong>Force Tesla AP Fingerprint</strong>(editable field): Forces fingerprint for a specific model of Tesla with Auto Pilot. This should not be used for pre AP Tesla Model S.Possible values are*TESLA AP1 MODEL S*,<em>TESLA AP1 MODEL X</em>,<em>TESLA AP2 MODEL S</em>.</li>
+<li><strong>Force Tesla AP Fingerprint</strong>(editable field): Forces fingerprint for a specific model of Tesla with AutoPilot. This should not be used for preAP Tesla Model S.Possible values are*TESLA AP1 MODEL S*,<em>TESLA AP1 MODEL X</em>,<em>TESLA AP2 MODEL S</em>.</li>
 <li><strong>Disable Main Sounds</strong>(toggle): Disables the device from playing the Engagement and Disengagement sounds. To be used when the car will generate these sounds by itself. Prompt and Warning sounds will still be played.</li>
 <li>
 <p><strong>Disable Prompt Sounds</strong>(toggle): Disables the device from playing the Prompt sounds. To be used when the car will generate these sounds by itself. Engagement/Disengagement and Warning sounds will still be played.</p>
 </li>
 <li>
-<p>Tesla specific settings for the Tesla Unity branch of Open Pilot (1/1)</p>
+<p><img alt="" src="../images/Tesla_Settings_1.png" /></p>
 </li>
 </ul>
+<p>Tesla specific settings for the Tesla Unity branch of OpenPilot (1/1)</p>
 
     </div>
 </article>
@@ -1041,22 +1024,14 @@
             
 
             
-            <div class="flex flex-col gap-4">
-                <div class="text-muted-foreground text-sm font-medium">Menu</div>
-                <div class="flex flex-col gap-3">
-                    
-                    <a class="text-2xl font-medium" href="..">
-                        
-                        Home
-                        
-                    </a>
-                    
-                </div>
-            </div>
-            
 
             
             <div class="flex flex-col gap-8">
+                
+                <div class="flex flex-col gap-4">
+                    <div class="text-muted-foreground text-sm font-medium">Home</div>
+                    
+                </div>
                 
                 <div class="flex flex-col gap-4">
                     <div class="text-muted-foreground text-sm font-medium">Getting Started</div>
@@ -1322,10 +1297,10 @@
         
 
         
-        <a href="#tesla-pre-ap"
+        <a href="#tesla-preap"
             class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
             data-active="false" data-depth="2">
-            Tesla pre AP
+            Tesla preAP
         </a>
         
 

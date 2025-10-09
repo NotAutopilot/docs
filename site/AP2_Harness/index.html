@@ -275,34 +275,9 @@
     
 
     
-    <div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2">
-        <div data-slot="sidebar-group-content" data-sidebar="group-content" class="w-full text-sm">
-            <ul data-slot="sidebar-menu" data-sidebar="menu" class="flex w-full min-w-0 flex-col gap-0.5">
-                
-                
-                <li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative">
-    <a data-slot="sidebar-menu-button" data-active="false" data-sidebar="menu-button"
-        data-size="default" href="/"
-        class="hover:bg-sidebar-accent hover:text-sidebar-accent-foreground peer/menu-button flex items-center gap-2 rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 data-[active=true]:bg-accent data-[active=true]:border-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md">
 
-        
-        Home
-        
-
-        
-
-        
-
-        
-    </a>
-</li>
-                
-                
-            </ul>
-        </div>
-    </div>
     
-
+    
     
     
     <div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2">
@@ -898,16 +873,16 @@
 <p>build your own for about $440 + tools and a lot of crimping :)</p>
 <h2 id="two-options">Two Options</h2>
 <ul>
-<li>AP2 controls steering using the Chassis CAN and acceleration/braking through the Powertrain CAN, thus it requires two harness for complete control from Open Pilot.</li>
+<li>AP2 controls steering using the Chassis CAN and acceleration/braking through the Powertrain CAN, thus it requires two harness for complete control from OpenPilot.</li>
 <li>Only a Comma three can control multiple pandas using the additional USB-C port. Hence a Comma two can only handle lateral control.</li>
 </ul>
-<h2 id="using-open-pilot-with-just-lateral-control">Using Open Pilot with just lateral control</h2>
+<h2 id="using-openpilot-with-just-lateral-control">Using OpenPilot with just lateral control</h2>
 <ul>
-<li>When using the Open Pilot on a Tesla with AP2/2.5/3, you have the option to configure the software (via the UI toggles) to only do lateral control, and let the built in adaptive cruise control handle the longitudinal control.</li>
+<li>When using the OpenPilot on a Tesla with AP2/2.5/3, you have the option to configure the software (via the UI toggles) to only do lateral control, and let the built in adaptive cruise control handle the longitudinal control.</li>
 <li>To do this, you will need a Comma two or Comma three plus a <a href="https://github.com/commaai/neo/blob/master/car_harness/Tesla_AP2%2B_Harness.sch.pdf">Lateral Control Harness</a> by following the instructions in the Comma repository.</li>
 </ul>
-<h2 id="using-open-pilot-with-full-control">Using Open Pilot with full control</h2>
-<p>To allow Open Pilot to fully (lateral and longitdinal) control your Telsa equipped with AP2/2.5/3, you need the following:</p>
+<h2 id="using-openpilot-with-full-control">Using OpenPilot with full control</h2>
+<p>To allow OpenPilot to fully (lateral and longitdinal) control your Telsa equipped with AP2/2.5/3, you need the following:</p>
 <ul>
 <li>A Comma three</li>
 <li>A black panda (for longitudinal control)</li>
@@ -960,22 +935,14 @@
             
 
             
-            <div class="flex flex-col gap-4">
-                <div class="text-muted-foreground text-sm font-medium">Menu</div>
-                <div class="flex flex-col gap-3">
-                    
-                    <a class="text-2xl font-medium" href="..">
-                        
-                        Home
-                        
-                    </a>
-                    
-                </div>
-            </div>
-            
 
             
             <div class="flex flex-col gap-8">
+                
+                <div class="flex flex-col gap-4">
+                    <div class="text-muted-foreground text-sm font-medium">Home</div>
+                    
+                </div>
                 
                 <div class="flex flex-col gap-4">
                     <div class="text-muted-foreground text-sm font-medium">Getting Started</div>
@@ -1225,18 +1192,18 @@
         
 
         
-        <a href="#using-open-pilot-with-just-lateral-control"
+        <a href="#using-openpilot-with-just-lateral-control"
             class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
             data-active="false" data-depth="2">
-            Using Open Pilot with just lateral control
+            Using OpenPilot with just lateral control
         </a>
         
 
         
-        <a href="#using-open-pilot-with-full-control"
+        <a href="#using-openpilot-with-full-control"
             class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
             data-active="false" data-depth="2">
-            Using Open Pilot with full control
+            Using OpenPilot with full control
         </a>
         
 

@@ -10,17 +10,17 @@ build your own for about $440 + tools and a lot of crimping :)
 
 ## Two Options
 
-- AP2 controls steering using the Chassis CAN and acceleration/braking through the Powertrain CAN, thus it requires two harness for complete control from Open Pilot.
+- AP2 controls steering using the Chassis CAN and acceleration/braking through the Powertrain CAN, thus it requires two harness for complete control from OpenPilot.
 - Only a Comma three can control multiple pandas using the additional USB-C port. Hence a Comma two can only handle lateral control.
 
-## Using Open Pilot with just lateral control
+## Using OpenPilot with just lateral control
 
-- When using the Open Pilot on a Tesla with AP2/2.5/3, you have the option to configure the software (via the UI toggles) to only do lateral control, and let the built in adaptive cruise control handle the longitudinal control.
+- When using the OpenPilot on a Tesla with AP2/2.5/3, you have the option to configure the software (via the UI toggles) to only do lateral control, and let the built in adaptive cruise control handle the longitudinal control.
 - To do this, you will need a Comma two or Comma three plus a [Lateral Control Harness](https://github.com/commaai/neo/blob/master/car_harness/Tesla_AP2%2B_Harness.sch.pdf) by following the instructions in the Comma repository.
 
-## Using Open Pilot with full control
+## Using OpenPilot with full control
 
-To allow Open Pilot to fully (lateral and longitdinal) control your Telsa equipped with AP2/2.5/3, you need the following:
+To allow OpenPilot to fully (lateral and longitdinal) control your Telsa equipped with AP2/2.5/3, you need the following:
 
 - A Comma three
 - A black panda (for longitudinal control)

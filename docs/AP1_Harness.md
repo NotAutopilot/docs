@@ -1,6 +1,7 @@
 # AP1 Harness
 
-AP1 Harness
+![AP1 Harness](images/AP1_Harness-1.jpg)
+
 ## Parts Needed
 
 ```
@@ -12,18 +13,22 @@ or
 build your own for about $220 + tools and a lot of crimping :)
 
 - A [Comma Car Harness](https://comma.ai/shop/products/comma-car-harness) for**Development Vehicle**- $200.00
-- 1 x [TE Connectivity/AMP 1-1743284-2](https://www.mouser.com/Product Detail/TE-Connectivity-AMP/1-1743284-2?qs=y Dt3hde EHFOG9El LOa1A2A%3D%3D) - $4.42
-- 1 x [TE Connectivity/AMP 1-1743282-2](https://www.mouser.com/Product Detail/TE-Connectivity-AMP/1-1743282-2?qs=5KIKuy Mpu1y Zb Zx9ku%2FCig%3D%3D) - $1.08
-- 8 x [TE Connectivity/AMP 5-963715-1-CT](https://www.mouser.com/Product Detail/TE-Connectivity/5-963715-1-Cut-Strip?qs=0l Qe Li L1qybbw60VBb VFhw%3D%3D) - unfortunately you can only by them in strips of 100 for $9.10
+- 1 x [TE Connectivity/AMP 1-1743284-2](https://www.mouser.com/ProductDetail/TE-Connectivity-AMP/1-1743284-2?qs=yDt3hdeEHFOG9ElLOa1A2A%3D%3D)- $4.42
+- 1 x [TE Connectivity/AMP 1-1743282-2](https://www.mouser.com/ProductDetail/TE-Connectivity-AMP/1-1743282-2?qs=5KIKuyMpu1yZbZx9ku%2FCig%3D%3D)- $1.08
+- 8 x [TE Connectivity/AMP 5-963715-1-CT](https://www.mouser.com/ProductDetail/TE-Connectivity/5-963715-1-Cut-Strip?qs=0lQeLiL1qybbw60VBbVFhw%3D%3D)- unfortunately you can only by them in strips of 100 for $9.10
 - about 20" of #18 automotive wire
 
-Male connector and wires on PCB board
+![Male connector and wires on PCB board](images/AP1_Harness-3.jpg)
+
 ## The PCB Board
 
-- As you can see from the parts list, I did not find a male connector that has pins. This one is designed to be used in a PCB board. I had a development PCB board in my workshop, so I just used some string scisors and cut it to fit. If you don't have one, you can order one from [Amazon](https://www.amazon.com/Lamp VPath-Prototype-Breadboard-Universal-Printed/dp/B07Y3GMWD9/ref=sr_1_16?crid=3EZYGNNKF2JRW&keywords=PCB%2Bboard&qid=1648841032&s=industrial&sprefix=pcb%2Bboard%2Cindustrial%2C50&sr=1-16&th=1) or pick one up from your local electronics store, like Micro Center.
+- As you can see from the parts list, I did not find a male connector that has pins. This one is designed to be used in a PCB board. I had a development PCB board in my workshop, so I just used some string scisors and cut it to fit. If you don't have one, you can order one from [Amazon](https://www.amazon.com/LampVPath-Prototype-Breadboard-Universal-Printed/dp/B07Y3GMWD9/ref=sr_1_16?crid=3EZYGNNKF2JRW&keywords=PCB%2Bboard&qid=1648841032&s=industrial&sprefix=pcb%2Bboard%2Cindustrial%2C50&sr=1-16&th=1) or pick one up from your local electronics store, like MicroCenter.
 - The best way is to go with the wires and the connector from the same side of the PCB board, the solder on the back. See picture of how my PCB board looked once I soldered it all together.
 
-AP1 Harness AP1 Connector Diagram
+![AP1 Harness](images/AP1_Harness-2.jpg)
+
+![AP1 Connector Diagram](images/AP1_Connector_Diagram.png)
+
 ## The Comma 26 Pin Connector
 
 - Take your time and use a sharp object to take out all the wires that you are not using from the 26 pin connector of the Comma harness. Will make everything look better and fit better under the roof liner.

@@ -91,11 +91,45 @@ class WikiConverter:
             src = element.get('src', '')
             alt = element.get('alt', '')
 
+            # Get caption from parent if available
+            parent = element.parent
+            caption = alt
+            if parent and parent.name == 'a':
+                # Check for caption in grandparent div
+                grandparent = parent.parent
+                if grandparent:
+                    caption_div = grandparent.find('div', class_='thumbcaption')
+                    if caption_div:
+                        caption_text = caption_div.get_text().strip()
+                        # Remove "Enlarge" text
+                        caption = caption_text.replace('Enlarge', '').strip()
+
             # Handle wiki images
             if 'images/' in src:
-                # Extract just the filename
-                img_name = src.split('/')[-1]
-                return f"![{alt}](images/{img_name})"
+                # Extract the actual image filename from the path
+                # Path format: images/thumb/8/8c/AP1_Harness-1_jpg/300px-AP1_Harness-1.jpg
+                # We want: AP1_Harness-1.jpg
+                parts = src.split('/')
+                if 'thumb' in parts:
+                    # Get the filename from the directory name before the sized version
+                    filename_part = parts[-2]  # e.g., "AP1_Harness-1_jpg"
+                    # Convert underscore extension back to dot
+                    if '_jpg' in filename_part:
+                        img_name = filename_part.replace('_jpg', '.jpg')
+                    elif '_png' in filename_part:
+                        img_name = filename_part.replace('_png', '.png')
+                    elif '_jpeg' in filename_part:
+                        img_name = filename_part.replace('_jpeg', '.jpeg')
+                    elif '_gif' in filename_part:
+                        img_name = filename_part.replace('_gif', '.gif')
+                    else:
+                        img_name = parts[-1]  # fallback to last part
+                else:
+                    img_name = parts[-1]
+
+                # Use caption if available, otherwise alt text
+                display_text = caption if caption else alt
+                return f"\n\n![{display_text}](images/{img_name})\n\n"
 
             return f"![{alt}]({src})"
 
@@ -140,6 +174,10 @@ class WikiConverter:
             if 'toc' in classes:
                 return ""
 
+            # Handle MediaWiki thumb images
+            if 'thumb' in classes:
+                return self.convert_thumb_image(element)
+
             # Handle collapsible sections
             if 'mw-collapsible' in classes:
                 content = self.process_children(element)
@@ -169,6 +207,51 @@ class WikiConverter:
     def get_text_content(self, element):
         """Get plain text content from element"""
         return element.get_text().strip()
+
+    def convert_thumb_image(self, thumb_div):
+        """Convert MediaWiki thumb image div to markdown image"""
+        # Find the img tag
+        img = thumb_div.find('img')
+        if not img:
+            return ""
+
+        src = img.get('src', '')
+
+        # Find the caption
+        caption_div = thumb_div.find('div', class_='thumbcaption')
+        caption = ""
+        if caption_div:
+            # Remove the magnify div
+            magnify = caption_div.find('div', class_='magnify')
+            if magnify:
+                magnify.extract()
+            caption = caption_div.get_text().strip()
+
+        # Extract the actual image filename from the path
+        # Path format: images/thumb/4/46/AP1_Harness-3_jpg/300px-AP1_Harness-3.jpg
+        # We want: AP1_Harness-3.jpg
+        if 'images/' in src:
+            parts = src.split('/')
+            if 'thumb' in parts:
+                # Get the filename from the directory name before the sized version
+                filename_part = parts[-2]  # e.g., "AP1_Harness-3_jpg"
+                # Convert underscore extension back to dot
+                if '_jpg' in filename_part:
+                    img_name = filename_part.replace('_jpg', '.jpg')
+                elif '_png' in filename_part:
+                    img_name = filename_part.replace('_png', '.png')
+                elif '_jpeg' in filename_part:
+                    img_name = filename_part.replace('_jpeg', '.jpeg')
+                elif '_gif' in filename_part:
+                    img_name = filename_part.replace('_gif', '.gif')
+                else:
+                    img_name = parts[-1]  # fallback to last part
+            else:
+                img_name = parts[-1]
+
+            return f"\n\n![{caption}](images/{img_name})\n\n"
+
+        return ""
 
     def convert_table(self, table):
         """Convert HTML table to markdown table"""

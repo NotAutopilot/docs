@@ -1,6 +1,7 @@
 # Tinkla OBD-C Adapter
 
-Tinkla OBD-C Adapter
+![Tinkla OBD-C Adapter](images/Tinkla_OBD-C_Adapter.jpg)
+
 ## What it does
 
 TheTinkla OBD-C Adapterwhich can be purchased from our[online store](https://shop.tinkla.us/Tinkla-OBD-C-Adapter-p452345118)replaces the previous harness that was needed in the early iterations of OpenPilot for preAP Tesla Model S.
@@ -9,7 +10,8 @@ Designed specifically to work with the latest versions of Tesla Unity and Comma 
 
 Inside the device there are 3 more expansion ports that allow you to hook up additional equipment, such as a[Tesla Bosch Radar](Tesla_Bosch_Radar.md).
 
-Tinkla OBD-C Adapter Schematics
+![Tinkla OBD-C Adapter Schematics](images/Tinkla_OBD-C_Adapter_Schematics.jpg)
+
 ## Connections
 
 - **OBD2 Connector**: this connector plugs directly into your[preAP Tesla Model S OBD2 port](Tesla_Model_S_preAP_OBD2_port.md)located in the driver's footwell.

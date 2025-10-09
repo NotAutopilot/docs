@@ -12,8 +12,8 @@ Some notable ones:
 - so "text to search" - Searches all source code for the text to search
 - gcp - a sequence of commands that allows you to commit and push the code to the repo
 - gcpa "my commit comment" - a sequence of commands that allows you to commit all changes and files and push to the repo
-- killop - kills Open Pilot tmux session
-- runop - runs Open Pilot in shell session; amazing for debug purposes
+- killop - kills OpenPilot tmux session
+- runop - runs OpenPilot in shell session; amazing for debug purposes
 - mrw - mounts file system in read/write mode
 - mro - mounts file system in read only mode
 

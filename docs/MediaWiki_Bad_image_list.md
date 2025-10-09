@@ -1,4 +1,4 @@
-# Media Wiki:Bad image list
+# MediaWiki:Bad image list
 
 The format is as follows:
 

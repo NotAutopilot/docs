@@ -79,6 +79,8 @@ If you drive in Chill mode most of the time (like I do), you will find yourself 
 
 ## Reading CAN messages
 
+![](images/Cabana_by_Comma_ai.png)
+
 By using the old web based version of[Cabana by Comma.ai](https://cabana.tinkla.us)you can view live streaming of CAN messages from your Tesla (Chassis CAN for Model S/X, Vehicle and Chassis CAN for Model 3/Y). To parse the messages you can select the appropriate dbc file (tesla_modelsx.dbc from Model S/X or[Josh Wardell's](https://github.com/joshwardell/model3dbc)tesla_model3y.dbc for Model 3/Y). Please note that Cabana only works inside Google Chrome.
 
 ```

@@ -4,10 +4,10 @@
 This page is describing the usage of the Tesla Pedal Interceptor with Tesla Unity. If you are looking to use the Pedal Interceptor with the older version of Tesla OP that works on EON, please look at the Pedal Interceptor for EON page.
 ```
 
-The Comma Pedal is used to provide advanced acceleration and regen braking capability on Tesla cars running Openpilot that do not have i Booster installed.
+The Comma Pedal is used to provide advanced acceleration and regen braking capability on Tesla cars running Openpilot that do not have iBooster installed.
 
 ```
-Without electric brakes (i Booster) the car only uses regenerative braking. This is not enough for sudden slowdowns. YOU MUST BE READY TO MANUALLY BRAKE AT ANY MOMENT.
+Without electric brakes (iBooster) the car only uses regenerative braking. This is not enough for sudden slowdowns. YOU MUST BE READY TO MANUALLY BRAKE AT ANY MOMENT.
 ```
 
 ### What it Does
@@ -23,7 +23,7 @@ The Comma Pedal has 4 main systems:
 
 When Openpilot is NOT engaged, the Comma Pedal reads the voltage from the accelerator pedal and just passes it along to the DU.
 
-When Openpilot IS engaged with [longitudinal control](Longitudinal_Control__ACC.md) , it gets the virtual accelerator pedal position from Openpilot and passes it on to the DU.
+When Openpilot IS engaged with [longitudinal control](Longitudinal_Control__ACC.md), it gets the virtual accelerator pedal position from Openpilot and passes it on to the DU.
 
 The Comma Pedal is also constantly sending the physical accelerator pedal's position to the CAN bus for Openpilot to read. This way you can increase speed temporarily without having to adjust max speed or disengage longitudinal control.
 
@@ -34,7 +34,7 @@ You cannot buy a pre-built Comma Pedal from Comma. Fortunately we have a solutio
 - you can find the Tinkla Pedal Interceptor [here in the Tinkla Store](https://shop.tinkla.us/Tinkla-Pedal-p487274387)
 - you can find the connectors (limited quantity)[here in the Tinkla Store](https://shop.tinkla.us/Tesla-Pedal-Connectors-pair-p459771917)
 
-You could also [build it yourself](https://github.com/commaai/neo/tree/master/pedal) (not recommended) or have one [fabricated through a service like Macrofab](https://medium.com/@joshuairl/comma-pedal-building-with-macrofab-6328bea791e8) .
+You could also [build it yourself](https://github.com/commaai/neo/tree/master/pedal)(not recommended) or have one [fabricated through a service like Macrofab](https://medium.com/@joshuairl/comma-pedal-building-with-macrofab-6328bea791e8).
 
 ### Wiring a Tesla Pedal
 
@@ -51,17 +51,19 @@ The above image shows the correct connections between the connectors and the Tin
 In order to create your Tesla Pedal you need:
 
 - 1x Comma Pedal board (for sources see above section)
-- 1x [box to hold the board](https://www.amazon.com/Le Motech-Plastic-Electrical-Junction-72x42x23mm/dp/B07F3Y8L95/) if your Pedal doesn't already have a case (current ones ship with 3D printed cases). You will need to cut some [small openings](images/Pedal_in_box.png) on the sides (and in front of the RJ45) if you use this one.
-- 1x set of "WPT-929" connectors (actually [Molex](https://www.molex.com/molex/products/datasheet.jsp?part=active/0314026110_CRIMP_HOUSINGS.xml) ) -[fast shipping](https://www.amazon.com/dp/B07GZY4ST4) ,[slow shipping](https://de.aliexpress.com/item/32778798102.html)
+- 1x [box to hold the board](https://www.amazon.com/LeMotech-Plastic-Electrical-Junction-72x42x23mm/dp/B07F3Y8L95/) if your Pedal doesn't already have a case (current ones ship with 3D printed cases). You will need to cut some [small openings](File_Pedal_in_box.png.md) on the sides (and in front of the RJ45) if you use this one.
+- 1x set of "WPT-929" connectors (actually [Molex](https://www.molex.com/molex/products/datasheet.jsp?part=active/0314026110_CRIMP_HOUSINGS.xml)) -[fast shipping](https://www.amazon.com/dp/B07GZY4ST4),[slow shipping](https://de.aliexpress.com/item/32778798102.html)
 - ~3ft of wire for the connectors in case your Pedal and connectors don't come with them (~AWG24)
-- 1x SN-28B crimping tool (same one as used for EPAS cable -[fast shipping](https://www.amazon.com/Wovier-Compression-Ratcheting-0-1-1-0mm2-Wire-electrode/dp/B01CE4FAMW) ,[slow shipping](https://www.aliexpress.com/item/32843027501.html) )
+- 1x SN-28B crimping tool (same one as used for EPAS cable -[fast shipping](https://www.amazon.com/Wovier-Compression-Ratcheting-0-1-1-0mm2-Wire-electrode/dp/B01CE4FAMW),[slow shipping](https://www.aliexpress.com/item/32843027501.html))
 - 1x ethernet cable ~2ft (not crossover)
 
 Use the diagram to connect the female WPT-929 pedal connector to the IN side of the pedal board and the male WSP-929 connector to the OUT side of the pedal connector.
 
 ### Connecting the Pedal for Tinkla Unity
 
-Connecting the CAN BUS from the Pedal to the Tinkla OBD-C Adapteris done via the RJ45 port using a standard ethernet cable.
+![](images/Tinkla_OBD-C_Adapter_RJ45.jpg)
+
+Connecting the CAN BUS from the Pedal to theTinkla OBD-C Adapteris done via the RJ45 port using a standard ethernet cable.
 
 Plug in the ethernet cable into the RJ45 port of the Pedal and the other end into the RJ45 port of the Tinkla OBD-C Adapter.
 
@@ -70,21 +72,21 @@ Plug in the ethernet cable into the RJ45 port of the Pedal and the other end int
 To install the Pedal, there are two steps:
 
 1. connecting the board to the accelerator pedal
-2. connecting the board to the Tinkla OBD-C Adapter
+2. connecting the board to theTinkla OBD-C Adapter
 
-This [video](https://www.youtube.com/watch?v=Ui Qved6gt2U) for a similar product shows you what you have to do in order to install the Pedal interceptor between the accelerator pedal and the car's existing connector. Take your time and watch the video first. The process is not complicated if you just follow it step by step.
+This [video](https://www.youtube.com/watch?v=UiQved6gt2U) for a similar product shows you what you have to do in order to install the Pedal interceptor between the accelerator pedal and the car's existing connector. Take your time and watch the video first. The process is not complicated if you just follow it step by step.
 
-Once that is complete, connect your ethernet cable to the Pedal and the other end to the RJ45 port on the Tinkla OBD-C Adapter.
+Once that is complete, connect your ethernet cable to the Pedal and the other end to the RJ45 port on theTinkla OBD-C Adapter.
 
 ### Flashing the firmware for Tesla Pedal with Tesla Unity code
 
 ##### Flashing via CAN
 
-With the introduction of Tesla Unity code, flashing the Tesla Pedal with the latest firmware is as easy as pressing a button in the Tesla pre AP settings page. To flash the latest firmware to your Tesla Pedal:
+With the introduction of Tesla Unity code, flashing the Tesla Pedal with the latest firmware is as easy as pressing a button in the Tesla preAP settings page. To flash the latest firmware to your Tesla Pedal:
 
-1. Ensure your Pedal is installed in your vehicle and connected to the Tinkla OBD-C Adapteror to your specific harness.
+1. Ensure your Pedal is installed in your vehicle and connected to theTinkla OBD-C Adapteror to your specific harness.
 2. Ensure that all the [settings are configured](Tesla_Unity_Configuration.md) correctly for your pedal, especially enabling the pedal and setting up which CAN port it is connected to.
-3. Using the**Flash Pedal**button under the**Tesla pre AP**tab of [settings](Tesla_Unity_Configuration.md) start the firmware flashing process
+3. Using the**Flash Pedal**button under the**Tesla preAP**tab of [settings](Tesla_Unity_Configuration.md) start the firmware flashing process
 4. Before hitting the**Flash**button, ensure your car is on (in P - Park) and continue to keep your foot on the brake throughout the process.
 5. Hit the**Flash**button and the screen will show the progress. Your car might emit warnings and sounds during this process, which is normal.
 6. Once process is complete, allow the car to go in "CAR OFF" mode and reboot your Comma devkit.
@@ -96,16 +98,18 @@ With the introduction of Tesla Unity code, flashing the Tesla Pedal with the lat
 
 If you built your Pedal yourself or it was shipped without any firmware, it will boot in DFU mode. To know which mode you're in look at the LED on the Pedal board: no light = DFU mode, slow blink = normal flash mode, fast blink = normal operations.
 
-Entering Pedal Interceptor DFU Mode (image by @jfrux) To enter DFU mode, you will need a [USB-A to USB-A cable](https://www.amazon.com/dp/B09FDJFJ6Z/ref=cm_sw_em_r_mt_dp_QFSM3ZZ87K5WTECKYD12?_encoding=UTF8&psc=1) and to remove the Pedal Interceptor from your car. Connect one end of the USB cable to the pedal interceptor, then jump the small pin indicated in the attached image to one of the pins labeled 5V with a small wire. While holding that jump wire, connect the Pedal Interceptor to your computer via USB. This usually takes two people, one to do the jump and one to plug the USB into the laptop. Always have the USB plugged into the Pedal first, then laptop (it makes your life a lot easier). For how to put the pedal interceptor in the DFU mode, follow the instructions for [applying 5 Volt to a special point on the board](https://medium.com/@jfrux/flashing-the-comma-pedal-with-ubuntu-a83fb668f6e2#fcdf) .
+![Entering Pedal Interceptor DFU Mode (image by @jfrux)](images/Entering_Pedal_Interceptor_DFU_Mode__image_by__jfrux_.png)
 
-While in DFU mode, and connected to your computer running Mac OS or Linux, you can flash your pedal using the same Unity code from your computer.
+To enter DFU mode, you will need a [USB-A to USB-A cable](https://www.amazon.com/dp/B09FDJFJ6Z/ref=cm_sw_em_r_mt_dp_QFSM3ZZ87K5WTECKYD12?_encoding=UTF8&psc=1) and to remove the Pedal Interceptor from your car. Connect one end of the USB cable to the pedal interceptor, then jump the small pin indicated in the attached image to one of the pins labeled 5V with a small wire. While holding that jump wire, connect the Pedal Interceptor to your computer via USB. This usually takes two people, one to do the jump and one to plug the USB into the laptop. Always have the USB plugged into the Pedal first, then laptop (it makes your life a lot easier). For how to put the pedal interceptor in the DFU mode, follow the instructions for [applying 5 Volt to a special point on the board](https://medium.com/@jfrux/flashing-the-comma-pedal-with-ubuntu-a83fb668f6e2#fcdf).
+
+While in DFU mode, and connected to your computer running MacOS or Linux, you can flash your pedal using the same Unity code from your computer.
 
 To do so you will need a local copy of the Unity code and to run few commands. Please see the sequence below that you have to run in a terminal window on your laptop.
 
 ```
 cd ~
 rm -rf openpilot
-git clone https://github.com/boggyver/openpilot.git --depth 1 -b tesla_unity_release C2
+git clone https://github.com/boggyver/openpilot.git --depth 1 -b tesla_unity_releaseC2
 cd openpilot/panda/board/pedal
 ./recover.sh
 ```
@@ -117,7 +121,7 @@ Once done, unplug USB from the Pedal and install in car.
 ### Using the Tesla Pedal
 
 ```
-Without electric brakes (i Booster) the car only uses regenerative braking. This is not enough for suddent slowdowns. YOU MUST BE READY TO MANUALLY BRAKE AT ANY MOMENT.
+Without electric brakes (iBooster) the car only uses regenerative braking. This is not enough for suddent slowdowns. YOU MUST BE READY TO MANUALLY BRAKE AT ANY MOMENT.
 ```
 
 Out of the box, OP will use the Tesla CC (with stalk spamming) to control CC. This in our OP implementation is called Adaptive Cruise Control or ACC. CC on Tesla only works above 18 MPH (29 km/h).

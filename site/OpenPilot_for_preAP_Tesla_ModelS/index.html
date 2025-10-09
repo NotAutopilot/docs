@@ -275,34 +275,9 @@
     
 
     
-    <div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2">
-        <div data-slot="sidebar-group-content" data-sidebar="group-content" class="w-full text-sm">
-            <ul data-slot="sidebar-menu" data-sidebar="menu" class="flex w-full min-w-0 flex-col gap-0.5">
-                
-                
-                <li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative">
-    <a data-slot="sidebar-menu-button" data-active="false" data-sidebar="menu-button"
-        data-size="default" href="/"
-        class="hover:bg-sidebar-accent hover:text-sidebar-accent-foreground peer/menu-button flex items-center gap-2 rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 data-[active=true]:bg-accent data-[active=true]:border-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md">
 
-        
-        Home
-        
-
-        
-
-        
-
-        
-    </a>
-</li>
-                
-                
-            </ul>
-        </div>
-    </div>
     
-
+    
     
     
     <div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2">
@@ -894,21 +869,21 @@
     <div class="typography w-full flex-1 *:data-[slot=alert]:first:mt-0">
         <p>****Quick Start****</p>
 <ol>
-<li>The <a href="../Tinkla_OBD-C_Adapter/">Tinkla OBD-C Adapter</a> will start your journey to driving with Open Pilot. Check your <a href="Tesla_Model_S_pre AP_OBD2_port.md">car's OBD2 port</a> for the correct pins.</li>
+<li>The <a href="../Tinkla_OBD-C_Adapter/">Tinkla OBD-C Adapter</a> will start your journey to driving with OpenPilot. Check your <a href="../Tesla_Model_S_preAP_OBD2_port/">car's OBD2 port</a> for the correct pins.</li>
 <li><a href="../Comma_devkit/">Install the EON Gold/Comma two/Comma three</a> in your windshield.</li>
-<li>Plug your <a href="https://comma.ai/shop/products/three">Comma Three</a> ,<a href="https://comma.ai/shop/products/two">Comma Two</a> or EON Gold with <a href="https://comma.ai/shop/products/panda">Black Panda</a> into the Tinkla OBD-C Adapter using the USB-C cable that came with your Comma device + an approved <a href="https://shop.tinkla.us/USB4-2m-Extension-Cable-For-Comma-Two-Three-p467071951">USB-C Extension</a> cable</li>
+<li>Plug your <a href="https://comma.ai/shop/products/three">Comma Three</a>,<a href="https://comma.ai/shop/products/two">Comma Two</a> or EON Gold with <a href="https://comma.ai/shop/products/panda">Black Panda</a> into the Tinkla OBD-C Adapter using the USB-C cable that came with your Comma device + an approved <a href="https://shop.tinkla.us/USB4-2m-Extension-Cable-For-Comma-Two-Three-p467071951">USB-C Extension</a> cable</li>
 <li><a href="../Comma_devkit/">Install the Tesla version of OP</a></li>
 <li><a href="../Tesla_Unity_Configuration/">Edit the Tesla specific configuration settings</a></li>
 <li><a href="../Comma_devkit/">Flash and patch</a> your panda and EPAS (pedal and radar too if installed)</li>
 <li>Finally take your Tesla w/OP for a spin!</li>
-<li>And if you want to have IC integration (root access not required), now you can with Tinkla Buddy</li>
+<li>And if you want to have IC integration (root access not required), now you can withTinkla Buddy</li>
 </ol>
 <h2 id="getting-pre-ap-up-to-ap1">Getting Pre-AP up to AP1</h2>
 <ul>
-<li>Please read and understand the <a href="../Tinkla_General_disclaimer/">Disclaimers and Licensing</a> .</li>
+<li>Please read and understand the <a href="../Tinkla_General_disclaimer/">Disclaimers and Licensing</a>.</li>
 </ul>
 <h4 id="out-of-the-box">Out of the Box</h4>
-<p>Well, just few easy mods to your Tesla and Open Pilot does a fairly good job at lane keep assist (LKA) and introduces a limited adaptive cruise control (ACC) based on the Open Pilot vision radar and just regenerative (regen) braking. Also, the system has a built in lane departure warning (LDW). All you need is:</p>
+<p>Well, just few easy mods to your Tesla and OpenPilot does a fairly good job at lane keep assist (LKA) and introduces a limited adaptive cruise control (ACC) based on the OpenPilot vision radar and just regenerative (regen) braking. Also, the system has a built in lane departure warning (LDW). All you need is:</p>
 <ol>
 <li>a supported Comma device (Comma two, Comma three, EON Gold with Black Panda)</li>
 <li>a <a href="../Tinkla_OBD-C_Adapter/">Tinkla OBD-C Adapter</a></li>
@@ -917,11 +892,11 @@
 <h4 id="0-18-mph-upgrade">0 - 18 MPH Upgrade</h4>
 <p>The "Out of the Box" setup is the basic install for your tesla and can control your acceleration above 18 MPH. The <a href="../Pedal_Interceptor/">Pedal Interceptor</a> is a small unit that gets connected between your accelerator pedal on your Model S and the Giraffe. While the stock cruise control on Tesla only works above 18 MPH, with the pedal we can control speed down to 1 MPH (though the regen brakes only work above 5 MPH). The benefit of the pedal is better (and smoother) adaptive cruise control over just the stock Tesla cruise control.</p>
 <h4 id="tesla-radar-retrofit">Tesla Radar Retrofit</h4>
-<p><a href="../Tesla_Bosch_Radar/">With a few more wires and a harness (plus some e Bay parts) you can add a Tesla Bosch radar</a> to your pre-AP1 car. With full radar integration now available in Open Pilot, you get more accurate lead car detection which leads to a better ACC (still limited to regen braking). Also, if you have Instrument Cluster integration, now you can see the detected cars on your IC.</p>
+<p><a href="../Tesla_Bosch_Radar/">With a few more wires and a harness (plus some eBay parts) you can add a Tesla Bosch radar</a> to your pre-AP1 car. With full radar integration now available in OpenPilot, you get more accurate lead car detection which leads to a better ACC (still limited to regen braking). Also, if you have Instrument Cluster integration, now you can see the detected cars on your IC.</p>
 <h4 id="instrument-cluster">Instrument Cluster</h4>
 <p>Tinkla Buddywill allow you to visualize the path and cars on your Tesla's Instrument Cluster. Tinkla Buddy only works with the older MCU1 units. It does not work with MCU2 due to the changes Tesla made in the architecture of the device.</p>
 <h4 id="stop-and-go">Stop-and-Go</h4>
-<p>The next hurdle for us is integration with i Booster brakes for full stop and go traffic. This will require replacement of the standard vacuum brakes on your pre-AP1 Model S to the i Booster system that Tesla used in the AP1 cars and beyond. This will be about <span class="arithmatex">\(800-\)</span>1000 in parts and some more involved mechanical work as you would need to flush your brakes and such. Code for the <a href="https://sghinnovations.com/?product=ibooster-controller-ecu">SGH Innovations' i Booster with ECU</a> is being tested at the moment.</p>
+<p>The next hurdle for us is integration with iBooster brakes for full stop and go traffic. This will require replacement of the standard vacuum brakes on your pre-AP1 Model S to the iBooster system that Tesla used in the AP1 cars and beyond. This will be about <span class="arithmatex">\(800-\)</span>1000 in parts and some more involved mechanical work as you would need to flush your brakes and such. Code for the <a href="https://sghinnovations.com/?product=ibooster-controller-ecu">SGH Innovations' iBooster with ECU</a> is being tested at the moment.</p>
 
     </div>
 </article>
@@ -967,22 +942,14 @@
             
 
             
-            <div class="flex flex-col gap-4">
-                <div class="text-muted-foreground text-sm font-medium">Menu</div>
-                <div class="flex flex-col gap-3">
-                    
-                    <a class="text-2xl font-medium" href="..">
-                        
-                        Home
-                        
-                    </a>
-                    
-                </div>
-            </div>
-            
 
             
             <div class="flex flex-col gap-8">
+                
+                <div class="flex flex-col gap-4">
+                    <div class="text-muted-foreground text-sm font-medium">Home</div>
+                    
+                </div>
                 
                 <div class="flex flex-col gap-4">
                     <div class="text-muted-foreground text-sm font-medium">Getting Started</div>

@@ -1,3 +1,3 @@
-# User talk:Bog Gyver
+# User talk:BogGyver
 
 Hello

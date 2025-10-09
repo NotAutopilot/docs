@@ -275,34 +275,9 @@
     
 
     
-    <div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2">
-        <div data-slot="sidebar-group-content" data-sidebar="group-content" class="w-full text-sm">
-            <ul data-slot="sidebar-menu" data-sidebar="menu" class="flex w-full min-w-0 flex-col gap-0.5">
-                
-                
-                <li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative">
-    <a data-slot="sidebar-menu-button" data-active="false" data-sidebar="menu-button"
-        data-size="default" href="/"
-        class="hover:bg-sidebar-accent hover:text-sidebar-accent-foreground peer/menu-button flex items-center gap-2 rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 data-[active=true]:bg-accent data-[active=true]:border-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md">
 
-        
-        Home
-        
-
-        
-
-        
-
-        
-    </a>
-</li>
-                
-                
-            </ul>
-        </div>
-    </div>
     
-
+    
     
     
     <div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2">
@@ -912,14 +887,14 @@
 </table>
 <h2 id="registering-your-tinkla-buddy">Registering your Tinkla Buddy</h2>
 <p>In order for your Tinkla Buddy to operate, it needs certificates which are given by the Tinkla server to those that registered their product. When you register your device you receive a free 14 day trial period. During this time your Tinkla Buddy has full functionality. Expand section for details.</p>
-<p>30 days prior to your the expiration of your license or trial period, you have the option to purchase or renew the yearly subscription using the built in Pay Pal connection.</p>
+<p>30 days prior to your the expiration of your license or trial period, you have the option to purchase or renew the yearly subscription using the built in PayPal connection.</p>
 <p>Once your trial or license period expires, all functionality on the Tinkla Buddy is removed until you purchase / renew your license.</p>
-<p>To register your Tinkla Buddy first you need to create an account ontinkla.us AND confirm your email.</p>
-<p>Once you have yourtinkla.usaccount setup, you can register your Tinkla Buddy using the Tinkla Buddy Adminportal.</p>
+<p>To register your Tinkla Buddy first you need to create an account ontinkla.usAND confirm your email.</p>
+<p>Once you have yourtinkla.usaccount setup, you can register your Tinkla Buddy using theTinkla Buddy Adminportal.</p>
 <p>Once you have verified your credentials, you will be required to enter your personal information as well as select your email notification preferences. These settings can be later changed from the**Account**menu, by selecting**User Preferences**</p>
 <p>Now it is time to finally register your Tinkla Buddy. You will need to know the VIN of the car you are installing the Tinkla Buddy on. From the main menu select**Tinkla Buddy**and then**Register**. Enter your VIN and a nickname for your car. The nickname can be later changed by clicking on it in the details page for your Tinkla Buddy. The VIN can not be changed, so please double check it before creating the record.Then click the**Save**button.</p>
 <p>You will notice that for now your Tinkla Buddy record has no data. The**Buddy Software**,**Tesla Software**fields will be empty and the**Last Signal**and**Cert Update**fields will show dates in the past. Do not worry, they will get updated the moment your Tinkla Buddy gets its certs for the first time.</p>
-<p>It is now time to <a href="../Tinkla_Buddy_Installation/">power up your Tinkla Buddy for the first time</a> .</p>
+<p>It is now time to <a href="../Tinkla_Buddy_Installation/">power up your Tinkla Buddy for the first time</a>.</p>
 <h2 id="using-the-tinkla-buddy-admin-portal">Using the Tinkla Buddy Admin portal</h2>
 <p>Do you need to see data from your Tesla? Do you need to look at the Tesla Vitals? Do you want to remotely**ssh**into your Tinkla Buddy? Do you need to give somebody that is helping you remote access (<strong>ssh</strong>) to your Tinkla Buddy? Do you need to purchase/renew your Tinkla Buddy software license? You can do all of the above plus much more from the Tinkla Buddy Admin. Expand section for details.</p>
 <h2 id="using-the-tinkla-menu">Using the Tinkla Menu</h2>
@@ -932,7 +907,7 @@
 <li><strong>Update</strong>- Checks for a Tinkla Buddy update.</li>
 <li><strong>Quiet</strong>- Puts the device in a quiet mode for Service Center visits.</li>
 <li><strong>Wifi</strong>- <strong>Info</strong>- This shows the current Wireless Access Point name and password to join the network and use your car's 3g or LTE internet.</li>
-<li><strong>IC Int.</strong>- Here you can Turn Integration**On**or**Off**- IC integration allows Open Pilot to appear on the Instrument Cluster similar to Tesla Auto Pilot. It also shows data from your Baolong TPMS as if you have a Conti TPMS retrofit.</li>
+<li><strong>IC Int.</strong>- Here you can Turn Integration**On**or**Off**- IC integration allows OpenPilot to appear on the Instrument Cluster similar to Tesla AutoPilot. It also shows data from your Baolong TPMS as if you have a Conti TPMS retrofit.</li>
 <li>**Please note:**it can take up to a minute for your IC to restart the processes in integration mode and it will flicker twice during the process. The IC isn't rebooted, just restarting processes.</li>
 <li><strong>Tunnels</strong>- Here you can turn Tunnels**On**or**Off**- Turning tunnels on allows you to use the Tinkla Bastillion server to SSH into your Tinkla Buddy and it enables the remote control app (in development)</li>
 <li><strong>Tesla</strong>- <strong>Tokens</strong>- If you are a security researcher and have access to your car's systems, you'll be able to see it here.</li>
@@ -950,13 +925,13 @@
 <li><strong>Custom</strong>- This set of menus are for your use to add/run your own menu scripts to run from the Tinkla Buddy and show the results on your CID. All additions and changes will need to be added to your Tinkla Buddy via SSH to<code>/home/pi/.tinkla/your_commands.json</code></li>
 </ol>
 <h2 id="using-the-tinkla-buddy-webapp">Using the Tinkla Buddy Webapp</h2>
-<p>Tinkla Buddy Webapp is a web based application hosted on your Tinkla Buddy. It allows you to do more configurations on your Tinkla Buddy that can not be achieved through the Tinkla Menu, such as setting up token persistence, changing your Wi Fi access point password, etc. Expand section for details.</p>
-<p>Setup Wi Fi for access to Tinkla Buddy App.</p>
+<p>Tinkla Buddy Webapp is a web based application hosted on your Tinkla Buddy. It allows you to do more configurations on your Tinkla Buddy that can not be achieved through the Tinkla Menu, such as setting up token persistence, changing your WiFi access point password, etc. Expand section for details.</p>
+<p>Setup WiFi for access to Tinkla Buddy App.</p>
 <p>First activate the TB on your CID using either the wheel menu button or (if parked) parking button four times. Select**Tinkla**.</p>
-<p>Then select**Wi Fi**.</p>
-<p>Then select**On**, to turn on the Wi Fi SSID.</p>
-<p>On your Cell phone look for the SSID<code>tinkla AP</code>, the Wi Fi password is<code>tesla Fr33</code></p>
-<p>Select the SSID and it will assign an IP (it may tell you there is no internet). The next thing to do is go to your favorite browser on the phone, and enter the following URL <a href="http://10.5.5.1">http://10.5.5.1</a> </p>
+<p>Then select**WiFi**.</p>
+<p>Then select**On**, to turn on the WiFi SSID.</p>
+<p>On your Cell phone look for the SSID<code>tinklaAP</code>, the WiFi password is<code>teslaFr33</code></p>
+<p>Select the SSID and it will assign an IP (it may tell you there is no internet). The next thing to do is go to your favorite browser on the phone, and enter the following URL <a href="http://10.5.5.1">http://10.5.5.1</a></p>
 <p>You will be presented with the log in screen. The first time password is<code>1234</code></p>
 <p>Then of course hit Login</p>
 <p>Now you can start exploring.</p>
@@ -980,15 +955,15 @@
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>ssh cid rm /tmp/CID_script.sh
 </span></code></pre></div>
 <h2 id="cron-jobs">Cron Jobs</h2>
-<p>If you already have root and token persistence setup, then you can have scripts set to run periodically on the CID based on where you place your<code>script.sh</code>. Based on the directory you use, you can have a script run after Reboot (MCU reboot, not Tinkla Buddy), every 1, 5, 15, or 60 minutes. Expand section for details.</p>
+<p>If you already have root and token persistence setup, then you can have scripts set to run periodically on the CID based on where you place your<code>script.sh</code>. Based on the directory you use, you can have a script run afterReboot (MCU reboot, not Tinkla Buddy), every 1, 5, 15, or 60 minutes. Expand section for details.</p>
 <p>Scripts within these folders**MUST**have filenames ending in<code>.sh</code>.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>/opt/tinkla/cron/after Reboot
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>/opt/tinkla/cron/every One Minute
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>/opt/tinkla/cron/every Five Minutes
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>/opt/tinkla/cron/every Fifteenminutes
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>/opt/tinkla/cron/every Hour
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>/opt/tinkla/cron/afterReboot
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>/opt/tinkla/cron/everyOneMinute
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>/opt/tinkla/cron/everyFiveMinutes
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>/opt/tinkla/cron/everyFifteenminutes
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>/opt/tinkla/cron/everyHour
 </span></code></pre></div>
-<p>For those users that have root persistence, I recommend adding a**clean_traces.sh**file to the**/opt/tinkla/cron/every One Minute**folder containing the following code</p>
+<p>For those users that have root persistence, I recommend adding a**clean_traces.sh**file to the**/opt/tinkla/cron/everyOneMinute**folder containing the following code</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sed -i &#39;/192\.168\.90\.101/d&#39; /var/log/sshd/current
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>sed -i &#39;/key type ssh-dss not/d&#39; /var/log/sshd/current
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>cat /dev/null &gt; /var/log/auth.log
@@ -997,35 +972,35 @@
 </span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>echo &#39;set +o history&#39; &gt; /home/tesla/.bashrc
 </span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>cat /dev/null &gt; /home/tesla/.bash_history
 </span></code></pre></div>
-<p>If you have root persistence and want the Auto Pilot screen on CID, create a script called**ap_screen.sh**in the**/opt/tinkla/cron/after Reboot**folder containing this code:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>edit-settings-conf.pl -a vapi/force Has Autopilot=true
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>edit-settings-conf.pl -a vapi/force Has Drive On Nav=true
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>edit-settings-conf.pl -a vapi/force Has Drive On Nav Maps=true
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>/usr/local/bin/sdv GUI_autopilot Always On true
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>/usr/local/bin/sdv GUI_autosteer On Request true
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>/usr/local/bin/sdv GUI_autosteer Disabled false
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>/usr/local/bin/sdv GUI_acc From Zero true
-</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>/usr/local/bin/sdv DAS_map Availability true
-</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>/usr/local/bin/sdv GUI_red Light Stop Sign On Request true
-</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>/usr/local/bin/sdv GUI_enable Map Stops true
-</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>/usr/local/bin/sdv GUI_enable Vision Stops true
-</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>/usr/local/bin/sdv GUI_enable FSDFunctions true
-</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>/usr/local/bin/sdv GUI_stop And Go true
-</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>/usr/local/bin/sdv GUI_noa Everywhere true
-</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>/usr/local/bin/sdv DAS_nav Available true
-</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>/usr/local/bin/sdv GUI_acc Follow Distance 2
-</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>/usr/local/bin/sdv GUI_acc Overtake On Request true
-</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>/usr/local/bin/sdv GUI_autopilot Control Request 0
-</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>/usr/local/bin/sdv FEATURE_das Drive On Nav Enabled true
-</span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>/usr/local/bin/sdv FEATURE_das Drive On Nav Maps Okay true
-</span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a>/usr/local/bin/sdv VAPI_backup Camera Calibrated true
-</span><span id="__span-5-22"><a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a>/usr/local/bin/sdv VAPI_fisheye Camera Calibrated true
-</span><span id="__span-5-23"><a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a>/usr/local/bin/sdv VAPI_l Pillar Camera Calibrated true
-</span><span id="__span-5-24"><a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a>/usr/local/bin/sdv VAPI_l Repeater Camera Calibrated true
-</span><span id="__span-5-25"><a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a>/usr/local/bin/sdv VAPI_main Camera Calibrated true
-</span><span id="__span-5-26"><a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a>/usr/local/bin/sdv VAPI_narrow Camera Calibrated true
-</span><span id="__span-5-27"><a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a>/usr/local/bin/sdv VAPI_r Pillar Camera Calibrated true
-</span><span id="__span-5-28"><a id="__codelineno-5-28" name="__codelineno-5-28" href="#__codelineno-5-28"></a>/usr/local/bin/sdv VAPI_r Repeater Camera Calibrated true
+<p>If you have root persistence and want the AutoPilot screen on CID, create a script called**ap_screen.sh**in the**/opt/tinkla/cron/afterReboot**folder containing this code:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>edit-settings-conf.pl -a vapi/forceHasAutopilot=true
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>edit-settings-conf.pl -a vapi/forceHasDriveOnNav=true
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>edit-settings-conf.pl -a vapi/forceHasDriveOnNavMaps=true
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>/usr/local/bin/sdv GUI_autopilotAlwaysOn true
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>/usr/local/bin/sdv GUI_autosteerOnRequest true
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>/usr/local/bin/sdv GUI_autosteerDisabled false
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>/usr/local/bin/sdv GUI_accFromZero true
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>/usr/local/bin/sdv DAS_mapAvailability true
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>/usr/local/bin/sdv GUI_redLightStopSignOnRequest true
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>/usr/local/bin/sdv GUI_enableMapStops true
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>/usr/local/bin/sdv GUI_enableVisionStops true
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>/usr/local/bin/sdv GUI_enableFSDFunctions true
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>/usr/local/bin/sdv GUI_stopAndGo true
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>/usr/local/bin/sdv GUI_noaEverywhere true
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>/usr/local/bin/sdv DAS_navAvailable true
+</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>/usr/local/bin/sdv GUI_accFollowDistance 2
+</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>/usr/local/bin/sdv GUI_accOvertakeOnRequest true
+</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>/usr/local/bin/sdv GUI_autopilotControlRequest 0
+</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>/usr/local/bin/sdv FEATURE_dasDriveOnNavEnabled true
+</span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>/usr/local/bin/sdv FEATURE_dasDriveOnNavMapsOkay true
+</span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a>/usr/local/bin/sdv VAPI_backupCameraCalibrated true
+</span><span id="__span-5-22"><a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a>/usr/local/bin/sdv VAPI_fisheyeCameraCalibrated true
+</span><span id="__span-5-23"><a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a>/usr/local/bin/sdv VAPI_lPillarCameraCalibrated true
+</span><span id="__span-5-24"><a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a>/usr/local/bin/sdv VAPI_lRepeaterCameraCalibrated true
+</span><span id="__span-5-25"><a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a>/usr/local/bin/sdv VAPI_mainCameraCalibrated true
+</span><span id="__span-5-26"><a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a>/usr/local/bin/sdv VAPI_narrowCameraCalibrated true
+</span><span id="__span-5-27"><a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a>/usr/local/bin/sdv VAPI_rPillarCameraCalibrated true
+</span><span id="__span-5-28"><a id="__codelineno-5-28" name="__codelineno-5-28" href="#__codelineno-5-28"></a>/usr/local/bin/sdv VAPI_rRepeaterCameraCalibrated true
 </span><span id="__span-5-29"><a id="__codelineno-5-29" name="__codelineno-5-29" href="#__codelineno-5-29"></a>echo &quot;1&quot; &gt; /var/etc/dashw
 </span><span id="__span-5-30"><a id="__codelineno-5-30" name="__codelineno-5-30" href="#__codelineno-5-30"></a>echo &quot;dashw 1&quot; &gt;&gt; /var/etc/gateway.cfg
 </span><span id="__span-5-31"><a id="__codelineno-5-31" name="__codelineno-5-31" href="#__codelineno-5-31"></a>echo &quot;autopilot 1&quot; &gt;&gt; /var/etc/gateway.cfg
@@ -1059,7 +1034,7 @@
 </span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>QAAMZ_4=0
 </span></code></pre></div>
 <p>This for example is a 4 channel board, and the names associated with each channel are**QAAMZ_1-QAAMZ_4**. To change the status of a channel, all you have to do is issue a command like<code>usbrelay QAAMZ_2=1</code>. That command will turn second channel ON. To turn it off, you type<code>usbrelay QAAMZ_2=0</code>. To turn multiple channels on/off, you just list them, space separated, after**usbrelay**like this<code>usbrelay QAAMZ_1=1 QAAMZ_2=0 QAAMZ_4=1</code>In this example channels 1 and 4 are turned on and channel 2 is turned off.</p>
-<p>Now that you know how to control the relays from the command prompt, you can incorporate them in your <a href="./">Custom Menu</a> .</p>
+<p>Now that you know how to control the relays from the command prompt, you can incorporate them in your <a href="./">Custom Menu</a>.</p>
 <p>The following example creates a custom menu for 2 options on the relays, one that switches 1 channel on/off and one that switches 3 channels at the same time on/off.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>{&quot;id&quot;:1200,&quot;text&quot;:&quot;This is just an example of using Relays with Tinkla Buddy. You have to run usbrealy from the prompt to identify the names of each relay first, then can configure and name your options.&quot;,
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>&quot;options&quot;:[
@@ -1126,22 +1101,14 @@
             
 
             
-            <div class="flex flex-col gap-4">
-                <div class="text-muted-foreground text-sm font-medium">Menu</div>
-                <div class="flex flex-col gap-3">
-                    
-                    <a class="text-2xl font-medium" href="..">
-                        
-                        Home
-                        
-                    </a>
-                    
-                </div>
-            </div>
-            
 
             
             <div class="flex flex-col gap-8">
+                
+                <div class="flex flex-col gap-4">
+                    <div class="text-muted-foreground text-sm font-medium">Home</div>
+                    
+                </div>
                 
                 <div class="flex flex-col gap-4">
                     <div class="text-muted-foreground text-sm font-medium">Getting Started</div>

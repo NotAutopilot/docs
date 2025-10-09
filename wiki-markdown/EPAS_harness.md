@@ -14,7 +14,11 @@ You can buy a pre-made EPAS Harness for use with a Giraffe from[EV Cables Compan
 
 ## Make your own EPAS Harness
 
-AWG Chart- You can follow @Deftdawg's EPAS creation video
+![](images/Tesla_EPAS_Harness.png)
+
+![AWG Chart](images/Amps_wire_gauge_size_chart.jpg)
+
+- You can follow @Deftdawg's EPAS creation video
 - When creating harnesses, please use the AWG chart to select the right wire gauge for your amps and length needs.- **NOTE:**It is not recommended to solder the JST2 plugs prior to fishing the wire into the driver footwell, so pause watching this video around the 34minute mark. The fishing process can easily destroy JST2 solder joints, so it's better to fish the wire first and then strip and solder the connections on when the wire is already into the cabin.
 - **SECOND NOTE:**There is another way to fish the EPAS cable through the firewall that will take a bit more work, and we don't currently have instructions written. If you'd like to help us document by performing this method and taking pictures, we'd appreciate it.
 - @Raf & @erflesby's guide here:[Putting together a tesla EPAS wire harness](https://docs.google.com/document/d/1q5JjWp0YRnWe-4rbyW1Z0T3OT5UOAsH0rTv5Mr0-8Eo/edit?usp=sharing)

@@ -1,6 +1,7 @@
 # Tesla CAN Bus
 
-Tesla CAN Connectors
+![Tesla CAN Connectors](images/Tesla_CAN_Connectors.png)
+
 ### General Info
 
 The Tesla CAN Bus system comprises of 6 standard CAN busses + one EtherCAN bus.

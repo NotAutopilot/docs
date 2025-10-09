@@ -275,34 +275,9 @@
     
 
     
-    <div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2">
-        <div data-slot="sidebar-group-content" data-sidebar="group-content" class="w-full text-sm">
-            <ul data-slot="sidebar-menu" data-sidebar="menu" class="flex w-full min-w-0 flex-col gap-0.5">
-                
-                
-                <li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative">
-    <a data-slot="sidebar-menu-button" data-active="false" data-sidebar="menu-button"
-        data-size="default" href="/"
-        class="hover:bg-sidebar-accent hover:text-sidebar-accent-foreground peer/menu-button flex items-center gap-2 rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 data-[active=true]:bg-accent data-[active=true]:border-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md">
 
-        
-        Home
-        
-
-        
-
-        
-
-        
-    </a>
-</li>
-                
-                
-            </ul>
-        </div>
-    </div>
     
-
+    
     
     
     <div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2">
@@ -892,16 +867,20 @@
 
     </div>
     <div class="typography w-full flex-1 *:data-[slot=alert]:first:mt-0">
-        <p>The Bosch radar made for Tesla (Bosch MRRevo14, and with few different part numbers like 1038224-00-A/B or 1057551-00-B) have been used on Tesla Model S cars from October 2014 (AP1) until they have been replaced by the Continental radar with AP2.5). The main difference between 1038224-00-B and 1038224-00-A is that the A version does not have the heater element for winter weather (to melt snow and ice).</p>
+        <p><img alt="" src="../images/Tesla_Bosch_Radar_Wiring_Harness.png" /></p>
+<p><img alt="" src="../images/Giraffe_rev_B_Radar_Diagram.png" /></p>
+<p><img alt="" src="../images/Giraffe_rev_A.png" /></p>
+<p><img alt="" src="images/The_Giraffe_rev_A_board__Use_CAN1_for_radar_.png" /></p>
+<p>The Bosch radar made for Tesla (Bosch MRRevo14, and with few different part numbers like 1038224-00-A/B or 1057551-00-B) have been used on Tesla Model S cars from October 2014 (AP1) until they have been replaced by the Continental radar with AP2.5). The main difference between 1038224-00-B and 1038224-00-A is that the A version does not have the heater element for winter weather (to melt snow and ice).</p>
 <p>The radar has a range of about 160m and for the short beam a cone of 45°.</p>
 <h3 id="bosch-radars">Bosch radars</h3>
 <p>Many other car manufacturers use the same radar hardware, including Honda, Nissan, VW, Audi, etc. But Tesla (AFAIK) is the only one that reads and processes raw data from the radar instead of letting the radar make the decision about longitudinal control action needed (acceleration or deceleration).</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>This radar can ben used on any OP supported car. To insall the radar for a non-Tesla car please find a branch that has the code already done or modify your branch and add the code needed to make the radar talk to the Panda code for your car.
 </span></code></pre></div>
 <h3 id="deconding-the-radar">Deconding the radar</h3>
-<p>With a little help from a group of enthusiasts, we were able to reverse engineer all the messages that AP sends to the radar in order to make it "talk". Then we identified the structure of the CAN messages that describe each of the 32 objects this radar can detect. Signals like longitudinal distance, lateral distance (vs radar), longitudinal relative speed, lateral relative speed, longitudinal acceleration, certainty of detection, etc are all now processed and sent to the radar daemon of Open Pilot, improving longitudinal control for the car.</p>
+<p>With a little help from a group of enthusiasts, we were able to reverse engineer all the messages that AP sends to the radar in order to make it "talk". Then we identified the structure of the CAN messages that describe each of the 32 objects this radar can detect. Signals like longitudinal distance, lateral distance (vs radar), longitudinal relative speed, lateral relative speed, longitudinal acceleration, certainty of detection, etc are all now processed and sent to the radar daemon of OpenPilot, improving longitudinal control for the car.</p>
 <h3 id="what-you-need">What you need</h3>
-<p>In order to get the radar working on your car, you need to buy a radar, a mounting bracket (few options here), a connector and then to create a harness and run the cable back to the <a href="../Tesla_Giraffe/">Giraffe</a> . As a first temporary setup for my research, I used an Audi bracket which I installed on my car's nose cone. Then I created the harness and connected it for both CAN and power to my Giraffe rev B using a car relay. Please also make sure you add the 120Ω resistor between CAN+ and CAN-.</p>
+<p>In order to get the radar working on your car, you need to buy a radar, a mounting bracket (few options here), a connector and then to create a harness and run the cable back to the <a href="../Tesla_Giraffe/">Giraffe</a>. As a first temporary setup for my research, I used an Audi bracket which I installed on my car's nose cone. Then I created the harness and connected it for both CAN and power to my Giraffe rev B using a car relay. Please also make sure you add the 120Ω resistor between CAN+ and CAN-.</p>
 <p>For a permanent install I recommend following the diagram in the Tesla Bosch Radar Wiring Harness image at the top of the page. This setup uses the EPAS power (which is ignition power) to trigger a relay and feed power to both the radar electronics and the heater unit of the radar. Make sure the line from the battery is fused. Please also make sure you add the 120Ω resistor between CAN+ and CAN-. Also please use the <a href="../AWG_chart/">AWG chart</a> to select the right wire needed for your setup.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>If you have a Giraffe rev A, you will have to solder the CAN wires from the radar directly to the Giraffe. We are using the middle CAN of the Panda (CAN2 when you think of them as CAN1-CH, CAN3-EPAS) and the pins where you should solder your connector are marked in this diagrams. 
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Also, you will have to add the same 120Ω resistor between CAN+ and CAN-.
@@ -915,7 +894,7 @@
 <p>If you want to implement the code for another car, you will have to modify the code as follow:</p>
 <ul>
 <li>find an existing CAN message on your car that is generated at 100Hz. We will use this message as a clock to trigger all the other messages needed by radar.</li>
-<li>take a look at my <a href="https://github.com/Bog Gyver/openpilot/tree/test_teslaradar">test_teslaradar</a> branch which uses the fake message code in <a href="https://github.com/Bog Gyver/openpilot/blob/test_teslaradar/panda/board/safety/safety_teslaradar.h">safety_teslaradar.h</a></li>
+<li>take a look at my <a href="https://github.com/BogGyver/openpilot/tree/test_teslaradar">test_teslaradar</a> branch which uses the fake message code in <a href="https://github.com/BogGyver/openpilot/blob/test_teslaradar/panda/board/safety/safety_teslaradar.h">safety_teslaradar.h</a></li>
 <li>
 <p>edit**safety_yourcar.h**(specific for your car) and add the following:</p>
 </li>
@@ -934,7 +913,7 @@
 <div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>//speed for radar
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a> if ((to_push-&gt;RIR&gt;&gt;21) == 0x309) {
 </span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a> // first 2 bytes
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a> actual_speed_kph = (int)((((to_push-&gt;RDLR &amp; 0x FF) &lt;&lt; 8) + ((to_push-&gt;RDLR &gt;&gt;8) &amp; 0x FF))*0.01);
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a> actual_speed_kph = (int)((((to_push-&gt;RDLR &amp; 0xFF) &lt;&lt; 8) + ((to_push-&gt;RDLR &gt;&gt;8) &amp; 0xFF))*0.01);
 </span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a> }
 </span></code></pre></div></p>
 </li>
@@ -948,45 +927,45 @@
 <li>
 <p>in the tx_hook function add interceptor for the message used to send info to the radar; in this example we use 0x560 as the CAN message ID; it this does not work for your car (already in use) you will have to change it to another ID that is not in use
 <div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>//check if this is a teslaradar vin message
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a> //capture message for radar VIN and settings
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a> //capture message for radarVIN and settings
 </span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a> if ((to_send-&gt;RIR &gt;&gt; 21) == 0x560) {
-</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a> int id = (to_send-&gt;RDLR &amp; 0x FF);
-</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a> int radar Vin_b1 = ((to_send-&gt;RDLR &gt;&gt; 8) &amp; 0x FF);
-</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a> int radar Vin_b2 = ((to_send-&gt;RDLR &gt;&gt; 16) &amp; 0x FF);
-</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a> int radar Vin_b3 = ((to_send-&gt;RDLR &gt;&gt; 24) &amp; 0x FF);
-</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a> int radar Vin_b4 = (to_send-&gt;RDHR &amp; 0x FF);
-</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a> int radar Vin_b5 = ((to_send-&gt;RDHR &gt;&gt; 8) &amp; 0x FF);
-</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a> int radar Vin_b6 = ((to_send-&gt;RDHR &gt;&gt; 16) &amp; 0x FF);
-</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a> int radar Vin_b7 = ((to_send-&gt;RDHR &gt;&gt; 24) &amp; 0x FF);
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a> int id = (to_send-&gt;RDLR &amp; 0xFF);
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a> int radarVin_b1 = ((to_send-&gt;RDLR &gt;&gt; 8) &amp; 0xFF);
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a> int radarVin_b2 = ((to_send-&gt;RDLR &gt;&gt; 16) &amp; 0xFF);
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a> int radarVin_b3 = ((to_send-&gt;RDLR &gt;&gt; 24) &amp; 0xFF);
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a> int radarVin_b4 = (to_send-&gt;RDHR &amp; 0xFF);
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a> int radarVin_b5 = ((to_send-&gt;RDHR &gt;&gt; 8) &amp; 0xFF);
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a> int radarVin_b6 = ((to_send-&gt;RDHR &gt;&gt; 16) &amp; 0xFF);
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a> int radarVin_b7 = ((to_send-&gt;RDHR &gt;&gt; 24) &amp; 0xFF);
 </span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a> if (id == 0) {
-</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a> tesla_radar_should_send = (radar Vin_b2 &amp; 0x01);
-</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a> radar Position = ((radar Vin_b2 &gt;&gt; 1) &amp; 0x03);
-</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a> radar Epas Type = ((radar Vin_b2 &gt;&gt; 3) &amp; 0x07);
-</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a> tesla_radar_trigger_message_id = (radar Vin_b3 &lt;&lt; 8) + radar Vin_b4;
-</span><span id="__span-8-17"><a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a> tesla_radar_can = radar Vin_b1;
-</span><span id="__span-8-18"><a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a> radar_VIN [0] = radar Vin_b5;
-</span><span id="__span-8-19"><a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a> radar_VIN [1] = radar Vin_b6;
-</span><span id="__span-8-20"><a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a> radar_VIN [2] = radar Vin_b7;
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a> tesla_radar_should_send = (radarVin_b2 &amp; 0x01);
+</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a> radarPosition = ((radarVin_b2 &gt;&gt; 1) &amp; 0x03);
+</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a> radarEpasType = ((radarVin_b2 &gt;&gt; 3) &amp; 0x07);
+</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a> tesla_radar_trigger_message_id = (radarVin_b3 &lt;&lt; 8) + radarVin_b4;
+</span><span id="__span-8-17"><a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a> tesla_radar_can = radarVin_b1;
+</span><span id="__span-8-18"><a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a> radar_VIN [0] = radarVin_b5;
+</span><span id="__span-8-19"><a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a> radar_VIN [1] = radarVin_b6;
+</span><span id="__span-8-20"><a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a> radar_VIN [2] = radarVin_b7;
 </span><span id="__span-8-21"><a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a> tesla_radar_vin_complete = tesla_radar_vin_complete | 1;
 </span><span id="__span-8-22"><a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a> }
 </span><span id="__span-8-23"><a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a> if (id == 1) {
-</span><span id="__span-8-24"><a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a> radar_VIN [3] = radar Vin_b1;
-</span><span id="__span-8-25"><a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a> radar_VIN [4] = radar Vin_b2;
-</span><span id="__span-8-26"><a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a> radar_VIN [5] = radar Vin_b3;
-</span><span id="__span-8-27"><a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a> radar_VIN [6] = radar Vin_b4;
-</span><span id="__span-8-28"><a id="__codelineno-8-28" name="__codelineno-8-28" href="#__codelineno-8-28"></a> radar_VIN [7] = radar Vin_b5;
-</span><span id="__span-8-29"><a id="__codelineno-8-29" name="__codelineno-8-29" href="#__codelineno-8-29"></a> radar_VIN [8] = radar Vin_b6;
-</span><span id="__span-8-30"><a id="__codelineno-8-30" name="__codelineno-8-30" href="#__codelineno-8-30"></a> radar_VIN [9] = radar Vin_b7;
+</span><span id="__span-8-24"><a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a> radar_VIN [3] = radarVin_b1;
+</span><span id="__span-8-25"><a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a> radar_VIN [4] = radarVin_b2;
+</span><span id="__span-8-26"><a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a> radar_VIN [5] = radarVin_b3;
+</span><span id="__span-8-27"><a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a> radar_VIN [6] = radarVin_b4;
+</span><span id="__span-8-28"><a id="__codelineno-8-28" name="__codelineno-8-28" href="#__codelineno-8-28"></a> radar_VIN [7] = radarVin_b5;
+</span><span id="__span-8-29"><a id="__codelineno-8-29" name="__codelineno-8-29" href="#__codelineno-8-29"></a> radar_VIN [8] = radarVin_b6;
+</span><span id="__span-8-30"><a id="__codelineno-8-30" name="__codelineno-8-30" href="#__codelineno-8-30"></a> radar_VIN [9] = radarVin_b7;
 </span><span id="__span-8-31"><a id="__codelineno-8-31" name="__codelineno-8-31" href="#__codelineno-8-31"></a> tesla_radar_vin_complete = tesla_radar_vin_complete | 2;
 </span><span id="__span-8-32"><a id="__codelineno-8-32" name="__codelineno-8-32" href="#__codelineno-8-32"></a> }
 </span><span id="__span-8-33"><a id="__codelineno-8-33" name="__codelineno-8-33" href="#__codelineno-8-33"></a> if (id == 2) {
-</span><span id="__span-8-34"><a id="__codelineno-8-34" name="__codelineno-8-34" href="#__codelineno-8-34"></a> radar_VIN [10] = radar Vin_b1;
-</span><span id="__span-8-35"><a id="__codelineno-8-35" name="__codelineno-8-35" href="#__codelineno-8-35"></a> radar_VIN [11] = radar Vin_b2;
-</span><span id="__span-8-36"><a id="__codelineno-8-36" name="__codelineno-8-36" href="#__codelineno-8-36"></a> radar_VIN [12] = radar Vin_b3;
-</span><span id="__span-8-37"><a id="__codelineno-8-37" name="__codelineno-8-37" href="#__codelineno-8-37"></a> radar_VIN [13] = radar Vin_b4;
-</span><span id="__span-8-38"><a id="__codelineno-8-38" name="__codelineno-8-38" href="#__codelineno-8-38"></a> radar_VIN [14] = radar Vin_b5;
-</span><span id="__span-8-39"><a id="__codelineno-8-39" name="__codelineno-8-39" href="#__codelineno-8-39"></a> radar_VIN [15] = radar Vin_b6;
-</span><span id="__span-8-40"><a id="__codelineno-8-40" name="__codelineno-8-40" href="#__codelineno-8-40"></a> radar_VIN [16] = radar Vin_b7;
+</span><span id="__span-8-34"><a id="__codelineno-8-34" name="__codelineno-8-34" href="#__codelineno-8-34"></a> radar_VIN [10] = radarVin_b1;
+</span><span id="__span-8-35"><a id="__codelineno-8-35" name="__codelineno-8-35" href="#__codelineno-8-35"></a> radar_VIN [11] = radarVin_b2;
+</span><span id="__span-8-36"><a id="__codelineno-8-36" name="__codelineno-8-36" href="#__codelineno-8-36"></a> radar_VIN [12] = radarVin_b3;
+</span><span id="__span-8-37"><a id="__codelineno-8-37" name="__codelineno-8-37" href="#__codelineno-8-37"></a> radar_VIN [13] = radarVin_b4;
+</span><span id="__span-8-38"><a id="__codelineno-8-38" name="__codelineno-8-38" href="#__codelineno-8-38"></a> radar_VIN [14] = radarVin_b5;
+</span><span id="__span-8-39"><a id="__codelineno-8-39" name="__codelineno-8-39" href="#__codelineno-8-39"></a> radar_VIN [15] = radarVin_b6;
+</span><span id="__span-8-40"><a id="__codelineno-8-40" name="__codelineno-8-40" href="#__codelineno-8-40"></a> radar_VIN [16] = radarVin_b7;
 </span><span id="__span-8-41"><a id="__codelineno-8-41" name="__codelineno-8-41" href="#__codelineno-8-41"></a> tesla_radar_vin_complete = tesla_radar_vin_complete | 4;
 </span><span id="__span-8-42"><a id="__codelineno-8-42" name="__codelineno-8-42" href="#__codelineno-8-42"></a> }
 </span><span id="__span-8-43"><a id="__codelineno-8-43" name="__codelineno-8-43" href="#__codelineno-8-43"></a> else {
@@ -1004,16 +983,16 @@
 <li>go to /data/openpilot/selfdrive/car/yourcar (of course, yourcar matches one of the supported OP cars like honda/toyota/etc.)</li>
 <li>edit**yourcarcan.py**and add the code needed to send the VIN and other info to the Panda</li>
 </ul>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>def create_radar_VIN_msg(id,radar VIN,radar CAN,radar Trigger Message,use Radar,radar Position,radar Epas Type):
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>def create_radar_VIN_msg(id,radarVIN,radarCAN,radarTriggerMessage,useRadar,radarPosition,radarEpasType):
 </span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a> msg_id = 0x560
 </span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a> msg_len = 8
 </span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a> msg = create_string_buffer(msg_len)
 </span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a> if id == 0:
-</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a> struct.pack_into(&#39;BBBBBBBB&#39;, msg, 0, id,radar CAN,use Radar + (radar Position &lt;&lt; 1) + (radar Epas Type &lt;&lt; 3), ((radar Trigger Message &gt;&gt; 8) &amp; 0x FF),(radar Trigger Message &amp; 0x FF),ord(radar VIN [0]),ord(radar VIN [1]),ord(radar VIN [2]))
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a> struct.pack_into(&#39;BBBBBBBB&#39;, msg, 0, id,radarCAN,useRadar + (radarPosition &lt;&lt; 1) + (radarEpasType &lt;&lt; 3), ((radarTriggerMessage &gt;&gt; 8) &amp; 0xFF),(radarTriggerMessage &amp; 0xFF),ord(radarVIN [0]),ord(radarVIN [1]),ord(radarVIN [2]))
 </span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a> if id == 1:
-</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a> struct.pack_into(&#39;BBBBBBBB&#39;, msg, 0, id,ord(radar VIN [3]),ord(radar VIN [4]),ord(radar VIN [5]),ord(radar VIN [6]),ord(radar VIN [7]),ord(radar VIN [8]),ord(radar VIN [9]))
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a> struct.pack_into(&#39;BBBBBBBB&#39;, msg, 0, id,ord(radarVIN [3]),ord(radarVIN [4]),ord(radarVIN [5]),ord(radarVIN [6]),ord(radarVIN [7]),ord(radarVIN [8]),ord(radarVIN [9]))
 </span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a> if id == 2:
-</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a> struct.pack_into(&#39;BBBBBBBB&#39;, msg, 0, id,ord(radar VIN [10]),ord(radar VIN [11]),ord(radar VIN [12]),ord(radar VIN [13]),ord(radar VIN [14]),ord(radar VIN [15]),ord(radar VIN [16]))
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a> struct.pack_into(&#39;BBBBBBBB&#39;, msg, 0, id,ord(radarVIN [10]),ord(radarVIN [11]),ord(radarVIN [12]),ord(radarVIN [13]),ord(radarVIN [14]),ord(radarVIN [15]),ord(radarVIN [16]))
 </span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a> return [msg_id, 0, msg.raw, 0]
 </span></code></pre></div>
 <ul>
@@ -1022,20 +1001,20 @@
 </li>
 <li>
 <p>in the <strong>init</strong> portion add
-<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>self.radar Vin_idx = 0
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>self.radarVin_idx = 0
 </span></code></pre></div></p>
 </li>
 <li>
 <p>in the update portion add the below code, updating as needed the CAN bus to be used for radar (in this example 2) and the 100Hz message we will use to trigger messages (in this example 0x17c)
 <div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>#if using radar, we need to send the VIN
-</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>if CS.use Tesla Radar and (frame % 100 == 0):
-</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a> can_sends.append(hondacan.create_radar_VIN_msg(self.radar Vin_idx, CS.radar VIN, 2, 0x17c, CS.use Tesla Radar, CS.radar Position, CS.radar Epas Type))
-</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a> self.radar Vin_idx += 1
-</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a> self.radar Vin_idx = self.radar Vin_idx % 3
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>if CS.useTeslaRadar and (frame % 100 == 0):
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a> can_sends.append(hondacan.create_radar_VIN_msg(self.radarVin_idx, CS.radarVIN, 2, 0x17c, CS.useTeslaRadar, CS.radarPosition, CS.radarEpasType))
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a> self.radarVin_idx += 1
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a> self.radarVin_idx = self.radarVin_idx % 3
 </span></code></pre></div></p>
 </li>
 <li>
-<p>copy from my repo the <a href="https://github.com/Bog Gyver/openpilot/blob/test_teslaradar/selfdrive/car/tesla/readconfig_min.sh">readconfig_min.py</a> and rename it**readconfig.py**; once you are done with all the code changes and reboot the EON, this will create a minimal <a href="Open Pilot_Configuration_File.md">Open Pilot Configuration File</a> at /data/bb_openpilot.cfg with the values needed for radar</p>
+<p>copy from my repo the <a href="https://github.com/BogGyver/openpilot/blob/test_teslaradar/selfdrive/car/tesla/readconfig_min.sh">readconfig_min.py</a> and rename it**readconfig.py**; once you are done with all the code changes and reboot the EON, this will create a minimal <a href="../OpenPilot_Configuration_File/">OpenPilot Configuration File</a> at /data/bb_openpilot.cfg with the values needed for radar</p>
 </li>
 <li>
 <p>edit**carstate.py**</p>
@@ -1049,35 +1028,35 @@
 <p>add definition in <strong>init</strong> for the variables needed by radar
 <div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>### START OF MAIN CONFIG OPTIONS ###
 </span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a> ### Do NOT modify here, modify in /data/bb_openpilot.cfg and reboot
-</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a> self.use Tesla Radar = False
-</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a> self.radar VIN = &quot; &quot;
-</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a> self.radar Offset = 0.
-</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a> self.radar Position = 0
-</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a> self.radar Epas Type = 0
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a> self.useTeslaRadar = False
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a> self.radarVIN = &quot; &quot;
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a> self.radarOffset = 0.
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a> self.radarPosition = 0
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a> self.radarEpasType = 0
 </span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a> #read config file
 </span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a> read_config_file(self)
 </span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a> ### END OF MAIN CONFIG OPTIONS ###
 </span></code></pre></div></p>
 </li>
 <li>
-<p>copy from my repo the <a href="https://github.com/Bog Gyver/openpilot/blob/test_teslaradar/selfdrive/car/tesla/radar_interface.py">radar_interface.py</a> file and modify if needed</p>
+<p>copy from my repo the <a href="https://github.com/BogGyver/openpilot/blob/test_teslaradar/selfdrive/car/tesla/radar_interface.py">radar_interface.py</a> file and modify if needed</p>
 </li>
-<li>copy from my repo the <a href="https://github.com/Bog Gyver/openpilot/blob/test_teslaradar/selfdrive/controls/radard.py">radard.py</a> to /data/openpilot/selfdrive/controls and modify as needed</li>
-<li>copy from my repo the <a href="https://github.com/Bog Gyver/openpilot/blob/test_teslaradar/selfdrive/controls/lib/radar_helpers.py">radar_helpers.py</a> to /data/openpilot/selfdrive/controls/lib and modify as needed</li>
+<li>copy from my repo the <a href="https://github.com/BogGyver/openpilot/blob/test_teslaradar/selfdrive/controls/radard.py">radard.py</a> to /data/openpilot/selfdrive/controls and modify as needed</li>
+<li>copy from my repo the <a href="https://github.com/BogGyver/openpilot/blob/test_teslaradar/selfdrive/controls/lib/radar_helpers.py">radar_helpers.py</a> to /data/openpilot/selfdrive/controls/lib and modify as needed</li>
 </ul>
 <h3 id="obtain-the-vin-programmed-in-your-radar">Obtain the VIN programmed in your radar</h3>
-<p>Chances are you bought your Tesla Bosch Radar on ebay and was previously installed and programmed in a car (so it will only respond if we send the right VIN, epay type and position). The first step in getting the radar to send data is to obtain the VIN that was previously programmed. To get the VIN you will have to use the <a href="https://github.com/Bog Gyver/openpilot/blob/test_teslaradar/selfdrive/car/tesla/radar_tools/read Radar Vin.py">read Radar Vin.py</a> script (if you are on one of my branches the file is located in<code>/data/openpilot/selfdrive/car/tesla/radar_tools/</code>).</p>
+<p>Chances are you bought your Tesla Bosch Radar on ebay and was previously installed and programmed in a car (so it will only respond if we send the right VIN, epay type and position). The first step in getting the radar to send data is to obtain the VIN that was previously programmed. To get the VIN you will have to use the <a href="https://github.com/BogGyver/openpilot/blob/test_teslaradar/selfdrive/car/tesla/radar_tools/readRadarVin.py">readRadarVin.py</a> script (if you are on one of my branches the file is located in<code>/data/openpilot/selfdrive/car/tesla/radar_tools/</code>).</p>
 <p>Once you have the scrip do the following steps:</p>
 <ul>
 <li>SSH into the EON</li>
 <li><code>cd /data/openpilot/selfdrive/car/tesla/radar_tools/</code>(or go to the location where you saved the script)</li>
-<li>kill Open Pilot:- <code>tmux kill-session -t comma</code></li>
+<li>kill OpenPilot:- <code>tmux kill-session -t comma</code></li>
 <li>set the python environment variable- <code>export PYTHONPATH="/data/openpilot/"</code></li>
-<li>run the read Radar Vin.py script- <code>python read Radar Vin.py</code></li>
+<li>run the readRadarVin.py script- <code>python readRadarVin.py</code></li>
 </ul>
 <p>The 17 character VIN number will be displayed in the output of the script. Write it down. It should look something like<code>5YJSA1E41FF156789</code></p>
 <h3 id="modifying-the-configuration-file-for-radar">Modifying the configuration file for radar</h3>
-<p>Now that we have the VIN, we need to configure the <a href="Open Pilot_Configuration_File.md">Open Pilot Configuration File</a> with the needed parameters.</p>
+<p>Now that we have the VIN, we need to configure the <a href="../OpenPilot_Configuration_File/">OpenPilot Configuration File</a> with the needed parameters.</p>
 <blockquote>
 <p>[OP_CONFIG]
 use_tesla_radar = True
@@ -1088,7 +1067,7 @@ radar_epas_type = 0
 radar_position = 0</p>
 </blockquote>
 <p>So make sure that the**use_tesla_radar**variable is set to True.</p>
-<p><strong>radar_vin**need to match the VIN you obtain from the read Radar Vin.py script (do not put any quotes or any other characters on that line, just the VIN). Example:**5YJSA1E41FF156789</strong></p>
+<p><strong>radar_vin**need to match the VIN you obtain from the readRadarVin.py script (do not put any quotes or any other characters on that line, just the VIN). Example:**5YJSA1E41FF156789</strong></p>
 <p>**radar_offset**has to be changed only if your radar is not centered on the car (some cars have it closer to the left side of the car, in which case the offset should be positive and equal to the distance between the center of the radar and center of the car, in meters; for example 58cm will be 0.58 for offset).</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>The following settings need to match the values that were on the donor car, not your car. Use the VIN Decoder to understand the Tesla model, year and other information that can help you program these parameters.
 </span></code></pre></div>
@@ -1100,20 +1079,21 @@ radar_position = 0</p>
 <li>3 - Mando VGR66</li>
 <li>4 - Mando VGR66 Gen3</li>
 </ul>
-<p>For pre-facelift AP1 cars you will find mostly 0 or 1. Post facelift cars are mostly 3 or 4. But nothing can give you the exact value and you might have to try various values until RADC_a062_str Rack Mismatch in Tesla Radar Alert Matrix message is 0. See the <a href="../Tesla_Bosch_Radar/">troubleshooting section</a> to learn how to look at the Tesla Radar Alert Matrix message in <a href="../Cabana/">Cabana</a> .</p>
+<p>For pre-facelift AP1 cars you will find mostly 0 or 1. Post facelift cars are mostly 3 or 4. But nothing can give you the exact value and you might have to try various values until RADC_a062_strRackMismatch in TeslaRadarAlertMatrix message is 0. See the <a href="../Tesla_Bosch_Radar/">troubleshooting section</a> to learn how to look at the TeslaRadarAlertMatrix message in <a href="../Cabana/">Cabana</a>.</p>
 <p>**radar_position**is the position of the radar in the donor car. The value can be between 0 and 2:</p>
 <ul>
 <li>0 - Model S (pre facelift)</li>
 <li>1 - Model S (post facelift)</li>
 <li>2 - Model X</li>
 </ul>
-<p>You can use the manufacturing date and model from <a href="https://teslatap.com/vin-decoder/">VIN Decoder</a> to estimate your value. 2014 and 2015 Model S will always be 0. 2017 and above Model S will be 1. Model X will be always 2. But again nothing will give you the exact value and you might have to try 0 or 1 if the Model S was manufactured in 2016 because it could be 0 (pre April 2016) or 1 (post April 2016). The value of RADC_a061_rad Position Mismatch in Tesla Radar Alert Matrix message should be 0 if programmed correctly. See the <a href="../Tesla_Bosch_Radar/">troubleshooting section</a> to learn how to look at the Tesla Radar Alert Matrix message in <a href="../Cabana/">Cabana</a> .</p>
-<p>You can find an explanation of each of the parameters <a href="Open Pilot_Configuration_File.md">here</a> .</p>
+<p>You can use the manufacturing date and model from <a href="https://teslatap.com/vin-decoder/">VIN Decoder</a> to estimate your value. 2014 and 2015 Model S will always be 0. 2017 and above Model S will be 1. Model X will be always 2. But again nothing will give you the exact value and you might have to try 0 or 1 if the Model S was manufactured in 2016 because it could be 0 (pre April 2016) or 1 (post April 2016). The value of RADC_a061_radPositionMismatch in TeslaRadarAlertMatrix message should be 0 if programmed correctly. See the <a href="../Tesla_Bosch_Radar/">troubleshooting section</a> to learn how to look at the TeslaRadarAlertMatrix message in <a href="../Cabana/">Cabana</a>.</p>
+<p>You can find an explanation of each of the parameters <a href="../OpenPilot_Configuration_File/">here</a>.</p>
 <p>Once done, reboot your EON.</p>
 <h3 id="calibrating-your-radar">Calibrating your radar</h3>
-<p>Determine the center of car Most likely the radar will have to be calibrated in order to ensure the correct data being fed into Open Pilot. In order to calibrate your radar you will need:</p>
+<p><img alt="Determine the center of car" src="../images/Determine_the_center_of_car.png" /></p>
+<p>Most likely the radar will have to be calibrated in order to ensure the correct data being fed into OpenPilot. In order to calibrate your radar you will need:</p>
 <ul>
-<li>the <a href="https://github.com/Bog Gyver/openpilot/blob/test_teslaradar/selfdrive/car/tesla/radar_tools/calibrate Radar.py">calibrate Radar.py</a> script which for those running on one of my Tesla branches is located in**/data/openpilot/selfdrive/car/tesla/radar_tools/**</li>
+<li>the <a href="https://github.com/BogGyver/openpilot/blob/test_teslaradar/selfdrive/car/tesla/radar_tools/calibrateRadar.py">calibrateRadar.py</a> script which for those running on one of my Tesla branches is located in**/data/openpilot/selfdrive/car/tesla/radar_tools/**</li>
 <li>a 4ft (120 cm) metal pole that can stay vertically by itself (I personally use a microphone stand)</li>
 <li>tape measure</li>
 <li>chalk</li>
@@ -1128,29 +1108,29 @@ radar_position = 0</p>
 <li>the place where your two new arches intersect will be point B (see red lines in diagram)</li>
 <li>connect points A and B with a line; this line is now along the center of the car (see green line in diagram)</li>
 </ul>
-<p>Now that we have the line that marks the zero d Y line, let's start the calibration script:</p>
+<p>Now that we have the line that marks the zero dY line, let's start the calibration script:</p>
 <ul>
 <li>start OP (OP might stop when you leave the car; what i did was to put open the driver window, put a heavy backpack on the driver seat, connect the driver seatbelt and turn the car on; this way it ensured that OP remained running)</li>
-<li>SSH into EON and go to the folder where the calibrate Radar.py is- <code>cd /data/openpilot/selfdrive/car/tesla/radar_tools/</code></li>
+<li>SSH into EON and go to the folder where the calibrateRadar.py is- <code>cd /data/openpilot/selfdrive/car/tesla/radar_tools/</code></li>
 <li>set the python environment- <code>export PYTHONPATH="/data/openpilot/"</code></li>
-<li>run the calibration script- <code>python calibrate Radar.py</code></li>
+<li>run the calibration script- <code>python calibrateRadar.py</code></li>
 </ul>
 <p>The script will start showing data for objects between 8 ft (2.5 m) and 15 ft (4.5 m) in front of the car.</p>
 <p>Now the calibration process starts:</p>
 <ul>
 <li>place the metal pole (again, i used a microphne stand) in the middle of the line that connects A and B</li>
-<li>look at the terminal window running the calibration script and check x and y values for distance:- you should see data from the script showing**d Rel**and**d Y**as some of the points; keep in mind the values are always in meters</li>
-<li>measure the distance between the radar and the pole: it should match the**d Rel**distance</li>
-<li>**d Y**should be 0.0</li>
-<li>if you can not see the pole at all or**d Rel**is greater than the real measured distance, you will need to adjust the radar vertically until they match.</li>
-<li>if**d Y**is not zero, adjust the radar position Left or Right until**d Y**is 0.0</li>
-<li>once**d Y**is 0.0 move the pole along the line connecting A and B repeating the above process</li>
-<li>you are done when no matter where you place the pole between A and B,**d Y**is always 0.0</li>
+<li>look at the terminal window running the calibration script and check x and y values for distance:- you should see data from the script showing**dRel**and**dY**as some of the points; keep in mind the values are always in meters</li>
+<li>measure the distance between the radar and the pole: it should match the**dRel**distance</li>
+<li>**dY**should be 0.0</li>
+<li>if you can not see the pole at all or**dRel**is greater than the real measured distance, you will need to adjust the radar vertically until they match.</li>
+<li>if**dY**is not zero, adjust the radar position Left or Right until**dY**is 0.0</li>
+<li>once**dY**is 0.0 move the pole along the line connecting A and B repeating the above process</li>
+<li>you are done when no matter where you place the pole between A and B,**dY**is always 0.0</li>
 </ul>
 <h3 id="troubleshooting-the-tesla-bosch-radar">Troubleshooting the Tesla Bosch Radar</h3>
 <p>The radar send data for the first 5 seconds no matter what we send to it. But if we are sending the wrong info (VIN, position or epas) it will stop sending changes to the data after 5 seconds. At this point we have to see what exactly is happening with the radar by looking at the allerts it generates.</p>
-<p>You can use <a href="../Cabana/">cabana</a> and paste the following code in the DBC in order to understand what errors the radar is sending and what you need to change. Once you opened your cabana drive, click Load DBC, then Upload, and copy and paste the content from below to the DBC area. Then just look at the message called Tesla Radar Alert Matrix and see if you have any errors. Calibration warnings will not stop radar from operating.
-(Make sure you're looking at 1:501 for Tesla Radar Alert Matrix, not 0:501)</p>
+<p>You can use <a href="../Cabana/">cabana</a> and paste the following code in the DBC in order to understand what errors the radar is sending and what you need to change. Once you opened your cabana drive, click Load DBC, then Upload, and copy and paste the content from below to the DBC area. Then just look at the message called TeslaRadarAlertMatrix and see if you have any errors. Calibration warnings will not stop radar from operating.
+(Make sure you're looking at 1:501 for TeslaRadarAlertMatrix, not 0:501)</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>VERSION &quot;&quot;
 </span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>NS_ : 
 </span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a> NS_DESC_
@@ -1182,91 +1162,91 @@ radar_position = 0</p>
 </span><span id="__span-16-29"><a id="__codelineno-16-29" name="__codelineno-16-29" href="#__codelineno-16-29"></a> BU_BO_REL_
 </span><span id="__span-16-30"><a id="__codelineno-16-30" name="__codelineno-16-30" href="#__codelineno-16-30"></a> SG_MUL_VAL_
 </span><span id="__span-16-31"><a id="__codelineno-16-31" name="__codelineno-16-31" href="#__codelineno-16-31"></a>BS_:
-</span><span id="__span-16-32"><a id="__codelineno-16-32" name="__codelineno-16-32" href="#__codelineno-16-32"></a>BU_: Front Camera Radar
-</span><span id="__span-16-33"><a id="__codelineno-16-33" name="__codelineno-16-33" href="#__codelineno-16-33"></a>BO_ 769 Tesla Radar Sgu Info: 8 Radar
-</span><span id="__span-16-34"><a id="__codelineno-16-34" name="__codelineno-16-34" href="#__codelineno-16-34"></a> SG_ RADC_Vertical Misalignment : 0|8@1+ (1,0) [0|255] &quot;&quot; Front Camera
-</span><span id="__span-16-35"><a id="__codelineno-16-35" name="__codelineno-16-35" href="#__codelineno-16-35"></a> SG_ RADC_SCUTemperature : 8|8@1+ (1,-128) [-128|127] &quot;&quot; Front Camera
-</span><span id="__span-16-36"><a id="__codelineno-16-36" name="__codelineno-16-36" href="#__codelineno-16-36"></a> SG_ RADC_VMA_Plaus : 16|8@1+ (1,0) [0|255] &quot;&quot; Front Camera
-</span><span id="__span-16-37"><a id="__codelineno-16-37" name="__codelineno-16-37" href="#__codelineno-16-37"></a> SG_ RADC_SGU_ITC : 24|8@1+ (1,0) [0|255] &quot;&quot; Front Camera
-</span><span id="__span-16-38"><a id="__codelineno-16-38" name="__codelineno-16-38" href="#__codelineno-16-38"></a> SG_ RADC_Horizont Misalignment : 32|12@1+ (1,0) [0|4096] &quot;&quot; Front Camera
-</span><span id="__span-16-39"><a id="__codelineno-16-39" name="__codelineno-16-39" href="#__codelineno-16-39"></a> SG_ RADC_Sensor Dirty : 44|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-40"><a id="__codelineno-16-40" name="__codelineno-16-40" href="#__codelineno-16-40"></a> SG_ RADC_HWFail : 45|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-41"><a id="__codelineno-16-41" name="__codelineno-16-41" href="#__codelineno-16-41"></a> SG_ RADC_SGUFail : 46|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-42"><a id="__codelineno-16-42" name="__codelineno-16-42" href="#__codelineno-16-42"></a> SG_ RADC_SGUInfo Consist Bit : 47|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-43"><a id="__codelineno-16-43" name="__codelineno-16-43" href="#__codelineno-16-43"></a>BO_ 770 Tesla Radar Tgu Info: 8 Radar
-</span><span id="__span-16-44"><a id="__codelineno-16-44" name="__codelineno-16-44" href="#__codelineno-16-44"></a> SG_ RADC_ACCTarg Obj1_sgu Index : 0|6@1+ (1,0) [0|63] &quot;&quot; Front Camera
-</span><span id="__span-16-45"><a id="__codelineno-16-45" name="__codelineno-16-45" href="#__codelineno-16-45"></a> SG_ RADC_ACCTarg Obj2_sgu Index : 6|6@1+ (1,0) [0|63] &quot;&quot; Front Camera
-</span><span id="__span-16-46"><a id="__codelineno-16-46" name="__codelineno-16-46" href="#__codelineno-16-46"></a> SG_ RADC_ACCTarg Obj3_sgu Index : 12|6@1+ (1,0) [0|63] &quot;&quot; Front Camera
-</span><span id="__span-16-47"><a id="__codelineno-16-47" name="__codelineno-16-47" href="#__codelineno-16-47"></a> SG_ RADC_ACCTarg Obj4_sgu Index : 18|6@1+ (1,0) [0|63] &quot;&quot; Front Camera
-</span><span id="__span-16-48"><a id="__codelineno-16-48" name="__codelineno-16-48" href="#__codelineno-16-48"></a> SG_ RADC_ACCTarg Obj5_sgu Index : 24|6@1+ (1,0) [0|63] &quot;&quot; Front Camera
-</span><span id="__span-16-49"><a id="__codelineno-16-49" name="__codelineno-16-49" href="#__codelineno-16-49"></a> SG_ unused30 : 30|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-50"><a id="__codelineno-16-50" name="__codelineno-16-50" href="#__codelineno-16-50"></a> SG_ RADC_TGUInfo Consist Bit : 31|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-51"><a id="__codelineno-16-51" name="__codelineno-16-51" href="#__codelineno-16-51"></a> SG_ RADC_ACCTarg Obj1_d BPower : 32|16@1+ (1,0) [0|65535] &quot;&quot; Front Camera
-</span><span id="__span-16-52"><a id="__codelineno-16-52" name="__codelineno-16-52" href="#__codelineno-16-52"></a> SG_ RADC_ACCTarg Obj5_d BPower : 48|16@1+ (1,0) [0|65535] &quot;&quot; Front Camera 
-</span><span id="__span-16-53"><a id="__codelineno-16-53" name="__codelineno-16-53" href="#__codelineno-16-53"></a>BO_ 1281 Tesla Radar Alert Matrix: 8 Radar
-</span><span id="__span-16-54"><a id="__codelineno-16-54" name="__codelineno-16-54" href="#__codelineno-16-54"></a> SG_ RADC_a001_ecu Internal Perf : 0|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-55"><a id="__codelineno-16-55" name="__codelineno-16-55" href="#__codelineno-16-55"></a> SG_ RADC_a002_flash Performance : 1|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-56"><a id="__codelineno-16-56" name="__codelineno-16-56" href="#__codelineno-16-56"></a> SG_ RADC_a003_v Bat High : 2|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-57"><a id="__codelineno-16-57" name="__codelineno-16-57" href="#__codelineno-16-57"></a> SG_ RADC_a004_adjustment Not Done : 3|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-58"><a id="__codelineno-16-58" name="__codelineno-16-58" href="#__codelineno-16-58"></a> SG_ RADC_a005_adjustment Req : 4|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-59"><a id="__codelineno-16-59" name="__codelineno-16-59" href="#__codelineno-16-59"></a> SG_ RADC_a006_adjustment Not Ok : 5|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-60"><a id="__codelineno-16-60" name="__codelineno-16-60" href="#__codelineno-16-60"></a> SG_ RADC_a007_sensor Blinded : 6|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-61"><a id="__codelineno-16-61" name="__codelineno-16-61" href="#__codelineno-16-61"></a> SG_ RADC_a008_plant Mode Active : 7|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-62"><a id="__codelineno-16-62" name="__codelineno-16-62" href="#__codelineno-16-62"></a> SG_ RADC_a009_config Mismatch : 8|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-63"><a id="__codelineno-16-63" name="__codelineno-16-63" href="#__codelineno-16-63"></a> SG_ RADC_a010_can Bus Off : 9|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-64"><a id="__codelineno-16-64" name="__codelineno-16-64" href="#__codelineno-16-64"></a> SG_ RADC_a011_bdy MIA : 10|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-65"><a id="__codelineno-16-65" name="__codelineno-16-65" href="#__codelineno-16-65"></a> SG_ RADC_a012_esp MIA : 11|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-66"><a id="__codelineno-16-66" name="__codelineno-16-66" href="#__codelineno-16-66"></a> SG_ RADC_a013_gtw MIA : 12|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-67"><a id="__codelineno-16-67" name="__codelineno-16-67" href="#__codelineno-16-67"></a> SG_ RADC_a014_sccm MIA : 13|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-68"><a id="__codelineno-16-68" name="__codelineno-16-68" href="#__codelineno-16-68"></a> SG_ RADC_a015_adas MIA : 14|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-69"><a id="__codelineno-16-69" name="__codelineno-16-69" href="#__codelineno-16-69"></a> SG_ RADC_a016_bdy Invalid Count : 15|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-70"><a id="__codelineno-16-70" name="__codelineno-16-70" href="#__codelineno-16-70"></a> SG_ RADC_a017_adas Invalid Count : 16|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-71"><a id="__codelineno-16-71" name="__codelineno-16-71" href="#__codelineno-16-71"></a> SG_ RADC_a018_esp Invalid Count : 17|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-72"><a id="__codelineno-16-72" name="__codelineno-16-72" href="#__codelineno-16-72"></a> SG_ RADC_a019_sccm Invalid Count : 18|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-73"><a id="__codelineno-16-73" name="__codelineno-16-73" href="#__codelineno-16-73"></a> SG_ RADC_a020_bdy Invalid Chk Sm : 19|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-74"><a id="__codelineno-16-74" name="__codelineno-16-74" href="#__codelineno-16-74"></a> SG_ RADC_a021_esp Invalid Chk Sm : 20|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-75"><a id="__codelineno-16-75" name="__codelineno-16-75" href="#__codelineno-16-75"></a> SG_ RADC_a022_sccm Invalid Chk Sm : 21|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-76"><a id="__codelineno-16-76" name="__codelineno-16-76" href="#__codelineno-16-76"></a> SG_ RADC_a023_sccm Invalid Chk Sm : 22|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-77"><a id="__codelineno-16-77" name="__codelineno-16-77" href="#__codelineno-16-77"></a> SG_ RADC_a024_abs Validity : 23|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-78"><a id="__codelineno-16-78" name="__codelineno-16-78" href="#__codelineno-16-78"></a> SG_ RADC_a025_amb TValidity : 24|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-79"><a id="__codelineno-16-79" name="__codelineno-16-79" href="#__codelineno-16-79"></a> SG_ RADC_a026_brake Validity : 25|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-80"><a id="__codelineno-16-80" name="__codelineno-16-80" href="#__codelineno-16-80"></a> SG_ RADC_a027_Cntry Cd Validity : 26|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-81"><a id="__codelineno-16-81" name="__codelineno-16-81" href="#__codelineno-16-81"></a> SG_ RADC_a028_esp Validity : 27|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-82"><a id="__codelineno-16-82" name="__codelineno-16-82" href="#__codelineno-16-82"></a> SG_ RADC_a029_long Acc Off Validity : 28|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-83"><a id="__codelineno-16-83" name="__codelineno-16-83" href="#__codelineno-16-83"></a> SG_ RADC_a030_long Acc Validity : 29|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-84"><a id="__codelineno-16-84" name="__codelineno-16-84" href="#__codelineno-16-84"></a> SG_ RADC_a031_odo Validity : 30|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-85"><a id="__codelineno-16-85" name="__codelineno-16-85" href="#__codelineno-16-85"></a> SG_ RADC_a032_gear Validity : 31|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-86"><a id="__codelineno-16-86" name="__codelineno-16-86" href="#__codelineno-16-86"></a> SG_ RADC_a033_steer Ang Validity : 32|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-87"><a id="__codelineno-16-87" name="__codelineno-16-87" href="#__codelineno-16-87"></a> SG_ RADC_a034_steer Ang Spd Validity : 33|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-88"><a id="__codelineno-16-88" name="__codelineno-16-88" href="#__codelineno-16-88"></a> SG_ RADC_a035_indctr Validity : 34|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-89"><a id="__codelineno-16-89" name="__codelineno-16-89" href="#__codelineno-16-89"></a> SG_ RADC_a036_veh Stand Still Validity : 35|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-90"><a id="__codelineno-16-90" name="__codelineno-16-90" href="#__codelineno-16-90"></a> SG_ RADC_a037_vin Validity : 36|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-91"><a id="__codelineno-16-91" name="__codelineno-16-91" href="#__codelineno-16-91"></a> SG_ RADC_a038_whl Rot Validity : 37|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-92"><a id="__codelineno-16-92" name="__codelineno-16-92" href="#__codelineno-16-92"></a> SG_ RADC_a039_whl Spd Validity : 38|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-93"><a id="__codelineno-16-93" name="__codelineno-16-93" href="#__codelineno-16-93"></a> SG_ RADC_a040_whl Stand Still Validity : 39|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-94"><a id="__codelineno-16-94" name="__codelineno-16-94" href="#__codelineno-16-94"></a> SG_ RADC_a041_wiper Validity : 40|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-95"><a id="__codelineno-16-95" name="__codelineno-16-95" href="#__codelineno-16-95"></a> SG_ RADC_a042_xwd Validity : 41|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-96"><a id="__codelineno-16-96" name="__codelineno-16-96" href="#__codelineno-16-96"></a> SG_ RADC_a043_yaw Off Validity : 42|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-97"><a id="__codelineno-16-97" name="__codelineno-16-97" href="#__codelineno-16-97"></a> SG_ RADC_a044_yaw Validity : 43|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-98"><a id="__codelineno-16-98" name="__codelineno-16-98" href="#__codelineno-16-98"></a> SG_ RADC_a045_bsd Sanity : 44|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-99"><a id="__codelineno-16-99" name="__codelineno-16-99" href="#__codelineno-16-99"></a> SG_ RADC_a046_rcta Sanity : 45|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-100"><a id="__codelineno-16-100" name="__codelineno-16-100" href="#__codelineno-16-100"></a> SG_ RADC_a047_lcw Sanity : 46|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-101"><a id="__codelineno-16-101" name="__codelineno-16-101" href="#__codelineno-16-101"></a> SG_ RADC_a048_steer Ang Off Sanity : 47|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-102"><a id="__codelineno-16-102" name="__codelineno-16-102" href="#__codelineno-16-102"></a> SG_ RADC_a049_tire Size Sanity : 48|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-103"><a id="__codelineno-16-103" name="__codelineno-16-103" href="#__codelineno-16-103"></a> SG_ RADC_a050_velocity Sanity : 49|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-104"><a id="__codelineno-16-104" name="__codelineno-16-104" href="#__codelineno-16-104"></a> SG_ RADC_a051_yaw Sanity : 50|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-105"><a id="__codelineno-16-105" name="__codelineno-16-105" href="#__codelineno-16-105"></a> SG_ RADC_a052_radome Htr Inop : 51|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-106"><a id="__codelineno-16-106" name="__codelineno-16-106" href="#__codelineno-16-106"></a> SG_ RADC_a053_espmod Validity : 52|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-107"><a id="__codelineno-16-107" name="__codelineno-16-107" href="#__codelineno-16-107"></a> SG_ RADC_a054_gtwmod Validity : 53|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-108"><a id="__codelineno-16-108" name="__codelineno-16-108" href="#__codelineno-16-108"></a> SG_ RADC_a055_stwmod Validity : 54|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-109"><a id="__codelineno-16-109" name="__codelineno-16-109" href="#__codelineno-16-109"></a> SG_ RADC_a056_bcmod Validity : 55|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-110"><a id="__codelineno-16-110" name="__codelineno-16-110" href="#__codelineno-16-110"></a> SG_ RADC_a057_dimod Validity : 56|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-111"><a id="__codelineno-16-111" name="__codelineno-16-111" href="#__codelineno-16-111"></a> SG_ RADC_a058_opmod Validity : 57|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-112"><a id="__codelineno-16-112" name="__codelineno-16-112" href="#__codelineno-16-112"></a> SG_ RADC_a059_drmi Invalid Chk Sm : 58|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-113"><a id="__codelineno-16-113" name="__codelineno-16-113" href="#__codelineno-16-113"></a> SG_ RADC_a060_drmi Invalid Count : 59|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-114"><a id="__codelineno-16-114" name="__codelineno-16-114" href="#__codelineno-16-114"></a> SG_ RADC_a061_rad Position Mismatch : 60|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-115"><a id="__codelineno-16-115" name="__codelineno-16-115" href="#__codelineno-16-115"></a> SG_ RADC_a062_str Rack Mismatch : 61|1@1+ (1,0) [0|1] &quot;&quot; Front Camera
-</span><span id="__span-16-116"><a id="__codelineno-16-116" name="__codelineno-16-116" href="#__codelineno-16-116"></a> SG_ unused62 : 62|2@1+ (1,0) [0|3] &quot;&quot; Front Camera
+</span><span id="__span-16-32"><a id="__codelineno-16-32" name="__codelineno-16-32" href="#__codelineno-16-32"></a>BU_: FrontCamera Radar
+</span><span id="__span-16-33"><a id="__codelineno-16-33" name="__codelineno-16-33" href="#__codelineno-16-33"></a>BO_ 769 TeslaRadarSguInfo: 8 Radar
+</span><span id="__span-16-34"><a id="__codelineno-16-34" name="__codelineno-16-34" href="#__codelineno-16-34"></a> SG_ RADC_VerticalMisalignment : 0|8@1+ (1,0) [0|255] &quot;&quot; FrontCamera
+</span><span id="__span-16-35"><a id="__codelineno-16-35" name="__codelineno-16-35" href="#__codelineno-16-35"></a> SG_ RADC_SCUTemperature : 8|8@1+ (1,-128) [-128|127] &quot;&quot; FrontCamera
+</span><span id="__span-16-36"><a id="__codelineno-16-36" name="__codelineno-16-36" href="#__codelineno-16-36"></a> SG_ RADC_VMA_Plaus : 16|8@1+ (1,0) [0|255] &quot;&quot; FrontCamera
+</span><span id="__span-16-37"><a id="__codelineno-16-37" name="__codelineno-16-37" href="#__codelineno-16-37"></a> SG_ RADC_SGU_ITC : 24|8@1+ (1,0) [0|255] &quot;&quot; FrontCamera
+</span><span id="__span-16-38"><a id="__codelineno-16-38" name="__codelineno-16-38" href="#__codelineno-16-38"></a> SG_ RADC_HorizontMisalignment : 32|12@1+ (1,0) [0|4096] &quot;&quot; FrontCamera
+</span><span id="__span-16-39"><a id="__codelineno-16-39" name="__codelineno-16-39" href="#__codelineno-16-39"></a> SG_ RADC_SensorDirty : 44|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-40"><a id="__codelineno-16-40" name="__codelineno-16-40" href="#__codelineno-16-40"></a> SG_ RADC_HWFail : 45|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-41"><a id="__codelineno-16-41" name="__codelineno-16-41" href="#__codelineno-16-41"></a> SG_ RADC_SGUFail : 46|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-42"><a id="__codelineno-16-42" name="__codelineno-16-42" href="#__codelineno-16-42"></a> SG_ RADC_SGUInfoConsistBit : 47|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-43"><a id="__codelineno-16-43" name="__codelineno-16-43" href="#__codelineno-16-43"></a>BO_ 770 TeslaRadarTguInfo: 8 Radar
+</span><span id="__span-16-44"><a id="__codelineno-16-44" name="__codelineno-16-44" href="#__codelineno-16-44"></a> SG_ RADC_ACCTargObj1_sguIndex : 0|6@1+ (1,0) [0|63] &quot;&quot; FrontCamera
+</span><span id="__span-16-45"><a id="__codelineno-16-45" name="__codelineno-16-45" href="#__codelineno-16-45"></a> SG_ RADC_ACCTargObj2_sguIndex : 6|6@1+ (1,0) [0|63] &quot;&quot; FrontCamera
+</span><span id="__span-16-46"><a id="__codelineno-16-46" name="__codelineno-16-46" href="#__codelineno-16-46"></a> SG_ RADC_ACCTargObj3_sguIndex : 12|6@1+ (1,0) [0|63] &quot;&quot; FrontCamera
+</span><span id="__span-16-47"><a id="__codelineno-16-47" name="__codelineno-16-47" href="#__codelineno-16-47"></a> SG_ RADC_ACCTargObj4_sguIndex : 18|6@1+ (1,0) [0|63] &quot;&quot; FrontCamera
+</span><span id="__span-16-48"><a id="__codelineno-16-48" name="__codelineno-16-48" href="#__codelineno-16-48"></a> SG_ RADC_ACCTargObj5_sguIndex : 24|6@1+ (1,0) [0|63] &quot;&quot; FrontCamera
+</span><span id="__span-16-49"><a id="__codelineno-16-49" name="__codelineno-16-49" href="#__codelineno-16-49"></a> SG_ unused30 : 30|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-50"><a id="__codelineno-16-50" name="__codelineno-16-50" href="#__codelineno-16-50"></a> SG_ RADC_TGUInfoConsistBit : 31|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-51"><a id="__codelineno-16-51" name="__codelineno-16-51" href="#__codelineno-16-51"></a> SG_ RADC_ACCTargObj1_dBPower : 32|16@1+ (1,0) [0|65535] &quot;&quot; FrontCamera
+</span><span id="__span-16-52"><a id="__codelineno-16-52" name="__codelineno-16-52" href="#__codelineno-16-52"></a> SG_ RADC_ACCTargObj5_dBPower : 48|16@1+ (1,0) [0|65535] &quot;&quot; FrontCamera 
+</span><span id="__span-16-53"><a id="__codelineno-16-53" name="__codelineno-16-53" href="#__codelineno-16-53"></a>BO_ 1281 TeslaRadarAlertMatrix: 8 Radar
+</span><span id="__span-16-54"><a id="__codelineno-16-54" name="__codelineno-16-54" href="#__codelineno-16-54"></a> SG_ RADC_a001_ecuInternalPerf : 0|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-55"><a id="__codelineno-16-55" name="__codelineno-16-55" href="#__codelineno-16-55"></a> SG_ RADC_a002_flashPerformance : 1|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-56"><a id="__codelineno-16-56" name="__codelineno-16-56" href="#__codelineno-16-56"></a> SG_ RADC_a003_vBatHigh : 2|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-57"><a id="__codelineno-16-57" name="__codelineno-16-57" href="#__codelineno-16-57"></a> SG_ RADC_a004_adjustmentNotDone : 3|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-58"><a id="__codelineno-16-58" name="__codelineno-16-58" href="#__codelineno-16-58"></a> SG_ RADC_a005_adjustmentReq : 4|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-59"><a id="__codelineno-16-59" name="__codelineno-16-59" href="#__codelineno-16-59"></a> SG_ RADC_a006_adjustmentNotOk : 5|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-60"><a id="__codelineno-16-60" name="__codelineno-16-60" href="#__codelineno-16-60"></a> SG_ RADC_a007_sensorBlinded : 6|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-61"><a id="__codelineno-16-61" name="__codelineno-16-61" href="#__codelineno-16-61"></a> SG_ RADC_a008_plantModeActive : 7|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-62"><a id="__codelineno-16-62" name="__codelineno-16-62" href="#__codelineno-16-62"></a> SG_ RADC_a009_configMismatch : 8|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-63"><a id="__codelineno-16-63" name="__codelineno-16-63" href="#__codelineno-16-63"></a> SG_ RADC_a010_canBusOff : 9|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-64"><a id="__codelineno-16-64" name="__codelineno-16-64" href="#__codelineno-16-64"></a> SG_ RADC_a011_bdyMIA : 10|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-65"><a id="__codelineno-16-65" name="__codelineno-16-65" href="#__codelineno-16-65"></a> SG_ RADC_a012_espMIA : 11|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-66"><a id="__codelineno-16-66" name="__codelineno-16-66" href="#__codelineno-16-66"></a> SG_ RADC_a013_gtwMIA : 12|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-67"><a id="__codelineno-16-67" name="__codelineno-16-67" href="#__codelineno-16-67"></a> SG_ RADC_a014_sccmMIA : 13|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-68"><a id="__codelineno-16-68" name="__codelineno-16-68" href="#__codelineno-16-68"></a> SG_ RADC_a015_adasMIA : 14|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-69"><a id="__codelineno-16-69" name="__codelineno-16-69" href="#__codelineno-16-69"></a> SG_ RADC_a016_bdyInvalidCount : 15|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-70"><a id="__codelineno-16-70" name="__codelineno-16-70" href="#__codelineno-16-70"></a> SG_ RADC_a017_adasInvalidCount : 16|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-71"><a id="__codelineno-16-71" name="__codelineno-16-71" href="#__codelineno-16-71"></a> SG_ RADC_a018_espInvalidCount : 17|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-72"><a id="__codelineno-16-72" name="__codelineno-16-72" href="#__codelineno-16-72"></a> SG_ RADC_a019_sccmInvalidCount : 18|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-73"><a id="__codelineno-16-73" name="__codelineno-16-73" href="#__codelineno-16-73"></a> SG_ RADC_a020_bdyInvalidChkSm : 19|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-74"><a id="__codelineno-16-74" name="__codelineno-16-74" href="#__codelineno-16-74"></a> SG_ RADC_a021_espInvalidChkSm : 20|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-75"><a id="__codelineno-16-75" name="__codelineno-16-75" href="#__codelineno-16-75"></a> SG_ RADC_a022_sccmInvalidChkSm : 21|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-76"><a id="__codelineno-16-76" name="__codelineno-16-76" href="#__codelineno-16-76"></a> SG_ RADC_a023_sccmInvalidChkSm : 22|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-77"><a id="__codelineno-16-77" name="__codelineno-16-77" href="#__codelineno-16-77"></a> SG_ RADC_a024_absValidity : 23|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-78"><a id="__codelineno-16-78" name="__codelineno-16-78" href="#__codelineno-16-78"></a> SG_ RADC_a025_ambTValidity : 24|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-79"><a id="__codelineno-16-79" name="__codelineno-16-79" href="#__codelineno-16-79"></a> SG_ RADC_a026_brakeValidity : 25|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-80"><a id="__codelineno-16-80" name="__codelineno-16-80" href="#__codelineno-16-80"></a> SG_ RADC_a027_CntryCdValidity : 26|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-81"><a id="__codelineno-16-81" name="__codelineno-16-81" href="#__codelineno-16-81"></a> SG_ RADC_a028_espValidity : 27|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-82"><a id="__codelineno-16-82" name="__codelineno-16-82" href="#__codelineno-16-82"></a> SG_ RADC_a029_longAccOffValidity : 28|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-83"><a id="__codelineno-16-83" name="__codelineno-16-83" href="#__codelineno-16-83"></a> SG_ RADC_a030_longAccValidity : 29|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-84"><a id="__codelineno-16-84" name="__codelineno-16-84" href="#__codelineno-16-84"></a> SG_ RADC_a031_odoValidity : 30|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-85"><a id="__codelineno-16-85" name="__codelineno-16-85" href="#__codelineno-16-85"></a> SG_ RADC_a032_gearValidity : 31|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-86"><a id="__codelineno-16-86" name="__codelineno-16-86" href="#__codelineno-16-86"></a> SG_ RADC_a033_steerAngValidity : 32|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-87"><a id="__codelineno-16-87" name="__codelineno-16-87" href="#__codelineno-16-87"></a> SG_ RADC_a034_steerAngSpdValidity : 33|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-88"><a id="__codelineno-16-88" name="__codelineno-16-88" href="#__codelineno-16-88"></a> SG_ RADC_a035_indctrValidity : 34|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-89"><a id="__codelineno-16-89" name="__codelineno-16-89" href="#__codelineno-16-89"></a> SG_ RADC_a036_vehStandStillValidity : 35|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-90"><a id="__codelineno-16-90" name="__codelineno-16-90" href="#__codelineno-16-90"></a> SG_ RADC_a037_vinValidity : 36|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-91"><a id="__codelineno-16-91" name="__codelineno-16-91" href="#__codelineno-16-91"></a> SG_ RADC_a038_whlRotValidity : 37|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-92"><a id="__codelineno-16-92" name="__codelineno-16-92" href="#__codelineno-16-92"></a> SG_ RADC_a039_whlSpdValidity : 38|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-93"><a id="__codelineno-16-93" name="__codelineno-16-93" href="#__codelineno-16-93"></a> SG_ RADC_a040_whlStandStillValidity : 39|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-94"><a id="__codelineno-16-94" name="__codelineno-16-94" href="#__codelineno-16-94"></a> SG_ RADC_a041_wiperValidity : 40|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-95"><a id="__codelineno-16-95" name="__codelineno-16-95" href="#__codelineno-16-95"></a> SG_ RADC_a042_xwdValidity : 41|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-96"><a id="__codelineno-16-96" name="__codelineno-16-96" href="#__codelineno-16-96"></a> SG_ RADC_a043_yawOffValidity : 42|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-97"><a id="__codelineno-16-97" name="__codelineno-16-97" href="#__codelineno-16-97"></a> SG_ RADC_a044_yawValidity : 43|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-98"><a id="__codelineno-16-98" name="__codelineno-16-98" href="#__codelineno-16-98"></a> SG_ RADC_a045_bsdSanity : 44|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-99"><a id="__codelineno-16-99" name="__codelineno-16-99" href="#__codelineno-16-99"></a> SG_ RADC_a046_rctaSanity : 45|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-100"><a id="__codelineno-16-100" name="__codelineno-16-100" href="#__codelineno-16-100"></a> SG_ RADC_a047_lcwSanity : 46|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-101"><a id="__codelineno-16-101" name="__codelineno-16-101" href="#__codelineno-16-101"></a> SG_ RADC_a048_steerAngOffSanity : 47|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-102"><a id="__codelineno-16-102" name="__codelineno-16-102" href="#__codelineno-16-102"></a> SG_ RADC_a049_tireSizeSanity : 48|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-103"><a id="__codelineno-16-103" name="__codelineno-16-103" href="#__codelineno-16-103"></a> SG_ RADC_a050_velocitySanity : 49|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-104"><a id="__codelineno-16-104" name="__codelineno-16-104" href="#__codelineno-16-104"></a> SG_ RADC_a051_yawSanity : 50|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-105"><a id="__codelineno-16-105" name="__codelineno-16-105" href="#__codelineno-16-105"></a> SG_ RADC_a052_radomeHtrInop : 51|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-106"><a id="__codelineno-16-106" name="__codelineno-16-106" href="#__codelineno-16-106"></a> SG_ RADC_a053_espmodValidity : 52|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-107"><a id="__codelineno-16-107" name="__codelineno-16-107" href="#__codelineno-16-107"></a> SG_ RADC_a054_gtwmodValidity : 53|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-108"><a id="__codelineno-16-108" name="__codelineno-16-108" href="#__codelineno-16-108"></a> SG_ RADC_a055_stwmodValidity : 54|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-109"><a id="__codelineno-16-109" name="__codelineno-16-109" href="#__codelineno-16-109"></a> SG_ RADC_a056_bcmodValidity : 55|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-110"><a id="__codelineno-16-110" name="__codelineno-16-110" href="#__codelineno-16-110"></a> SG_ RADC_a057_dimodValidity : 56|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-111"><a id="__codelineno-16-111" name="__codelineno-16-111" href="#__codelineno-16-111"></a> SG_ RADC_a058_opmodValidity : 57|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-112"><a id="__codelineno-16-112" name="__codelineno-16-112" href="#__codelineno-16-112"></a> SG_ RADC_a059_drmiInvalidChkSm : 58|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-113"><a id="__codelineno-16-113" name="__codelineno-16-113" href="#__codelineno-16-113"></a> SG_ RADC_a060_drmiInvalidCount : 59|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-114"><a id="__codelineno-16-114" name="__codelineno-16-114" href="#__codelineno-16-114"></a> SG_ RADC_a061_radPositionMismatch : 60|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-115"><a id="__codelineno-16-115" name="__codelineno-16-115" href="#__codelineno-16-115"></a> SG_ RADC_a062_strRackMismatch : 61|1@1+ (1,0) [0|1] &quot;&quot; FrontCamera
+</span><span id="__span-16-116"><a id="__codelineno-16-116" name="__codelineno-16-116" href="#__codelineno-16-116"></a> SG_ unused62 : 62|2@1+ (1,0) [0|3] &quot;&quot; FrontCamera
 </span></code></pre></div>
 
     </div>
@@ -1313,22 +1293,14 @@ radar_position = 0</p>
             
 
             
-            <div class="flex flex-col gap-4">
-                <div class="text-muted-foreground text-sm font-medium">Menu</div>
-                <div class="flex flex-col gap-3">
-                    
-                    <a class="text-2xl font-medium" href="..">
-                        
-                        Home
-                        
-                    </a>
-                    
-                </div>
-            </div>
-            
 
             
             <div class="flex flex-col gap-8">
+                
+                <div class="flex flex-col gap-4">
+                    <div class="text-muted-foreground text-sm font-medium">Home</div>
+                    
+                </div>
                 
                 <div class="flex flex-col gap-4">
                     <div class="text-muted-foreground text-sm font-medium">Getting Started</div>

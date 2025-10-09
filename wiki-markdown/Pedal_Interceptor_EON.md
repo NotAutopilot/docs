@@ -50,6 +50,8 @@ Use the diagram to connect the female WPT-929 pedal connector to the IN side of 
 
 Connecting the CAN BUS from the Pedal to the[Giraffe](Tesla_Giraffe.md)depends on your setup, as explained in the parts list above.
 
+![](images/Pedal_CAN_connection.png)
+
 Via RJ45: Plug in the ethernet cable into the RJ45 port of the Pedal and the other end into the RJ45 port of the Giraffe that is labelled with "comma".Via JST2: Solder positions 3 and 6 of the fake-ethernet port of the Pedal board to the two JST2 connectors (male and female) with enough length to reach EPAS cable/Giraffe. We need both because you will plug the female one in the[Giraffe's](Tesla_Giraffe.md)EPAS connector and then the EPAS Harness into the male JST2. Red should be CAN+ and black should be CAN- (that's the convention also used in the image showing the CAN wire soldered to pins 3 and 6 of the fake ethernet port on the Pedal board).
 ### Installing the Tesla Pedal for old EON setup with Giraffe or Harness
 

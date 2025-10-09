@@ -1,3 +1,3 @@
-# Media Wiki:Group-contributors
+# MediaWiki:Group-contributors
 
 Contributors

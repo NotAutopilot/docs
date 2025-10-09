@@ -275,34 +275,9 @@
     
 
     
-    <div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2">
-        <div data-slot="sidebar-group-content" data-sidebar="group-content" class="w-full text-sm">
-            <ul data-slot="sidebar-menu" data-sidebar="menu" class="flex w-full min-w-0 flex-col gap-0.5">
-                
-                
-                <li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative">
-    <a data-slot="sidebar-menu-button" data-active="false" data-sidebar="menu-button"
-        data-size="default" href="/"
-        class="hover:bg-sidebar-accent hover:text-sidebar-accent-foreground peer/menu-button flex items-center gap-2 rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 data-[active=true]:bg-accent data-[active=true]:border-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md">
 
-        
-        Home
-        
-
-        
-
-        
-
-        
-    </a>
-</li>
-                
-                
-            </ul>
-        </div>
-    </div>
     
-
+    
     
     
     <div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2">
@@ -892,12 +867,13 @@
 
     </div>
     <div class="typography w-full flex-1 *:data-[slot=alert]:first:mt-0">
-        <p>pre AP Tesla Model S OBD2 port with pins 1 and 9 populatedpre AP Tesla Model S OBD2 port without pins 1 and 9 populated</p>
+        <p><img alt="preAP Tesla Model S OBD2 port with pins 1 and 9 populated" src="../images/OBD2_with_pins_1_and_9_populated.png" /></p>
+<p><img alt="preAP Tesla Model S OBD2 port without pins 1 and 9 populated" src="../images/OBD2_port_without_pins_1_and_9_populated.png" /></p>
 <h2 id="tinkla-obd-c-adapter-and-your-cars-obd2-port">Tinkla OBD-C Adapter and your car's OBD2 port</h2>
-<p>Tinkla OBD-C Adapter connects to your pre AP Tesla Model S' OBD2 port in order to power the Comma devkit and also talk to your car's Chassis CAN bus. Depending on the year/month when your car was manufactured, your OBD2 port might or might not have the pins 1 and 9 (which have the Chassis CAN bus) populated. Do not despair, we have a solution for that.</p>
+<p>Tinkla OBD-C Adapter connects to your preAP Tesla Model S' OBD2 port in order to power the Comma devkit and also talk to your car's Chassis CAN bus. Depending on the year/month when your car was manufactured, your OBD2 port might or might not have the pins 1 and 9 (which have the Chassis CAN bus) populated. Do not despair, we have a solution for that.</p>
 <p>In case you need to connect more than one device to the OBD2 port, a <a href="https://www.amazon.com/dp/B07Z945XG4/ref=cm_sw_r_cp_api_i_7SCGR1QFWSNXARNY73J3?_encoding=UTF8&amp;psc=1">splitter like this one</a> could make your life easier.</p>
 <h2 id="checking-your-cars-obd2-port">Checking your car's OBD2 port</h2>
-<p>Locate your pre AP Tesla Model S OBD2 port in the driver footwell. It is under the ceiling of the footwell, towards the outside of the car, close to the door. Will look like one of the two pictures above. One of those pictures show the pins 1 and 9 populated, one shows them not populated. Take a picture of the OBD2 connector and compare to the images. Which one do you have?</p>
+<p>Locate your preAP Tesla Model S OBD2 port in the driver footwell. It is under the ceiling of the footwell, towards the outside of the car, close to the door. Will look like one of the two pictures above. One of those pictures show the pins 1 and 9 populated, one shows them not populated. Take a picture of the OBD2 connector and compare to the images. Which one do you have?</p>
 <h2 id="i-have-pins-1-and-9-populated">I have pins 1 and 9 populated</h2>
 <p>OK, then you are ready to just plug the Tinkla OBD-C adapter straight into the OBD2 port and install your Comma devkit and Tesla Unity software.</p>
 <h2 id="i-do-not-have-pins-1-and-9-populated">I do not have pins 1 and 9 populated</h2>
@@ -908,7 +884,7 @@
 <li>adding the pins 1 (red) and 9 (black) to the existing OBD2 connector</li>
 <li>connecting the other end of the harness to the diagnostic port</li>
 </ol>
-<p>This <a href="https://www.youtube.com/watch?v=Ui Qved6gt2U">video</a> for a different product shows you what you have to do in order to remove the driver side foot-well cover. Take your time and watch the video first. The process is not complicated if you just follow it step by step.</p>
+<p>This <a href="https://www.youtube.com/watch?v=UiQved6gt2U">video</a> for a different product shows you what you have to do in order to remove the driver side foot-well cover. Take your time and watch the video first. The process is not complicated if you just follow it step by step.</p>
 <p>Once you remove the foot-well cover, take your time and remove the two screws that hold the OBD2 connector in place. They are fairly painful to reach and takes time and a lot of weird yoga like positions to remove. Once the OBD2 connector is free, use a small flat screwdriver to take out the two blue tabs, insert the pins in the OBD2 connector then place the two blue tabs back. Now mount back the OBD2 connector in it's original location (few more yoga positions and you're done).</p>
 <p>Now connect the other end of the harness to the Tesla diagnostic port. The port is located under the center console behind the little shelf. You can either pull down on the shelf or even access it sometimes the side (if you followed the steps in the video above).</p>
 <p>Once both ends are connected try the whole system first before following the steps in reverse order to put the driver foot-well back together.</p>
@@ -957,22 +933,14 @@
             
 
             
-            <div class="flex flex-col gap-4">
-                <div class="text-muted-foreground text-sm font-medium">Menu</div>
-                <div class="flex flex-col gap-3">
-                    
-                    <a class="text-2xl font-medium" href="..">
-                        
-                        Home
-                        
-                    </a>
-                    
-                </div>
-            </div>
-            
 
             
             <div class="flex flex-col gap-8">
+                
+                <div class="flex flex-col gap-4">
+                    <div class="text-muted-foreground text-sm font-medium">Home</div>
+                    
+                </div>
                 
                 <div class="flex flex-col gap-4">
                     <div class="text-muted-foreground text-sm font-medium">Getting Started</div>

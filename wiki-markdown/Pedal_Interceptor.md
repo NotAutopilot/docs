@@ -61,6 +61,8 @@ Use the diagram to connect the female WPT-929 pedal connector to the IN side of 
 
 ### Connecting the Pedal for Tinkla Unity
 
+![](images/Tinkla_OBD-C_Adapter_RJ45.jpg)
+
 Connecting the CAN BUS from the Pedal to theTinkla OBD-C Adapteris done via the RJ45 port using a standard ethernet cable.
 
 Plug in the ethernet cable into the RJ45 port of the Pedal and the other end into the RJ45 port of the Tinkla OBD-C Adapter.
@@ -96,7 +98,9 @@ With the introduction of Tesla Unity code, flashing the Tesla Pedal with the lat
 
 If you built your Pedal yourself or it was shipped without any firmware, it will boot in DFU mode. To know which mode you're in look at the LED on the Pedal board: no light = DFU mode, slow blink = normal flash mode, fast blink = normal operations.
 
-Entering Pedal Interceptor DFU Mode (image by @jfrux)To enter DFU mode, you will need a[USB-A to USB-A cable](https://www.amazon.com/dp/B09FDJFJ6Z/ref=cm_sw_em_r_mt_dp_QFSM3ZZ87K5WTECKYD12?_encoding=UTF8&psc=1)and to remove the Pedal Interceptor from your car. Connect one end of the USB cable to the pedal interceptor, then jump the small pin indicated in the attached image to one of the pins labeled 5V with a small wire. While holding that jump wire, connect the Pedal Interceptor to your computer via USB. This usually takes two people, one to do the jump and one to plug the USB into the laptop. Always have the USB plugged into the Pedal first, then laptop (it makes your life a lot easier). For how to put the pedal interceptor in the DFU mode, follow the instructions for[applying 5 Volt to a special point on the board](https://medium.com/@jfrux/flashing-the-comma-pedal-with-ubuntu-a83fb668f6e2#fcdf).
+![Entering Pedal Interceptor DFU Mode (image by @jfrux)](images/Entering_Pedal_Interceptor_DFU_Mode__image_by__jfrux_.png)
+
+To enter DFU mode, you will need a[USB-A to USB-A cable](https://www.amazon.com/dp/B09FDJFJ6Z/ref=cm_sw_em_r_mt_dp_QFSM3ZZ87K5WTECKYD12?_encoding=UTF8&psc=1)and to remove the Pedal Interceptor from your car. Connect one end of the USB cable to the pedal interceptor, then jump the small pin indicated in the attached image to one of the pins labeled 5V with a small wire. While holding that jump wire, connect the Pedal Interceptor to your computer via USB. This usually takes two people, one to do the jump and one to plug the USB into the laptop. Always have the USB plugged into the Pedal first, then laptop (it makes your life a lot easier). For how to put the pedal interceptor in the DFU mode, follow the instructions for[applying 5 Volt to a special point on the board](https://medium.com/@jfrux/flashing-the-comma-pedal-with-ubuntu-a83fb668f6e2#fcdf).
 
 While in DFU mode, and connected to your computer running MacOS or Linux, you can flash your pedal using the same Unity code from your computer.
 

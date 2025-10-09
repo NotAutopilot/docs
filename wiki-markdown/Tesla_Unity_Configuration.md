@@ -19,8 +19,12 @@
 - There is no need to enter the units of measure. Any text other than numbers is ignored and the units of measure are added automatically.
 - There is one field (**Speed Limit Offset**) which can be either in your car's units of measure (km/h or MPH) OR can represent a percentage of the speed limit. The way this field is interpreted depends on the value of the**Use relative offset**toggle.
 
-- Editing numerical values in Tesla Unity settings page (1/2)
-- Editing numerical values in Tesla Unity settings page (2/2)
+- ![](images/Editing_numerical_values_1.png)
+
+Editing numerical values in Tesla Unity settings page (1/2)
+- ![](images/Editing_numerical_values_2.png)
+
+Editing numerical values in Tesla Unity settings page (2/2)
 
 ## Tinkla
 
@@ -44,8 +48,12 @@ These settings apply to all models of Tesla. They control software that was crea
 - **Tinkla Development Unit**(toggle): For development purpose only. Please leave this toggle OFF.
 - **Flash Panda**(button): Panda is a separate internal component inside your Comma devkit. It has its own software and does a lot of the safety controls and checks between your car and the Comma devkit. You can think of it as the CAN Police. Every time you update your Comma devkit software you will also have to flash the new code on the Panda. This button starts the process to[flash your Panda](Comma_devkit.md).
 
-- Tinkla specific settings for the Tesla Unity branch of OpenPilot (1/2)
-- Tinkla specific settings for the Tesla Unity branch of OpenPilot (2/2)
+- ![](images/Tinkla_Settings_1.png)
+
+Tinkla specific settings for the Tesla Unity branch of OpenPilot (1/2)
+- ![](images/Tinkla_Settings_2.png)
+
+Tinkla specific settings for the Tesla Unity branch of OpenPilot (2/2)
 
 ## Tesla preAP
 
@@ -73,9 +81,15 @@ These settings apply only to preAP Tesla Model S. They control how OP software w
 - **Calibrate Pedal**(button): Use this feature to calibrate your pedal interceptor device in order to enable the right experience when using PCC. Pedal will not work (will not allow you to enable PCC) until it is calibrated.
 - **Radar VIN Learn**(button):Use this feature to configure your radar if you have installed a[Tesla Bosch Radar](Tesla_Bosch_Radar.md)in your car. It will program the VIN of your car as well as the location of the radar. Please make sure you configure all the toggles and settings for the radar (see radar options on this page) before attempting the Radar VIN Learn.
 
-- Tesla preAP specific settings for the Tesla Unity branch of OpenPilot (1/3)
-- Tesla preAP specific settings for the Tesla Unity branch of OpenPilot (2/3)
-- Tesla preAP specific settings for the Tesla Unity branch of OpenPilot (3/3)
+- ![](images/Tesla_preAP_Settings_1.png)
+
+Tesla preAP specific settings for the Tesla Unity branch of OpenPilot (1/3)
+- ![](images/Tesla_preAP_Settings_2.png)
+
+Tesla preAP specific settings for the Tesla Unity branch of OpenPilot (2/3)
+- ![](images/Tesla_preAP_Settings_3.png)
+
+Tesla preAP specific settings for the Tesla Unity branch of OpenPilot (3/3)
 
 ## Tesla Generic
 
@@ -96,4 +110,6 @@ These settings apply to all models of Tesla. They control how OP software works 
 - **Disable Main Sounds**(toggle): Disables the device from playing the Engagement and Disengagement sounds. To be used when the car will generate these sounds by itself. Prompt and Warning sounds will still be played.
 - **Disable Prompt Sounds**(toggle): Disables the device from playing the Prompt sounds. To be used when the car will generate these sounds by itself. Engagement/Disengagement and Warning sounds will still be played.
 
-- Tesla specific settings for the Tesla Unity branch of OpenPilot (1/1)
+- ![](images/Tesla_Settings_1.png)
+
+Tesla specific settings for the Tesla Unity branch of OpenPilot (1/1)

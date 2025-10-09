@@ -275,34 +275,9 @@
     
 
     
-    <div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2">
-        <div data-slot="sidebar-group-content" data-sidebar="group-content" class="w-full text-sm">
-            <ul data-slot="sidebar-menu" data-sidebar="menu" class="flex w-full min-w-0 flex-col gap-0.5">
-                
-                
-                <li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative">
-    <a data-slot="sidebar-menu-button" data-active="false" data-sidebar="menu-button"
-        data-size="default" href="/"
-        class="hover:bg-sidebar-accent hover:text-sidebar-accent-foreground peer/menu-button flex items-center gap-2 rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 data-[active=true]:bg-accent data-[active=true]:border-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md">
 
-        
-        Home
-        
-
-        
-
-        
-
-        
-    </a>
-</li>
-                
-                
-            </ul>
-        </div>
-    </div>
     
-
+    
     
     
     <div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2">
@@ -892,17 +867,17 @@
 
     </div>
     <div class="typography w-full flex-1 *:data-[slot=alert]:first:mt-0">
-        <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>The original EON is not supported in the latest releases of software from Open Pilot. The Tinkla Unity software will not run on the original EON. You can still find some old versions of Open Pilot for Tesla (v0.6.6 and v0.7.4) but you will not be able to take advantage of the newer features. Also the EON requires the EPAS harness to work on pre AP Tesla Model S.
+        <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>The original EON is not supported in the latest releases of software from OpenPilot. The Tinkla Unity software will not run on the original EON. You can still find some old versions of OpenPilot for Tesla (v0.6.6 and v0.7.4) but you will not be able to take advantage of the newer features. Also the EON requires the EPAS harness to work on preAP Tesla Model S.
 </span></code></pre></div>
 <p>The EON is the name associated in the Comma.ai community to the device that sits in your windshield and does all the calculations for LKA and ACC.</p>
-<p>Comma.ai EON Dev Kit</p>
-<h2 id="eon-dev-kit-or-fr-eon">EON Dev Kit (or Fr EON)</h2>
-<p>The EON is based on the <a href="https://www.qualcomm.com/products/snapdragon-821-mobile-platform?cmpid=snfyus19642&amp;gclid=EAIa IQob Ch MI-o G8if364QIVFY_ICh0DFAr XEAAYASAAEg KFL_D_Bw E&amp;gclsrc=aw.ds">Qualcom Snapdragon 821 mobile platform</a> . Phones like One Plus 3T or Le Eco Le Pro3 have been used to create the Fr EON (the free EON). You can find some instructions <a href="https://medium.com/@kirk_40929/getting-comma-openpilot-running-on-a-used-phone-c72d609cb4d3">here</a> .</p>
+<p><img alt="Comma.ai EON DevKit" src="../images/EON-devkit.jpg" /></p>
+<h2 id="eon-devkit-or-freon">EON DevKit (or FrEON)</h2>
+<p>The EON is based on the <a href="https://www.qualcomm.com/products/snapdragon-821-mobile-platform?cmpid=snfyus19642&amp;gclid=EAIaIQobChMI-oG8if364QIVFY_ICh0DFArXEAAYASAAEgKFL_D_BwE&amp;gclsrc=aw.ds">Qualcom Snapdragon 821 mobile platform</a>. Phones like OnePlus 3T or LeEco LePro3 have been used to create the FrEON (the free EON). You can find some instructions <a href="https://medium.com/@kirk_40929/getting-comma-openpilot-running-on-a-used-phone-c72d609cb4d3">here</a>.</p>
 <p>If you choose to buy your <a href="https://comma.ai/shop/products/eon-gold-dashcam-devkit">EON</a> already made, you can do so from Comma.ai store for $599 USD.</p>
-<p>Also, as we run more and more processing on the EON, it gets hotter and hotter. Some of us have opted to replace the original fan (which is also noisy when you're inside of a Tesla) with super quiet <a href="../Noctua_fan/">Noctua fans</a> . $15 from Amazon and soldering two wires and you're good to go! We might have to actually double that to two <a href="../Noctua_fan/">Noctua fans</a> in the near future.</p>
+<p>Also, as we run more and more processing on the EON, it gets hotter and hotter. Some of us have opted to replace the original fan (which is also noisy when you're inside of a Tesla) with super quiet <a href="../Noctua_fan/">Noctua fans</a>. $15 from Amazon and soldering two wires and you're good to go! We might have to actually double that to two <a href="../Noctua_fan/">Noctua fans</a> in the near future.</p>
 <p>Also, keeping the phone screen off helps keeping the temperature low. I know, in the beginning one wants to see those lines matching the lines in the video, but after a while you stop paying attention to the screen. And if you have the IC integration all the data is on IC anyway. So turn that screen off and you will see the temperature drop about 15F.</p>
 <p>Code for power management of battery (only charging when below 60% and stopping the charge when it reaches 80%) has helped keep the battery temperature lower and hence the CPU cooler. And this is a free upgrade, as the code is already in my repo.</p>
-<p>Here is a helpful <a href="../EON_bash_profile/">EON bash profile</a> (.bash_profile).</p>
+<p>Here is a helpful <a href="../EON_bash_profile/">EON bash profile</a>(.bash_profile).</p>
 <h2 id="installing-the-eon">Installing the EON</h2>
 <p>EON installation is pretty simple. Your main objective is to ensure the EON is level with the ground, and pointed as straight as you can get it. If you're uncomfortable "eyeballing it," you may want to use:</p>
 <ul>
@@ -917,9 +892,9 @@
 <li>Repeat the process on the other side of the windshield, ensuring you mark the same spots.</li>
 <li>measure the distance between one edge of the windshield and the other end, keeping the tape at each pair of marked points from before. use masking tape to mark the middle of the windshield. again, use the EDGE of the tape, not the center.</li>
 <li>Now use a long piece of masking tape to mark the center of the windshield from top to bottom. This (if you did everything correctly) will cover all 3 of your markers from before and provide a straight line. One edge of the masking tape is now the perfect middle of the windshield. Your mount will have to be aligned with that for a perfect position.</li>
-<li>Take a small piece of tape and mark the middle of the Go Pro mount. use a slightly longer piece than the go-pro (maybe &frac14;-&frac12;" more on each side) and ensure it is straight and down the middle of the Go Pro. If, when looking from inside of the car, your tape is to the RIGHT of the center, then put the tape on the LEFT side of the Go Pro. Reverse if the other way.</li>
+<li>Take a small piece of tape and mark the middle of the GoPro mount. use a slightly longer piece than the go-pro (maybe &frac14;-&frac12;" more on each side) and ensure it is straight and down the middle of the GoPro. If, when looking from inside of the car, your tape is to the RIGHT of the center, then put the tape on the LEFT side of the GoPro. Reverse if the other way.</li>
 <li>Using your EON without the mounting bracket, determine the location along the center of the windshield where you want it placed. Make sure the grove on the support is alongside the center of the windshield. use a small piece of masking tape to mark the upper part of the position where you want your EON to be.</li>
-<li>Remove the RED protective tape from the back of the 3M adhesive and be ready to place the Go Pro on the windshield. Align the masking tape we placed on the Go Pro mount on the inside with the masking tape we have on the outside of the windshield. They should not overlap at all AND you should not see light either. when you are confident on the position press hard on the mount.</li>
+<li>Remove the RED protective tape from the back of the 3M adhesive and be ready to place the GoPro on the windshield. Align the masking tape we placed on the GoPro mount on the inside with the masking tape we have on the outside of the windshield. They should not overlap at all AND you should not see light either. when you are confident on the position press hard on the mount.</li>
 <li>Remove all masking tape. You are done. You now have a perfectly centered, perfectly vertical EON.</li>
 </ol>
 <h3 id="hide-the-usbantenna-cable-above-the-headliner">Hide the USB/antenna cable above the Headliner</h3>
@@ -931,30 +906,30 @@
 <li>Move to the corner where the headliner and the removed airbag panel intersect, this corner is the easiest place to stick a pry tool... Using your pry tool lift the corner and move the pry-tool along the top of the windshield tucking the two wires into the headliner as you go. When you reach the mirror base, this can be lifted slightly route the GPS into the headliner crossing in between headliner and mirror base, while the EON USB cable can be routed down the front of the windshield to emerge at the bottom of the mirror base closer to the centre of the windshield.</li>
 <li>Once the cabling is tucked in the headliner, move back to the "A" pillar and tuck the cable into the pillar cover routing it down towards the door seal, then secure the pillar cover to conceal the wiring.</li>
 </ol>
-<h2 id="installing-open-pilot-for-tesla">Installing Open Pilot for Tesla</h2>
+<h2 id="installing-openpilot-for-tesla">Installing OpenPilot for Tesla</h2>
 <p>Comma.ai doesn't support Tesla cars. That's why we maintain our own fork, which you will have to manually check out after setting up your EON.</p>
 <p><strong>DON’T INSTALL ON ANYTHING OTHER THAN A TESLA!</strong>
 (Someone bricked their Jeep trying.)</p>
-<h3 id="start-with-stock-open-pilot">Start with Stock Open Pilot</h3>
-<p>Follow the instructions for setting up an EON with Open Pilot using these instructions:<a href="https://medium.com/@jfrux/comma-eon-initial-setup-with-openpilot-2b5ea58354a">Comma EON Initial Setup with Open Pilot</a> </p>
+<h3 id="start-with-stock-openpilot">Start with Stock OpenPilot</h3>
+<p>Follow the instructions for setting up an EON with OpenPilot using these instructions:<a href="https://medium.com/@jfrux/comma-eon-initial-setup-with-openpilot-2b5ea58354a">Comma EON Initial Setup with OpenPilot</a></p>
 <p>Then we will#Git the Tesla OP Fork</p>
 <h3 id="git-the-tesla-op-fork">Git the Tesla OP Fork</h3>
 <p><a href="../SSH_Into_Your_Device/">SSH into your EON</a> and execute the following commands (you need internet connectivity on your EON):</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>cd /data
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>rm -rf /data/openpilot
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>git clone --depth 1 https://github.com/Bog Gyver/openpilot.git -b tesla_0.6.6 /data/openpilot
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>git clone --depth 1 https://github.com/BogGyver/openpilot.git -b tesla_0.6.6 /data/openpilot
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>reboot
 </span></code></pre></div>
 <p>The first reboot will take around 20 minutes to set everything up.</p>
 <h3 id="edit-your-config">Edit your Config</h3>
-<p>After the EON has booted you can edit your <a href="Open Pilot_Configuration_File.md">config</a> , which now has been automatically created.
+<p>After the EON has booted you can edit your <a href="../OpenPilot_Configuration_File/">config</a>, which now has been automatically created.
 At the top find<code>user_handle = your_tinkla_username</code>, set force fingerprint to True, and change your_tinkla_username to your Tinkla username (preferred, if available) or to your Discord handle.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>nano /data/bb_openpilot.cfg
 </span></code></pre></div>
-<p>Make sure to set<code>use_tesla_gps = True</code>in case you're using a White Panda (Grey Panda has GPS built in). With GPS info of your drives you're helping Comma to improve their models (Open Pilot uploads your drives to their servers).
+<p>Make sure to set<code>use_tesla_gps = True</code>in case you're using a White Panda (Grey Panda has GPS built in). With GPS info of your drives you're helping Comma to improve their models (OpenPilot uploads your drives to their servers).
 Keep in mind that config changes only apply after rebooting the EON.</p>
 <h3 id="flash-your-panda">Flash your Panda</h3>
-<p>After installing or updating Open Pilot on your EON, you need to also update the software on your Panda. Here's how:</p>
+<p>After installing or updating OpenPilot on your EON, you need to also update the software on your Panda. Here's how:</p>
 <p>In your Tesla while it says “Car Off” connect your Panda to your Giraffe rev B OBD (or EPAS OBD). Connect your EON to the Panda via USB. Then SSH in and run:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>cd /data/openpilot/panda/board
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>killall boardd
@@ -962,31 +937,31 @@ Keep in mind that config changes only apply after rebooting the EON.</p>
 </span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>make &amp;&amp; sleep 1 &amp;&amp; (make recover || make recover) &amp;&amp; echo Success! Rebooting in 2s... &amp;&amp; sleep 2 &amp;&amp; reboot
 </span></code></pre></div>
 <p>The kill command ensures that the EON stops regular communication to the Panda. That's also why a reboot is needed at the end. If any error occurs (which of course should not happen) the reboot will be skipped so you can troubleshoot.
-Assertion Errors should be fixed by rebooting EON and trying a second time. Optionally you may also power cycle your Panda by reseating it.</p>
+AssertionErrors should be fixed by rebooting EON and trying a second time. Optionally you may also power cycle your Panda by reseating it.</p>
 <h3 id="final-steps">Final steps</h3>
-<p>Finally, check here to learn more about all the controls, functions and features related to longitudinal control:<a href="../Longitudinal_Control__ACC/">Using adaptive cruise control</a> </p>
-<h4 id="first-open-pilot-drive">First Open Pilot Drive</h4>
+<p>Finally, check here to learn more about all the controls, functions and features related to longitudinal control:<a href="../Longitudinal_Control__ACC/">Using adaptive cruise control</a></p>
+<h4 id="first-openpilot-drive">First OpenPilot Drive</h4>
 <ol>
 <li>Make sure the EON is mounted properly and connected to the Panda by following <a href="./">#Installing the EON</a></li>
 <li>Make sure the EON has Internet access (either your wifi at home or a SIM card). Connect to a mobile hotspot if you don't have a SIM card1. Reboot your EON before turning your car on for good measure</li>
-<li>Turn your car on and verify that the Panda LEDs are pulsing red/blue/purple. If they are green, your panda is not flashed, see flashing instructions here <a href="../Panda/">Panda Flashing</a> .</li>
-<li>Open Pilot should switch to "drive mode" and show the camera view with white lane marking</li>
+<li>Turn your car on and verify that the Panda LEDs are pulsing red/blue/purple. If they are green, your panda is not flashed, see flashing instructions here <a href="../Panda/">Panda Flashing</a>.</li>
+<li>OpenPilot should switch to "drive mode" and show the camera view with white lane marking</li>
 <li>Make sure that your EON is connected to the Internet or Calibration will not start</li>
 <li>Read up and understand the controls from <a href="../Longitudinal_Control__ACC/">Using adaptive cruise control</a></li>
 </ol>
 <p>IF YOUR CAR IS RECOGNIZED:</p>
 <ol>
 <li>Calibration will increment at above 15mph. It will take less than 30 seconds to fully calibrate. If you move the mount, it's recommended to reset camera calibration under "device settings".</li>
-<li>When driving, Double Pull the Cruise Control Stalk to use Open Pilot</li>
+<li>When driving, Double Pull the Cruise Control Stalk to use OpenPilot</li>
 </ol>
 <p>IF YOUR CAR IS NOT RECOGNIZED</p>
 <ol>
 <li>Ask for help on the #tesla channel of the <a href="https://discordapp.com/invite/Wyna3qy">Comma.ai Discord</a></li>
 </ol>
 <p>Experiencing issues?
-In case you use a <a href="../Pedal_Interceptor/">Pedal</a> and it just won't work, chances are it doesn't have Tesla firmware on it yet. You can flash it with <a href="../Pedal_Interceptor/">this guide</a> .
-Various other problems can be related to wiring, so double check each installation page, especially <a href="../EPAS_harness/">EPAS Harness</a> .
-On any other issue, please use the search function or ask us on <a href="https://discordapp.com/invite/Wyna3qy">Discord</a> .</p>
+In case you use a <a href="../Pedal_Interceptor/">Pedal</a> and it just won't work, chances are it doesn't have Tesla firmware on it yet. You can flash it with <a href="../Pedal_Interceptor/">this guide</a>.
+Various other problems can be related to wiring, so double check each installation page, especially <a href="EPAS_Harness.md">EPAS Harness</a>.
+On any other issue, please use the search function or ask us on <a href="https://discordapp.com/invite/Wyna3qy">Discord</a>.</p>
 
     </div>
 </article>
@@ -1032,22 +1007,14 @@ On any other issue, please use the search function or ask us on <a href="https:/
             
 
             
-            <div class="flex flex-col gap-4">
-                <div class="text-muted-foreground text-sm font-medium">Menu</div>
-                <div class="flex flex-col gap-3">
-                    
-                    <a class="text-2xl font-medium" href="..">
-                        
-                        Home
-                        
-                    </a>
-                    
-                </div>
-            </div>
-            
 
             
             <div class="flex flex-col gap-8">
+                
+                <div class="flex flex-col gap-4">
+                    <div class="text-muted-foreground text-sm font-medium">Home</div>
+                    
+                </div>
                 
                 <div class="flex flex-col gap-4">
                     <div class="text-muted-foreground text-sm font-medium">Getting Started</div>
@@ -1289,10 +1256,10 @@ On any other issue, please use the search function or ask us on <a href="https:/
         
         
         
-        <a href="#eon-dev-kit-or-fr-eon"
+        <a href="#eon-devkit-or-freon"
             class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
             data-active="false" data-depth="2">
-            EON Dev Kit (or Fr EON)
+            EON DevKit (or FrEON)
         </a>
         
 
@@ -1319,17 +1286,17 @@ On any other issue, please use the search function or ask us on <a href="https:/
         
 
         
-        <a href="#installing-open-pilot-for-tesla"
+        <a href="#installing-openpilot-for-tesla"
             class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
             data-active="false" data-depth="2">
-            Installing Open Pilot for Tesla
+            Installing OpenPilot for Tesla
         </a>
         
         
-        <a href="#start-with-stock-open-pilot"
+        <a href="#start-with-stock-openpilot"
             class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
             data-active="false" data-depth="3">
-            Start with Stock Open Pilot
+            Start with Stock OpenPilot
         </a>
         
         <a href="#git-the-tesla-op-fork"

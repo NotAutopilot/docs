@@ -275,34 +275,9 @@
     
 
     
-    <div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2">
-        <div data-slot="sidebar-group-content" data-sidebar="group-content" class="w-full text-sm">
-            <ul data-slot="sidebar-menu" data-sidebar="menu" class="flex w-full min-w-0 flex-col gap-0.5">
-                
-                
-                <li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative">
-    <a data-slot="sidebar-menu-button" data-active="false" data-sidebar="menu-button"
-        data-size="default" href="/"
-        class="hover:bg-sidebar-accent hover:text-sidebar-accent-foreground peer/menu-button flex items-center gap-2 rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 data-[active=true]:bg-accent data-[active=true]:border-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md">
 
-        
-        Home
-        
-
-        
-
-        
-
-        
-    </a>
-</li>
-                
-                
-            </ul>
-        </div>
-    </div>
     
-
+    
     
     
     <div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2">
@@ -892,21 +867,21 @@
 
     </div>
     <div class="typography w-full flex-1 *:data-[slot=alert]:first:mt-0">
-        <p>Tinkla OBD-C Adapter</p>
+        <p><img alt="Tinkla OBD-C Adapter" src="../images/Tinkla_OBD-C_Adapter.jpg" /></p>
 <h2 id="what-it-does">What it does</h2>
-<p>The Tinkla OBD-C Adapterwhich can be purchased from our <a href="https://shop.tinkla.us/Tinkla-OBD-C-Adapter-p452345118">online store</a> replaces the previous harness that was needed in the early iterations of Open Pilot for pre AP Tesla Model S.</p>
-<p>Designed specifically to work with the latest versions of Tesla Unity and Comma two/Comma three dev kits (as well as EON Gold with Black Panda), this little device plugs into your OBD2 port and creates the needed interface between the Comma devkit and your car. It also have additional ports to allow to connect a <a href="../Pedal_Interceptor/">Pedal Interceptor</a> or to power your <a href="../Tinkla_Buddy/">Tinkla Buddy</a> .</p>
-<p>Inside the device there are 3 more expansion ports that allow you to hook up additional equipment, such as a <a href="../Tesla_Bosch_Radar/">Tesla Bosch Radar</a> .</p>
-<p>Tinkla OBD-C Adapter Schematics</p>
+<p>TheTinkla OBD-C Adapterwhich can be purchased from our <a href="https://shop.tinkla.us/Tinkla-OBD-C-Adapter-p452345118">online store</a> replaces the previous harness that was needed in the early iterations of OpenPilot for preAP Tesla Model S.</p>
+<p>Designed specifically to work with the latest versions of Tesla Unity and Comma two/Comma three dev kits (as well as EON Gold with Black Panda), this little device plugs into your OBD2 port and creates the needed interface between the Comma devkit and your car. It also have additional ports to allow to connect a <a href="../Pedal_Interceptor/">Pedal Interceptor</a> or to power your <a href="../Tinkla_Buddy/">Tinkla Buddy</a>.</p>
+<p>Inside the device there are 3 more expansion ports that allow you to hook up additional equipment, such as a <a href="../Tesla_Bosch_Radar/">Tesla Bosch Radar</a>.</p>
+<p><img alt="Tinkla OBD-C Adapter Schematics" src="../images/Tinkla_OBD-C_Adapter_Schematics.jpg" /></p>
 <h2 id="connections">Connections</h2>
 <ul>
-<li><strong>OBD2 Connector</strong>: this connector plugs directly into your <a href="Tesla_Model_S_pre AP_OBD2_port.md">pre AP Tesla Model S OBD2 port</a> located in the driver's footwell.</li>
+<li><strong>OBD2 Connector</strong>: this connector plugs directly into your <a href="../Tesla_Model_S_preAP_OBD2_port/">preAP Tesla Model S OBD2 port</a> located in the driver's footwell.</li>
 <li><strong>OBD-C Port</strong>: this port allows you to connect your Comma devkit to the Tinkla OBD-C Adapter using a <a href="https://www.amazon.com/gp/product/B07WXQT9P8?th=1">Thunderbolt3</a> cable. This offers +12v, ground and access to 3 CAN buses for the Comma devkit.<strong>Do not plug anything else in this port as it will most likely fry the equipment. This is NOT a standard USB-C port!</strong></li>
 <li><strong>RJ45 for Pedal Interceptor</strong>: This port allows you to connect your <a href="../Pedal_Interceptor/">Pedal Interceptor</a> to the harness using a standard RJ45 Ethernet cable.<strong>Do not plug anything else in this port as it will most likely fry the equipment. This is NOT a standard RJ45 port!</strong></li>
 <li><strong>USB A Port</strong>: This port allows you to power your Tinkla Buddy directly from the Tinkla OBD-C Adapter. It offers 5V/2A power on standard USB power pins.</li>
 <li><strong>JST2.5 connector for CAN0</strong>: This connector allows you to connect other equipment to the chassis can.</li>
-<li><strong>JST2.5 connector for CAN1</strong>: This connector allows you to connect a <a href="../Tesla_Bosch_Radar/">Tesla Bosch Radar</a> . It already has an 120 ohm resistor to terminate the CAN connection.</li>
-<li><strong>JST2.5 connector for CAN2</strong>: This connector allows you to connect a <a href="../Pedal_Interceptor/">Pedal Interceptor</a> (if yours does not have the RJ45 connector) or other equipment to CAN2. It has a built in 60ohm terminator for the CAN connection.</li>
+<li><strong>JST2.5 connector for CAN1</strong>: This connector allows you to connect a <a href="../Tesla_Bosch_Radar/">Tesla Bosch Radar</a>. It already has an 120 ohm resistor to terminate the CAN connection.</li>
+<li><strong>JST2.5 connector for CAN2</strong>: This connector allows you to connect a <a href="../Pedal_Interceptor/">Pedal Interceptor</a>(if yours does not have the RJ45 connector) or other equipment to CAN2. It has a built in 60ohm terminator for the CAN connection.</li>
 </ul>
 
     </div>
@@ -953,22 +928,14 @@
             
 
             
-            <div class="flex flex-col gap-4">
-                <div class="text-muted-foreground text-sm font-medium">Menu</div>
-                <div class="flex flex-col gap-3">
-                    
-                    <a class="text-2xl font-medium" href="..">
-                        
-                        Home
-                        
-                    </a>
-                    
-                </div>
-            </div>
-            
 
             
             <div class="flex flex-col gap-8">
+                
+                <div class="flex flex-col gap-4">
+                    <div class="text-muted-foreground text-sm font-medium">Home</div>
+                    
+                </div>
                 
                 <div class="flex flex-col gap-4">
                     <div class="text-muted-foreground text-sm font-medium">Getting Started</div>

@@ -5,12 +5,12 @@
 
 ## What is Tinkla Buddy?
 
-Tinkla Buddy (formerly r Panda) is a nice solution for our Teslas to have Instrument Cluster [IC] integration without root.
+Tinkla Buddy (formerly rPanda) is a nice solution for our Teslas to have Instrument Cluster [IC] integration without root.
 
 If you don't have root access to your Tesla, you can now enjoy these benefits:
 
-- Open Pilot Integration into IC for pre-AP cars.
-- In car Wi Fi Access Point
+- OpenPilot Integration into IC for pre-AP cars.
+- In car WiFi Access Point
 - Control Relay via CID buttons for after-market features
 - Secure Remote Access to your Buddy from ANYWHERE
 - and More!
@@ -38,7 +38,7 @@ The cost of the Tinkla Buddy software subscription is:
 
 - Tesla 2020.36.3.1 compatibility
 - Fast setup detection
-- Wi Fi Client mode
+- WiFi Client mode
 - Keep Awake for Tegras
 - Control Relays using Tinkla Buddy Menu
 
@@ -59,7 +59,7 @@ The cost of the Tinkla Buddy software subscription is:
 ### v1.27
 
 - Fully boot without being connected to either IC or CID
-- Reduce number of Qt Car restarts by detecting IC state
+- Reduce number of QtCar restarts by detecting IC state
 - Increase automatically switch back to analog to 5 min to allow for buddy reboots without changes to IC
 - Increase number of checks for state of IC and CID before pulling Vitals
 
@@ -85,12 +85,12 @@ The cost of the Tinkla Buddy software subscription is:
 - Auto-detection of MCU type (Tegra vs Intel)
 - Auto-detection of AP type (pre-AP, AP1, AP2, AP2.5, AP3)
 - Auto-detection of installation location
-- Improved Wi Fi stability
+- Improved WiFi stability
 
 ### v1.21
 
 - Fixes issue with starting persistence mode
-- LEDs now show status of tinkla Buddy and availability of valid cert
+- LEDs now show status of tinklaBuddy and availability of valid cert
 
 ### v1.20
 

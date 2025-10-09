@@ -275,34 +275,9 @@
     
 
     
-    <div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2">
-        <div data-slot="sidebar-group-content" data-sidebar="group-content" class="w-full text-sm">
-            <ul data-slot="sidebar-menu" data-sidebar="menu" class="flex w-full min-w-0 flex-col gap-0.5">
-                
-                
-                <li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative">
-    <a data-slot="sidebar-menu-button" data-active="false" data-sidebar="menu-button"
-        data-size="default" href="/"
-        class="hover:bg-sidebar-accent hover:text-sidebar-accent-foreground peer/menu-button flex items-center gap-2 rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 data-[active=true]:bg-accent data-[active=true]:border-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md">
 
-        
-        Home
-        
-
-        
-
-        
-
-        
-    </a>
-</li>
-                
-                
-            </ul>
-        </div>
-    </div>
     
-
+    
     
     
     <div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2">
@@ -894,12 +869,12 @@
     <div class="typography w-full flex-1 *:data-[slot=alert]:first:mt-0">
         <h2 id="ssh-when-device-is-running-a-version-after-083">SSH when device is running a version after 0.8.3</h2>
 <ol>
-<li>You need a Git Hub account. Make one if you don't already have one.</li>
+<li>You need a GitHub account. Make one if you don't already have one.</li>
 <li>Enable SSH on your comma two:<strong>Settings -&gt; Network -&gt; Enable SSH</strong></li>
-<li>Enter your Git Hub username for SSH:<strong>Settings -&gt; Network -&gt; SSH Keys</strong>(hit**Remove**and then**Add**if needed).</li>
+<li>Enter your GitHub username for SSH:<strong>Settings -&gt; Network -&gt; SSH Keys</strong>(hit**Remove**and then**Add**if needed).</li>
 <li>Obtain the IP of your devices from**Settings -&gt; Network**</li>
 <li>Ping the device address from your computer to make sure it is reachable.</li>
-<li>Under a Unix/Linux, mac OS terminal or Windows 10 with Open SSH, use the command:</li>
+<li>Under a Unix/Linux, macOS terminal or Windows 10 with OpenSSH, use the command:</li>
 </ol>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>ssh root@&lt;IP address of comma two&gt; -p 8022 -i &lt;path to private github key&gt;
 </span></code></pre></div>
@@ -909,20 +884,20 @@
 <p>for Comma three.</p>
 <p>If you assign a fixed IP through your router reservations, then you can configure ssh so you can ssh by just doing**ssh eon**. To do so, add the following lines to your**~/.ssh/config**file:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Host eon 
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a> Host Name &lt;IP address of comma two&gt;
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a> HostName &lt;IP address of comma two&gt;
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a> Port 8022
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a> Identity File &lt;path to private github key&gt;
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a> Strict Host Key Checking no
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a> IdentityFile &lt;path to private github key&gt;
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a> StrictHostKeyChecking no
 </span></code></pre></div>
-<p>For more info visit <a href="https://github.com/commaai/openpilot/wiki/SSH#openssh-or-similar-client">the comma wiki</a> </p>
+<p>For more info visit <a href="https://github.com/commaai/openpilot/wiki/SSH#openssh-or-similar-client">the comma wiki</a></p>
 <h2 id="ssh-when-devices-is-running-a-version-before-083">SSH when devices is running a version before 0.8.3</h2>
 <ol>
-<li>Download the private key from the <a href="https://github.com/commaai/openpilot/blob/master/tools/ssh/id_rsa">openpilot repo</a> . Save the key file as a text file and name it something like key.pem.</li>
+<li>Download the private key from the <a href="https://github.com/commaai/openpilot/blob/master/tools/ssh/id_rsa">openpilot repo</a>. Save the key file as a text file and name it something like key.pem.</li>
 <li>Open a terminal</li>
 <li>Run**chmod 600 key.pem**(otherwise, the system will think the text file is not safe).</li>
-<li>Get the IP address of your comma two from**Settings &gt; Wi Fi &gt; Open Wi Fi Settings &gt; More Options &gt; Options (top right icon) &gt; Advanced**(please make sure your comma two and your computer connect to the same Wi Fi).</li>
+<li>Get the IP address of your comma two from**Settings &gt; WiFi &gt; Open WiFi Settings &gt; More Options &gt; Options (top right icon) &gt; Advanced**(please make sure your comma two and your computer connect to the same WiFi).</li>
 <li>Ping the device address from your computer to make sure it is reachable.</li>
-<li>Under a Unix/Linux, mac OS terminal or Windows 10 with Open SSH, use the command:</li>
+<li>Under a Unix/Linux, macOS terminal or Windows 10 with OpenSSH, use the command:</li>
 </ol>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>ssh root@&lt;IP address of comma two&gt; -p 8022 -i key.pem
 </span></code></pre></div>
@@ -971,22 +946,14 @@
             
 
             
-            <div class="flex flex-col gap-4">
-                <div class="text-muted-foreground text-sm font-medium">Menu</div>
-                <div class="flex flex-col gap-3">
-                    
-                    <a class="text-2xl font-medium" href="..">
-                        
-                        Home
-                        
-                    </a>
-                    
-                </div>
-            </div>
-            
 
             
             <div class="flex flex-col gap-8">
+                
+                <div class="flex flex-col gap-4">
+                    <div class="text-muted-foreground text-sm font-medium">Home</div>
+                    
+                </div>
                 
                 <div class="flex flex-col gap-4">
                     <div class="text-muted-foreground text-sm font-medium">Getting Started</div>

@@ -1,3 +1,3 @@
-# Template:Flow Mention
+# Template:FlowMention
 
 @Example

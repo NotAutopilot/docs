@@ -6,7 +6,8 @@ The original EON is not supported in the latest releases of software from OpenPi
 
 The EON is the name associated in the Comma.ai community to the device that sits in your windshield and does all the calculations for LKA and ACC.
 
-Comma.ai EON DevKit
+![Comma.ai EON DevKit](images/EON-devkit.jpg)
+
 ## EON DevKit (or FrEON)
 
 The EON is based on the[Qualcom Snapdragon 821 mobile platform](https://www.qualcomm.com/products/snapdragon-821-mobile-platform?cmpid=snfyus19642&gclid=EAIaIQobChMI-oG8if364QIVFY_ICh0DFArXEAAYASAAEgKFL_D_BwE&gclsrc=aw.ds). Phones like OnePlus 3T or LeEco LePro3 have been used to create the FrEON (the free EON). You can find some instructions[here](https://medium.com/@kirk_40929/getting-comma-openpilot-running-on-a-used-phone-c72d609cb4d3).
