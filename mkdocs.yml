@@ -1,22 +1,10 @@
 site_name: Tinkla Wiki
 site_description: Community documentation for running OpenPilot on Tesla vehicles
 site_author: Tinkla Community
-site_url: https://tinkla.us
 
 theme:
   name: shadcn
   palette: slate
-  features:
-    - navigation.instant
-    - navigation.tracking
-    - navigation.tabs
-    - navigation.sections
-    - navigation.expand
-    - navigation.top
-    - toc.follow
-    - search.suggest
-    - search.highlight
-    - content.code.copy
 
 markdown_extensions:
   - abbr
@@ -43,11 +31,7 @@ markdown_extensions:
   - pymdownx.keys
   - pymdownx.mark
   - pymdownx.smartsymbols
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.tasklist:
@@ -60,9 +44,6 @@ plugins:
 
 extra:
   social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/BogGyver/openpilot
-      name: GitHub Repository
     - icon: fontawesome/solid/globe
       link: https://comma.ai
       name: Comma.ai
