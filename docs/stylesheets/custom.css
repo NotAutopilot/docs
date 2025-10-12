@@ -1,0 +1,40 @@
+/* Custom styles for Tinkla Wiki */
+
+/* Fix text overflow - force text to wrap */
+article p,
+article li,
+article div,
+article code,
+article pre {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+/* Ensure long URLs and links wrap */
+article a {
+  word-break: break-all;
+  overflow-wrap: break-word;
+}
+
+/* Prevent code blocks from overflowing */
+article pre,
+article code {
+  max-width: 100%;
+  overflow-x: auto;
+  white-space: pre-wrap;
+}
+
+/* Ensure main content area doesn't overflow */
+article {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Fix list items that have long concatenated words */
+article ul li,
+article ol li {
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}

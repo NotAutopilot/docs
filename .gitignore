@@ -4,6 +4,9 @@ site/
 # Old wiki backup
 mkdocs-old/
 
+# Original MediaWiki dump
+tinkla-wiki/
+
 # Python
 __pycache__/
 *.py[cod]
