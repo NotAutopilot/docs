@@ -1,2 +1,0 @@
-# Tinkla Buddy Admin
-

@@ -1,211 +1,234 @@
-# Welcome to Tinkla!
+# Welcome to NotAutopilot!
 
-If you're looking for instructions for the old versions of OpenPilot that run on EON with white or gray panda, that page is availablehere.
+## ⚠️ CRITICAL WARNING - READ FIRST ⚠️
 
-Talk: Feedback? Ideas? Comments?
+**THIS SOFTWARE IS EXCLUSIVELY FOR PRE-AUTOPILOT TESLA MODEL S (2012-2014) ONLY.**
 
-## What is OpenPilot
+### 🚨 REAL INCIDENT: A user bricked a Jeep by attempting to install this software on an incompatible vehicle. 🚨
 
-OpenPilot is open source software built to improve upon the existing driver assistance in most new cars on the road today. Now OpenPilot is available for pre-autopilot Tesla Model S as well as Tesla Model S/X with autopilot hardware 1 or 2.
+**Using this on ANY other vehicle WILL cause permanent damage.**
 
-Currently, openpilot performs the functions of Adaptive Cruise Control (ACC), Automated Lane Centering (ALC), Forward Collision Warning (FCW) and Lane Departure Warning (LDW) for a growing variety of supported car makes, models and model years. In addition, while openpilot is engaged, a camera based Driver Monitoring (DM) feature alerts distracted and asleep drivers. See more about the vehicle integration and limitations.
+**Compatible Vehicle (ONLY):**
+- Tesla Model S (2012-2014) WITHOUT Autopilot hardware
+
+**NOT Compatible (WILL DAMAGE):**
+- Tesla Model S with AP1/AP2+
+- Tesla Model X (any variant)
+- Tesla Model 3/Y/Cybertruck
+- ANY non-Tesla vehicle
+
+**→ [MANDATORY: Read SAFETY_FIRST.md before proceeding](SAFETY_FIRST.md)**
+
+---
+
+## What is NotAutopilot?
+
+NotAutopilot is open source software built to add advanced driver assistance to **Pre-Autopilot Tesla Model S vehicles (2012-2014)**. It is a focused fork of openpilot specifically designed for this single vehicle platform.
+
+Currently, NotAutopilot performs the functions of Adaptive Cruise Control (ACC), Automated Lane Centering (ALC), Forward Collision Warning (FCW) and Lane Departure Warning (LDW) for Pre-Autopilot Tesla Model S. In addition, while NotAutopilot is engaged, a camera-based Driver Monitoring (DM) feature alerts distracted and drowsy drivers.
+
+**Based on**: openpilot 0.10.2
+**Lineage**: Fork of tinkla (via xnor)
+**Status**: Beta - Research/Development purposes only
+
+---
 
 ## Getting Started
 
-1. OpenPilot for preAP Tesla ModelS
-2. OpenPilot for Tesla Model S/X with AP1
-3. OpenPilot for Tesla Model S/X with AP2
+**Pre-Autopilot Tesla Model S (2012-2014) ONLY:**
+
+→ **[OpenPilot for preAP Tesla ModelS](OpenPilot_for_preAP_Tesla_ModelS.md)**
+
+**Before installation, you MUST read:**
+1. [SAFETY_FIRST.md](SAFETY_FIRST.md) - Critical safety warnings
+2. [Hardware_Compatibility.md](Hardware_Compatibility.md) - Hardware requirements
+3. [NotAutopilot_General_disclaimer.md](NotAutopilot_General_disclaimer.md) - Legal disclaimers
+
+---
+
+## Key Features
+
+### Core Functionality
+- **Adaptive Cruise Control (ACC)** - Maintains speed and following distance
+- **Automated Lane Centering (ALC)** - Keeps vehicle centered in lane
+- **Forward Collision Warning (FCW)** - Alerts to potential collisions
+- **Lane Departure Warning (LDW)** - Alerts when drifting from lane
+- **Driver Monitoring (DM)** - Monitors driver attention
+
+### Optional Peripherals
+
+**Pedal Interceptor** (Highly Recommended)
+- Enables 0-18 MPH speed control
+- Smooth acceleration control
+- Essential for stop-and-go traffic
+- [Installation Guide](Pedal_Interceptor.md)
+
+**Tesla Bosch Radar** (Recommended)
+- Enhanced lead vehicle detection
+- Improved ACC performance
+- 160m range, 32 object tracking
+- [Installation Guide](Tesla_Bosch_Radar.md)
+
+---
+
+## Important Limitations
+
+### This is BETA Software
+- Requires full driver attention at ALL times
+- Research/development purposes only
+- NOT a production product
+- You are responsible for safe operation
+
+### Braking Limitations
+- **WITHOUT Pedal**: Only regen braking above 18 MPH
+- **WITH Pedal**: Regen braking 5-18 MPH only
+- **NO hydraulic brake integration**
+- **YOU MUST BE READY TO BRAKE MANUALLY**
+
+### Not Included
+- ❌ Instrument Cluster (IC) integration - Removed
+- ❌ Tinkla Buddy device - Not supported
+- ❌ iBooster brake control - Not supported
+- ❌ Multi-vehicle support - Pre-AP only
+
+---
+
+## Supported Hardware
+
+### Comma Devices
+
+✅ **Comma 3** - Fully supported
+✅ **Comma 3X (C3X)** - Fully supported
+⚠️ **Comma 4** - Untested
+
+❌ **Comma Two** - Not supported
+❌ **EON Gold/EON** - Not supported
+
+**[→ Complete hardware compatibility matrix](Hardware_Compatibility.md)**
+
+---
 
 ## Software Design History
 
-### v0.9.6-61 (2024-01-17)
+### NotAutopilot (Current)
 
-```
-* in line with latest code from Comma
-* adds support for C3X
-* adds fixes for "steering temporary unavailable"
-* you can now chose between OP/AP1/ACC on cars with AP:
- - OP - single stalk pull
- - AP - double stalk pull
- - ACC (Tesla stock) - up/down stalk movement
-* improved IC integration for cars with AP:
- - when OP/AP now engaged, IC shows AP data
- - when OP is engaed, IC shows OP data
- - when AP is engaged, IC shows AP data
-* option to ignore radar errors (useful in winter time when radar might get dirty)
-```
+NotAutopilot is a focused fork that:
+- Supports Pre-Autopilot Tesla Model S ONLY
+- Removes multi-vehicle complexity
+- Removes IC/Buddy integration
+- Emphasizes safety and clear boundaries
+- Maintains excellent Pre-AP support
 
-### v0.8.13-57 (2022-11-17)
+### Inherited from Tinkla
 
-```
-* Fix pedal pressed message on ACC
-* Adjust top speed with speed limit for AP1
-* Show set speed in lower right corner for RHD cars
-* Brake factor speed adjustable (1.1 below 70km/h, 1.4 above 110km/h)
-```
+NotAutopilot builds on boggyver's pioneering tinkla project:
 
-### v0.8.13-56 (2022-11-08)
+**Retained Features:**
+- EPAS control and patching
+- Pedal Interceptor integration
+- Tesla Bosch Radar integration
+- Tesla Unity configuration system
+- UI-based flashing for all components
+- Universal calibration tools
 
-```
-* Sound files volume fix
-* Show TACC icon on IC for AP cars when OP is available
-* Display shutdown
-* Engage at 0 MPH (AP cars)
-* Fleet based speed (AP cars)
-* Slow down in turns based on SunnyPilot 
-* prevent iBooster from pressing both pedals
-* Improved acceleration handling for AP1
-* Add message ID for the CAN Error 
-* Reduce min accel to -4.5 
-* Improve follow distance
-* Better and smoother pedal with 4 profiles
-* Universal calibration tool for pedal interceptor
-* iBooster control improvement
-* Add 5 pedal profiles and 3 acceleration profiles for better long control wiht pedal
-* Add alert when maximum regen is used with pedal to show braking limit 
-* Prevent PCC engagement with uncalibrated pedals
-* Cancel automatic lane change on blinker or wheel touch
-* Toggle to ignore wrong date/time on device
-* Increase steering angle limits on Panda
-* Fix Controls Mismatch when taking over steering
-```
+**Removed Features:**
+- AP1/AP2 vehicle support
+- Instrument Cluster integration
+- Tinkla Buddy device support
+- iBooster experimental code
+- Multi-vehicle configuration options
 
-### v0.8.13-55 (2022-09-21)
+**[→ See complete project history](Project_History.md)**
 
-```
-* Sound toggles (to mute certain sounds)
-* Sound files
-```
+---
 
-### v0.8.13-54 (2022-09-19)
+## Documentation
 
-```
-* Add capabilities for Str params
-* Implement fixed fingerprint option to avoid fingerprinting issues
-```
+### Essential Reading
+- [SAFETY_FIRST.md](SAFETY_FIRST.md) - Critical safety warnings
+- [Hardware_Compatibility.md](Hardware_Compatibility.md) - Hardware matrix
+- [Project_History.md](Project_History.md) - Project lineage and philosophy
+- [NotAutopilot_General_disclaimer.md](NotAutopilot_General_disclaimer.md) - Legal disclaimers
 
-### v0.8.13-53 (2022-08-05)
+### Installation & Configuration
+- [OpenPilot for preAP Tesla ModelS](OpenPilot_for_preAP_Tesla_ModelS.md) - Installation guide
+- [Tesla_Unity_Configuration.md](Tesla_Unity_Configuration.md) - Configuration guide
+- [Pedal_Interceptor.md](Pedal_Interceptor.md) - Pedal installation
+- [Tesla_Bosch_Radar.md](Tesla_Bosch_Radar.md) - Radar installation
 
-```
-* iBooster ECU fixes
-* Try to fix Controls Mismatch issues
-* Add toggle for radar error with AP
-```
+### Technical Documentation
+- [Tesla CAN Bus](Tesla_CAN_Bus.md) - CAN architecture
+- [EPAS Harness](EPAS_harness.md) - Steering harness
+- [The Panda](The_Panda.md) - CAN interface
+- [Tinkla OBD-C Adapter](Tinkla_OBD-C_Adapter.md) - Connection adapter
 
-### v0.8.13-52 (2022-08-05)
+### Advanced Topics
+- [Longitudinal Control (ACC)](Longitudinal_Control__ACC.md) - ACC details
+- [Cabana](Cabana.md) - CAN bus analysis
+- [SSH Into Your Device](SSH_Into_Your_Device.md) - Device access
 
-```
-* Reset Pedal PID on engagement
-* Toggle for Model S Performance for pedal (bug fix)
-* Pedal profile for MS Performance (bug fix)
-* Toggle to prevent auto updates
-* Toggle for dev unit (bug fix)
-* Autoresume speed from stand still
-```
+---
 
-### v0.8.13-51 (2022-07-05)
+## Disclaimers & Legal
 
-```
-* new PID for pedal, including way to save state
-* toggle for Model S Performance for pedal
-* pedal profile for MS Performance
-```
+### Important Warnings
 
-### v0.8.13-48 (2022-05-18)
+**Modifying your car can result in damage, injury, or death. Do not modify your car unless you understand and accept those risks. You alone are ultimately responsible, not the creator of this software, Comma.ai, the Comma.ai community, Tesla, or anyone else.**
 
-```
-* limit iBooster travel to a max of 15mm (90psi on my car)
-* set Hold values for iBooster to 6.5mm (14psi)
-* change lane poly calculation logic for IC integrtion
-```
+### Licensing
 
-### v0.8.13-47 (2022-05-11)
+NotAutopilot is released under the MIT license (inherited from openpilot). Some parts of the software are released under other licenses as specified.
 
-- do not send iBooster brake command when real accelerator pedal is pressed
+Any user of this software shall indemnify and hold harmless Comma.ai, Inc. and its directors, officers, employees, agents, stockholders, affiliates, subcontractors and customers from and against all allegations, claims, actions, suits, demands, damages, liabilities, obligations, losses, settlements, judgments, costs and expenses (including without limitation attorneys' fees and costs) which arise out of, relate to or result from any use of this software by user.
 
-### v0.8.13-46 (2022-05-10)
+**THIS IS BETA QUALITY SOFTWARE FOR RESEARCH PURPOSES ONLY. THIS IS NOT A PRODUCT. YOU ARE RESPONSIBLE FOR COMPLYING WITH LOCAL LAWS AND REGULATIONS. NO WARRANTY EXPRESSED OR IMPLIED.**
 
-- do not send iBooster brake command when accelerator pedal is pressed
-- increase brake hold value
+**[→ Full disclaimer](NotAutopilot_General_disclaimer.md)**
 
-### v0.8.13-45 (2022-05-09)
+---
 
-- update firmware for Vacuum Sensor board with brake release condition
-- allow 0x553 for iBooster in panda
-- allow 0x555 for IVS in panda
+## Ready to Install?
 
-### v0.8.13-44 (2022-05-04)
+### Pre-Installation Checklist
 
-- update firmware for Vacuum Sensor board
-- fix CRC for iBooster
+- [ ] I have a Pre-Autopilot Tesla Model S (2012-2014)
+- [ ] I have verified my vehicle does NOT have Autopilot hardware
+- [ ] I have read SAFETY_FIRST.md completely
+- [ ] I have read the general disclaimer
+- [ ] I understand this is BETA software requiring full driver attention
+- [ ] I accept all risks, responsibilities, and liabilities
+- [ ] I have compatible hardware (Comma 3 or C3X)
+- [ ] I understand I must be ready to brake manually at all times
 
-### v0.8.13-43 (2022-04-21)
+### All Boxes Checked?
 
-- fix Pedal over CC issues when MCU2 or no Tinkla Buddy
-- add firmware for Vacuum Sensor board
-- fix CRC for iBooster
+**→ [Proceed to Installation Guide](OpenPilot_for_preAP_Tesla_ModelS.md)**
 
-### v0.8.13-41 (2022-04-19)
+### Have Doubts?
 
-- fix startup screen for C3
-- fix modem initialization for C3 (comma three: correctly set initial EPS bearer settings for AT&T sim cards)
-- fix logic for enabling OP on preAP MS
-- add C3 Tinkla Splash
+**DO NOT INSTALL.**
 
-### v0.8.13-38 (2022-04-05)
+Review all documentation carefully, verify vehicle compatibility, and ensure you fully understand the risks before proceeding.
 
-- toggle to allow move of maps on left
-- always show OP data on IC when engaged (AP1/AP2)
-- Comma three support
-- fix top speed indicator when using pedal with Tinkla Buddy
+---
 
-### v0.8.13-37 (2022-04-01)
+## Project Information
 
-- added configuration value for HandsOnLevel before human takeover
-- fixed acceleration for AP1 stop-and-go which was limited at 1.2m/s^2
-- added testing toggle for full LongControl from planner vs actuator (AP1 or preAP with iBooster)
-- fixed release scripts
-- fixed automatic flashing of panda code
+**Project**: NotAutopilot
+**Base**: openpilot 0.10.2
+**Lineage**: tinkla (boggyver) → xnor (Lukas Loetkolben) → NotAutopilot
+**Vehicle**: Pre-Autopilot Tesla Model S (2012-2014) ONLY
+**Status**: Beta
+**License**: MIT
 
-### v0.8.13-34 (2022-03-27)
+**Acknowledgments:**
+- boggyver (tinkla creator - Tesla integration pioneer)
+- Lukas Loetkolben (xnor fork maintainer)
+- comma.ai (openpilot creators)
+- Tesla community (testing and support)
 
-- full support for OP long control with AP1
-- follow distance is adjustable from CC stalk (when available)
-- UI shows multiple road lanes when detected by OP
-- fix bug where ACC would show disabled message after brake press even when not enabled
-- variable acceleration based on speed for AP1 OP based long control
-- improve pedal tune (by vandreykiv)
-- fix variables default value not showing correctly in UI
+---
 
-### v0.8.13-33 (2022-03-26)
+*Drive safely. Stay alert. Take responsibility.*
 
-- new events to show when Standard CC is enabled
-- added shutdown timeout for device (vandreykiv)
-
-### v0.8.13-32 (2022-03-20)
-
-- allows Standard CC (no LKAS) to be used with pedal when cruise enabled
-- allows Standard CC (no LKAS) to be used with ACC by double press down
-- allows for pedal to be used over CC (when setting enabled)
-
-### v0.8.13-31 (2022-03-18)
-
-- based on v0.8.13 (latest release from Comma)
-- requires EON Gold/Black Panda or Comma two/three
-- no need for EPAS harness
-- Panda flash built in UI
-- Pedal flash built in UI
-- EPAS patching built in UI
-- Radar VIN Learner built in UI
-- radar behind nosecone setting as part of VIN Learn (set via UI)
-- works with either human long control, ACC or pedal
-- no more ssh to install or update
-- no more ssh to change any settings, all done through UI
-- automatic change top speed based on speed limit and offset (either units or %)
-- automatic lane change with adjustable delay
-- human steering override with adjustable delay for re-engagement
-- steering never disengages unless you cancel it via stalk
-- adjustable follow distance though UI
-- allows for CC without LKAS when using Pedal
-- pedal can be on either CAN0 or CAN2 (set via UI)
-- support for iBooster ECU (in dev)
+**This is experimental software. You are responsible for your vehicle's safe operation.**
