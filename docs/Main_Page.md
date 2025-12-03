@@ -28,7 +28,7 @@ NotAutopilot is open source software built to add advanced driver assistance to 
 Currently, NotAutopilot performs the functions of Adaptive Cruise Control (ACC), Automated Lane Centering (ALC), Forward Collision Warning (FCW) and Lane Departure Warning (LDW) for Pre-Autopilot Tesla Model S. In addition, while NotAutopilot is engaged, a camera-based Driver Monitoring (DM) feature alerts distracted and drowsy drivers.
 
 **Based on**: openpilot 0.10.2
-**Lineage**: Fork of tinkla (via xnor)
+**Lineage**: boggyver → xnor → NotAutopilot
 **Status**: Beta - Research/Development purposes only
 
 ---
@@ -119,11 +119,11 @@ NotAutopilot is a focused fork that:
 - Emphasizes safety and clear boundaries
 - Maintains excellent Pre-AP support
 
-### Inherited from Tinkla
+### Core Features
 
-NotAutopilot builds on boggyver's pioneering tinkla project:
+NotAutopilot includes these essential capabilities:
 
-**Retained Features:**
+**Vehicle Control:**
 - EPAS control and patching
 - Pedal Interceptor integration
 - Tesla Bosch Radar integration
@@ -131,12 +131,12 @@ NotAutopilot builds on boggyver's pioneering tinkla project:
 - UI-based flashing for all components
 - Universal calibration tools
 
-**Removed Features:**
+**Not Included:**
 - AP1/AP2 vehicle support
 - Instrument Cluster integration
 - Tinkla Buddy device support
-- iBooster experimental code
-- Multi-vehicle configuration options
+- iBooster brake control
+- Multi-vehicle configuration
 
 **[→ See complete project history](Project_History.md)**
 
@@ -216,14 +216,14 @@ Review all documentation carefully, verify vehicle compatibility, and ensure you
 
 **Project**: NotAutopilot
 **Base**: openpilot 0.10.2
-**Lineage**: tinkla (boggyver) → xnor (Lukas Loetkolben) → NotAutopilot
+**Lineage**: boggyver → xnor (Lukas Loetkolben) → NotAutopilot
 **Vehicle**: Pre-Autopilot Tesla Model S (2012-2014) ONLY
 **Status**: Beta
 **License**: MIT
 
 **Acknowledgments:**
-- boggyver (tinkla creator - Tesla integration pioneer)
-- Lukas Loetkolben (xnor fork maintainer)
+- boggyver (Tesla integration pioneer)
+- Lukas Loetkolben (xnor maintainer)
 - comma.ai (openpilot creators)
 - Tesla community (testing and support)
 

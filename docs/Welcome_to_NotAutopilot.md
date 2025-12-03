@@ -15,7 +15,7 @@ Using this on any other vehicle WILL cause damage. A user bricked a Jeep attempt
 NotAutopilot is an openpilot fork specifically designed for **Pre-Autopilot Tesla Model S vehicles (2012-2014 only)**. It provides driver assistance features including Adaptive Cruise Control (ACC), Automated Lane Centering (ALC), Forward Collision Warning (FCW), and Lane Departure Warning (LDW).
 
 **Based on**: openpilot 0.10.2
-**Lineage**: Fork of xnor (by Lukas Loetkolben), which is a fork of tinkla (by boggyver)
+**Lineage**: boggyver → xnor (Lukas Loetkolben) → NotAutopilot
 
 ### What NotAutopilot Does
 
@@ -43,9 +43,9 @@ Currently, NotAutopilot performs the following functions for Pre-Autopilot Tesla
 
 ---
 
-## What's Different from Tinkla?
+## What's Included in NotAutopilot?
 
-NotAutopilot is a **focused fork** that supports **Pre-AP Model S ONLY**:
+NotAutopilot is a **focused implementation** that supports **Pre-AP Model S ONLY**:
 
 ### ✅ What's Included
 
@@ -56,14 +56,14 @@ NotAutopilot is a **focused fork** that supports **Pre-AP Model S ONLY**:
 - UI-based flashing for panda, EPAS, pedal, radar
 - Core openpilot features (ACC, LKA, FCW, LDW, DM)
 
-### ❌ What's NOT Included (Removed from Tinkla)
+### ❌ What's NOT Included
 
-- ~~Tesla Model S/X with AP1 support~~ - REMOVED
-- ~~Tesla Model S/X with AP2+ support~~ - REMOVED
-- ~~Instrument Cluster (IC) integration~~ - REMOVED
-- ~~Tinkla Buddy device~~ - REMOVED
-- ~~iBooster brake integration~~ - REMOVED
-- ~~Multi-vehicle configuration options~~ - REMOVED
+- ~~Tesla Model S/X with AP1 support~~ - Not supported
+- ~~Tesla Model S/X with AP2+ support~~ - Not supported
+- ~~Instrument Cluster (IC) integration~~ - Not included
+- ~~Tinkla Buddy device~~ - Not supported
+- ~~iBooster brake integration~~ - Not included
+- ~~Multi-vehicle configuration options~~ - Pre-AP only
 
 **Why?** NotAutopilot focuses on doing one thing well: excellent support for Pre-AP Model S with clear safety boundaries.
 
@@ -166,41 +166,34 @@ This comprehensive guide covers:
 
 ## Software Design History
 
-### NotAutopilot Releases
+### NotAutopilot Features
 
-**Current Version**: Based on openpilot 0.10.2 + tinkla/xnor codebase
+**Current Version**: Based on openpilot 0.10.2
 
 **Key Features:**
 - Pre-AP Tesla Model S support only
 - Streamlined single-vehicle configuration
 - Enhanced safety documentation
-- Removed unsupported features (IC, Buddy, AP1/AP2)
+- Clear feature boundaries
 
-### Inherited from Tinkla
+### Core Pre-AP Features
 
-NotAutopilot inherits significant functionality from the tinkla project:
+NotAutopilot includes these essential features for Pre-Autopilot Model S:
 
-**Core Pre-AP Features (Retained):**
+**Vehicle Control:**
 - EPAS control and patching
 - Pedal Interceptor integration with multiple profiles
 - Tesla Bosch Radar integration with VIN learning
 - Universal pedal calibration tool
 - Radar calibration tools
+
+**Configuration & Management:**
 - Tesla Unity configuration system
 - UI-based flashing for all components
 - Adjustable follow distance
 - Automatic speed limit adjustment with offset
 - Human steering override with re-engagement delay
 - Sound toggles and customization
-
-**Multi-Vehicle Features (Removed):**
-- AP1/AP2 support and configuration
-- Instrument Cluster integration
-- Tinkla Buddy features
-- iBooster experimental code
-- Vehicle-specific toggles for AP cars
-
-**[→ See complete tinkla changelog in original Welcome_to_Tinkla_.md](Welcome_to_Tinkla_.md)** *(archived for reference)*
 
 ---
 
@@ -301,8 +294,8 @@ Start with these key documents:
 ### Community
 
 NotAutopilot builds on the work of:
-- boggyver (tinkla creator)
-- Lukas Loetkolben (xnor)
+- boggyver (Tesla integration pioneer)
+- Lukas Loetkolben (xnor maintainer)
 - comma.ai (openpilot creators)
 - Tesla community
 
@@ -336,7 +329,7 @@ Review the documentation, verify your vehicle compatibility, and ensure you unde
 
 **Project**: NotAutopilot
 **Base**: openpilot 0.10.2
-**Lineage**: tinkla (boggyver) → xnor (Lukas Loetkolben) → NotAutopilot
+**Lineage**: boggyver → xnor (Lukas Loetkolben) → NotAutopilot
 **Focus**: Pre-Autopilot Tesla Model S (2012-2014) only
 **Status**: Beta
 **License**: MIT (inherited from openpilot)

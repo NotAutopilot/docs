@@ -8,7 +8,7 @@ NotAutopilot is a focused fork of openpilot specifically designed for Pre-Autopi
 
 ## Fork Lineage
 
-### Original Project: Tinkla (by boggyver)
+### Original Project: boggyver's Tesla Integration
 
 **Creator**: boggyver
 **Repository**: [boggyver/openpilot](https://github.com/boggyver/openpilot)
@@ -35,21 +35,19 @@ NotAutopilot is a focused fork of openpilot specifically designed for Pre-Autopi
 - iBooster brake integration (experimental)
 - UI-based configuration and flashing
 
-**Impact**: The tinkla project made openpilot accessible to the entire Tesla community, including older Pre-AP vehicles that were originally not supported by comma.ai's openpilot.
+**Impact**: boggyver's work made openpilot accessible to the entire Tesla community, including older Pre-AP vehicles that were originally not supported by comma.ai's openpilot.
 
 ---
 
 ### Intermediate Fork: xnor (by Lukas Loetkolben)
 
 **Creator**: Lukas Loetkolben
-**Lineage**: Fork of tinkla/openpilot
+**Lineage**: Fork of boggyver/openpilot
 
-**Purpose**: [Additional context about xnor fork - specific modifications and focus]
-
-**Key Changes**: [To be documented based on xnor specifics]
+**Purpose**: Maintained and refined Tesla integration for openpilot
 
 **Maintained Features**:
-- Tinkla's core Tesla support
+- Core Tesla support
 - Pre-AP Model S compatibility
 - Essential peripherals (Pedal, Radar)
 
@@ -57,11 +55,11 @@ NotAutopilot is a focused fork of openpilot specifically designed for Pre-Autopi
 
 ### Current Project: NotAutopilot
 
-**Lineage**: Fork of xnor → Fork of tinkla
+**Lineage**: Fork of xnor → Fork of boggyver
 **Openpilot Base**: Version 0.10.2
 **Focus**: Pre-Autopilot Tesla Model S ONLY
 
-**Key Changes from Tinkla:**
+**Key Changes:**
 
 #### Additions
 - Prominent safety warnings to prevent cross-vehicle installation
@@ -107,7 +105,7 @@ NotAutopilot is a focused fork of openpilot specifically designed for Pre-Autopi
    - Damage to vehicles outside the supported platform
    - User confusion about compatibility
 
-3. **Community Heritage**: The Pre-AP Model S was where the tinkla project began, pioneered by boggyver. NotAutopilot honors this heritage by maintaining exceptional support for this specific platform.
+3. **Community Heritage**: The Pre-AP Model S was where boggyver's pioneering Tesla integration began. NotAutopilot honors this heritage by maintaining exceptional support for this specific platform.
 
 ### Removed Features Rationale
 
@@ -139,7 +137,7 @@ NotAutopilot is a focused fork of openpilot specifically designed for Pre-Autopi
 - **Incomplete**: Not fully stable or tested in original tinkla codebase
 - **Scope**: Beyond the scope of NotAutopilot's core mission
 
-**Decision**: Focus on proven, stable features. Users wanting iBooster should use full tinkla.
+**Decision**: Focus on proven, stable features. Users wanting iBooster should use boggyver's original implementation.
 
 ---
 
@@ -301,11 +299,11 @@ NotAutopilot inherits its license from openpilot:
 
 ---
 
-## Comparison: Tinkla vs NotAutopilot
+## Choosing the Right Fork
 
-### When to Use Tinkla (Original)
+### When to Use boggyver's Original Fork
 
-**Use tinkla if you:**
+**Use boggyver's fork if you:**
 - Have a Tesla Model S/X with AP1 hardware
 - Have a Tesla Model S/X with AP2+ hardware
 - Want Instrument Cluster integration
@@ -313,7 +311,7 @@ NotAutopilot inherits its license from openpilot:
 - Want iBooster brake integration
 - Need multi-vehicle support
 
-**Tinkla Repository**: [boggyver/openpilot](https://github.com/boggyver/openpilot)
+**Repository**: [boggyver/openpilot](https://github.com/boggyver/openpilot)
 
 ### When to Use NotAutopilot
 
@@ -367,14 +365,14 @@ NotAutopilot inherits its license from openpilot:
 
 ### Understanding the Fork
 
-**Q: Why fork tinkla instead of contributing to it?**
-A: NotAutopilot has a different scope and philosophy. Tinkla aims to support all Tesla variants; NotAutopilot focuses exclusively on Pre-AP Model S for simplicity and safety.
+**Q: Why create a separate fork instead of contributing to boggyver's?**
+A: NotAutopilot has a different scope and philosophy. boggyver's fork aims to support all Tesla variants; NotAutopilot focuses exclusively on Pre-AP Model S for simplicity and safety.
 
-**Q: Will features from tinkla be backported?**
+**Q: Will features from boggyver's fork be backported?**
 A: Only Pre-AP specific improvements. Multi-vehicle or IC features won't be added.
 
-**Q: Can I go back to tinkla?**
-A: Yes, you can reinstall tinkla if you need features NotAutopilot doesn't provide.
+**Q: Can I switch to boggyver's original fork?**
+A: Yes, you can install boggyver's fork if you need features NotAutopilot doesn't provide.
 
 ### Technical Questions
 
@@ -384,7 +382,7 @@ A: openpilot 0.10.2
 **Q: Will you update to newer openpilot versions?**
 A: Potentially, if there are significant benefits for Pre-AP users and the update can be done while maintaining stability.
 
-**Q: Is the code compatible with tinkla?**
+**Q: Is the code compatible with boggyver's fork?**
 A: Partially. Core Pre-AP code is similar, but NotAutopilot has removed AP1/AP2 and IC integration code.
 
 ---
@@ -392,11 +390,11 @@ A: Partially. Core Pre-AP code is similar, but NotAutopilot has removed AP1/AP2 
 ## Acknowledgments
 
 Thank you to:
-- **boggyver** for creating tinkla and making openpilot accessible to the Tesla community
+- **boggyver** for pioneering Tesla integration and making openpilot accessible to the Tesla community
 - **comma.ai** for creating and open-sourcing openpilot
 - **Lukas Loetkolben** for the xnor fork
 - **The Tesla community** for testing, feedback, and support
-- **All contributors** to openpilot and tinkla
+- **All contributors** to openpilot and Tesla integration efforts
 
 NotAutopilot stands on the shoulders of giants.
 

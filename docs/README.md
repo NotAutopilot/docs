@@ -100,7 +100,7 @@ NotAutopilot is an **openpilot fork** designed exclusively for **Pre-Autopilot T
 ### Key Information
 
 - **Base**: openpilot 0.10.2
-- **Lineage**: tinkla (boggyver) → xnor (Lukas Loetkolben) → NotAutopilot
+- **Lineage**: boggyver → xnor (Lukas Loetkolben) → NotAutopilot
 - **Vehicle**: Pre-AP Tesla Model S ONLY
 - **Status**: BETA (research/development only)
 - **License**: MIT (inherited from openpilot)
@@ -273,8 +273,8 @@ By using NotAutopilot, you:
 ### Credits & Acknowledgments
 
 NotAutopilot builds on the work of:
-- **boggyver** - Original tinkla creator, Tesla integration pioneer
-- **Lukas Loetkolben** - xnor fork maintainer
+- **boggyver** - Tesla integration pioneer
+- **Lukas Loetkolben** - xnor maintainer
 - **comma.ai** - openpilot creators
 - **Tesla community** - Testing and support
 
@@ -284,9 +284,9 @@ NotAutopilot builds on the work of:
 - Pre-AP Model S ONLY (no multi-vehicle complexity)
 - Safety-first documentation
 - Clear feature boundaries
-- Removed unsupported features (IC, Buddy, iBooster)
+- Streamlined feature set
 
-**Inherited from Tinkla:**
+**Core Features:**
 - EPAS control and patching
 - Pedal Interceptor integration
 - Tesla Bosch Radar integration

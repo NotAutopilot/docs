@@ -226,7 +226,7 @@ The [Pedal Interceptor](Pedal_Interceptor.md) is a small unit that connects betw
 - IC will show standard Tesla information only
 - NotAutopilot status shown on Comma device screen only
 
-**If you need IC integration:** Consider using the original [tinkla project](https://github.com/boggyver/openpilot) which includes Tinkla Buddy support.
+**If you need IC integration:** Consider using [boggyver's openpilot fork](https://github.com/boggyver/openpilot) which includes Tinkla Buddy support.
 
 ---
 
@@ -254,7 +254,7 @@ The [Pedal Interceptor](Pedal_Interceptor.md) is a small unit that connects betw
 - WITH Pedal: Regen braking 5-18 MPH
 - Below 5 MPH: NO automatic braking
 
-**If you need iBooster:** Consider using the original [tinkla project](https://github.com/boggyver/openpilot) which has experimental iBooster support.
+**If you need iBooster:** Consider using [boggyver's openpilot fork](https://github.com/boggyver/openpilot) which has experimental iBooster support.
 
 ---
 
